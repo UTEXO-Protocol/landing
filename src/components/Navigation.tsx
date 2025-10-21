@@ -21,16 +21,16 @@ export default function Navigation() {
             />
             <div className="hidden lg:flex items-center lg:gap-10">
               <a href="#why-utexo" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
-                WHY UTEXO
+                Why Utexo
               </a>
               <a href="#insights" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
-                INSIGHTS
+                Insights
               </a>
               <a href="#features" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
-                FEATURES
+                Features
               </a>
               <a href="#faqs" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
-                FAQS
+                FAQs
               </a>
             </div>
           </div>
@@ -61,28 +61,28 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
               className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
             >
-              WHY UTEXO
+              Why Utexo
             </a>
             <a 
               href="#insights" 
               onClick={() => setMobileMenuOpen(false)}
               className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
             >
-              INSIGHTS
+              Insights
             </a>
             <a 
               href="#features" 
               onClick={() => setMobileMenuOpen(false)}
               className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
             >
-              FEATURES
+              Features
             </a>
             <a 
               href="#faqs" 
               onClick={() => setMobileMenuOpen(false)}
               className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
             >
-              FAQS
+              FAQs
             </a>
           </div>
         </div>
