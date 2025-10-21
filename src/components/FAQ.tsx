@@ -1,0 +1,189 @@
+'use client';
+import Image from "next/image";
+import { useState } from "react";
+
+interface FAQData {
+  question: string;
+  answer: string;
+  bullets?: string[];
+}
+
+export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const leftFAQs: FAQData[] = [
+    {
+      question: "What is UTEXO?",
+      answer: "Utexo is a Bitcoin execution layer for Lightning-scale stablecoin payments, securing USDT with Bitcoin's proof-of-work and RGB's privacy/programmability. It prioritizes stablecoins for non-custodial DeFi without blockchain bloat.",
+      bullets: ["Unlocks $300B+ stablecoin liquidity for BTCFi", "Enables native yield opportunities for Bitcoin and USDT"]
+    },
+    {
+      question: "How do I bridge USDT into Utexo?",
+      answer: "Connect your wallets, select route, and atomic-swap to RGB with Utexo USDT in <60 seconds—non-custodial, cheap, instant.",
+      bullets: ["Steps: Approve > Select amount/chain > Confirm > Receive.", "Chains: Tron in Q4, Ethereum already live"]
+    },
+    {
+      question: "How are transfers instant with zero fees?",
+      answer: "Sub-second finality via Lightning integration; zero settlement fees through Utexo's L2. RGB client-side validation ensures full privacy.",
+      bullets: ["Payment channels abstracted for user UX, enabling off-chain, instant, cheap, private txs.", "Atomic swaps with LSPs for global routing", "Impact: Handles $1B+ USDT daily"]
+    },
+    {
+      question: "How does privacy work via RGB?",
+      answer: "RGB uses client-side validation with blinded state commitments on Bitcoin UTXOs. There is no public graph.",
+      bullets: ["Commitments only on-chain; balances/recipients off-ledger", "Blended invoice allows to hide receiver UTXO from the sender", "Value: Secure institutional USDT flows"]
+    },
+    {
+      question: "How do I stake / earn yield?",
+      answer: "Deposit BTC/USDT on utexo.com for APY from Lightning routing fees/incentives (up to 15% est.), auto-compounding via Bitcoin-secured exits—non-custodial.",
+      bullets: ["Steps: Bridge > LP in pairs (e.g., USDT/BTC) > Earn fees + rewards.", "Sources: Routing fees, exchange/tx activity, and future incentives."]
+    },
+    {
+      question: "Are funds SAFU? What are the risks?",
+      answer: "",
+      bullets: ["Insured liquidity; AML compliant"]
+    },
+    {
+      question: "When will Utexo launch?",
+      answer: "Bridge is live now. Full launch of Utexo with AMM Dex, developer platform (api) in Q1/Q2 2026.",
+      bullets: ["Current: Bridge is active ; Q4 AMM/yield; Q1 2026 scaling/ orderbook", "2026: AMM, API, scaling", "Access: inquire at help@utexo.com"]
+    }
+  ];
+
+  const rightFAQs: FAQData[] = [
+    {
+      question: "What is RGB, and why pair it with Lightning?",
+      answer: "RGB is client-side-validation protocol for private, programmable assets on Bitcoin without bloat. Paired with Lightning to leverage its speed, with Utexo L2 and LSPs to abstract channel management and rebalancing challenges.",
+      bullets: ["Enhances privacy and settlement speed", "Utexo L2 simplifies UX by delegation of Lightning's complexity to professional LSPs without compromising non-custody."]
+    },
+    {
+      question: "What stablecoins does Utexo support?",
+      answer: "Launches with USDT ($180B liquidity); others will follow (USDC, USDA, DAI, USDI). Atomic swaps ensure 1:1 parity. Utexo serves as Bitcoin's stablecoin gateway.",
+      bullets: []
+    },
+    {
+      question: "Is Utexo fully non-custodial?",
+      answer: "Yes, users control keys and RGB state. Client-side validation ensures no transaction history published on-chain.",
+      bullets: []
+    },
+    {
+      question: "Why Utexo over LSPs or other Lightning solutions?",
+      answer: "Lightning's channel management drives LSPs, which Utexo abstracts via L2 and LSP interop, improving UX. Utexo manages inbound/outbound liquidity seamlessly with superior privacy.",
+      bullets: ["RGB privacy + Bitcoin security outpaces alternatives."]
+    },
+    {
+      question: "What are the actual fees in Utexo?",
+      answer: "No fees on settlement via L2. Fees apply on Lightning payments, DEX/swaps, bridge inflows, API provider requests, and OTC desk inbounds. Rebates enhance yield for participants.",
+      bullets: ["Fee structure optimized for efficiency vs. Ethereum"]
+    },
+    {
+      question: "How scalable is Utexo for BTCFi growth?",
+      answer: "Utexo is a Bitcoin execution layer for Lightning-scale stablecoin payments, securing USDT with Bitcoin's proof-of-work and RGB's privacy/programmability. It prioritizes stablecoins for non-custodial DeFi without blockchain bloat.",
+      bullets: ["Unlocks $300B+ stablecoin liquidity for BTCFi", "Enables native yield opportunities for Bitcoin and USDT"]
+    },
+    {
+      question: "Can I integrate Utexo into my wallet or app?",
+      answer: "Yes, SDKs/APIs are available on dev.utexo.com for bridging/ swaps/proofs with Utexo. Compatible with any wallet or app supporting atomic swaps and client-side validation.",
+      bullets: ["Testnet/docs available soon", "Partnership inquiries welcome help@utexo.com"]
+    }
+  ];
+
+  return (
+    <section id="faqs" className="bg-[#D4D4D4] px-4 sm:px-0">
+      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-16 sm:pt-32 lg:pt-[290px] mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6]">
+        <div className="hidden lg:block absolute lg:bottom-[50px] lg:left-[-80px]">
+          <Image
+            src="/last.png"
+            alt="3D Element"
+            width={372}
+            height={372}
+            className="lg:w-[150px] lg:h-[150px]"
+          />
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
+          {/* Left Column - FAQS Label */}
+          <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2 ml-0 sm:ml-6 lg:ml-[43px]">
+            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-widest text-black font-medium">FAQS</span>
+          </div>
+
+          {/* Middle Column - Questions */}
+          <div className="flex-1 space-y-5 sm:space-y-5.5 lg:space-y-6 ml-0 sm:ml-8 lg:ml-[64px]">
+            {leftFAQs.map((faq, index) => (
+              <div key={index} className="pr-0 sm:pr-12 lg:pr-[72px]">
+                <h3 
+                  className="text-[18px] sm:text-[21px] lg:text-[24px] mb-4 sm:mb-6 lg:mb-[32px] font-normal cursor-pointer hover:opacity-70 transition-opacity"
+                  style={{ fontFamily: "'PP Mori', sans-serif" }}
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  {faq.question}
+                </h3>
+                {openIndex === index && (
+                  <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3 mb-8 sm:mb-12 lg:mb-[64px]">
+                    {faq.answer && (
+                      <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                        {faq.answer}
+                      </p>
+                    )}
+                    {faq.bullets && faq.bullets.length > 0 && (
+                      <ul className="list-disc list-inside space-y-2 text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                        {faq.bullets.map((bullet, i) => (
+                          <li key={i}>{bullet}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column - Questions */}
+          <div className="flex-1 space-y-5 sm:space-y-5.5 lg:space-y-6">
+            {rightFAQs.map((faq, index) => {
+              const rightIndex = index + leftFAQs.length;
+              return (
+                <div key={rightIndex} className="pr-0 sm:pr-12 lg:pr-[72px]">
+                  <h3 
+                    className="text-[18px] sm:text-[21px] lg:text-[24px] mb-4 sm:mb-6 lg:mb-[32px] font-normal cursor-pointer hover:opacity-70 transition-opacity"
+                    style={{ fontFamily: "'PP Mori', sans-serif" }}
+                    onClick={() => setOpenIndex(openIndex === rightIndex ? null : rightIndex)}
+                  >
+                    {faq.question}
+                  </h3>
+                  {openIndex === rightIndex && (
+                    <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3 mb-8 sm:mb-12 lg:mb-[64px]">
+                      {faq.answer && (
+                        <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                          {faq.answer}
+                        </p>
+                      )}
+                      {faq.bullets && faq.bullets.length > 0 && (
+                        <ul className="list-disc list-inside space-y-2 text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                          {faq.bullets.map((bullet, i) => (
+                            <li key={i}>{bullet}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 3D Element */}
+        <div className="mt-12 sm:mt-18 lg:mt-24 flex justify-center">
+          <Image
+            src="/newlogo.png"
+            alt="3D Element"
+            width={372}
+            height={372}
+            className="w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] lg:w-[372px] lg:h-[372px]"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
