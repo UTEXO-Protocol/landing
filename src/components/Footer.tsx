@@ -64,7 +64,7 @@ export default function Footer() {
           >PRIVACY POLICY</a>
         </div>
 
-        <div className="text-center max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
+        {/* <div className="text-center max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
           <p 
             className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#959595] uppercase"
             style={{ 
@@ -76,7 +76,7 @@ export default function Footer() {
             }}
           >
 Lorem ipsum dolor sit amet consectetur. Venenatis odio orci egestas in eget nisl at. Augue consectetur nibh interdum turpis auctor ut aliquam. Nec elit non massa metus phasellus. Leo fames magna id feugiat vel lacus sit nullam vel. Egestas pharetra nulla viverra aliquam netus faucibus tortor. Mi cras arcu sed est. Ultricies fermentum nisl aliquet nibh tempor etiam.          </p>
-        </div>
+        </div> */}
 
         {/* 3D Element */}
 
