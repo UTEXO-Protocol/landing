@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "./Button";
 
 export default function Hero() {
   return (
@@ -49,16 +50,9 @@ export default function Hero() {
                 stablecoin backbone
               </h1>
 
-              <button 
-                className="flex items-center justify-center border border-white/10 hover:border-white/30 cursor-pointer mt-0 sm:mt-12 lg:mt-[350px] gap-1 sm:gap-2 text-white text-[11px] sm:text-[12px] lg:text-[13px] font-medium transition-all rounded-lg w-[120px] h-[48px] sm:w-[132px] sm:h-[52px] lg:w-[144px] lg:h-[55px] uppercase"
-                style={{
-                  background: 'linear-gradient(90deg, #2f3B1F 0%, #0C150C 100%)',
-                  fontFamily: 'Roboto Mono, monospace',
-                }}
-              >
-                <span className="lg:text-[13px] font-bold">get started</span>
-                <Image src="/Vector.png" alt="arrow-right" width={12} height={10} />
-              </button>
+              <Button className="mt-0 sm:mt-12 lg:mt-[350px]">
+                get started
+              </Button>
             </div>
           </div>
           
