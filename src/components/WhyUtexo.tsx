@@ -52,15 +52,9 @@ export default function WhyUtexo() {
               </div>
 
               <div className="col-span-1 flex px-2 sm:px-3 lg:px-4">
-                <button 
-                  className="w-[120px] h-[48px] sm:w-[132px] sm:h-[52px] lg:w-[144px] lg:h-[55px] bg-black text-white text-[11px] sm:text-[12px] lg:text-[13px] font-medium transition-all rounded-lg flex items-center justify-center gap-1 sm:gap-2 uppercase"
-                  style={{
-                      fontFamily: 'Roboto Mono, monospace',
-                  }}
-                >
-                  <span className="font-bold">get started</span>
-                  <Image src="/Vector.png" alt="arrow-right" width={12} height={10} />
-                </button>
+                <Button variant="black" className="w-[120px] h-[48px] sm:w-[132px] sm:h-[52px] lg:w-[144px] lg:h-[55px]">
+                  get started
+                </Button>
               </div>
             </div>
           </div>

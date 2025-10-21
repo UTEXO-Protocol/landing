@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import { useState } from "react";
+import Button from "./Button";
 
 interface QuoteData {
   quote: string;
@@ -76,18 +77,21 @@ export default function Quote() {
         </div>
 
         <div className="flex justify-end gap-0 absolute bottom-0 right-0">
-          <button 
+          <Button 
             onClick={handlePrevious}
-            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors border-r border-gray-700"
-          >
-            <Image src="/Vector.png" alt="arrow-left" width={20} height={20} className="rotate-180 w-4 sm:w-4.5 lg:w-5" />
-          </button>
-          <button 
+            variant="black"
+            iconOnly={true}
+            iconRotation="rotate-180 w-4 sm:w-4.5 lg:w-5"
+            iconSize={{ width: 20, height: 20 }}
+            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] border-r border-gray-700"
+          />
+          <Button 
             onClick={handleNext}
-            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors border-l border-gray-700"
-          >
-            <Image src="/Vector.png" alt="arrow-right" width={20} height={20} className="w-4 sm:w-4.5 lg:w-5" />
-          </button>
+            variant="black"
+            iconOnly={true}
+            iconSize={{ width: 20, height: 20 }}
+            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] border-l border-gray-700"
+          />
         </div>
       </div>
     </section>

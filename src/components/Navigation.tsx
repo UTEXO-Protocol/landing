@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import { useState } from "react";
+import Button from "./Button";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,10 +45,9 @@ export default function Navigation() {
               <span className={`w-6 h-0.5 bg-black transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
             </button>
             
-            <button className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] bg-black text-white lg:text-[13px] font-medium hover:bg-gray-800 transition-colors rounded-[10px] flex items-center justify-center gap-1 sm:gap-2">
-              <span>get started</span>
-              <Image src="/Vector.png" alt="arrow-right" width={12} height={10} className="w-2.5 sm:w-3" />
-            </button>
+            <Button variant="black" className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]">
+              get started
+            </Button>
           </div>
         </div>
       </nav>
