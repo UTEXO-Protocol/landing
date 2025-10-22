@@ -89,7 +89,7 @@ export default function FAQ() {
 
   return (
     <section id="faqs" className="bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-16 sm:pt-32 lg:pt-[290px] mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6]">
+      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-16 sm:pt-32 md:pt-48 mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6]">
         <div className="hidden lg:block absolute lg:bottom-[50px] lg:left-[-80px]">
           <Image
             src="/Group 41.png"
@@ -173,13 +173,13 @@ export default function FAQ() {
         </div>
 
         {/* 3D Element */}
-        <div className="mt-12 sm:mt-18 lg:mt-24 flex justify-center">
+        <div className="mt-10 md:mt-0 flex justify-center">
           <Image
             src="/UtexoLogo.png"
             alt="3D Element"
             width={372}
             height={372}
-            className="w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] lg:w-[372px] lg:h-[372px]"
+            className="w-44 md:!w-80 md:h-80 h-auto"
           />
         </div>
       </div>
