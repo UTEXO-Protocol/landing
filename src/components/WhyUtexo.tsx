@@ -14,21 +14,23 @@ export default function WhyUtexo() {
             {/* Row 1 - Three Features in One Rectangle */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6">
               {/* Purpose-built */}
-              <div className="space-y-3 sm:space-y-4 px-2 sm:px-3 lg:px-4">
+              <div className="space-y-3 sm:space-y-4">
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">Purpose-built for stablecoins on Bitcoin</h3>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
                   Most scaling layers weren&apos;t designed with stablecoins in mind. UTEXO is. We combine Bitcoin&apos;s security with lightning-fast, private, zero-fee settlement — with native USDT support.
                 </p>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 px-2 sm:px-3 lg:px-4">
+              {/* Privacy & non-custodial */}
+              <div className="space-y-3 sm:space-y-4">
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">Privacy & non-custodial by design</h3>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
                   Transactions are private via RGB, and you always control your own keys.
                 </p>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 px-2 sm:px-3 lg:px-4">
+              {/* Seamless, instant settlement */}
+              <div className="space-y-3 sm:space-y-4">
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">Seamless, instant settlement</h3>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
                   Trades and transfers settle instantly, with zero fees.
@@ -37,7 +39,7 @@ export default function WhyUtexo() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6 mt-6 sm:mt-9 lg:mt-12">
-              <div className="col-span-1 rounded-xl space-y-3 sm:space-y-4 px-2 sm:px-3 lg:px-4">
+              <div className="col-span-1 rounded-xl space-y-3 sm:space-y-4">
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal">Built on RGB + Lightning</h3>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
                   We leverage the RGB protocol for confidential, non-custodial tokenization and Lightning Network for settlement.
@@ -51,7 +53,7 @@ export default function WhyUtexo() {
                 </p>
               </div>
 
-              <div className="col-span-1 flex px-2 sm:px-3 lg:px-4">
+              <div className="col-span-1 flex md:pt-2 md:px-3 lg:px-4">
                 <Button variant="black" className="w-[120px] h-[48px] sm:w-[132px] sm:h-[52px] lg:w-[144px] lg:h-[55px]">
                   get started
                 </Button>
@@ -68,14 +70,14 @@ export default function WhyUtexo() {
                 alt="Shield"
                 width={120}
                 height={120}
-                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px] "
+                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px]"
               />
             </div>
             
             <div className="w-full sm:w-[400px] md:w-[500px] lg:w-[550px] space-y-3 sm:space-y-4">
               <h3 className="text-[22px] sm:text-[25px] lg:text-[28px] font-normal leading-tight">Backed by Tether, Anchored in Bitcoin</h3>
               <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-black opacity-50 leading-snug">
-                Tether is one of the many investors in Utexo recognizing our mission to bring native USDT adoption to Bitcoin&apos;s RGB & Lightning ecosystems.
+                Tether is one of the many investors in Utexo recognizing our mission to bring native USDT adoption to Bitcoin's RGB & Lightning ecosystems.
               </p>
             </div>
           </div>
@@ -105,7 +107,7 @@ export default function WhyUtexo() {
                 </p>
               </div>
               <div>
-              <Button />
+                <Button />
               </div>
             </div>
           </div>
@@ -114,4 +116,3 @@ export default function WhyUtexo() {
     </section>
   );
 }
-

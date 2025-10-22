@@ -107,12 +107,11 @@ export default function FAQ() {
           </div>
 
           {/* Middle Column - Questions */}
-          <div className="flex-1 space-y-5 sm:space-y-5.5 lg:space-y-6 ml-0 sm:ml-8 lg:ml-[64px]">
+          <div className="flex-1 space-y-3 sm:space-y-5 lg:space-y-6 ml-0 sm:ml-8 lg:ml-[64px]">
             {leftFAQs.map((faq, index) => (
               <div key={index} className="pr-0 sm:pr-12 lg:pr-[72px]">
                 <h3 
-                  className="text-[18px] sm:text-[21px] lg:text-[24px] mb-4 sm:mb-6 lg:mb-[32px] font-normal cursor-pointer hover:opacity-70 transition-opacity"
-                  style={{ fontFamily: "'PP Mori', sans-serif" }}
+                  className="text-[18px] sm:text-[21px] lg:text-[24px] mb-4 sm:mb-6 lg:mb-[32px] font-sans font-normal cursor-pointer hover:opacity-70 transition-opacity"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 >
                   {faq.question}
@@ -120,7 +119,7 @@ export default function FAQ() {
                 {openIndex === index && (
                   <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3 mb-8 sm:mb-12 lg:mb-[64px]">
                     {faq.answer && (
-                      <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                      <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight">
                         {faq.answer}
                       </p>
                     )}
@@ -138,7 +137,7 @@ export default function FAQ() {
           </div>
 
           {/* Right Column - Questions */}
-          <div className="flex-1 space-y-5 sm:space-y-5.5 lg:space-y-6">
+          <div className="flex-1 space-y-3 sm:space-y-5 lg:space-y-6">
             {rightFAQs.map((faq, index) => {
               const rightIndex = index + leftFAQs.length;
               return (
@@ -153,7 +152,7 @@ export default function FAQ() {
                   {openIndex === rightIndex && (
                     <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3 mb-8 sm:mb-12 lg:mb-[64px]">
                       {faq.answer && (
-                        <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                        <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                           {faq.answer}
                         </p>
                       )}

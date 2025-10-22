@@ -40,11 +40,10 @@ export default function Hero() {
           </div>
           
           {/* Content */}
-          <div className="relative z-10 px-6 sm:px-12 lg:px-[100px] py-8 sm:py-12 lg:py-[80px]">
-            <div className="w-full max-w-[724px]">
+          <div className="relative z-10 px-6 sm:px-12 lg:px-[120px] py-8 sm:py-12 lg:py-[80px]">
+            <div className="w-full max-w-[760px]">
               <h1 
-                className="text-[36px] sm:text-[56px] lg:text-[80px] font-medium leading-tight sm:leading-[60px] lg:leading-[82px] tracking-[-0.03em] text-white mb-6 sm:mb-7 lg:mb-8 h-auto lg:h-[164px]"
-                style={{ fontFamily: "'PP Mori', BlinkMacSystemFont, sans-serif" }}
+                className="text-[36px] sm:text-[56px] lg:text-[80px] font-medium leading-tight sm:leading-[60px] lg:leading-[82px] tracking-[-0.03em] text-white mb-6 sm:mb-7 lg:mb-8 h-auto lg:h-[164px] font-sans"
               >
                 Bitcoin&apos;s private<br />
                 stablecoin backbone

@@ -1,15 +1,44 @@
 /* Import PP Mori Font - Must be first */
-@import url('https://fonts.cdnfonts.com/css/pp-mori');
+/*@import url('https://fonts.cdnfonts.com/css/pp-mori');*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 @import '@fontsource-variable/jetbrains-mono';
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --background: #D4D4D4;
   --foreground: #000000;
   --font-sans-real: 'PP Mori', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono-real: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
-
+  --font-jetbrains-real: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
 }
 
 @theme inline {
@@ -18,6 +47,9 @@
   --font-sans: var(--font-sans-real);
   --font-mono: var(--font-mono-real);
 }
+
+.font-jetbrains { font-family: var(--font-jetbrains-real); }
+
 
 body {
   background: var(--background);
