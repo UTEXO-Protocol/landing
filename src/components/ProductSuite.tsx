@@ -29,13 +29,24 @@ export default function ProductSuite() {
                 className="lg:w-[185.4px] lg:h-[232px]"
               />
             </div>
-            <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[140px] pointer-events-none">
+
+            <div className="hidden lg:block absolute lg:bottom-[200px] lg:right-[70px] pointer-events-none" aria-hidden="true">
+              <Image
+                src="/group42.png"
+                alt=""               // purely decorative
+                width={120}
+                height={120}
+                className="lg:w-[100px] lg:h-auto"
+              />
+            </div>
+
+            <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[160px] pointer-events-none">
               <Image
                 src="/first.png"
                 alt="3D Element"
                 width={150}
                 height={150}
-                className="lg:w-[230px] lg:h-[280px]"
+                className="lg:w-[230px] lg:h-auto"
               />
             </div>
           </div>

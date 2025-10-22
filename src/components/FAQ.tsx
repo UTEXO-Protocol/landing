@@ -175,7 +175,7 @@ export default function FAQ() {
         {/* 3D Element */}
         <div className="mt-12 sm:mt-18 lg:mt-24 flex justify-center">
           <Image
-            src="/newlogo.png"
+            src="/UtexoLogo.png"
             alt="3D Element"
             width={372}
             height={372}

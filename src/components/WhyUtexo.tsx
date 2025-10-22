@@ -46,7 +46,7 @@ export default function WhyUtexo() {
 
               <div className="col-span-1 space-y-3 sm:space-y-4">
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-3 sm:mb-4">Yield on BTC & USDT</h3>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug904ab334-ce58-4da7-9bd9-491b31bac47f 1">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
                   Stake via LN & RGB to earn 3-5 %+ APY on your holdings. Plus non-custodial staking.
                 </p>
               </div>
