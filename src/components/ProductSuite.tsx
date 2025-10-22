@@ -9,41 +9,41 @@ export default function ProductSuite() {
           <div className="col-span-1 lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-0">
             
             <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
-              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[rgba(38,38,38,1)] border-white/10 flex items-center justify-center">
+              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
                 <Image src="/one.png" alt="DEX" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>DEX (Bitcoin-native)</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Trade BTC vs USDT instantly on-chain.
               </p>
             </div>
 
             <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
-              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[rgba(38,38,38,1)] border-white/10 flex items-center justify-center">
+              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
                 <Image src="/two.png" alt="Bridge" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Cross-chain Bridge</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Atomic swaps to/from Ethereum / new/other chains.
               </p>
             </div>
 
             <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
-              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[rgba(38,38,38,1)] border-white/10 flex items-center justify-center">
+              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
                 <Image src="/three.png" alt="Developer Stack" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Developer Stack</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 RPCs, SDKs, modular integrations.
               </p>
             </div>
 
             <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
-              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[rgba(38,38,38,1)] border-white/10 flex items-center justify-center">
+              <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
                 <Image src="/fore.png" alt="Staking" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Staking / Yield</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Earn the highest yield %+ APY on BTC & USDT.
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function ProductSuite() {
               <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] font-light leading-tight" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Product<br />Suite
               </h2>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 UTEXO is scaling Bitcoin&apos;s Lightning and RGB network with a full-stack suite designed for stablecoin adoption and liquidity. Our infrastructure powers instant, private, and low-fee transactions while preserving Bitcoin&apos;s security model.
               </p>
                 <Button />
