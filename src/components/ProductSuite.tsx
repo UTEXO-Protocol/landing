@@ -32,7 +32,7 @@ export default function ProductSuite() {
 
             <div className="hidden lg:block absolute lg:bottom-[200px] lg:right-[70px] pointer-events-none" aria-hidden="true">
               <Image
-                src="/group42.png"
+                src="/Group42.png"
                 alt=""               // purely decorative
                 width={120}
                 height={120}
