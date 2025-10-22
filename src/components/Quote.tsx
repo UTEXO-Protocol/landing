@@ -26,7 +26,7 @@ export default function Quote() {
     {
       quote: "Bitcoin deserves a stablecoin that feels truly native, lightweight, private, and scalable.",
       logo: "/BM.png",
-      logoAlt: "Paolo"
+      logoAlt: "Paolo A."
     }
   ];
 
