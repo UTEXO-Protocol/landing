@@ -51,6 +51,28 @@ export default function ProductSuite() {
             </div>
           </div>
 
+          {/* Mobile decorative bits */}
+          <div className="lg:hidden relative mt-10 mb-15 pointer-events-none">
+            {/* Blur behind */}
+            <Image
+              src="/Group42.png"
+              alt=""
+              width={140}
+              height={140}
+              className="w-[100px] h-auto absolute right-10 bottom-15"
+              sizes="(max-width:1023px) 140px, 0"
+            />
+            {/* Small ring, anchored to bottom-right of the text block */}
+            <Image
+              src="/first.png"
+              alt=""
+              width={180}
+              height={220}
+              className="w-[180px] h-auto absolute -top-20 right-30"
+              sizes="(max-width:1023px) 180px, 0"
+            />
+          </div>
+
           {/* Product Cards - Two Rows on Left Side */}
           <div className="col-span-1 lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-0">
             <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">

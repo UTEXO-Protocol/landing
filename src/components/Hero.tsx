@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Center */}
-          <div className="absolute bottom-[-50px] sm:bottom-[-65px] lg:bottom-[-80px] right-1/4 md:right-1/3 -translate-x-1/2 z-20">
+          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-1/3 md:-translate-x-1/2 z-20">
             <Image
               src="/Group 39.png"
               alt="3D Element Bottom Center"
@@ -29,13 +29,13 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Large Ring */}
-          <div className="hidden lg:block absolute lg:bottom-[0px] lg:left-[510px] z-30 lg:w-[240px] lg:h-[310px]">
+          <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px]">
             <Image
               src="/first.png"
               alt="3D Element Bottom"
               width={350}
               height={350}
-              className="lg:w-80 h-auto"
+              className="w-36 lg:w-80 h-auto"
             />
           </div>
           

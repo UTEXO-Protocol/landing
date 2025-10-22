@@ -92,11 +92,11 @@ export default function FAQ() {
       <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-16 sm:pt-32 lg:pt-[290px] mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6]">
         <div className="hidden lg:block absolute lg:bottom-[50px] lg:left-[-80px]">
           <Image
-            src="/last.png"
+            src="/Group 41.png"
             alt="3D Element"
             width={372}
             height={372}
-            className="lg:w-[150px] lg:h-auto"
+            className="lg:w-[140px] lg:h-auto"
           />
         </div>
         

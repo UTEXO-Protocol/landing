@@ -1,6 +1,7 @@
 /* Import PP Mori Font - Must be first */
 @import url('https://fonts.cdnfonts.com/css/pp-mori');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import '@fontsource-variable/jetbrains-mono';
 @import "tailwindcss";
 
 :root {
