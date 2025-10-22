@@ -59,28 +59,28 @@ export default function Navigation() {
             <a 
               href="#why-utexo" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
+              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               Why Utexo
             </a>
             <a 
               href="#insights" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
+              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               Insights
             </a>
             <a 
               href="#features" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
+              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               Features
             </a>
             <a 
               href="#faqs" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity py-2"
+              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               FAQs
             </a>

@@ -96,7 +96,7 @@ export default function FAQ() {
             alt="3D Element"
             width={372}
             height={372}
-            className="lg:w-[150px] lg:h-[150px]"
+            className="lg:w-[150px] lg:h-auto"
           />
         </div>
         

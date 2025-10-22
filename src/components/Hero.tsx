@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Center */}
-          <div className="absolute bottom-[-50px] sm:bottom-[-65px] lg:bottom-[-80px] left-1/2 -translate-x-1/2 z-20">
+          <div className="absolute bottom-[-50px] sm:bottom-[-65px] lg:bottom-[-80px] right-1/4 md:right-1/3 -translate-x-1/2 z-20">
             <Image
               src="/Group 39.png"
               alt="3D Element Bottom Center"
