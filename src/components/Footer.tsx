@@ -38,7 +38,7 @@ export default function Footer() {
               letterSpacing: '-0.03em',
               lineHeight: '130%'
             }}
-          >CONTACT SUPPORT</a>
+          >Contact support</a>
 
           <a 
             href="#" 
@@ -50,7 +50,7 @@ export default function Footer() {
               letterSpacing: '-0.03em',
               lineHeight: '130%'
             }}
-          >TERMS OF SERVICE</a>
+          >Terms of service</a>
           <a 
             href="#" 
             className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity"
@@ -61,10 +61,10 @@ export default function Footer() {
               letterSpacing: '-0.03em',
               lineHeight: '130%'
             }}
-          >PRIVACY POLICY</a>
+          >Privacy policy</a>
         </div>
 
-        {/* <div className="text-center max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
+        <div className="text-center max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
           <p 
             className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#959595] uppercase"
             style={{ 
@@ -75,8 +75,9 @@ export default function Footer() {
               lineHeight: '130%'
             }}
           >
-Lorem ipsum dolor sit amet consectetur. Venenatis odio orci egestas in eget nisl at. Augue consectetur nibh interdum turpis auctor ut aliquam. Nec elit non massa metus phasellus. Leo fames magna id feugiat vel lacus sit nullam vel. Egestas pharetra nulla viverra aliquam netus faucibus tortor. Mi cras arcu sed est. Ultricies fermentum nisl aliquet nibh tempor etiam.          </p>
-        </div> */}
+            © Utexo 2025. All rights reserved.
+          </p>
+        </div> 
 
         {/* 3D Element */}
 
