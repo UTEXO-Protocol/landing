@@ -2,15 +2,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next",
-      "config": { "zeroConfig": true },
-      "branches": ["mooncity"]
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/svelte",
-      "config": { "zeroConfig": true },
-      "branches": ["main"]
+      "use": "@vercel/next"
     }
   ],
   "routes": [
