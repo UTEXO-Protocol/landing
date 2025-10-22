@@ -46,7 +46,7 @@ export default function Quote() {
             <div className="w-full sm:w-[400px] md:w-[600px] lg:w-[788px]">
               <blockquote 
                 key={currentIndex}
-                className="text-[16px] sm:text-[20px] lg:text-[24px] font-normal leading-relaxed animate-fadeIn" 
+                className="text-[16px] sm:text-[20px] lg:text-[24px] font-normal leading-normal animate-fadeIn" 
                 style={{ fontFamily: "'PP Mori', sans-serif" }}
               >
                 &quot;{quotes[currentIndex].quote}&quot;

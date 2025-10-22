@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className=" bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pb-12 sm:pb-20 lg:pb-[120px] mx-auto border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] border-b-[1px] border-[#C6C6C6]">
+      <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pb-12 sm:pb-20 lg:pb-[120px] mx-auto border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] ">
       
       <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
           <Image
@@ -16,15 +16,15 @@ export default function Footer() {
         </div>
         <div className="w-full sm:w-[500px] lg:w-[611px] mx-auto py-6 sm:py-8 lg:py-0">
         <div className="flex justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-7 lg:mb-8">
-          <a href="#" className="hover:opacity-70 transition-opacity">
+          <a href="https://x.com/utexocom" className="hover:opacity-70 transition-opacity">
             <Image src="/x.png" alt="X (Twitter)" width={24} height={24} className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6" />
           </a>
-          <a href="#" className="hover:opacity-70 transition-opacity">
+          <a href="https://discord.gg/hmVJNEJH2P" className="hover:opacity-70 transition-opacity">
             <Image src="/d.png" alt="Discord" width={24} height={24} className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6" />
           </a>
-          <a href="#" className="hover:opacity-70 transition-opacity">
+{/*          <a href="#" className="hover:opacity-70 transition-opacity">
             <Image src="/t.png" alt="Telegram" width={24} height={24} className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6" />
-          </a>
+          </a>*/}
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-9 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">

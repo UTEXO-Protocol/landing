@@ -12,8 +12,16 @@ export default function Features() {
           <div className="flex-1 ml-0 sm:ml-8 lg:ml-[64px]">
             {/* Header Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 lg:gap-16 pb-6 sm:pb-7 lg:pb-8 border-b border-[#C6C6C6]">
-              <h2 className="text-[22px] sm:text-[24px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>USDT & BTC support</h2>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 pr-0 sm:pr-12 lg:pr-[72px]">Real USDT natively on Bitcoin</p>
+               <div>
+                <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>USDT & BTC support</h3>
+              </div>
+                {/*<h2 className="text-[22px] sm:text-[24px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>USDT & BTC support</h2>*/}
+             <div className="items-center flex">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                  Real USDT natively on Bitcoin.
+                </p>
+              </div>              
+              {/*<p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]">Real USDT natively on Bitcoin.</p>*/}
             </div>
 
             {/* Feature 1 - Private & non-custodial */}
@@ -21,8 +29,8 @@ export default function Features() {
               <div>
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>Private & non-custodial</h3>
               </div>
-              <div>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <div className="items-center flex">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   RGB ensures confidentiality of fully private transactions.
                 </p>
               </div>
@@ -33,8 +41,8 @@ export default function Features() {
               <div>
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>Zero-fee, instant settlement</h3>
               </div>
-              <div>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <div className="items-center flex">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   Send or trade in under a second, with no fees.
                 </p>
               </div>
@@ -45,8 +53,8 @@ export default function Features() {
               <div>
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>Secure & scalable</h3>
               </div>
-              <div>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <div className="items-center flex">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   Built on Bitcoin, inherits security model. Scales with Lightning and rollups to 100,000+ tx/sec.
                 </p>
               </div>
@@ -57,8 +65,8 @@ export default function Features() {
               <div>
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>Staking yield</h3>
               </div>
-              <div>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <div className="items-center flex">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   Earn 3-5 %+ APY on BTC & 10%+ on USDT via LN & RGB.
                 </p>
               </div>
@@ -69,8 +77,8 @@ export default function Features() {
               <div>
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal" style={{ fontFamily: "'PP Mori', sans-serif" }}>Developer friendly</h3>
               </div>
-              <div>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <div className="items-center flex">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight pr-0 sm:pr-12 lg:pr-[72px]" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   Open SDKs/APIs for seamless wallet/ app integration.
                 </p>
               </div>

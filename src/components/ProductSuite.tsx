@@ -13,7 +13,7 @@ export default function ProductSuite() {
                 <Image src="/one.png" alt="DEX" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>DEX (Bitcoin-native)</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Trade BTC vs USDT instantly on-chain.
               </p>
             </div>
@@ -23,7 +23,7 @@ export default function ProductSuite() {
                 <Image src="/two.png" alt="Bridge" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Cross-chain Bridge</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Atomic swaps to/from Ethereum / new/other chains.
               </p>
             </div>
@@ -33,7 +33,7 @@ export default function ProductSuite() {
                 <Image src="/three.png" alt="Developer Stack" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Developer Stack</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 RPCs, SDKs, modular integrations.
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function ProductSuite() {
                 <Image src="/fore.png" alt="Staking" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Staking / Yield</h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Earn the highest yield %+ APY on BTC & USDT.
               </p>
             </div>
@@ -55,8 +55,8 @@ export default function ProductSuite() {
               <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] font-medium leading-tight" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Product Suite
               </h2>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
-                UTEXO is scaling Bitcoin&apos;s Lightning and RGB network with a full-stack suite designed for stablecoin adoption and liquidity. Our infrastructure powers instant, private, and low-fee transactions while preserving Bitcoin&apos;s security model.
+              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white leading-snug" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                Utexo is scaling Bitcoin&apos;s Lightning and RGB network with a full-stack suite designed for stablecoin adoption and liquidity. Our infrastructure powers instant, private, and low-fee transactions while preserving Bitcoin&apos;s security model.
               </p>
                 <Button />
             </div>
