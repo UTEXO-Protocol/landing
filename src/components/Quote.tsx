@@ -5,8 +5,9 @@ import Button from "./Button";
 
 interface QuoteData {
   quote: string;
-  logo: string;
+  logo?: string;
   logoAlt: string;
+  subtitle?: string; 
 }
 
 export default function Quote() {
@@ -20,13 +21,13 @@ export default function Quote() {
     },
     {
       quote: "By bringing USDT to RGB, Tether is helping to unlock a new frontier for money on Bitcoin.",
-      logo: "/BM.png",
-      logoAlt: "tether."
+      logo: "/tether_logo_icon_black.png",
+      logoAlt: "Tether"
     },
     {
       quote: "Bitcoin deserves a stablecoin that feels truly native, lightweight, private, and scalable.",
-      logo: "/BM.png",
-      logoAlt: "Paolo A."
+      logoAlt: "Paolo A.",
+      subtitle: "CEO of Tether"
     }
   ];
 
@@ -54,25 +55,33 @@ export default function Quote() {
             </div>
 
             <div className="flex items-center justify-center">
-              {quotes[currentIndex].logoAlt === "Bitcoin Magazine" ? (
+              {quotes[currentIndex].logo ? (
                 <Image
                   key={`logo-${currentIndex}`}
-                  src="/BM.png"
-                  alt="Bitcoin Magazine"
+                  src={quotes[currentIndex].logo}
+                  alt={quotes[currentIndex].logoAlt}
                   width={200}
                   height={80}
-                  className="w-[100px] h-[24px] sm:w-[120px] sm:h-[28px] lg:w-[144px] lg:h-[33.67px] animate-fadeIn"
+                  className="w-[100px] h-auto sm:w-[120px] lg:w-[144px] animate-fadeIn"
+                  priority={false}
                 />
               ) : (
-                <div 
-                  key={`text-${currentIndex}`}
-                  className="text-[40px] sm:text-[50px] lg:text-[60px] font-bold animate-fadeIn" 
-                  style={{ fontFamily: "'PP Mori', sans-serif" }}
-                >
-                  {quotes[currentIndex].logoAlt}
+                <div key={`text-${currentIndex}`} className="text-center animate-fadeIn">
+                  <div
+                    className="text-xl md:text-[40px] font-bold"
+                    style={{ fontFamily: "'PP Mori', sans-serif" }}
+                  >
+                    {quotes[currentIndex].logoAlt}
+                  </div>
+                  {quotes[currentIndex].subtitle && (
+                    <div className="text-black/50 text-sm sm:text-base mt-1">
+                      {quotes[currentIndex].subtitle}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
+
           </div>
         </div>
 
