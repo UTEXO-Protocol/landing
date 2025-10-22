@@ -20,16 +20,16 @@ export default function Navigation() {
               className="w-[70px] h-[26px] sm:w-[85px] sm:h-[31px] lg:w-[100.14px] lg:h-[37px]"
             />
             <div className="hidden lg:flex items-center lg:gap-10">
-              <a href="#why-utexo" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
+              <a href="#why-utexo" className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity">
                 Why Utexo
               </a>
-              <a href="#insights" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
+              <a href="#insights" className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity">
                 Insights
               </a>
-              <a href="#features" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
+              <a href="#features" className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity">
                 Features
               </a>
-              <a href="#faqs" className="lg:text-[14px] font-medium tracking-wide uppercase hover:opacity-70 transition-opacity">
+              <a href="#faqs" className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity">
                 FAQs
               </a>
             </div>

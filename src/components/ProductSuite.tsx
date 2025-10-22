@@ -52,8 +52,8 @@ export default function ProductSuite() {
           {/* Right side - Product Suite Content */}
           <div className="col-span-1 lg:col-span-1 flex flex-col justify-between relative p-6 sm:p-8 lg:p-[42px]">
             <div className="space-y-6 sm:space-y-7 lg:space-y-8">
-              <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] font-light leading-tight" style={{ fontFamily: "'PP Mori', sans-serif" }}>
-                Product<br />Suite
+              <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] font-medium leading-tight" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                Product Suite
               </h2>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[rgba(255,255,255,1)] opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 UTEXO is scaling Bitcoin&apos;s Lightning and RGB network with a full-stack suite designed for stablecoin adoption and liquidity. Our infrastructure powers instant, private, and low-fee transactions while preserving Bitcoin&apos;s security model.

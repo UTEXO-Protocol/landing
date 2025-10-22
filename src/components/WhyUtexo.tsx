@@ -7,7 +7,7 @@ export default function WhyUtexo() {
       <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] mx-auto border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           <div className="w-full sm:w-[120px] lg:w-[150px] ml-0 sm:ml-4 lg:ml-[32px] shrink-0">
-            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-widest text-black font-medium">WHY UTEXO</span>
+            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-mono">Why Utexo</span>
           </div>
 
           <div className="flex-1">
@@ -46,7 +46,7 @@ export default function WhyUtexo() {
 
               <div className="col-span-1 space-y-3 sm:space-y-4">
                 <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-3 sm:mb-4">Yield on BTC & USDT</h3>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 leading-relaxed">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600">
                   Stake via LN & RGB to earn 3-5 %+ APY on your holdings. Plus non-custodial staking.
                 </p>
               </div>
@@ -64,11 +64,11 @@ export default function WhyUtexo() {
           <div className="flex items-center gap-4 sm:gap-6 w-full lg:w-auto">
             <div className="shrink-0">
               <Image
-                src="/79235d8aec7443fdd482b9c99e47cc7fcd661c7d.png"
+                src="/tether_shield.png"
                 alt="Shield"
                 width={120}
                 height={120}
-                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px]"
+                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px] "
               />
             </div>
             
@@ -100,7 +100,7 @@ export default function WhyUtexo() {
             
             <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10">
               <div className="text-white space-y-2">
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed max-w-sm">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-mono">
                   We enable native on-chain BTC/USDT trading pairs (already ~8 % of all CEX daily volume, ~$12B+).
                 </p>
               </div>

@@ -5,7 +5,7 @@ export default function Features() {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6 pl-0 sm:pl-6 lg:pl-[42px]">
           {/* Left Column - FEATURES Label */}
           <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2">
-            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-widest text-black font-medium">FEATURES</span>
+            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-mono">Features</span>
           </div>
 
           {/* Right Content Area */}

@@ -58,7 +58,7 @@ export default function Hero() {
           
           {/* Text Overlay */}
           <div className="hidden sm:block absolute bottom-8 sm:bottom-12 lg:bottom-[80px] right-4 sm:right-6 lg:right-[30px] max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] z-10">
-            <p className="text-white/90 text-[12px] sm:text-[13px] lg:text-[14px] leading-relaxed">
+            <p className="text-white text-[12px] sm:text-[13px] lg:text-[14px] leading-relaxed">
               Native USDT & BTC, instant zero-fee settlements, lightning fast, private & non-custodial payments. Backed by Tether, settled on Bitcoin natively.
             </p>
           </div>

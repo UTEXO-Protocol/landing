@@ -64,7 +64,7 @@ export default function Button({
         />
       ) : (
         <>
-          <span className="font-bold">{children || 'get started'}</span>
+          <span className="font-bold font-mono">{children || 'get started'}</span>
           <Image src="/Vector.png" alt="arrow-right" width={iconSize.width} height={iconSize.height} />
         </>
       )}

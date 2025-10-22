@@ -9,7 +9,7 @@ export default function Stats() {
           >
             $300B+
           </div>
-          <p className="text-[10px] pb-12 sm:pb-16 lg:pb-[100px] sm:text-[11px] lg:text-[12px] pt-2 sm:pt-3 lg:pt-4 px-3 text-left sm:text-left lg:text-left text-gray-600 uppercase tracking-wider">
+          <p className="text-[10px] pb-12 sm:pb-16 lg:pb-[100px] sm:text-[11px] lg:text-[12px] pt-2 sm:pt-3 lg:pt-4 px-3 text-left sm:text-left lg:text-left text-gray-600 tracking-wider">
             In stablecoin issuance
           </p>
         </div>
