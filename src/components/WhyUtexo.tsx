@@ -77,7 +77,7 @@ export default function WhyUtexo() {
             <div className="w-full sm:w-[400px] md:w-[500px] lg:w-[550px] space-y-3 sm:space-y-4">
               <h3 className="text-[22px] sm:text-[25px] lg:text-[28px] font-normal leading-tight">Backed by Tether, Anchored in Bitcoin</h3>
               <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-black opacity-50 leading-snug">
-                Tether is one of the many investors in Utexo recognizing our mission to bring native USDT adoption to Bitcoin's RGB & Lightning ecosystems.
+                Tether is one of the many investors in Utexo recognizing our mission to bring native USDT adoption to Bitcoin&apos;s RGB & Lightning ecosystems.
               </p>
             </div>
           </div>
