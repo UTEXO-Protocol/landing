@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-9 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
-          <a 
+          {/*<a 
             href="#" 
             className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
             style={{ 
@@ -38,9 +38,20 @@ export default function Footer() {
               letterSpacing: '-0.03em',
               lineHeight: '130%'
             }}
-          >Contact support</a>
+          >Contact support</a>*/}
 
-          <a 
+          <p 
+             
+            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed text-center"
+            style={{ 
+              fontFamily: "'Roboto Mono', sans-serif",
+              fontWeight: 400,
+              fontStyle: 'normal',
+              letterSpacing: '-0.03em',
+              lineHeight: '130%'
+            }}
+          >more coming soon</p>
+{/*          <a 
             href="#" 
             className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
             style={{ 
@@ -50,18 +61,7 @@ export default function Footer() {
               letterSpacing: '-0.03em',
               lineHeight: '130%'
             }}
-          >Terms of service</a>
-          <a 
-            href="#" 
-            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
-            style={{ 
-              fontFamily: "'Roboto Mono', sans-serif",
-              fontWeight: 400,
-              fontStyle: 'normal',
-              letterSpacing: '-0.03em',
-              lineHeight: '130%'
-            }}
-          >Privacy policy</a>
+          >Privacy policy</a>*/}
         </div>
 
         <div className="text-center max-w-full sm:max-w-3xl lg:max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
