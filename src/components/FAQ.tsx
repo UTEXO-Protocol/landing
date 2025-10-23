@@ -117,14 +117,14 @@ export default function FAQ() {
                   {faq.question}
                 </h3>
                 {openIndex === index && (
-                  <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3 mb-8 sm:mb-12 lg:mb-[64px]">
+                  <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3 mb-8 sm:mb-12 lg:mb-14">
                     {faq.answer && (
                       <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-tight">
                         {faq.answer}
                       </p>
                     )}
                     {faq.bullets && faq.bullets.length > 0 && (
-                      <ul className="list-disc list-inside space-y-2 text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                      <ul className="list-disc list-inside space-y-2 text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                         {faq.bullets.map((bullet, i) => (
                           <li key={i}>{bullet}</li>
                         ))}
@@ -157,7 +157,7 @@ export default function FAQ() {
                         </p>
                       )}
                       {faq.bullets && faq.bullets.length > 0 && (
-                        <ul className="list-disc list-inside space-y-2 text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                        <ul className="list-disc list-inside space-y-2 text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                           {faq.bullets.map((bullet, i) => (
                             <li key={i}>{bullet}</li>
                           ))}
