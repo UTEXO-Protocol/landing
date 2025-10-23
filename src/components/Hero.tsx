@@ -49,7 +49,7 @@ export default function Hero() {
                 stablecoin backbone
               </h1>
 
-              <Button className="mt-0 sm:mt-12 lg:mt-[350px]">
+              <Button  href="https://bridge.utexo.com" className="mt-0 sm:mt-12 lg:mt-[350px]">
                 get started
               </Button>
             </div>

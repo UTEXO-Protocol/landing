@@ -45,7 +45,7 @@ export default function Navigation() {
               <span className={`w-6 h-0.5 bg-black transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
             </button>
             
-            <Button variant="black" className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]">
+            <Button href="https://bridge.utexo.com" variant="black" className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]">
               get started
             </Button>
           </div>

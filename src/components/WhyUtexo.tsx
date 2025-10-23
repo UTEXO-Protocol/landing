@@ -107,7 +107,7 @@ export default function WhyUtexo() {
                 </p>
               </div>
               <div>
-                <Button />
+                <Button href="https://bridge.utexo.com"/>
               </div>
             </div>
           </div>

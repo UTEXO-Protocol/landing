@@ -10,14 +10,14 @@ export default function ProductSuite() {
           {/* Product Suite Content - First on Mobile */}
           <div className="col-span-1 lg:col-span-1 flex flex-col justify-between relative p-6 sm:p-8 lg:p-[42px] order-first lg:order-last">
             <div className="space-y-6 sm:space-y-7 lg:space-y-8">
-              <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] font-medium leading-tight" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] leading-tight sm:leading-[50px] lg:leading-[60px] tracking-[-0.03em] font-sans">
                 Product Suite
               </h2>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white leading-snug" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Utexo is scaling Bitcoin&apos;s Lightning and RGB network with a full-stack suite designed for stablecoin adoption and liquidity. Our infrastructure powers instant, private, and low-fee transactions while preserving Bitcoin&apos;s security model.
               </p>
               <div className="mt-6">
-                <Button />
+                <Button href="https://bridge.utexo.com" />
               </div>
             </div>
             <div className="hidden lg:block absolute lg:bottom-[-90px] lg:right-[20px] pointer-events-none">

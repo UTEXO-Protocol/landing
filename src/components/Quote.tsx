@@ -89,6 +89,7 @@ export default function Quote() {
           <Button 
             onClick={handlePrevious}
             variant="black"
+            glare={false}
             iconOnly={true}
             iconRotation="rotate-180 w-4 sm:w-4.5 lg:w-5"
             iconSize={{ width: 20, height: 20 }}
@@ -97,6 +98,7 @@ export default function Quote() {
           <Button 
             onClick={handleNext}
             variant="black"
+            glare={false}
             iconOnly={true}
             iconSize={{ width: 20, height: 20 }}
             className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] border-l border-gray-700"

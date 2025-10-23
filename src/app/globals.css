@@ -59,6 +59,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 * {
   box-sizing: border-box;
 }
@@ -79,3 +81,91 @@ body {
 }
 
 
+/* === Liquid Glass + Chrome Sheen (finalized iOS-style) === */
+
+@keyframes sheen {
+  from { transform: translateX(-160%) skewX(-14deg); }
+  to   { transform: translateX(240%)  skewX(-14deg); }
+}
+
+/* Floating blobs for “liquid” shimmer */
+@keyframes float-a {
+  0%,100% { transform: translate(-8%, -6%) scale(1.05); }
+  50%     { transform: translate(10%,  8%)  scale(0.95); }
+}
+@keyframes float-b {
+  0%,100% { transform: translate(6%, 8%) scale(1.1); }
+  50%     { transform: translate(-12%, -10%) scale(0.9); }
+}
+
+.btn-liquid {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* --- Glass layer --- */
+.btn-liquid::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 60% at 30% 30%, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.12) 40%, transparent 60%) no-repeat,
+    radial-gradient(48% 48% at 70% 65%, rgba(166,214,255,0.30) 0%, rgba(166,214,255,0.10) 50%, transparent 70%) no-repeat;
+  filter: blur(12px) saturate(140%);
+  animation: float-a 6s ease-in-out infinite alternate;
+}
+
+/* --- Chrome sweep --- */
+.btn-liquid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent);
+  width: 40%;
+  transform: translateX(-160%) skewX(-14deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Trigger sheen --- */
+.btn-liquid:hover::after,
+.btn-liquid:focus-visible::after {
+  opacity: 1;
+  animation: sheen .5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* --- Variant tuning --- */
+
+/* Default/secondary: cool glass look */
+.btn-liquid[data-variant="primary"],
+.btn-liquid[data-variant="secondary"]::before {
+  mix-blend-mode: screen;
+}
+
+/* Black variant: keep dark, subtle metallic highlight */
+.btn-liquid[data-variant="black"]::before {
+  background:
+    radial-gradient(60% 60% at 40% 40%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.03) 40%, transparent 60%) no-repeat,
+    radial-gradient(48% 48% at 70% 65%, rgba(255,255,255,0.05) 0%, transparent 70%) no-repeat;
+  filter: blur(6px) brightness(0.8);
+  mix-blend-mode: lighten;
+}
+
+.btn-liquid[data-variant="black"]::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-liquid::before,
+  .btn-liquid::after {
+    animation: none !important;
+  }
+}
