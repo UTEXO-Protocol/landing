@@ -5,6 +5,7 @@ interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  href?: string; 
   iconOnly?: boolean;
   iconRotation?: string;
   iconSize?: { width: number; height: number };
@@ -15,6 +16,7 @@ export default function Button({
   children, 
   className = '', 
   onClick,
+  href = null, 
   iconOnly = false,
   iconRotation = '',
   iconSize = { width: 12, height: 10 }

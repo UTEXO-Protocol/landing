@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-6 sm:gap-9 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           <a 
             href="#" 
-            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity"
+            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
             style={{ 
               fontFamily: "'Roboto Mono', sans-serif",
               fontWeight: 400,
@@ -42,7 +42,7 @@ export default function Footer() {
 
           <a 
             href="#" 
-            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity"
+            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
             style={{ 
               fontFamily: "'Roboto Mono', sans-serif",
               fontWeight: 400,
@@ -53,7 +53,7 @@ export default function Footer() {
           >Terms of service</a>
           <a 
             href="#" 
-            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity"
+            className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
             style={{ 
               fontFamily: "'Roboto Mono', sans-serif",
               fontWeight: 400,
