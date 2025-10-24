@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="relative z-10 px-6 sm:px-12 lg:px-[120px] py-8 sm:py-12 lg:py-[80px]">
             <div className="w-full max-w-[760px]">
               <h1 
-                className="text-[36px] sm:text-[56px] lg:text-[80px] font-medium leading-tight sm:leading-[60px] lg:leading-[82px] tracking-[-0.03em] text-white mb-6 sm:mb-7 lg:mb-8 h-auto lg:h-[164px] font-sans"
+                className="text-[36px] sm:text-[56px] lg:text-[80px] font-medium leading-tight sm:leading-[60px] lg:leading-[82px] tracking-[-0.03em] text-white mb-6 sm:mb-7 lg:mb-8 h-auto lg:h-[164px] font-sans text-shadow-xs"
               >
                 Bitcoin&apos;s private<br />
                 stablecoin backbone
@@ -59,7 +59,7 @@ export default function Hero() {
           
           {/* Text Overlay */}
           <div className="hidden sm:block absolute bottom-8 sm:bottom-12 lg:bottom-[80px] right-4 sm:right-6 lg:right-[30px] max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] z-10">
-            <p className="text-white text-[12px] sm:text-[13px] lg:text-[14px] leading-relaxed">
+            <p className="text-white text-[12px] sm:text-[13px] lg:text-[14px] leading-relaxed text-shadow-xs ">
               Native USDT & BTC, instant zero-fee settlements, lightning fast, private & non-custodial payments. Backed by Tether, settled on Bitcoin natively.
             </p>
           </div>

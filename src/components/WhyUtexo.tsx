@@ -102,7 +102,7 @@ export default function WhyUtexo() {
             
             <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10">
               <div className="text-white space-y-2">
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-mono">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-mono text-shadow-xs">
                   We enable native on-chain BTC/USDT trading pairs (already ~8 % of all CEX daily volume, ~$12B+).
                 </p>
               </div>
