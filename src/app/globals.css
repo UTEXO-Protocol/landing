@@ -83,16 +83,17 @@ body {
 
 /* === Liquid Glass + Chrome Sheen (finalized iOS-style) === */
 
+/* Existing keyframes unchanged */
 @keyframes sheen {
   from { transform: translateX(-160%) skewX(-14deg); }
-  to   { transform: translateX(240%)  skewX(-14deg); }
+  to   { transform: translateX(240%) skewX(-14deg); }
 }
 
-/* Floating blobs for “liquid” shimmer */
 @keyframes float-a {
   0%,100% { transform: translate(-8%, -6%) scale(1.05); }
-  50%     { transform: translate(10%,  8%)  scale(0.95); }
+  50%     { transform: translate(10%, 8%) scale(0.95); }
 }
+
 @keyframes float-b {
   0%,100% { transform: translate(6%, 8%) scale(1.1); }
   50%     { transform: translate(-12%, -10%) scale(0.9); }
@@ -105,7 +106,7 @@ body {
   will-change: transform;
 }
 
-/* --- Glass layer --- */
+/* --- Glass layer (unchanged) --- */
 .btn-liquid::before {
   content: "";
   position: absolute;
@@ -120,21 +121,36 @@ body {
   animation: float-a 6s ease-in-out infinite alternate;
 }
 
-/* --- Chrome sweep --- */
+/* --- Chrome sweep (unchanged) --- */
+
+
 .btn-liquid::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   border-radius: inherit;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent);
+
+  /* keep your 40% beam width */
   width: 40%;
+
+  /* this is what slides across during hover via @keyframes sheen */
   transform: translateX(-160%) skewX(-14deg);
+
   opacity: 0;
   pointer-events: none;
+
+  /* 👇 NEW: use a CSS variable for the highlight gradient */
+  background: var(--sheen-gradient, linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.9),
+    transparent
+  ));
 }
 
-/* --- Trigger sheen --- */
+
+/* --- Trigger sheen (unchanged) --- */
 .btn-liquid:hover::after,
 .btn-liquid:focus-visible::after {
   opacity: 1;
@@ -143,33 +159,55 @@ body {
 
 /* --- Variant tuning --- */
 
-/* Default/secondary: cool glass look */
+/* Default/secondary: cool glass look (unchanged) */
 .btn-liquid[data-variant="primary"],
 .btn-liquid[data-variant="secondary"]::before {
   mix-blend-mode: screen;
 }
 
-/* Black variant: keep dark, subtle metallic highlight */
+/* Black variant: add Bitcoin gradient layer */
 .btn-liquid[data-variant="black"]::before {
   background:
+    /* Existing radial gradients */
     radial-gradient(60% 60% at 40% 40%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.03) 40%, transparent 60%) no-repeat,
-    radial-gradient(48% 48% at 70% 65%, rgba(255,255,255,0.05) 0%, transparent 70%) no-repeat;
+    radial-gradient(48% 48% at 70% 65%, rgba(255,255,255,0.05) 0%, transparent 70%) no-repeat,
+    /* New Bitcoin orange gradient */
+    linear-gradient(
+      135deg,
+      rgba(255, 153, 0, 0.15) 0%, /* Bitcoin #FF9900 at low opacity */
+      transparent 50%
+    );
   filter: blur(6px) brightness(0.8);
   mix-blend-mode: lighten;
+  animation: float-a 6s ease-in-out infinite alternate; /* Unchanged */
 }
+
 
 .btn-liquid[data-variant="black"]::after {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+  --sheen-gradient: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 153, 0, 0.4) 40%,  /* Bitcoin ember */
+    rgba(255, 255, 255, 0.4) 60%, /* chrome edge */
+    transparent 100%
+  );
 }
 
-/* Reduced motion */
+
+
+/* Hover/focus enhancement for black variant */
+.btn-liquid[data-variant="black"]:hover,
+.btn-liquid[data-variant="black"]:focus-visible {
+  transform: scale(1.05); /* Subtle scale for tactile luxury */
+}
+
+/* Reduced motion (unchanged) */
 @media (prefers-reduced-motion: reduce) {
   .btn-liquid::before,
   .btn-liquid::after {
     animation: none !important;
   }
 }
-
 
 /* === Premium floating motion === */
 
