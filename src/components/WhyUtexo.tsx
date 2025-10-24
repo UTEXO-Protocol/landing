@@ -54,7 +54,7 @@ export default function WhyUtexo() {
               </div>
 
               <div className="col-span-1 flex md:pt-2 md:px-3 lg:px-4">
-                <Button variant="black" className="w-[120px] h-[48px] sm:w-[132px] sm:h-[52px] lg:w-[144px] lg:h-[55px]">
+                <Button href="https://bridge.utexo.com" variant="black" className="w-[120px] h-[48px] sm:w-[132px] sm:h-[52px] lg:w-[144px] lg:h-[55px]">
                   get started
                 </Button>
               </div>
