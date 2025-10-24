@@ -69,7 +69,7 @@ export default function ProductSuite() {
               alt=""
               width={180}
               height={220}
-              className="w-[180px] h-auto absolute -top-20 right-30"
+              className="w-[180px] h-auto absolute -top-20 right-30 animate-floatRing"
               sizes="(max-width:1023px) 180px, 0"
             />
           </div>
