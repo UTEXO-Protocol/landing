@@ -169,3 +169,57 @@ body {
     animation: none !important;
   }
 }
+
+
+/* === Premium floating motion === */
+
+/* Smaller / foreground element: a gentle hover with XY drift */
+@keyframes floatOrb {
+  0% {
+    transform: translate3d(-2px, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(3px, -10px, 0) rotate(1.2deg);
+  }
+  100% {
+    transform: translate3d(-2px, 0px, 0) rotate(0deg);
+  }
+}
+
+/* Larger ring: slightly slower, more "weighty", tiny roll */
+@keyframes floatRing {
+  0% {
+    transform: translate3d(2px, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-3px, -7px, 0) rotate(-1deg);
+  }
+  100% {
+    transform: translate3d(2px, 0px, 0) rotate(0deg);
+  }
+}
+
+/* Utilities */
+.animate-floatOrb {
+  animation: floatOrb 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-floatRing {
+  animation: floatRing 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* slight stagger helper if you ever need it */
+.float-delay {
+  animation-delay: 1.5s;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-floatOrb,
+  .animate-floatRing {
+    animation: none !important;
+  }
+}
+

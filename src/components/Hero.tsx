@@ -18,7 +18,9 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Center */}
-          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-1/3 md:-translate-x-1/2 z-20">
+          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-1/3 md:-translate-x-1/2 z-20 animate-floatOrb"   style={{
+    filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))"
+  }}>
             <Image
               src="/Group 39.png"
               alt="3D Element Bottom Center"
@@ -29,7 +31,7 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Large Ring */}
-          <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px]">
+          <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px] animate-floatRing">
             <Image
               src="/first.png"
               alt="3D Element Bottom"
