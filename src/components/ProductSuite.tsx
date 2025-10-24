@@ -20,10 +20,11 @@ export default function ProductSuite() {
                 <Button href="https://bridge.utexo.com" />
               </div>
             </div>
-            <div className="hidden lg:block absolute lg:bottom-[-90px] lg:right-[20px] pointer-events-none">
+            <div className="hidden lg:block absolute lg:bottom-[-90px] lg:right-[20px] pointer-events-none animate-floatRing" style={{
+    filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))" }}>
               <Image
                 src="/last.png"
-                alt="3D Element"
+                alt="3D Coin Element"
                 width={120}
                 height={120}
                 className="lg:w-[185.4px] lg:h-[232px]"
@@ -33,14 +34,14 @@ export default function ProductSuite() {
             <div className="hidden lg:block absolute lg:bottom-[200px] lg:right-[70px] pointer-events-none" aria-hidden="true">
               <Image
                 src="/Group42.png"
-                alt=""               // purely decorative
+                alt="Background"
                 width={120}
                 height={120}
                 className="lg:w-[100px] lg:h-auto"
               />
             </div>
 
-            <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[160px] pointer-events-none">
+            <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[160px] pointer-events-none animate-floatOrb" >
               <Image
                 src="/first.png"
                 alt="3D Element"

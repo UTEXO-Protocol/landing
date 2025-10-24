@@ -178,7 +178,7 @@ export default function FAQ() {
             alt="3D Element"
             width={372}
             height={372}
-            className="w-44 md:!w-80 md:h-80 h-auto"
+            className="w-44 md:!w-80 md:h-80 h-auto drop-shadow-2xl/35"
           />
         </div>
       </div>

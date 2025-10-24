@@ -18,12 +18,12 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Center */}
-          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-1/3 md:-translate-x-1/2 z-20 animate-floatOrb"   style={{
+          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-1/3 md:-translate-x-1/2 z-20 animate-floatRing"   style={{
     filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))"
   }}>
             <Image
               src="/Group 39.png"
-              alt="3D Element Bottom Center"
+              alt="3D Coin Element"
               width={150}
               height={150}
               className="w-20 sm:w-28 lg:w-32 h-auto"
@@ -31,13 +31,13 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Large Ring */}
-          <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px] animate-floatRing">
+          <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px] animate-floatOrb">
             <Image
               src="/first.png"
-              alt="3D Element Bottom"
+              alt="3D Element"
               width={350}
               height={350}
-              className="w-36 lg:w-80 h-auto"
+              className="w-36 lg:w-64 h-auto"
             />
           </div>
           
