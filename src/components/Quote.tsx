@@ -8,6 +8,7 @@ interface QuoteData {
   logo?: string;
   logoAlt: string;
   subtitle?: string; 
+  source?: string;
 }
 
 export default function Quote() {
@@ -17,17 +18,20 @@ export default function Quote() {
     {
       quote: "Tether to launch USDT on RGB, expanding native Bitcoin stablecoin support RGB protocol enables tokenized USDT and NFTs on Bitcoin First RGB bridge brings USDT from Ethereum to Bitcoin via Lightning",
       logo: "/BM.png",
-      logoAlt: "Bitcoin Magazine"
+      logoAlt: "Bitcoin Magazine",
+      source: "https://bitcoinmagazine.com/news/first-rgb-bridge-brings-usdt-from-ethereum-to-bitcoin-via-lightning"
     },
     {
       quote: "By bringing USDT to RGB, Tether is helping to unlock a new frontier for money on Bitcoin.",
       logo: "/tether_logo_icon_black.png",
-      logoAlt: "Tether"
+      logoAlt: "Tether",
+      source: "https://tether.io/news/tether-to-launch-usdt-on-rgb-expanding-native-bitcoin-stablecoin-support"
     },
     {
       quote: "Bitcoin deserves a stablecoin that feels truly native, lightweight, private, and scalable.",
       logoAlt: "Paolo A.",
-      subtitle: "CEO of Tether"
+      subtitle: "CEO of Tether",
+      source: "https://tether.io/news/tether-to-launch-usdt-on-rgb-expanding-native-bitcoin-stablecoin-support"
     }
   ];
 
@@ -44,6 +48,8 @@ export default function Quote() {
       <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] min-h-[280px] sm:min-h-[320px] lg:h-[358px] border-[1px] border-[#C6C6C6] bg-[#E2E2E2] mx-auto flex items-center overflow-hidden">
         <div className="w-full sm:w-[600px] md:w-[850px] lg:w-[1094px] mx-auto px-4 sm:px-6 lg:px-0">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-0">
+
+            {/* Quote text */}
             <div className="w-full sm:w-[400px] md:w-[600px] lg:w-[788px]">
               <blockquote 
                 key={currentIndex}
@@ -54,29 +60,74 @@ export default function Quote() {
               </blockquote>
             </div>
 
+            {/* Logo / Author */}
             <div className="flex items-center justify-center">
               {quotes[currentIndex].logo ? (
-                <Image
-                  key={`logo-${currentIndex}`}
-                  src={quotes[currentIndex].logo}
-                  alt={quotes[currentIndex].logoAlt}
-                  width={200}
-                  height={80}
-                  className="w-[100px] h-auto sm:w-[120px] lg:w-[144px] animate-fadeIn"
-                  priority={false}
-                />
-              ) : (
-                <div key={`text-${currentIndex}`} className="text-center animate-fadeIn">
-                  <div
-                    className="text-xl md:text-[40px] font-bold"
-                    style={{ fontFamily: "'PP Mori', sans-serif" }}
+                // If we have a logo (e.g. Bitcoin Magazine / Tether)
+                quotes[currentIndex].source ? (
+                  <a
+                    href={quotes[currentIndex].source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="animate-fadeIn hover:opacity-80 transition-opacity"
                   >
-                    {quotes[currentIndex].logoAlt}
-                  </div>
-                  {quotes[currentIndex].subtitle && (
-                    <div className="text-black/50 text-sm sm:text-base mt-1">
-                      {quotes[currentIndex].subtitle}
-                    </div>
+                    <Image
+                      key={`logo-${currentIndex}`}
+                      src={quotes[currentIndex].logo as string}
+                      alt={quotes[currentIndex].logoAlt}
+                      width={200}
+                      height={80}
+                      className="w-[100px] h-auto sm:w-[120px] lg:w-[144px]"
+                      priority={false}
+                    />
+                  </a>
+                ) : (
+                  <Image
+                    key={`logo-${currentIndex}`}
+                    src={quotes[currentIndex].logo as string}
+                    alt={quotes[currentIndex].logoAlt}
+                    width={200}
+                    height={80}
+                    className="w-[100px] h-auto sm:w-[120px] lg:w-[144px] animate-fadeIn"
+                    priority={false}
+                  />
+                )
+              ) : (
+                // No logo → text source (e.g. Paolo A.)
+                <div key={`text-${currentIndex}`} className="text-center animate-fadeIn">
+                  {quotes[currentIndex].source ? (
+                    <a
+                      href={quotes[currentIndex].source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group"
+                    >
+                      <div
+                        className="text-xl md:text-[40px] font-bold group-hover:underline"
+                        style={{ fontFamily: "'PP Mori', sans-serif" }}
+                      >
+                        {quotes[currentIndex].logoAlt}
+                      </div>
+                      {quotes[currentIndex].subtitle && (
+                        <div className="text-black/50 text-sm sm:text-base mt-1 group-hover:text-black/70 transition-colors">
+                          {quotes[currentIndex].subtitle}
+                        </div>
+                      )}
+                    </a>
+                  ) : (
+                    <>
+                      <div
+                        className="text-xl md:text-[40px] font-bold"
+                        style={{ fontFamily: "'PP Mori', sans-serif" }}
+                      >
+                        {quotes[currentIndex].logoAlt}
+                      </div>
+                      {quotes[currentIndex].subtitle && (
+                        <div className="text-black/50 text-sm sm:text-base mt-1">
+                          {quotes[currentIndex].subtitle}
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               )}
@@ -85,6 +136,7 @@ export default function Quote() {
           </div>
         </div>
 
+        {/* Arrows */}
         <div className="flex justify-end gap-0 absolute bottom-0 right-0">
           <Button 
             onClick={handlePrevious}
@@ -108,4 +160,3 @@ export default function Quote() {
     </section>
   );
 }
-
