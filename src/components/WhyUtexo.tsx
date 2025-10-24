@@ -70,7 +70,7 @@ export default function WhyUtexo() {
                 alt="Shield"
                 width={120}
                 height={120}
-                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px] drop-shadow-2xl/35 shadow-black"
+                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px] drop-shadow-xl/35 shadow-black"
               />
             </div>
             
