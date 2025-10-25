@@ -111,7 +111,7 @@ export default function FAQ() {
             {leftFAQs.map((faq, index) => (
               <div key={index} className="pr-0 sm:pr-12 lg:pr-[72px]">
                 <h3 
-                  className="text-[18px] sm:text-[21px] lg:text-[24px] mb-4 sm:mb-6 lg:mb-[32px] font-sans font-normal cursor-pointer hover:opacity-70 transition-opacity"
+                  className="text-[18px] sm:text-[21px] mb-2 sm:mb-3 lg:mb-4 font-sans font-normal cursor-pointer hover:opacity-70 transition-opacity"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 >
                   {faq.question}
@@ -143,7 +143,7 @@ export default function FAQ() {
               return (
                 <div key={rightIndex} className="pr-0 sm:pr-12 lg:pr-[72px]">
                   <h3 
-                    className="text-[18px] sm:text-[21px] lg:text-[24px] mb-4 sm:mb-6 lg:mb-[32px] font-normal cursor-pointer hover:opacity-70 transition-opacity"
+                    className="text-[18px] sm:text-[21px] mb-2 sm:mb-3 lg:mb-4 font-normal cursor-pointer hover:opacity-70 transition-opacity"
                     style={{ fontFamily: "'PP Mori', sans-serif" }}
                     onClick={() => setOpenIndex(openIndex === rightIndex ? null : rightIndex)}
                   >
