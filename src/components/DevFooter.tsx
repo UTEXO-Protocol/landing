@@ -2,18 +2,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className=" bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pb-12 sm:pb-20 lg:pb-[120px] lg:pt-10 mx-auto border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] ">
-{/*<div className="mb-8 sm:mb-10 lg:mb-12 flex justify-center">
-  <Image
-    src="/UtexoLogo.png"
-    alt="Utexo Logo"
-    width={372}
-    height={372}
-    className="w-44 md:!w-80 md:h-80 h-auto drop-shadow-2xl/35"
-  />
-</div>*/}
-
+    <footer className=" px-4 sm:px-0 bg-black ">
+      <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pb-12 sm:pb-20 lg:pb-[120px] mx-auto border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] ">
+      
       <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
           <Image
             src="/end0.png"
@@ -24,17 +15,6 @@ export default function Footer() {
           />
         </div>
         <div className="w-full sm:w-[500px] lg:w-[611px] mx-auto py-6 sm:py-8 lg:py-0">
-            <div className="mb-8 sm:mb-10 lg:mb-12 flex justify-center">
-              <Image
-                src="/UtexoLogo.png"
-                alt="Utexo Logo"
-                width={372}
-                height={372}
-                className="w-44 md:!w-80 md:h-80 h-auto drop-shadow-2xl/35"
-              />
-            </div>
-
-          {/* === Social icons (existing) === */}
         <div className="flex justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-7 lg:mb-8">
           <a href="https://x.com/utexocom" className="hover:opacity-70 transition-opacity">
             <Image src="/x.png" alt="X (Twitter)" width={24} height={24} className="w-5 h-5 sm:w-5 sm:h-5 lg:w-7 lg:h-7" />
