@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import toast from "react-hot-toast";
+import Button from "@/components/Button";
 
 export default function NewsletterCTA() {
   const [email, setEmail] = useState("");
@@ -95,16 +96,16 @@ export default function NewsletterCTA() {
               autoComplete="email"
               aria-label="Email address"
               className="
-                w-full flex-1 rounded-[8px]
+                w-full h-[55px] flex-1 rounded-[8px]
                 border border-[#C6C6C6] bg-[#d4d4d4]
-                px-3 py-[10px]
+                px-3 py-[10px] leading-none appearance-none 
                 text-[11px] font-mono uppercase tracking-[0.08em]
                 text-black placeholder:text-[#8f8f8f]
                 focus:outline-none focus:ring-2 focus:ring-black/20
               "
             />
 
-            <button
+{/*            <button
               type="submit"
               disabled={pending}
               className="
@@ -118,7 +119,38 @@ export default function NewsletterCTA() {
             >
               <span className="mr-1">{pending ? "..." : "Sign Up"}</span>
               <span aria-hidden>➔</span>
-            </button>
+            </button>*/}
+{/*            <button
+              type="submit"
+              disabled={pending}
+              className="
+                relative inline-flex items-center justify-center
+                w-[144px] h-[55px] rounded-lg border border-white/10
+                bg-black text-white text-[13px] font-mono font-bold uppercase
+                transition-all active:scale-[0.98] cursor-pointer
+                hover:bg-gray-800 
+              "
+            >
+              <span className="flex items-center gap-2">
+                {pending ? "..." : "Sign Up"}
+                <img
+                  src="/Vector.png"
+                  alt="arrow"
+                  width={12}
+                  height={10}
+                  className="inline-block"
+                />
+              </span>
+            </button>*/}
+              <Button
+              variant="black"
+              type="submit"
+              loading={pending}
+              className=""
+            >
+              Sign Up
+
+            </Button>
           </form>
         </div>
 
