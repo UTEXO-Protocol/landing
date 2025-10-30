@@ -45,7 +45,7 @@ export default function DevHero() {
           </div>
 
           {/* 3D ring — big asset (/last.png), position like Figma */}
-          <div className="pointer-events-none absolute z-0 hidden lg:block lg:-bottom-24 lg:left-48 animate-floatOrb">
+          <div className="pointer-events-none absolute z-0 hidden lg:block lg:-bottom-20 lg:left-52 animate-floatOrb">
             <Image src="/last.png" alt="" width={260} height={260} className="w-[200px] h-auto" priority />
           </div>
         </div>
