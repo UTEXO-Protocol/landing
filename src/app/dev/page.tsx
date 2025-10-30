@@ -1,5 +1,7 @@
 import DevNavigation from "@/components/DevNavigation";
 import DevHero from "@/components/DevHero";
+import DevWhatIs from "@/components/DevWhatIs";
+
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -18,7 +20,7 @@ export default function DevPage() {
       <DevHero />
 
       {/* TODO: upcoming Dev sections (same order we agreed) */}
-      {/* <DevWhatIs /> */}
+      <DevWhatIs />
       {/* <DevProductSuite /> */}
       {/* <DevWhy /> */}
       {/* <DevPricing /> */}
