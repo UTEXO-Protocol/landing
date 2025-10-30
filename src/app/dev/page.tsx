@@ -1,7 +1,6 @@
 import DevNavigation from "@/components/DevNavigation";
 import DevHero from "@/components/DevHero";
 import DevWhatIs from "@/components/DevWhatIs";
-
 import Footer from "@/components/Footer";
 
 export const metadata = {
