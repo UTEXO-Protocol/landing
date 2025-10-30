@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function ProductSuite() {
   return (
-    <section className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0">
+    <section id="ProductSuite" className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0">
       <div className="w-full sm:w-[640px] md:w-[900px] bg-black lg:w-[1320px] mx-auto">
         {/* Grid Container with Reordered Content for Mobile */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
