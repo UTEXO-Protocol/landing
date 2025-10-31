@@ -5,6 +5,9 @@ import DevWhy from "@/components/DevWhy";
 
 import DevProductSuite from "@/components/DevProductSuite";
 import DevPricing from "@/components/DevPricing";
+import DevFaq from "@/components/DevFAQ";
+import DevFinal from "@/components/DevFinalCTA";
+
 
 import Footer from "@/components/DevFooter";
 
@@ -28,8 +31,8 @@ export default function DevPage() {
       <DevProductSuite /> 
        <DevWhy /> 
        <DevPricing /> 
-      {/* <DevFaq /> */}
-      {/* <NewsletterCTA /> */}
+       <DevFaq /> 
+       <DevFinal /> 
 
       {/* Footer (can reuse for now; dark variant later if needed) */}
       <div className="bg-black">
