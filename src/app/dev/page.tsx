@@ -4,8 +4,9 @@ import DevWhatIs from "@/components/DevWhatIs";
 import DevWhy from "@/components/DevWhy";
 
 import DevProductSuite from "@/components/DevProductSuite";
+import DevPricing from "@/components/DevPricing";
 
-import Footer from "@/components/Footer";
+import Footer from "@/components/DevFooter";
 
 export const metadata = {
   title: "Dev Utexo — RGB & Lightning Infrastructure Cloud",
@@ -26,7 +27,7 @@ export default function DevPage() {
       <DevWhatIs />
       <DevProductSuite /> 
        <DevWhy /> 
-      {/* <DevPricing /> */}
+       <DevPricing /> 
       {/* <DevFaq /> */}
       {/* <NewsletterCTA /> */}
 
