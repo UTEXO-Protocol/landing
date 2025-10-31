@@ -4,7 +4,7 @@ export default function DevWhatIs() {
     <section className="bg-black text-white">
       <div className="mx-auto w-full px-4 sm:w-[640px] md:w-[900px] lg:w-[1320px]
                       border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px] border-b">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-x-10 py-10 lg:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-x-10 py-10 lg:pt-12 lg:pb-14">
           {/* Label (col 1) */}
           <div className="lg:col-span-1">
             <span className="font-mono uppercase tracking-[0.20em] text-[12px] text-white/70">

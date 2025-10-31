@@ -10,7 +10,7 @@ export default function DevHero() {
                       border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]
                       border-t border-b">
         {/* hero height tracks landing proportions */}
-        <div className="relative overflow-visible h-[420px] sm:h-[560px] lg:h-[740px]">
+        <div className="relative overflow-visible h-[400px] sm:h-[550px] lg:h-[740px]">
           {/* content sits higher (not fully centered) */}
           <div className="relative z-10 flex h-full flex-col items-center text-center
                           justify-center ">
@@ -22,9 +22,9 @@ export default function DevHero() {
             {/* headline – Mori / font-sans */}
             <h1 className="font-sans font-medium tracking-[-0.03em]
                            text-[36px] sm:text-[56px] lg:text-[80px]
-                           leading-[1.05] lg:leading-[82px] max-w-[1040px]">
-              The Infrastructure Cloud<wbr/>
-              for RGB and Lightning Network.
+                           leading-[1.05] lg:leading-[82px] lg:px-24 max-w-[1040px]">
+              The Infrastructure<wbr/> Cloud 
+              for RGB and<wbr/> Lightning Network.
             </h1>
 
             {/* subhead – Mori / font-sans */}
@@ -35,10 +35,10 @@ export default function DevHero() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button variant="secondary" href="#request-demo" className="w-[180px] h-[48px] text-[12px]">
+              <Button variant="black" href="#request-demo" className="w-[180px] h-[48px] text-[12px]">
                 request demo
               </Button>
-              <Button variant="secondary" href="#docs" className="w-[160px] h-[48px] text-[12px]">
+              <Button variant="black" href="#docs" className="w-[160px] h-[48px] text-[12px]">
                 view docs
               </Button>
             </div>

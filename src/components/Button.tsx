@@ -174,7 +174,7 @@ export default function Button({
 
   const baseClass = iconOnly
     ? `relative overflow-hidden text-white transition-all flex items-center justify-center cursor-pointer ${hoverClass}`
-    : `relative overflow-hidden w-[144px] h-[55px] text-white text-[13px] font-medium transition-all rounded-lg flex items-center justify-center gap-2 uppercase border border-white/10 cursor-pointer ${hoverClass}`;
+    : `relative overflow-hidden w-[144px] h-[55px] text-white text-[12px] font-medium transition-all rounded-lg flex items-center justify-center gap-2 uppercase border border-white/10 cursor-pointer ${hoverClass}`;
 
   const chromeLayers =
     liquid && glare
