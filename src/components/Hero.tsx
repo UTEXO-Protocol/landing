@@ -22,7 +22,7 @@ export default function Hero() {
     filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))"
   }}>
             <Image
-              src="/Group 39.png"
+              src="/Group39.webp"
               alt="3D Coin Element"
               width={150}
               height={150}
@@ -33,7 +33,7 @@ export default function Hero() {
           {/* 3D Element - Bottom Large Ring */}
           <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px] animate-floatOrb">
             <Image
-              src="/first.png"
+              src="/first.webp"
               alt="3D Element"
               width={350}
               height={350}
