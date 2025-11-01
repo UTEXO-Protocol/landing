@@ -59,7 +59,7 @@ export default function NewsletterCTA() {
       >
         <div className="mx-auto max-w-[900px] text-center">
           {/* top microcopy */}
-          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#6a6a6a]">
+          <p className="font-ingram text-[11px] uppercase tracking-[0.08em] text-[#6a6a6a]">
             Zero spam. Pure signal.
           </p>
 
@@ -70,7 +70,7 @@ export default function NewsletterCTA() {
           </h2>
 
           {/* bottom helper line */}
-          <p className="mt-4 text-[13px] px-10 md:px-0 leading-relaxed text-[#6a6a6a] font-mono">
+          <p className="mt-4 text-[13px] px-10 md:px-0 leading-relaxed text-[#6a6a6a] font-ingram">
             Join our newsletter and never miss news, tips, and insights.
           </p>
 
@@ -99,7 +99,7 @@ export default function NewsletterCTA() {
                 w-full h-[55px] flex-1 rounded-[8px]
                 border border-[#C6C6C6] bg-[#d4d4d4]
                 px-3 py-[10px] leading-none appearance-none 
-                text-[11px] font-mono uppercase tracking-[0.08em]
+                text-[11px] font-ingram uppercase tracking-[0.08em]
                 text-black placeholder:text-[#8f8f8f]
                 focus:outline-none focus:ring-2 focus:ring-black/20
               "

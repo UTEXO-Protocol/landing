@@ -186,7 +186,7 @@ export default function Button({
       : ""; // Plain button
 
   const style = {
-    fontFamily: iconOnly ? undefined : "Roboto Mono, monospace",
+    fontFamily: iconOnly ? undefined : "Ingram Mono, monospace",
     ...getBackgroundStyle(),
   };
 
@@ -204,7 +204,7 @@ export default function Button({
         />
       ) : (
         <>
-          <span className="font-bold font-mono">{label}</span>
+          <span className="font-bold font-ingram">{label}</span>
           {!loading && (
             <Image
               src="/Vector.png"

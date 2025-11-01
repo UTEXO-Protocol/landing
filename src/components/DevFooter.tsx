@@ -84,7 +84,7 @@ export default function DevFooter() {
             <p
               className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed text-center"
               style={{
-                fontFamily: "'Roboto Mono', sans-serif",
+                fontFamily: "'Ingram Mono', sans-serif",
                 fontWeight: 400,
                 letterSpacing: "-0.03em",
                 lineHeight: "130%",
@@ -109,7 +109,7 @@ export default function DevFooter() {
             <p
               className="text-[8px] sm:text-[9px] lg:text-[10px] text-white/60 uppercase"
               style={{
-                fontFamily: "'Roboto Mono', sans-serif",
+                fontFamily: "'Ingram Mono', sans-serif",
                 fontWeight: 400,
                 letterSpacing: "-0.03em",
                 lineHeight: "130%",

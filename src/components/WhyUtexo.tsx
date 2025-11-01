@@ -7,7 +7,7 @@ export default function WhyUtexo() {
       <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] mx-auto border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           <div className="w-full sm:w-[120px] lg:w-[150px] ml-0 sm:ml-4 lg:ml-[32px] shrink-0">
-            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-mono">Why Utexo</span>
+            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-ingram">Why Utexo</span>
           </div>
 
           <div className="flex-1">
@@ -102,7 +102,7 @@ export default function WhyUtexo() {
             
             <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10">
               <div className="text-white space-y-2">
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-mono text-shadow-xs">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-ingram text-shadow-xs">
                   We enable native on-chain BTC/USDT trading pairs (already ~8 % of all CEX daily volume, ~$12B+).
                 </p>
               </div>

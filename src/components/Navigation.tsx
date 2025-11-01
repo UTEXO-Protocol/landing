@@ -103,7 +103,7 @@ export default function Navigation() {
                       <div
                         className="
                           flex items-center justify-between
-                          font-mono text-sm text-white/50
+                          font-ingram text-sm text-white/50
                           cursor-not-allowed select-none pr-2
                         "
                         title="Coming soon"
@@ -120,13 +120,13 @@ export default function Navigation() {
 
               <a
                 href="#features"
-                className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
               >
                 Features
               </a>
               <a
                 href="#faqs"
-                className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
               >
                 FAQs
               </a>
@@ -172,7 +172,7 @@ export default function Navigation() {
             <a
               href="#why-utexo"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               Why Utexo
             </a>
@@ -181,7 +181,7 @@ export default function Navigation() {
             <button
               onClick={() => setMobileProductsOpen((v) => !v)}
               aria-expanded={mobileProductsOpen}
-              className="text-[14px] font-mono tracking-wide uppercase flex items-center justify-between py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase flex items-center justify-between py-1"
             >
               <span>Products</span>
               <svg
@@ -213,11 +213,11 @@ export default function Navigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-mono uppercase text-black hover:opacity-80"
+                  className="text-[13px] font-ingram uppercase text-black hover:opacity-80"
                 >
                   Bridge <span className="text-black/50">· Live ↗</span>
                 </a>
-                <span className="text-[13px] font-mono uppercase text-black/40">
+                <span className="text-[13px] font-ingram uppercase text-black/40">
                   Dev <span className="text-black/40">· Soon</span>
                 </span>
               </div>
@@ -226,14 +226,14 @@ export default function Navigation() {
             <a
               href="#features"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               Features
             </a>
             <a
               href="#faqs"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-mono tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
             >
               FAQs
             </a>

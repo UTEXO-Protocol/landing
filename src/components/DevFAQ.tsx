@@ -45,7 +45,7 @@ export default function DevFAQ() {
           {/* Left Column - FAQS Label */}
           <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2 ml-0 sm:ml-6 lg:ml-[43px]">
             <span
-              className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase text-white font-mono tracking-tight"
+              className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase text-white font-ingram tracking-tight"
               style={{ letterSpacing: '-0.03em', lineHeight: '130%' }}
             >
               FAQS

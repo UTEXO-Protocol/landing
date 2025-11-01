@@ -25,7 +25,7 @@ export default function DevFinalCTA() {
             <div
               className="mb-4 uppercase text-[12px] text-white/50"
               style={{
-                fontFamily: "'Roboto Mono', sans-serif",
+                fontFamily: "'Ingram Mono', sans-serif",
                 letterSpacing: "-0.03em",
                 lineHeight: "130%",
               }}

@@ -88,7 +88,7 @@ export default function DevNavigation() {
                         rel="noopener noreferrer"
                         className="
                           flex items-center justify-between
-                          font-mono text-sm text-white/90
+                          font-ingram text-sm text-white/90
                           pr-2 transition-all duration-200
                           hover:text-[#FF9900]/80 hover:tracking-[0.015em] hover:opacity-100
                         "
@@ -104,7 +104,7 @@ export default function DevNavigation() {
                       <div
                         className="
                           flex items-center justify-between
-                          font-mono text-sm text-white/45
+                          font-ingram text-sm text-white/45
                           cursor-not-allowed select-none pr-2
                         "
                         title="Coming soon"
@@ -121,13 +121,13 @@ export default function DevNavigation() {
 
               <a
                 href="#features"
-                className="lg:text-[14px] tracking-wide uppercase font-mono text-white/90 hover:text-white transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram text-white/90 hover:text-white transition-opacity"
               >
                 Features
               </a>
               <a
                 href="#faqs"
-                className="lg:text-[14px] tracking-wide uppercase font-mono text-white/90 hover:text-white transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram text-white/90 hover:text-white transition-opacity"
               >
                 FAQs
               </a>
@@ -173,7 +173,7 @@ export default function DevNavigation() {
             <a
               href="#why-utexo"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-mono tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
             >
               Why Utexo
             </a>
@@ -182,7 +182,7 @@ export default function DevNavigation() {
             <button
               onClick={() => setMobileProductsOpen((v) => !v)}
               aria-expanded={mobileProductsOpen}
-              className="text-[14px] font-mono tracking-wide uppercase flex items-center justify-between py-1 text-white/90"
+              className="text-[14px] font-ingram tracking-wide uppercase flex items-center justify-between py-1 text-white/90"
             >
               <span>Products</span>
               <svg
@@ -214,11 +214,11 @@ export default function DevNavigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-mono uppercase text-white hover:text-[#FF9900]/80"
+                  className="text-[13px] font-ingram uppercase text-white hover:text-[#FF9900]/80"
                 >
                   Bridge <span className="text-white/50">· Live ↗</span>
                 </a>
-                <span className="text-[13px] font-mono uppercase text-white/40">
+                <span className="text-[13px] font-ingram uppercase text-white/40">
                   Dev <span className="text-white/40">· Soon</span>
                 </span>
               </div>
@@ -227,7 +227,7 @@ export default function DevNavigation() {
             <a
               href="#features"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-mono tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
             >
               Features
             </a>

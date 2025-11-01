@@ -7,7 +7,7 @@ export default function DevWhatIs() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-x-10 py-10 lg:pt-12 lg:pb-14">
           {/* Label (col 1) */}
           <div className="lg:col-span-1">
-            <span className="font-mono uppercase tracking-[0.20em] text-[12px] text-white/70">
+            <span className="font-ingram uppercase tracking-[0.20em] text-[12px] text-white/70">
               What is Dev Utexo?
             </span>
           </div>

@@ -86,7 +86,7 @@ export default function Footer() {
              
             className="text-[10px] sm:text-[11px] lg:text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed text-center"
             style={{ 
-              fontFamily: "'Roboto Mono', sans-serif",
+              fontFamily: "'Ingram Mono', sans-serif",
               fontWeight: 400,
               fontStyle: 'normal',
               letterSpacing: '-0.03em',
@@ -110,7 +110,7 @@ export default function Footer() {
           <p 
             className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#959595] uppercase"
             style={{ 
-              fontFamily: "'Roboto Mono', sans-serif",
+              fontFamily: "'Ingram Mono', sans-serif",
               fontWeight: 400,
               fontStyle: 'normal',
               letterSpacing: '-0.03em',

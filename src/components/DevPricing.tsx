@@ -12,7 +12,7 @@ export default function DevPricing() {
           <span
             className="uppercase text-[12px] sm:text-[12px] lg:text-[16px] text-white"
             style={{
-              fontFamily: "'Roboto Mono', sans-serif",
+              fontFamily: "'Ingram Mono', sans-serif",
               fontWeight: 400,
               letterSpacing: "-0.03em",
               lineHeight: "130%",
@@ -23,7 +23,7 @@ export default function DevPricing() {
           <span
             className="uppercase text-[12px] sm:text-[12px] lg:text-[16px] text-white/50"
             style={{
-              fontFamily: "'Roboto Mono', sans-serif",
+              fontFamily: "'Ingram Mono', sans-serif",
               fontWeight: 400,
               letterSpacing: "-0.03em",
               lineHeight: "130%",

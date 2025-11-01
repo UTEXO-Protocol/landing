@@ -15,7 +15,7 @@ export default function DevHero() {
           <div className="relative z-10 flex h-full flex-col items-center text-center
                           justify-center ">
             {/* kicker */}
-            <p className="font-mono uppercase tracking-[0.20em] text-[10px] text-white/60 mb-3">
+            <p className="font-ingram uppercase tracking-[0.20em] text-[10px] text-white/60 mb-3">
               Build. Scale. Connect.
             </p>
 

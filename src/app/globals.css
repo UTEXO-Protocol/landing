@@ -33,12 +33,23 @@
   font-display: swap;
 }
 
+@font-face {
+    font-family: 'Ingram Mono';
+    src: url('/fonts/IngramMono-Regular.woff2') format('woff2'),
+        url('/fonts/IngramMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
   --background: #D4D4D4;
   --foreground: #000000;
   --font-sans-real: 'PP Mori', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono-real: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
   --font-jetbrains-real: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --font-ingram-real: 'Ingram Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
 }
 
 @theme inline {
@@ -46,9 +57,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans-real);
   --font-mono: var(--font-mono-real);
+  --font-ingram: var(--font-ingram-real);
 }
 
 .font-jetbrains { font-family: var(--font-jetbrains-real); }
+.font-ingram { font-family: var(--font-ingram-real); }
 
 
 svg {

@@ -93,7 +93,7 @@ export default function FAQ() {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           {/* Left Column - FAQS Label */}
           <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2 ml-0 sm:ml-6 lg:ml-[43px]">
-            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase text-black font-mono tracking-tight">FAQS</span>
+            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase text-black font-ingram tracking-tight">FAQS</span>
           </div>
 
           {/* Middle Column - Questions */}
