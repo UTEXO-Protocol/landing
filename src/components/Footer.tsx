@@ -16,13 +16,13 @@ export default function Footer() {
   />
 </div>*/}
 
-      <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
+      <div className="hidden lg:block absolute lg:bottom-[-80px] lg:-right-6 ">
           <Image
             src="/end0.svg"
             alt="3D Element"
             width={200}
             height={200}
-            className="lg:w-[180px] lg:h-[250px] rotate-330"
+            className="w-44 h-auto lg:w-80 lg:h-auto"
           />
 
         </div>
