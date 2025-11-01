@@ -5,7 +5,7 @@ import End0 from '@/vectors/end0.svg';
 
 export default function DevFooter() {
   return (
-    <footer className="bg-black px-4 relative sm:px-0 text-white z-0">
+    <footer className="bg-black px-4 relative sm:px-0 text-white z-0 overflow-hidden">
       <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] 
                       pb-12 sm:pb-20 lg:pb-[120px] lg:pt-10 mx-auto 
                       border-l-0 sm:border-l-[1px] border-[#2A2A2A] 
