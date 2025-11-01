@@ -16,7 +16,7 @@ export default function Navigation() {
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
             <Image
-              src="/Group 3.png"
+              src="/UtexoLogoFullBlack.svg"
               alt="UTEXO Logo"
               width={100.14}
               height={37}
