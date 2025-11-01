@@ -66,11 +66,11 @@ export default function WhyUtexo() {
           <div className="flex items-center gap-4 sm:gap-6 w-full lg:w-auto">
             <div className="shrink-0">
               <Image
-                src="/tether_shield.png"
+                src="/tether_shield.webp"
                 alt="Shield"
-                width={120}
-                height={120}
-                className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[188px] lg:h-[188px] drop-shadow-xl/35 shadow-black"
+                width={360}
+                height={360}
+                className="w-auto h-[120px] sm:w-auto sm:h-[150px] lg:w-auto lg:h-[188px] drop-shadow-xl/35 shadow-black"
               />
             </div>
             
