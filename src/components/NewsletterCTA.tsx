@@ -43,7 +43,7 @@ export default function NewsletterCTA() {
       className="
         relative w-full
         bg-[#D4D4D4] text-black
-        border-y border-[#C6C6C6]
+        
         px-4 sm:px-0
       "
     >
