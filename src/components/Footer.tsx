@@ -1,4 +1,7 @@
 import Image from "next/image";
+import XIcon from '@/vectors/x.svg';
+import DiscordIcon from '@/vectors/d.svg';
+import End0 from '@/vectors/end0.svg';
 
 export default function Footer() {
   return (
@@ -14,7 +17,7 @@ export default function Footer() {
   />
 </div>*/}
 
-      <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
+{/*      <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
           <Image
             src="/end0.png"
             alt="3D Element"
@@ -22,7 +25,13 @@ export default function Footer() {
             height={200}
             className="lg:w-[180px] lg:h-[250px] rotate-330"
           />
+
+        </div>*/}
+
+        <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
+          <End0 className="w-[180px] h-[250px] rotate-[330deg]" />
         </div>
+
         <div className="w-full sm:w-[500px] lg:w-[611px] mx-auto py-6 sm:py-8 lg:py-0">
             <div className="mb-8 sm:mb-10 lg:mb-12 flex justify-center">
               <Image

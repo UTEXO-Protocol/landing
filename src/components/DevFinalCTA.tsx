@@ -4,12 +4,12 @@ import Button from "./Button";
 
 export default function DevFinalCTA() {
   return (
-    <section className="bg-black text-white relative overflow-hidden">
+    <section className="bg-black text-white relative z-10">
       <div className="mx-auto w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="relative px-6 sm:px-8 lg:px-9 py-16 lg:py-24">
           {/* Deco (bottom-left), mimic Dev ProductSuite usage */}
           <div
-            className="hidden lg:block absolute pointer-events-none left-20 -bottom-20 z-50"
+            className="hidden lg:block  absolute pointer-events-none left-20 -bottom-20"
             style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.40))" }}
           >
             <Image
@@ -23,7 +23,7 @@ export default function DevFinalCTA() {
 
           <div className="max-w-[980px] mx-auto text-center">
             <div
-              className="mb-4 uppercase text-[12px] text-white/70"
+              className="mb-4 uppercase text-[12px] text-white/50"
               style={{
                 fontFamily: "'Roboto Mono', sans-serif",
                 letterSpacing: "-0.03em",
@@ -38,7 +38,7 @@ export default function DevFinalCTA() {
               Ready to build on RGB?
             </h2>
 
-            <p className="text-[15px] lg:text-[16px] text-white/80 mb-10 max-w-[780px] mx-auto">
+            <p className="text-[15px] lg:text-[16px] text-white/40 mb-10 max-w-[780px] mx-auto">
               Join the developers scaling the Bitcoin economy with Dev Utexo.
             </p>
 

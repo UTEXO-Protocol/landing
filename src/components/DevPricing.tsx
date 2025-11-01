@@ -10,7 +10,7 @@ export default function DevPricing() {
         {/* Header row: left label + right label */}
         <div className="flex items-center justify-between px-6 sm:px-8 lg:px-9 pt-10 lg:pt-14 pb-6">
           <span
-            className="uppercase text-[12px] sm:text-[12px] lg:text-[12px] text-white/80"
+            className="uppercase text-[12px] sm:text-[12px] lg:text-[16px] text-white"
             style={{
               fontFamily: "'Roboto Mono', sans-serif",
               fontWeight: 400,
@@ -18,10 +18,10 @@ export default function DevPricing() {
               lineHeight: "130%",
             }}
           >
-            PRICING&nbsp;&nbsp;PLANS
+            Pricing&nbsp;&nbsp;Plans
           </span>
           <span
-            className="uppercase text-[12px] sm:text-[12px] lg:text-[12px] text-white/80"
+            className="uppercase text-[12px] sm:text-[12px] lg:text-[16px] text-white/50"
             style={{
               fontFamily: "'Roboto Mono', sans-serif",
               fontWeight: 400,
@@ -29,7 +29,7 @@ export default function DevPricing() {
               lineHeight: "130%",
             }}
           >
-            UTEXO&nbsp;&nbsp;CLOUDS
+            Utexo&nbsp;&nbsp;Clouds
           </span>
         </div>
 
@@ -41,10 +41,10 @@ export default function DevPricing() {
 
             <div className="flex items-baseline gap-2 mb-6">
               <span className="text-[66px] leading-[110%] tracking-[-0.03em] font-sans">$35</span>
-              <span className="text-[14px] opacity-70">/month</span>
+              <span className="text-[14px] opacity-50">/month</span>
             </div>
 
-            <ul className="space-y-4 text-white/70 text-[16px]">
+            <ul className="space-y-4 text-white/50 text-[16px]">
               <li>1 RGB Lightning Node (RLN),</li>
               <li>250,000 API calls</li>
               <li>Chat support</li>
@@ -61,10 +61,10 @@ export default function DevPricing() {
 
             <div className="flex items-baseline gap-2 mb-6">
               <span className="text-[66px] leading-[110%] tracking-[-0.03em] font-sans">$99</span>
-              <span className="text-[14px] opacity-70">/month</span>
+              <span className="text-[14px] opacity-50">/month</span>
             </div>
 
-            <ul className="space-y-4 text-white/70 text-[16px]">
+            <ul className="space-y-4 text-white/50 text-[16px]">
               <li>6 RGB Lightning Nodes (RLN),</li>
               <li>1,000,000 API calls</li>
               <li>Chat support</li>
@@ -84,7 +84,7 @@ export default function DevPricing() {
               <span className="block text-[66px] leading-[110%] tracking-[-0.03em] font-sans">Custom</span>
             </div>
 
-            <ul className="space-y-4 text-white/70 text-[16px]">
+            <ul className="space-y-4 text-white/50 text-[16px]">
               <li>Unlimited compute credits</li>
               <li>Enterprise SLA, and multi-user</li>
               <li>Support</li>
