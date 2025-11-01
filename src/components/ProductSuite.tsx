@@ -35,7 +35,7 @@ export default function ProductSuite() {
               style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))" }}
             >
               <Image
-                src="/last.png"
+                src="/last.webp"
                 alt="3D Coin Element"
                 width={120}
                 height={120}
