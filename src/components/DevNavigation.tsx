@@ -22,7 +22,7 @@ export default function DevNavigation() {
               width={100.14}
               height={37}
               priority
-              className="w-[70px] h-[26px] sm:w-[85px] sm:h-[31px] lg:w-[100.14px] lg:h-[37px]"
+              className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
             />
 
             {/* Desktop menu */}
