@@ -35,7 +35,7 @@ export default function ProductSuite() {
               style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))" }}
             >
               <Image
-                src="/last.png"
+                src="/last.webp"
                 alt="3D Coin Element"
                 width={120}
                 height={120}
@@ -55,7 +55,7 @@ export default function ProductSuite() {
 
             <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[160px] pointer-events-none animate-floatOrb">
               <Image
-                src="/first.png"
+                src="/first.webp"
                 alt="3D Element"
                 width={150}
                 height={150}
@@ -75,7 +75,7 @@ export default function ProductSuite() {
               sizes="(max-width:1023px) 140px, 0"
             />
             <Image
-              src="/first.png"
+              src="/first.webp"
               alt=""
               width={180}
               height={220}
