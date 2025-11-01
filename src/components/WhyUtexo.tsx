@@ -84,7 +84,7 @@ export default function WhyUtexo() {
 
           <div className="relative overflow-visible h-[280px] w-full sm:h-[320px] sm:w-[300px] lg:h-[358px] lg:w-[343px] shrink-0">
             <Image
-              src="/part.jpg"
+              src="/part.webp"
               alt="Trading Background"
               fill
               className="object-cover"
