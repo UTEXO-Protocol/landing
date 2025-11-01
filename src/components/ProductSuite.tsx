@@ -37,8 +37,8 @@ export default function ProductSuite() {
               <Image
                 src="/last.webp"
                 alt="3D Coin Element"
-                width={120}
-                height={120}
+                width={150}
+                height={150}
                 className="lg:w-[185.4px] lg:h-[232px]"
               />
             </div>
@@ -57,8 +57,8 @@ export default function ProductSuite() {
               <Image
                 src="/first.webp"
                 alt="3D Element"
-                width={150}
-                height={150}
+                width={240}
+                height={240}
                 className="lg:w-[230px] lg:h-auto"
               />
             </div>
