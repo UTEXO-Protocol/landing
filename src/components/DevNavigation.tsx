@@ -17,7 +17,7 @@ export default function DevNavigation() {
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
             <Image
-              src="/UtexoLogoFullWhite.png" /* swap to your white/chrome asset if different */
+              src="/UtexoLogoFullWhite.png"
               alt="UTEXO Logo"
               width={100.14}
               height={37}
@@ -42,7 +42,6 @@ export default function DevNavigation() {
                   className="lg:text-[14px] tracking-wide uppercase font-mono inline-flex items-center gap-2 text-white/90 hover:text-white"
                 >
                   PRODUCTS
-                  {/* wide chevron, rotates up on hover/open */}
                   <svg
                     viewBox="0 0 24 24"
                     className="h-[14px] w-[18px] transition-transform duration-200 group-hover:rotate-180"

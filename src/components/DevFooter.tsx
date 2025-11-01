@@ -34,7 +34,7 @@ export default function DevFooter() {
          <div className="w-full sm:w-[500px] lg:w-[611px] mx-auto py-6 sm:py-8 lg:py-0">
           <div className="mb-8 sm:mb-10 lg:mb-12 flex justify-center">
             <Image
-              src="/UtexoLogo.png"
+              src="/UtexoLogo.webp"
               alt="Utexo Logo"
               width={372}
               height={372}
