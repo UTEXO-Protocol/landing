@@ -13,7 +13,7 @@ export default function DevFinalCTA() {
             style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.40))" }}
           >
             <Image
-              src="/Group51.png"
+              src="/Group51.webp"
               alt=""
               width={220}
               height={220}

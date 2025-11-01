@@ -156,7 +156,7 @@ export default function NewsletterCTA() {
 
         {/* 3D coin on the left with float animation */}
         <img
-          src="/Group51.png"
+          src="/Group51.webp"
           alt=""
           aria-hidden="true"
           className="
