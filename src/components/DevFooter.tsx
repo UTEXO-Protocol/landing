@@ -1,6 +1,6 @@
 import Image from "next/image";
-import XIcon from '@/vectors/x.tsx';
-import DiscordIcon from '@/vectors/d.tsx';
+import XIcon from '@/vectors/x';
+import DiscordIcon from '@/vectors/d';
 
 export default function DevFooter() {
   return (

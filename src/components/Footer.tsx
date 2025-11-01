@@ -1,6 +1,6 @@
 import Image from "next/image";
-import XIcon from '@/vectors/x.tsx';
-import DiscordIcon from '@/vectors/d.tsx';
+import XIcon from '@/vectors/x';
+import DiscordIcon from '@/vectors/d';
 
 export default function Footer() {
   return (
@@ -62,7 +62,7 @@ export default function Footer() {
               className="hover:opacity-70 transition-opacity"
               aria-label="Utexo on Discord"
             >
-              <DiscordIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-1" />
+              <DiscordIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-1 " />
             </a>
 {/*          <a href="#" className="hover:opacity-70 transition-opacity">
             <Image src="/t.png" alt="Telegram" width={24} height={24} className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6" />
