@@ -9,7 +9,7 @@ export default function Hero() {
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/background.jpeg"
+              src="/background.webp"
               alt="Background"
               width={1320}
               height={740}
