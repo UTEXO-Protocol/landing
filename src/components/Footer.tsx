@@ -1,7 +1,6 @@
 import Image from "next/image";
-import XIcon from '@/vectors/x.svg';
-import DiscordIcon from '@/vectors/d.svg';
-import End0 from '@/vectors/end0.svg';
+import XIcon from '@/vectors/x.tsx';
+import DiscordIcon from '@/vectors/d.tsx';
 
 export default function Footer() {
   return (
@@ -17,20 +16,20 @@ export default function Footer() {
   />
 </div>*/}
 
-{/*      <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
+      <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
           <Image
-            src="/end0.png"
+            src="/end0.svg"
             alt="3D Element"
             width={200}
             height={200}
             className="lg:w-[180px] lg:h-[250px] rotate-330"
           />
 
-        </div>*/}
-
-        <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
-          <End0 className="w-[180px] h-[250px] rotate-[330deg]" />
         </div>
+
+{/*        <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">
+          <End0 className="w-[180px] h-[250px] rotate-[330deg] opacity-90" aria-hidden />
+        </div>*/}
 
         <div className="w-full sm:w-[500px] lg:w-[611px] mx-auto py-6 sm:py-8 lg:py-0">
             <div className="mb-8 sm:mb-10 lg:mb-12 flex justify-center">
@@ -45,12 +44,26 @@ export default function Footer() {
 
           {/* === Social icons (existing) === */}
         <div className="flex justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-7 lg:mb-8">
-          <a href="https://x.com/utexocom" className="hover:opacity-70 transition-opacity">
+{/*          <a href="https://x.com/utexocom" className="hover:opacity-70 transition-opacity">
             <Image src="/x.png" alt="X (Twitter)" width={24} height={24} className="w-5 h-5 sm:w-5 sm:h-5 lg:w-7 lg:h-7" />
           </a>
           <a href="https://discord.gg/hmVJNEJH2P" className="hover:opacity-70 transition-opacity">
             <Image src="/d.png" alt="Discord" width={24} height={24} className="w-5 h-5 sm:w-5 sm:h-5 lg:w-7 lg:h-7" />
-          </a>
+          </a>*/}
+              <a
+              href="https://x.com/utexocom"
+              className="hover:opacity-70 transition-opacity"
+              aria-label="Utexo on X"
+            >
+              <XIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-2 stroke-black fill-none" />
+            </a>
+            <a
+              href="https://discord.gg/hmVJNEJH2P"
+              className="hover:opacity-70 transition-opacity"
+              aria-label="Utexo on Discord"
+            >
+              <DiscordIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-1" />
+            </a>
 {/*          <a href="#" className="hover:opacity-70 transition-opacity">
             <Image src="/t.png" alt="Telegram" width={24} height={24} className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6" />
           </a>*/}
