@@ -3,30 +3,42 @@ import Button from "./Button";
 
 export default function ProductSuite() {
   return (
-    <section className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0">
+    <section
+      id="ProductSuite"
+      className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0"
+    >
       <div className="w-full sm:w-[640px] md:w-[900px] bg-black lg:w-[1320px] mx-auto">
-        {/* Grid Container with Reordered Content for Mobile */}
+        {/* Keep your original 3-col grid; left spans 2 on lg (≈2:1 look) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-          {/* Product Suite Content - First on Mobile */}
-          <div className="col-span-1 lg:col-span-1 flex flex-col justify-between relative p-6 sm:p-8 lg:p-[42px] order-first lg:order-last">
+          
+          {/* RIGHT (copy + 3D). First on mobile, second on desktop. */}
+          <div className="order-first lg:order-last col-span-1 flex flex-col justify-between relative p-6 sm:p-8 lg:p-9">
             <div className="space-y-6 sm:space-y-7 lg:space-y-8">
-              <h2 className="text-[40px] sm:text-[52px] lg:text-[64px] leading-tight sm:leading-[50px] lg:leading-[60px] tracking-[-0.03em] font-sans">
+              {/* Match DevProductSuite scale */}
+              <h2 className="text-[40px] sm:text-[48px] lg:text-[80px] leading-tight sm:leading-[50px] lg:leading-[90%] tracking-[-0.03em] font-sans">
                 Product Suite
               </h2>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white leading-snug" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+              <p
+                className="text-[14px] sm:text-[15px] lg:text-[16px] text-white leading-snug"
+                style={{ fontFamily: "'PP Mori', sans-serif" }}
+              >
                 Utexo is scaling Bitcoin&apos;s Lightning and RGB network with a full-stack suite designed for stablecoin adoption and liquidity. Our infrastructure powers instant, private, and low-fee transactions while preserving Bitcoin&apos;s security model.
               </p>
               <div className="mt-6">
                 <Button href="https://bridge.utexo.com" />
               </div>
             </div>
-            <div className="hidden lg:block absolute lg:bottom-[-90px] lg:right-[20px] pointer-events-none animate-floatRing" style={{
-    filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))" }}>
+
+            {/* 3D: EXACTLY your original anchors (unchanged) */}
+            <div
+              className="hidden lg:block absolute lg:bottom-[-90px] lg:right-[20px] pointer-events-none animate-floatRing"
+              style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))" }}
+            >
               <Image
-                src="/last.png"
+                src="/last.webp"
                 alt="3D Coin Element"
-                width={120}
-                height={120}
+                width={150}
+                height={150}
                 className="lg:w-[185.4px] lg:h-[232px]"
               />
             </div>
@@ -41,20 +53,19 @@ export default function ProductSuite() {
               />
             </div>
 
-            <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[160px] pointer-events-none animate-floatOrb" >
+            <div className="hidden lg:block absolute lg:bottom-[50px] lg:right-[160px] pointer-events-none animate-floatOrb">
               <Image
-                src="/first.png"
+                src="/first.webp"
                 alt="3D Element"
-                width={150}
-                height={150}
+                width={240}
+                height={240}
                 className="lg:w-[230px] lg:h-auto"
               />
             </div>
           </div>
 
-          {/* Mobile decorative bits */}
+          {/* Mobile decorative bits — unchanged */}
           <div className="lg:hidden relative mt-10 mb-15 pointer-events-none">
-            {/* Blur behind */}
             <Image
               src="/Group42.png"
               alt=""
@@ -63,9 +74,8 @@ export default function ProductSuite() {
               className="w-[100px] h-auto absolute right-10 bottom-15"
               sizes="(max-width:1023px) 140px, 0"
             />
-            {/* Small ring, anchored to bottom-right of the text block */}
             <Image
-              src="/first.png"
+              src="/first.webp"
               alt=""
               width={180}
               height={220}
@@ -74,43 +84,56 @@ export default function ProductSuite() {
             />
           </div>
 
-          {/* Product Cards - Two Rows on Left Side */}
-          <div className="col-span-1 lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-0">
-            <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
+          {/* LEFT (cards). Second on mobile, first on desktop (span 2 cols). */}
+          <div className="order-2 lg:order-1 col-span-1 lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-0">
+            {/* Card 1 */}
+            <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/one.png" alt="DEX" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
+                {/* 28px icon to match DevProductSuite */}
+                <Image src="/one.png" alt="DEX" width={28} height={28} className="w-5 h-5" />
               </div>
-              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>DEX (Bitcoin-native)</h3>
+              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3 font-sans">
+                DEX (Bitcoin-native)
+              </h3>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Trade BTC vs USDT instantly on-chain.
               </p>
             </div>
 
-            <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
+            {/* Card 2 */}
+            <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/two.png" alt="Bridge" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
+                <Image src="/two.png" alt="Bridge" width={28} height={28} className="w-5 h-5" />
               </div>
-              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Cross-chain Bridge</h3>
+              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                Cross-chain Bridge
+              </h3>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Atomic swaps to/from Ethereum / new/other chains.
               </p>
             </div>
 
-            <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
+            {/* Card 3 */}
+            <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/three.png" alt="Developer Stack" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
+                <Image src="/three.png" alt="Developer Stack" width={28} height={28} className="w-5 h-5" />
               </div>
-              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Developer Stack</h3>
+              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                Developer Stack
+              </h3>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 RPCs, SDKs, modular integrations.
               </p>
             </div>
 
-            <div className="flex flex-col border border-white/10 p-6 sm:p-8 lg:p-[42px]">
+            {/* Card 4 */}
+            <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/fore.png" alt="Staking" width={24} height={24} className="w-5 sm:w-5.5 lg:w-6 h-5 sm:h-5.5 lg:h-6" />
+                <Image src="/fore.png" alt="Staking" width={28} height={28} className="w-5 h-5" />
               </div>
-              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>Staking / Yield</h3>
+              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                Staking / Yield
+              </h3>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Earn the highest yield %+ APY on BTC & USDT.
               </p>

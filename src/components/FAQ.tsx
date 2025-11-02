@@ -88,22 +88,12 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faqs" className="bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-16 sm:pt-32 md:pt-48 mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6]">
-        <div className="hidden lg:block absolute lg:bottom-[50px] lg:left-[-80px]">
-          <Image
-            src="/Group 41.png"
-            alt="3D Element"
-            width={372}
-            height={372}
-            className="lg:w-[140px] lg:h-auto"
-          />
-        </div>
-        
+    <section id="faqs" className="bg-[#D4D4D4] px-4 sm:px-0 ">
+      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-14 sm:pt-24 md:pt-36 mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] pb-20">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           {/* Left Column - FAQS Label */}
           <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2 ml-0 sm:ml-6 lg:ml-[43px]">
-            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase text-black font-mono tracking-tight">FAQS</span>
+            <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase text-black font-ingram tracking-tight">FAQS</span>
           </div>
 
           {/* Middle Column - Questions */}
@@ -169,17 +159,6 @@ export default function FAQ() {
               );
             })}
           </div>
-        </div>
-
-        {/* 3D Element */}
-        <div className="mt-10 md:mt-0 flex justify-center">
-          <Image
-            src="/UtexoLogo.png"
-            alt="3D Element"
-            width={372}
-            height={372}
-            className="w-44 md:!w-80 md:h-80 h-auto drop-shadow-2xl/35"
-          />
         </div>
       </div>
     </section>

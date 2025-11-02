@@ -4,12 +4,12 @@ import Button from "./Button";
 export default function Hero() {
   return (
     <section className="relative overflow-visible px-4 sm:px-0">
-      <div className="pb-16 sm:pb-24 lg:pb-32 mx-auto w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+      <div className="pb-10 sm:pb-16 lg:pb-20 mx-auto w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="relative bg-[#1a2e1a] overflow-visible h-[400px] sm:h-[550px] lg:h-[740px] mx-auto">
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/background.jpeg"
+              src="/background.webp"
               alt="Background"
               width={1320}
               height={740}
@@ -22,7 +22,7 @@ export default function Hero() {
     filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))"
   }}>
             <Image
-              src="/Group 39.png"
+              src="/Group39.webp"
               alt="3D Coin Element"
               width={150}
               height={150}
@@ -33,7 +33,7 @@ export default function Hero() {
           {/* 3D Element - Bottom Large Ring */}
           <div className="absolute bottom-12 left-36 lg:bottom-[0px] lg:left-[560px] z-30 lg:w-[240px] lg:h-[310px] animate-floatOrb">
             <Image
-              src="/first.png"
+              src="/first.webp"
               alt="3D Element"
               width={350}
               height={350}

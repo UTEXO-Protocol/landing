@@ -124,8 +124,11 @@ interface ButtonProps {
   iconOnly?: boolean;
   iconRotation?: string;
   iconSize?: { width: number; height: number };
-  liquid?: boolean; // enable/disable liquid blobs
-  glare?: boolean;  // enable/disable chrome sheen
+  liquid?: boolean;
+  glare?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 export default function Button({
@@ -139,7 +142,10 @@ export default function Button({
   iconRotation = "",
   iconSize = { width: 12, height: 10 },
   liquid = true,
-  glare = true, // default ON
+  glare = true,
+  loading = false,
+  disabled = false,
+  type = "button",
 }: ButtonProps) {
   const getBackgroundStyle = () => {
     switch (variant) {
@@ -168,7 +174,7 @@ export default function Button({
 
   const baseClass = iconOnly
     ? `relative overflow-hidden text-white transition-all flex items-center justify-center cursor-pointer ${hoverClass}`
-    : `relative overflow-hidden w-[144px] h-[55px] text-white text-[13px] font-medium transition-all rounded-lg flex items-center justify-center gap-2 uppercase border border-white/10 cursor-pointer ${hoverClass}`;
+    : `relative overflow-hidden w-[144px] h-[55px] text-white text-[12px] font-medium transition-all rounded-lg flex items-center justify-center gap-2 uppercase border border-white/10 cursor-pointer ${hoverClass}`;
 
   const chromeLayers =
     liquid && glare
@@ -180,9 +186,11 @@ export default function Button({
       : ""; // Plain button
 
   const style = {
-    fontFamily: iconOnly ? undefined : "Roboto Mono, monospace",
+    fontFamily: iconOnly ? undefined : "Ingram Mono, monospace",
     ...getBackgroundStyle(),
   };
+
+  const label = loading ? "Submitting…" : (children ?? "get started");
 
   const contents = (
     <>
@@ -196,21 +204,21 @@ export default function Button({
         />
       ) : (
         <>
-          <span className="font-bold font-mono">
-            {children || "get started"}
-          </span>
-          <Image
-            src="/Vector.png"
-            alt="arrow-right"
-            width={iconSize.width}
-            height={iconSize.height}
-          />
+          <span className="font-bold font-ingram">{label}</span>
+          {!loading && (
+            <Image
+              src="/Vector.png"
+              alt="arrow-right"
+              width={iconSize.width}
+              height={iconSize.height}
+            />
+          )}
         </>
       )}
     </>
   );
 
-  const classes = `${baseClass} ${chromeLayers} group active:scale-[0.98] transition-transform ${className}`;
+  const classes = `${baseClass} ${chromeLayers} group active:scale-[0.98] transition-transform disabled:opacity-60 disabled:cursor-not-allowed ${className}`;
 
   if (href) {
     return (
@@ -222,6 +230,8 @@ export default function Button({
         data-variant={variant}
         className={classes}
         style={style}
+        aria-busy={loading || undefined}
+        aria-disabled={disabled || undefined}
       >
         {contents}
       </Link>
@@ -230,10 +240,13 @@ export default function Button({
 
   return (
     <button
+      type={type}
       onClick={onClick}
       data-variant={variant}
       className={classes}
       style={style}
+      disabled={disabled || loading}
+      aria-busy={loading || undefined}
     >
       {contents}
     </button>

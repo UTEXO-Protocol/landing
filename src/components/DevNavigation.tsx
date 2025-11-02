@@ -5,18 +5,19 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Button from './Button';
 
-export default function Navigation() {
+export default function DevNavigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   return (
     <>
-      <nav className="py-4 sm:py-6 lg:py-[33px] mx-auto left-0 right-0 z-50 bg-[#D4D4D4] w-full px-4 sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+      {/* Dark header shell */}
+      <nav className="py-4 sm:py-6 lg:py-[33px] mx-auto left-0 right-0 z-[70] bg-black w-full px-4 sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#2a2a2a] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="w-full sm:w-[600px] md:w-[860px] lg:w-[1220px] h-[55px] mx-auto flex items-center justify-between">
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
             <Image
-              src="/UtexoLogoFullBlack.svg"
+              src="/UtexoLogoFullWhite.svg"
               alt="UTEXO Logo"
               width={100.14}
               height={37}
@@ -28,7 +29,7 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
                 href="#why-utexo"
-                className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-mono text-white/90 hover:text-white transition-opacity"
               >
                 Why Utexo
               </a>
@@ -38,10 +39,9 @@ export default function Navigation() {
                 {/* Trigger */}
                 <a
                   href="#ProductSuite"
-                  className="lg:text-[14px] tracking-wide uppercase font-mono inline-flex items-center gap-2"
+                  className="lg:text-[14px] tracking-wide uppercase font-mono inline-flex items-center gap-2 text-white/90 hover:text-white"
                 >
                   PRODUCTS
-                  {/* wide chevron, rotates up on hover/open */}
                   <svg
                     viewBox="0 0 24 24"
                     className="h-[14px] w-[18px] transition-transform duration-200 group-hover:rotate-180"
@@ -65,7 +65,7 @@ export default function Navigation() {
                     group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
                     focus-within:visible focus-within:opacity-100 focus-within:translate-y-0
                     transition-all duration-150
-                    absolute left-0 top-[calc(100%+6px)] z-[60]
+                    absolute left-0 top-[calc(100%+6px)] z-[80]
                   "
                 >
                   {/* hover buffer */}
@@ -74,9 +74,9 @@ export default function Navigation() {
                   <div
                     className="
                       w-36 rounded-[12px]
-                      border border-[#BFBFBF]/[.44]
-                      bg-[rgba(2,1,1,0.60)] backdrop-blur-md
-                      shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+                      border border-white/10
+                      bg-[rgba(20,20,20,0.75)] backdrop-blur-md
+                      shadow-[0_10px_30px_rgba(0,0,0,0.45)]
                       overflow-hidden
                     "
                   >
@@ -88,12 +88,13 @@ export default function Navigation() {
                         rel="noopener noreferrer"
                         className="
                           flex items-center justify-between
-                          font-mono text-sm text-white/90
+                          font-ingram text-sm text-white/90
                           pr-2 transition-all duration-200
-                          hover:text-[#FFBE3C] hover:tracking-[0.015em] hover:opacity-100
+                          hover:text-[#FF9900]/80 hover:tracking-[0.015em] hover:opacity-100
                         "
                       >
                         <span>Bridge</span>
+                        {/* status stays subtle on dark */}
                         <span className="text-xs uppercase tracking-[0.05em] text-white/50 select-none">
                           Live↗
                         </span>
@@ -103,14 +104,14 @@ export default function Navigation() {
                       <div
                         className="
                           flex items-center justify-between
-                          font-ingram text-sm text-white/50
+                          font-ingram text-sm text-white/45
                           cursor-not-allowed select-none pr-2
                         "
                         title="Coming soon"
                         aria-disabled="true"
                       >
-                        <span>SDK</span>
-                        <span className="text-xs uppercase tracking-[0.05em] text-white/50">Soon</span>
+                        <span>Dev</span>
+                        <span className="text-xs uppercase tracking-[0.05em] text-white/45">Soon</span>
                       </div>
 
                     </div>
@@ -120,13 +121,13 @@ export default function Navigation() {
 
               <a
                 href="#features"
-                className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram text-white/90 hover:text-white transition-opacity"
               >
                 Features
               </a>
               <a
                 href="#faqs"
-                className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram text-white/90 hover:text-white transition-opacity"
               >
                 FAQs
               </a>
@@ -146,9 +147,9 @@ export default function Navigation() {
               aria-controls="mobile-menu"
               aria-label="Toggle menu"
             >
-              <span className={`w-6 h-0.5 bg-black transition-all ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-black transition-all ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-black transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-white transition-all ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-white transition-all ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-white transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
             </button>
 
             <Button
@@ -166,13 +167,13 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed top-[80px] left-0 right-0 z-40 bg-[#D4D4D4] border-b border-[#C6C6C6] animate-fadeIn"
+          className="lg:hidden fixed top-[80px] left-0 right-0 z-[60] bg-[#0B0B0B] border-b border-[#1C1C1C] animate-fadeIn"
         >
           <div className="flex flex-col py-4 px-8 space-y-4">
             <a
               href="#why-utexo"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-ingram tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
             >
               Why Utexo
             </a>
@@ -181,7 +182,7 @@ export default function Navigation() {
             <button
               onClick={() => setMobileProductsOpen((v) => !v)}
               aria-expanded={mobileProductsOpen}
-              className="text-[14px] font-ingram tracking-wide uppercase flex items-center justify-between py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase flex items-center justify-between py-1 text-white/90"
             >
               <span>Products</span>
               <svg
@@ -202,10 +203,10 @@ export default function Navigation() {
 
             {mobileProductsOpen && (
               <div className="ml-4 flex flex-col gap-3 pb-2">
-{/*                <a
+                {/*                <a
                   href="#ProductSuite"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-[13px] font-mono uppercase text-black/70 hover:text-black"
+                  className="text-[13px] font-mono uppercase text-white/70 hover:text-white"
                 >
                   Overview
                 </a>*/}
@@ -213,12 +214,12 @@ export default function Navigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-ingram uppercase text-black hover:opacity-80"
+                  className="text-[13px] font-ingram uppercase text-white hover:text-[#FF9900]/80"
                 >
-                  Bridge <span className="text-black/50">· Live ↗</span>
+                  Bridge <span className="text-white/50">· Live ↗</span>
                 </a>
-                <span className="text-[13px] font-ingram uppercase text-black/40">
-                  Dev <span className="text-black/40">· Soon</span>
+                <span className="text-[13px] font-ingram uppercase text-white/40">
+                  Dev <span className="text-white/40">· Soon</span>
                 </span>
               </div>
             )}
@@ -226,14 +227,14 @@ export default function Navigation() {
             <a
               href="#features"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-ingram tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
+              className="text-[14px] font-ingram tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
             >
               Features
             </a>
             <a
               href="#faqs"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[14px] font-ingram tracking-wide uppercase hover:opacity-70 transition-opacity py-1"
+              className="text-[14px] font-mono tracking-wide uppercase text-white/90 hover:text-white transition-opacity py-1"
             >
               FAQs
             </a>

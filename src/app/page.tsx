@@ -7,6 +7,7 @@ import Features from "@/components/Features";
 import Quote from "@/components/Quote";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import NewsletterCTA from "@/components/NewsletterCTA";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Features />
       <Quote />
       <FAQ />
+      <NewsletterCTA />
       <Footer />
     </div>
   );
