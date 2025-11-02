@@ -8,7 +8,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ToasterClient from "@/components/ToasterClient";
 
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://utexo.com'),
   title: "Utexo - Bitcoin's private stablecoin backbone",
   description: "Native USDT & BTC, instant zero-fee settlements, lightning-fast, private & non-custodial payments.",
   keywords: "Utexo, stablecoins, Bitcoin, Lightning, private payments, non-custodial, RGB",
