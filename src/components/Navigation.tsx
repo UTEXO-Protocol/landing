@@ -28,7 +28,7 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
                 href="#why-utexo"
-                className="lg:text-[14px] tracking-wide uppercase font-mono hover:opacity-70 transition-opacity"
+                className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
               >
                 Why Utexo
               </a>
@@ -38,7 +38,7 @@ export default function Navigation() {
                 {/* Trigger */}
                 <a
                   href="#ProductSuite"
-                  className="lg:text-[14px] tracking-wide uppercase font-mono inline-flex items-center gap-2"
+                  className="lg:text-[14px] tracking-wide uppercase font-ingram inline-flex items-center gap-2"
                 >
                   PRODUCTS
                   {/* wide chevron, rotates up on hover/open */}
@@ -88,7 +88,7 @@ export default function Navigation() {
                         rel="noopener noreferrer"
                         className="
                           flex items-center justify-between
-                          font-mono text-sm text-white/90
+                          font-ingram text-sm text-white/90
                           pr-2 transition-all duration-200
                           hover:text-[#FFBE3C] hover:tracking-[0.015em] hover:opacity-100
                         "
