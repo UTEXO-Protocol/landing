@@ -58,7 +58,7 @@ export default function Footer() {
               <XIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-2 stroke-black fill-none" />
             </a>
             <a
-              href="https://discord.gg/hmVJNEJH2P"
+              href="https://discord.gg/utexo"
               className="hover:opacity-70 transition-opacity"
               aria-label="Utexo on Discord"
             >
