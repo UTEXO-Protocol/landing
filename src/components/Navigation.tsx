@@ -90,7 +90,7 @@ export default function Navigation() {
                           flex items-center justify-between
                           font-mono text-sm text-white/90
                           pr-2 transition-all duration-200
-                          hover:text-[#FF9900]/80 hover:tracking-[0.015em] hover:opacity-100
+                          hover:text-[#FFBE3C] hover:tracking-[0.015em] hover:opacity-100
                         "
                       >
                         <span>Bridge</span>
@@ -109,7 +109,7 @@ export default function Navigation() {
                         title="Coming soon"
                         aria-disabled="true"
                       >
-                        <span>Dev</span>
+                        <span>SDK</span>
                         <span className="text-xs uppercase tracking-[0.05em] text-white/50">Soon</span>
                       </div>
 

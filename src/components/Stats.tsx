@@ -72,7 +72,7 @@ export default function Stats() {
 
           {/* LEFT: investor marquee, vertically centered vs stat */}
           <div className="w-full lg:flex-1 lg:max-w-[60%] flex items-center">
-            <InvestorMarquee logos={investorLogos} speedMs={18000} />
+            {/*<InvestorMarquee logos={investorLogos} speedMs={18000} />*/}
           </div>
 
           {/* RIGHT: animated stat block */}
