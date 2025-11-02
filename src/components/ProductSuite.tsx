@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Button from "./Button";
 
+const titleLink =
+  "inline-flex items-center gap-1 text-white/90 hover:text-[#FFBE3C] transition-[color,letter-spacing] duration-200 underline underline-offset-4 decoration-white/10 hover:decoration-[#FFBE3C]/60 hover:tracking-[0.015em] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFBE3C]/40 rounded-sm";
+
 export default function ProductSuite() {
   return (
     <section
@@ -106,7 +109,20 @@ export default function ProductSuite() {
                 <Image src="/two.png" alt="Bridge" width={28} height={28} className="w-5 h-5" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
-                Cross-chain Bridge
+                <a
+                  href="https://bridge.utexo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Cross-chain Bridge
+                  <span
+                    className="ml-1 opacity-0 translate-x-[-2px] group-hover:translate-x-[2px] group-hover:opacity-70 transition-all duration-300 ease-out px-1"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </a>
               </h3>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Atomic swaps to/from Ethereum / new/other chains.
@@ -119,7 +135,20 @@ export default function ProductSuite() {
                 <Image src="/three.png" alt="Developer Stack" width={28} height={28} className="w-5 h-5" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
-                Developer Stack
+                  <a
+                  href="https://thunderstack.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Developer Stack
+                  <span
+                    className="ml-1 opacity-0 translate-x-[-2px] group-hover:translate-x-[2px] group-hover:opacity-70 transition-all duration-300 ease-out"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </a>
               </h3>
               <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 RPCs, SDKs, modular integrations.
