@@ -218,7 +218,7 @@ export default function Navigation() {
                   Bridge <span className="text-black/50">· Live ↗</span>
                 </a>
                 <span className="text-[13px] font-ingram uppercase text-black/40">
-                  Dev <span className="text-black/40">· Soon</span>
+                  SDK <span className="text-black/40">· Soon</span>
                 </span>
               </div>
             )}
