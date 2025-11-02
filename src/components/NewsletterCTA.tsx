@@ -40,6 +40,7 @@ export default function NewsletterCTA() {
 
   return (
     <section
+      id="newsletter"
       className="
         relative w-full
         bg-[#D4D4D4] text-black
