@@ -59,7 +59,10 @@ export default function NewsletterCTA() {
           bg-[#E2E2E2]
         "
       >
-        <div className="mx-auto max-w-[900px] text-center">
+
+
+  <div className="px-3 sm:px-10">
+    <div className="mx-auto max-w-[900px] text-center">
           {/* top microcopy */}
           <p className="font-ingram text-[11px] uppercase tracking-[0.08em] text-[#6a6a6a]">
             Zero spam. Pure signal.
@@ -79,7 +82,7 @@ export default function NewsletterCTA() {
           {/* form */}
           <form
             onSubmit={handleSubmit}
-            className="mt-8 mx-auto flex w-full max-w-[440px] flex-col items-stretch gap-3 sm:flex-row sm:items-center"
+            className="mt-8 mx-auto w-full max-w-[520px] flex-col items-center grid grid-cols-1 sm:grid-cols-[1fr_auto]  gap-3 sm:flex-row sm:items-center"
           >
             {/* honeypot */}
             <div className="sr-only" aria-hidden="true">
@@ -101,7 +104,7 @@ export default function NewsletterCTA() {
                 w-full h-[55px] flex-1 rounded-[8px]
                 border border-[#C6C6C6] bg-[#d4d4d4]
                 px-3 py-[10px] leading-none appearance-none 
-                text-[11px] font-ingram uppercase tracking-[0.08em]
+                text-[12px] font-ingram uppercase tracking-[0.08em]
                 text-black placeholder:text-[#8f8f8f]
                 focus:outline-none focus:ring-2 focus:ring-black/20
               "
@@ -148,13 +151,14 @@ export default function NewsletterCTA() {
               variant="black"
               type="submit"
               loading={pending}
-              className=""
+              className="w-full sm:w-[144px] "
             >
               Sign Up
 
             </Button>
           </form>
         </div>
+      </div>
 
         {/* 3D coin on the left with float animation */}
 <div
