@@ -11,9 +11,13 @@ export default function Hero() {
             <Image
               src="/background.webp"
               alt="Background"
-              width={1320}
-              height={740}
-              className="object-cover w-full h-full"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 640px) calc(100vw - 2rem),
+                     (max-width: 900px) 640px,
+                     (max-width: 1320px) 900px,
+                     1320px"
             />
           </div>
           
