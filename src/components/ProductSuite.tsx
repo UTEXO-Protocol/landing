@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
 
-const titleLink =
-  "inline-flex items-center gap-1 text-white/90 hover:text-[#FFBE3C] transition-[color,letter-spacing] duration-200 underline underline-offset-4 decoration-white/10 hover:decoration-[#FFBE3C]/60 hover:tracking-[0.015em] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFBE3C]/40 rounded-sm";
-
 export default function ProductSuite() {
   return (
     <section
