@@ -90,7 +90,7 @@ export default function ProductSuite() {
             <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
                 {/* 28px icon to match DevProductSuite */}
-                <Image src="/one.png" alt="DEX" width={28} height={28} className="w-5 h-5" />
+                <Image src="/one.svg" alt="DEX" width={28} height={28} className="w-5 h-5" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3 font-sans">
                 DEX (Bitcoin-native)
@@ -103,7 +103,7 @@ export default function ProductSuite() {
             {/* Card 2 */}
             <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/two.png" alt="Bridge" width={28} height={28} className="w-5 h-5" />
+                <Image src="/two.svg" alt="Bridge" width={28} height={28} className="w-5 h-5" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 <a
@@ -129,7 +129,7 @@ export default function ProductSuite() {
             {/* Card 3 */}
             <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/three.png" alt="Developer Stack" width={28} height={28} className="w-5 h-5" />
+                <Image src="/three.svg" alt="Developer Stack" width={28} height={28} className="w-5 h-5" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   <a
@@ -155,7 +155,7 @@ export default function ProductSuite() {
             {/* Card 4 */}
             <div className="flex flex-col border border-white/10 p-6 sm:p-7 lg:p-8">
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
-                <Image src="/fore.png" alt="Staking" width={28} height={28} className="w-5 h-5" />
+                <Image src="/four.svg" alt="Staking" width={28} height={28} className="w-5 h-5" />
               </div>
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                 Staking / Yield
