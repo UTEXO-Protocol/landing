@@ -3,6 +3,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import Button from "@/components/Button";
+import Image from "next/image";
 
 export default function NewsletterCTA() {
   const [email, setEmail] = useState("");
@@ -156,18 +157,29 @@ export default function NewsletterCTA() {
         </div>
 
         {/* 3D coin on the left with float animation */}
-        <img
-          src="/Group51.webp"
-          alt=""
-          aria-hidden="true"
-          className="
-            pointer-events-none hidden md:block absolute
-            left-[20px] md:left-[40px] lg:left-[60px]
-            bottom-[-30px] md:bottom-[-40px]
-            w-[90px] md:w-[120px] lg:w-[140px] h-auto
-            animate-floatRing float-delay
-          "
-        />
+<div
+  className="
+    pointer-events-none hidden md:block absolute
+    left-[20px] md:left-[40px] lg:left-[60px]
+    bottom-[-30px] md:bottom-[-40px]
+    w-[90px] md:w-[120px] lg:w-[140px]
+    animate-floatRing float-delay
+  "
+>
+  <Image
+    src="/Group51.webp"
+    alt=""
+    aria-hidden="true"
+    // intrinsic ratio only; Tailwind controls actual size
+    width={140}
+    height={140}
+    className="w-full h-auto"
+    sizes="(max-width: 768px) 90px,
+           (max-width: 1024px) 120px,
+           140px"
+    priority={false}
+  />
+</div>
       </div>
     </section>
   );
