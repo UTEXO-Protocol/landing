@@ -81,16 +81,31 @@ export default function WhyUtexo() {
               </p>
             </div>
           </div>
-
+{/*
           <div className="relative overflow-visible h-[280px] w-full sm:h-[320px] sm:w-[300px] lg:h-[358px] lg:w-[343px] shrink-0">
             <Image
               src="/part.webp"
               alt="Trading Background"
               fill
               className="object-cover"
-              sizes="(max-width: 640px) calc(100vw - 2rem),
+              sizes="(max-width: 480px) calc(100vw - 2rem),
+                     (max-width: 640px) calc(100vw - 2rem),
                      (max-width: 1024px) 300px,
                      343px"
+              quality={80}
+            />*/}
+          <div
+            className="relative overflow-visible h-[280px] w-full max-w-[380px] sm:max-w-none
+                         sm:h-[320px] sm:w-[300px]
+                         lg:h-[358px] lg:w-[343px]
+                         shrink-0"
+            >
+            <Image
+              src="/part.webp"
+              alt="Trading Background"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) 300px, 343px"
               quality={80}
             />
             <div className="hidden sm:block absolute top-1/2 ml-0 sm:ml-[-8px] lg:ml-[-10px] -translate-y-1/2 -left-6 sm:-left-7 lg:-left-8 z-20">
@@ -105,7 +120,7 @@ export default function WhyUtexo() {
             
             <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10">
               <div className="text-white space-y-2">
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-ingram text-shadow-xs">
+                <p className="text-lg sm:text-[15px] lg:text-[16px] leading-tight max-w-sm font-ingram text-shadow-xs">
                   We enable native on-chain BTC/USDT trading pairs (already ~8 % of all CEX daily volume, ~$12B+).
                 </p>
               </div>
