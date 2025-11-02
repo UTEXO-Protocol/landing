@@ -6,6 +6,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 import ToasterClient from "@/components/ToasterClient";
 
 
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="antialiased">
         {children}
+        <Analytics />
         <ToasterClient />
       </body>
     </html>
