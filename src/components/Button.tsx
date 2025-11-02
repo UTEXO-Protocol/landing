@@ -110,15 +110,17 @@
 //     </>
 //   );
 // }
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import type * as React from "react";
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "black";
   children?: React.ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent) => void;
   href?: string;
   external?: boolean;
   iconOnly?: boolean;
@@ -137,7 +139,7 @@ export default function Button({
   className = "",
   onClick,
   href,
-  external = true,
+  external,
   iconOnly = false,
   iconRotation = "",
   iconSize = { width: 12, height: 10 },
@@ -220,13 +222,23 @@ export default function Button({
 
   const classes = `${baseClass} ${chromeLayers} group active:scale-[0.98] transition-transform disabled:opacity-60 disabled:cursor-not-allowed ${className}`;
 
+  // --- Auto-detect link type ---
+  const isHash = !!href && href.startsWith("#");
+  const isInternalPath = !!href && href.startsWith("/");
+  const looksAbsolute = !!href && /^https?:\/\//i.test(href);
+
+  // If `external` is explicitly passed, use it; else only absolute URLs are external
+  const isExternal = external ?? (looksAbsolute && !isHash && !isInternalPath);
+
   if (href) {
     return (
       <Link
         href={href}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
-        onClick={onClick}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        onClick={(e) => {
+          onClick?.(e);
+        }}
         data-variant={variant}
         className={classes}
         style={style}

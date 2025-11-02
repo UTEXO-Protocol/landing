@@ -152,11 +152,11 @@ export default function Navigation() {
             </button>
 
             <Button
-              
+              href="#newsletter"
               variant="black"
               className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]"
-            ><a href="#newsletter">
-              sign up</a>
+            >
+              sign up
             </Button>
           </div>
         </div>
