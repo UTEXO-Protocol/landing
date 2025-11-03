@@ -7,7 +7,8 @@ export default function ProductSuite() {
       id="ProductSuite"
       className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0"
     >
-      <div className="w-full sm:w-[640px] md:w-[900px] bg-black lg:w-[1320px] mx-auto">
+      <div className="w-full sm:w-[640px] md:w-[900px] bg-black lg:w-[1320px] mx-auto
+             border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         {/* Keep your original 3-col grid; left spans 2 on lg (≈2:1 look) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           
@@ -45,7 +46,7 @@ export default function ProductSuite() {
 
             <div className="hidden lg:block absolute lg:bottom-[200px] lg:right-[70px] pointer-events-none" aria-hidden="true">
               <Image
-                src="/Group42.png"
+                src="/Group42.webp"
                 alt="Background"
                 width={120}
                 height={120}
@@ -67,7 +68,7 @@ export default function ProductSuite() {
           {/* Mobile decorative bits — unchanged */}
           <div className="lg:hidden relative mt-10 mb-15 pointer-events-none">
             <Image
-              src="/Group42.png"
+              src="/Group42.webp"
               alt=""
               width={140}
               height={140}
