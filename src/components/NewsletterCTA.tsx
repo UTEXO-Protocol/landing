@@ -55,7 +55,7 @@ export default function NewsletterCTA() {
           relative mx-auto
           w-full sm:w-[640px] md:w-[900px] lg:w-[1320px]
           py-16 md:py-24
-          border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px] border-[#C6C6C6]
+          border-0 sm:border-[1px]  border-[#C6C6C6]
           bg-[#E2E2E2]
         "
       >
