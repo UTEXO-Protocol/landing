@@ -151,7 +151,7 @@ export default function NewsletterCTA() {
               variant="black"
               type="submit"
               loading={pending}
-              className="w-full sm:w-[144px] "
+              className="w-full sm:w-[144px] px-3"
             >
               Sign Up
 
