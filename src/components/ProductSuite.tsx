@@ -106,24 +106,27 @@ export default function ProductSuite() {
               <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[78px] lg:h-[78px] mb-16 sm:mb-24 lg:mb-[131px] bg-[#1A1A1A] border-white/10 flex items-center justify-center">
                 <Image src="/two.svg" alt="Bridge" width={28} height={28} className="w-5 h-5" />
               </div>
-              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+
+              <h3
+                className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3"
+                style={{ fontFamily: "'PP Mori', sans-serif" }}
+              >
+                Cross-chain Bridge
+              </h3>
+
+              <p
+                className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed"
+                style={{ fontFamily: "'PP Mori', sans-serif" }}
+              >
+                Atomic swaps to/from Ethereum / new/other chains.{" "}
                 <a
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center text-white/90 hover:text-white transition-colors duration-200"
+                  className="inline-flex items-center text-white/90 underline underline-offset-2 decoration-white/50 hover:no-underline hover:text-white transition-all duration-200"
                 >
-                  Cross-chain Bridge
-                  <span
-                    className="ml-1 opacity-0 translate-x-[-2px] group-hover:translate-x-[2px] group-hover:opacity-70 transition-all duration-300 ease-out px-1"
-                    aria-hidden="true"
-                  >
-                    →
-                  </span>
+                  Open bridge
                 </a>
-              </h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
-                Atomic swaps to/from Ethereum / new/other chains.
               </p>
             </div>
 
@@ -148,9 +151,21 @@ export default function ProductSuite() {
                   </span>
                 </a>
               </h3>
-              <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed" style={{ fontFamily: "'PP Mori', sans-serif" }}>
-                RPCs, SDKs, modular integrations.
-              </p>
+                <p
+                  className="text-[14px] sm:text-[15px] lg:text-[16px] text-white opacity-50 leading-relaxed"
+                  style={{ fontFamily: "'PP Mori', sans-serif" }}
+                >
+                  RPCs, SDKs, modular integrations.{" "}
+                  <a
+                    href="https://thunderstack.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-white/90 underline underline-offset-2 decoration-white/50 hover:no-underline hover:text-white transition-all duration-200"
+                  >
+                    Explore stack
+                  </a>
+                </p>
+
             </div>
 
             {/* Card 4 */}
