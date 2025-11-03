@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 
 interface QuoteData {
@@ -13,6 +13,7 @@ interface QuoteData {
 
 export default function Quote() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false); // stop autoplay after user interaction
 
   const quotes: QuoteData[] = [
     {
@@ -35,11 +36,24 @@ export default function Quote() {
     }
   ];
 
+  // AUTOPLAY: rotate quotes every 8 seconds until user interacts
+  useEffect(() => {
+    if (isPaused) return; // stop autoplay after first manual click
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === quotes.length - 1 ? 0 : prev + 1));
+    }, 8000); // 8s, tweak if you want
+
+    return () => clearInterval(interval);
+  }, [isPaused, quotes.length]);
+
   const handlePrevious = () => {
+    setIsPaused(true);
     setCurrentIndex((prev) => (prev === 0 ? quotes.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
+    setIsPaused(true);
     setCurrentIndex((prev) => (prev === quotes.length - 1 ? 0 : prev + 1));
   };
 
