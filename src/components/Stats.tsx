@@ -79,13 +79,12 @@ export default function Stats() {
           <div className="w-full lg:w-auto flex flex-col text-center sm:text-right lg:text-right pr-0 sm:pr-4 lg:pr-[32px]">
             <div
               ref={containerRef}
-              className="text-[60px] sm:text-[90px] lg:text-[130px] font-medium leading-tight sm:leading-[70px] lg:leading-[82px] tracking-[-0.03em] text-black mb-2 font-sans"
-              style={{ fontWeight: 500 }}
+              className="text-[66px] sm:text-[90px] lg:text-[130px] font-medium leading-tight sm:leading-[70px] lg:leading-[82px] tracking-[-0.03em] text-black mb-0 sm:mb-2 font-sans"
               aria-label="$300B+"
             >
               ${Math.round(count)}B+
             </div>
-            <p className="text-[10px] sm:text-[11px] lg:text-[12px] mt-4 sm:pt-3 lg:pt-4 px-3 text-left sm:text-left lg:text-left text-black opacity-50 tracking-wider">
+            <p className="text-sm lg:text-[12px] mt-2 sm:pt-3 lg:pt-4 px-3 text-center sm:text-left lg:text-left text-black opacity-50 tracking-wider">
               In stablecoin issuance
             </p>
 
