@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <>
       <nav className="py-4 sm:py-6 lg:py-[33px] mx-auto left-0 right-0 z-50 bg-[#D4D4D4] w-full px-4 sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
-        <div className="w-full sm:w-[600px] md:w-[860px] lg:w-[1220px] h-[55px] mx-auto flex items-center justify-between">
+        <div className="w-full sm:w-[600px] md:w-full h-[55px] mx-auto flex items-center justify-between">
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
             <Image
