@@ -24,8 +24,8 @@ export default function FAQ() {
     },
     {
       question: "How are transfers instant with zero fees?",
-      answer: "Sub-second finality via Lightning integration; zero settlement fees through Utexo's L2. RGB client-side validation ensures full privacy.",
-      bullets: ["Payment channels abstracted for user UX, enabling off-chain, instant, cheap, private txs.", "Atomic swaps with LSPs for global routing", "Impact: Handles $1B+ USDT daily"]
+      answer: "Sub second finality via Lightning integration, zero settlement fee since that is managed inside Utexo's execution layer on Bitcoin. RGB client-side validation ensures full privacy.",
+      bullets: ["Payment channels abstracted for smooth user UX, enabling off-chain, instant, cheap, private transactions", "Atomic swaps with liquidity providers and LSPs enable global routing", "Impact:  built to handle billions in daily USDT volume moving through Bitcoin"]
     },
     {
       question: "How does privacy work via RGB?",
@@ -35,7 +35,7 @@ export default function FAQ() {
     {
       question: "How do I stake / earn yield?",
       answer: "Deposit BTC/USDT on utexo.com for APY from Lightning routing fees/incentives (up to 15% est.), auto-compounding via Bitcoin-secured exits—non-custodial.",
-      bullets: ["Steps: Bridge > LP in pairs (e.g., USDT/BTC) > Earn fees + rewards.", "Sources: Routing fees, exchange/tx activity, and future incentives."]
+      bullets: ["Steps: Bridge > LP in pairs (e.g., USDT/BTC) > Earn fees + rewards.", "Sources: Routing fees, exchange/tx activity, and future incentives"]
     },
     {
       question: "Are funds SAFU? What are the risks?",
@@ -52,8 +52,8 @@ export default function FAQ() {
   const rightFAQs: FAQData[] = [
     {
       question: "What is RGB, and why pair it with Lightning?",
-      answer: "RGB is client-side-validation protocol for private, programmable assets on Bitcoin without bloat. Paired with Lightning to leverage its speed, with Utexo L2 and LSPs to abstract channel management and rebalancing challenges.",
-      bullets: ["Enhances privacy and settlement speed", "Utexo L2 simplifies UX by delegation of Lightning's complexity to professional LSPs without compromising non-custody."]
+      answer: "RGB is a client-side validation protocol for private, programmable assets on Bitcoin. Utexo pairs RGB with Lightning to leverage Lightning speed while keeping asset logic off-chain. In practice, the Utexo execution layer sits between users and a network of professional LSPs and service providers. It abstracts Lightning channel management, RGB issuance, and rebalancing challenges so users get a simple stablecoin experience on Bitcoin without giving up custody.",
+      bullets: ["Enhances privacy and settlement speed"]
     },
     {
       question: "What stablecoins does Utexo support?",
@@ -67,12 +67,12 @@ export default function FAQ() {
     },
     {
       question: "Why Utexo over LSPs or other Lightning solutions?",
-      answer: "Lightning's channel management drives LSPs, which Utexo abstracts via L2 and LSP interop, improving UX. Utexo manages inbound/outbound liquidity seamlessly with superior privacy.",
-      bullets: ["RGB privacy + Bitcoin security outpaces alternatives."]
+      answer: "Lightning channel management today is handled by Lightning Service Providers (LSPs). Utexo adds an execution layer on Bitcoin that coordinates with LSPs, abstracts inbound and outbound liquidity, and improves UX. It brings Lightning, RGB, and Bitcoin-native UTXO transport solutions such as statechains into a single environment that is built for stablecoin flows.",
+      bullets: ["RGB privacy + Bitcoin security outpaces alternatives"]
     },
     {
       question: "What are the actual fees in Utexo?",
-      answer: "No fees on settlement via L2. Fees apply on Lightning payments, DEX/swaps, bridge inflows, API provider requests, and OTC desk inbounds. Rebates enhance yield for participants.",
+      answer: "Fees come from using Utexo services, for example swaps, routing payments, and other transactional flows inside our execution layer. Settlements in Utexo are zero fee. Because most activity happens off-chain over Lightning and RGB, effective costs are lower and transactions faster than typical stablecoin transfers on other networks.",
       bullets: ["Fee structure optimized for efficiency vs. Ethereum"]
     },
     {
