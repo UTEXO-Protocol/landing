@@ -5,7 +5,7 @@ import DiscordIcon from '@/vectors/d';
 export default function Footer() {
   return (
     <footer className=" bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pb-12 sm:pb-20 lg:pb-[120px] lg:pt-10 mx-auto border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] ">
+      <div className="relative w-full sm:w-[640px] md:w-11/12 pb-12 sm:pb-20 lg:pb-[120px] lg:pt-10 mx-auto border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] ">
 {/*<div className="mb-8 sm:mb-10 lg:mb-12 flex justify-center">
   <Image
     src="/UtexoLogo.png"

@@ -11,7 +11,7 @@ import NewsletterCTA from "@/components/NewsletterCTA";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#D4D4D4] text-black">
+    <div className="min-h-screen bg-[#D4D4D4] text-black w-full">
       <Navigation />
       <Hero />
       <Stats />

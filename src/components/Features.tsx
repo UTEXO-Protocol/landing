@@ -1,7 +1,7 @@
 export default function Features() {
   return (
     <section id="features" className="bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] mx-auto py-12 sm:py-18 lg:py-24 border border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+      <div className="w-full sm:w-[640px] md:w-11/12 mx-auto py-12 sm:py-18 lg:py-24 border border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6 pl-0 sm:pl-6 lg:pl-[42px]">
           {/* Left Column - FEATURES Label */}
           <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2">

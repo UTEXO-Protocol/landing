@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function WhyUtexo() {
   return (
     <section id="why-utexo" className="bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] mx-auto border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+      <div className="w-full sm:w-[640px] md:w-11/12 mx-auto border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px] sm:border-t-[1px] sm:pt-6">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           <div className="w-full sm:w-[120px] lg:w-[150px] ml-0 sm:ml-4 lg:ml-[32px] shrink-0">
             <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-ingram">

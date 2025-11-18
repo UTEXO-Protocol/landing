@@ -5,9 +5,9 @@ export default function ProductSuite() {
   return (
     <section
       id="ProductSuite"
-      className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0"
+      className="mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0"
     >
-      <div className="w-full sm:w-[640px] md:w-[900px] bg-black lg:w-[1320px] mx-auto
+      <div className="w-full sm:w-[640px] md:w-11/12 bg-black  mx-auto
              border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         {/* Keep your original 3-col grid; left spans 2 on lg (≈2:1 look) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
@@ -107,11 +107,21 @@ export default function ProductSuite() {
                 <Image src="/two.svg" alt="Bridge" width={28} height={28} className="w-5 h-5" />
               </div>
 
-              <h3
-                className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3"
-                style={{ fontFamily: "'PP Mori', sans-serif" }}
-              >
-                Cross-chain Bridge
+              <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
+                  <a
+                  href="https://thunderstack.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Cross-Chain Bridge
+                  <span
+                    className="ml-1 opacity-0 translate-x-[-2px] group-hover:translate-x-[2px] group-hover:opacity-70 transition-all duration-300 ease-out"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </a>
               </h3>
 
               <p

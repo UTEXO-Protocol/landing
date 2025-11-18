@@ -89,7 +89,7 @@ export default function FAQ() {
 
   return (
     <section id="faqs" className="bg-[#D4D4D4] px-4 sm:px-0 ">
-      <div className="w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] pt-14 sm:pt-24 md:pt-36 mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] pb-20">
+      <div className="w-full sm:w-[640px] md:w-11/12 pt-14 sm:pt-24 md:pt-36 mx-auto relative border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] border-[#C6C6C6] pb-20">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           {/* Left Column - FAQS Label */}
           <div className="w-full sm:w-[120px] lg:w-[150px] shrink-0 pt-0 sm:pt-2 ml-0 sm:ml-6 lg:ml-[43px]">
