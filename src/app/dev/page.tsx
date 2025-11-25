@@ -30,7 +30,7 @@ export default function DevPage() {
       <DevWhatIs />
       <DevProductSuite /> 
        <DevWhy /> 
-       <DevPricing /> 
+       {/*<DevPricing /> */}
        <DevFaq /> 
        <DevFinal /> 
 
