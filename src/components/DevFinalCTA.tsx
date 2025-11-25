@@ -5,7 +5,7 @@ import Button from "./Button";
 export default function DevFinalCTA() {
   return (
     <section className="bg-black text-white relative z-10">
-      <div className="mx-auto w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+      <div className="mx-auto w-full sm:w-[640px] md:w-11/12 border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="relative px-6 sm:px-8 lg:px-9 py-16 lg:py-24">
           {/* Deco (bottom-left), mimic Dev ProductSuite usage */}
           <div
@@ -45,7 +45,7 @@ export default function DevFinalCTA() {
             {/* Two CTAs (replacing newsletter input), equal width */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button href="#request-demo" variant="black" className="!w-48">
-                request demo
+                request access
               </Button>
               <Button href="#talk-to-sales" variant="black" className="!w-48">
                 talk to sales

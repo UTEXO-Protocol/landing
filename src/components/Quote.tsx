@@ -59,12 +59,12 @@ export default function Quote() {
 
   return (
     <section className="bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="relative w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] min-h-[280px] sm:min-h-[320px] lg:h-[358px] border-[1px] border-[#C6C6C6] bg-[#E2E2E2] mx-auto flex items-center overflow-hidden">
+      <div className="relative w-full sm:w-[640px] md:w-11/12 min-h-[280px] sm:min-h-[320px] lg:h-[358px] border-[1px] border-[#C6C6C6] bg-[#E2E2E2] mx-auto flex items-center overflow-hidden">
         <div className="w-full sm:w-[600px] md:w-[850px] lg:w-[1094px] mx-auto px-4 sm:px-6 lg:px-0">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-0">
 
             {/* Quote text */}
-            <div className="w-full sm:w-[400px] md:w-[600px] lg:w-[788px]">
+            <div className="w-full sm:max-w-[400px] md:max-w-[600px] lg:max-w-[788px] sm:px-4 md:px-6">
               <blockquote 
                 key={currentIndex}
                 className="text-[16px] sm:text-[20px] lg:text-[24px] font-normal leading-normal animate-fadeIn" 
@@ -75,7 +75,7 @@ export default function Quote() {
             </div>
 
             {/* Logo / Author */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center sm:pr-4 md:pr-6">
               {quotes[currentIndex].logo ? (
                 // If we have a logo (e.g. Bitcoin Magazine / Tether)
                 quotes[currentIndex].source ? (

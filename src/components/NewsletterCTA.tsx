@@ -53,7 +53,7 @@ export default function NewsletterCTA() {
       <div
         className="
           relative mx-auto
-          w-full sm:w-[640px] md:w-[900px] lg:w-[1320px]
+          w-full sm:w-[640px] md:w-11/12
           py-16 md:py-24
           border-0 sm:border-[1px]  border-[#C6C6C6]
           bg-[#E2E2E2]

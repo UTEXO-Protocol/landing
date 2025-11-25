@@ -7,7 +7,7 @@ export default function ProductSuite() {
       id="ProductSuite"
       className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0"
     >
-      <div className="w-full sm:w-[640px] md:w-[900px] bg-black lg:w-[1320px] mx-auto
+      <div className="w-full sm:w-[640px] md:w-11/12 bg-black mx-auto
              border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         {/* Keep your original 3-col grid; left spans 2 on lg (≈2:1 look) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
@@ -16,7 +16,7 @@ export default function ProductSuite() {
           <div className="order-first lg:order-last col-span-1 flex flex-col justify-between relative p-6 sm:p-8 lg:p-9">
             <div className="space-y-6 sm:space-y-7 lg:space-y-8">
               {/* Match DevProductSuite scale */}
-              <h2 className="text-[40px] sm:text-[48px] lg:text-[80px] leading-tight sm:leading-[50px] lg:leading-[90%] tracking-[-0.03em] font-sans">
+              <h2 className="text-4xl sm:text-[48px] md:text-6xl lg:text-7xl leading-tight sm:leading-[50px] lg:leading-[90%] tracking-[-0.03em] font-sans">
                 Product Suite
               </h2>
               <p
@@ -40,7 +40,7 @@ export default function ProductSuite() {
                 alt="3D Coin Element"
                 width={150}
                 height={150}
-                className="lg:w-[185.4px] lg:h-[232px]"
+                className="md:!w-40 md:h-auto lg:w-[185.4px] lg:h-auto"
               />
             </div>
 
@@ -111,7 +111,20 @@ export default function ProductSuite() {
                 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3"
                 style={{ fontFamily: "'PP Mori', sans-serif" }}
               >
-                Cross-chain Bridge
+                  <a
+                  href="https://bridge.utexo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Cross-chain Bridge
+                  <span
+                    className="ml-1 opacity-0 translate-x-[-2px] group-hover:translate-x-[2px] group-hover:opacity-70 transition-all duration-300 ease-out"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </a>
               </h3>
 
               <p

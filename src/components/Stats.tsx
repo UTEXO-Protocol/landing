@@ -65,7 +65,7 @@ export default function Stats() {
 
   return (
     <section className="relative bg-[#D4D4D4] px-4 sm:px-0 ">
-      <div className="pb-10 sm:pb-5 w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] border-l-0 sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] mx-auto px-0 sm:px-6 lg:px-0 pt-6 sm:pt-8 lg:pt-8 pb-8 sm:pb-10 lg:pb-12">
+      <div className="pb-10 sm:pb-5 w-full sm:w-[640px] md:w-11/12 border-l-0 sm:border-l-[1px] border-[#C6C6C6] sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] mx-auto px-0 sm:px-6 lg:px-0 pt-6 sm:pt-8 lg:pt-8 pb-8 sm:pb-10 lg:pb-12">
 
         {/* flex wrapper: marquee left, stat right */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">

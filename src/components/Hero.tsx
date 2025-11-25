@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function Hero() {
   return (
     <section className="relative overflow-visible px-4 sm:px-0">
-      <div className="pb-4 sm:pb-16 lg:pb-20 mx-auto w-full sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+      <div className="pb-4 sm:pb-16 lg:pb-20 mx-auto w-full sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
         <div className="relative bg-[#1a2e1a] overflow-visible h-[400px] sm:h-[550px] lg:h-[740px] mx-auto">
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
           
           {/* 3D Element - Bottom Center */}
-          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-1/3 md:-translate-x-1/2 z-20 animate-floatRing"   style={{
+          <div className="absolute bottom-[-30px] sm:bottom-[-65px] lg:!-bottom-14 right-10 -translate-x-1/2 md:right-2/4 lg:right-1/3 lg:-translate-x-1/2 z-20 animate-floatRing"   style={{
     filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.4))"
   }}>
             <Image
