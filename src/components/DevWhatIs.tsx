@@ -17,11 +17,11 @@ export default function DevWhatIs() {
 
           {/* Copy (cols 3–4) */}
           <div className="lg:col-span-3 space-y-8">
-            <p className="font-sans font-medium text-[28px] leading-[1.25] sm:text-[32px] lg:text-[40px] lg:leading-[1.22]">
+            <p className="font-sans font-medium text-2xl leading-[1.25] sm:text-3xl lg:text-4xl lg:leading-[1.22]">
               Dev Utexo is the SDK and REST API that connects your application to Utexo’s execution layer for native stablecoins and RGB assets on Bitcoin.
             </p>
 
-            <p className="font-sans font-medium text-[28px] leading-[1.25] sm:text-[32px] lg:text-[40px] lg:leading-[1.22]">
+            <p className="font-sans font-medium text-2xl leading-[1.25] sm:text-3xl lg:text-4xl lg:leading-[1.22]">
               It abstracts Bitcoin nodes, Lightning liquidity, RGB state, and statechain updates so you can offer private USDT transfers and other RGB assets without operating any infrastructure.
             </p>
           </div>

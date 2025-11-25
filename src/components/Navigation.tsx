@@ -100,18 +100,21 @@ export default function Navigation() {
                       </a>
 
                       {/* Dev (Soon) – disabled, stays muted */}
-                      <div
+
+                                              <a
+                        href="/dev"
+                        target=""
+                        rel="noopener noreferrer"
                         className="
                           flex items-center justify-between
-                          font-ingram text-sm text-white/50
-                          cursor-not-allowed select-none pr-2
+                          font-ingram text-sm text-white/90
+                          pr-2 transition-all duration-200
+                          hover:text-[#FFBE3C] hover:tracking-[0.015em] hover:opacity-100
                         "
-                        title="Coming soon"
-                        aria-disabled="true"
                       >
-                        <span>SDK</span>
+                        <span>Dev</span>
                         <span className="text-xs uppercase tracking-[0.05em] text-white/50">Soon</span>
-                      </div>
+                      </a>
 
                     </div>
                   </div>
