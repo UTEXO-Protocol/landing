@@ -50,7 +50,7 @@ export default function DevProductSuite() {
           {/* Copy block (right) */}
           <div className="col-span-1 flex flex-col justify-between relative p-6 sm:p-8 lg:p-9">
             <div className="space-y-6 sm:space-y-7 lg:space-y-8">
-              <h2 className="text-[40px] sm:text-[48px] lg:text-8xl leading-tight sm:leading-[50px] lg:leading-[90%] tracking-[-0.03em] font-sans">
+              <h2 className="text-4xl sm:text-[48px] md:text-6xl lg:text-7xl leading-tight sm:leading-[50px] lg:leading-[90%] tracking-[-0.03em] font-sans">
                 Dev Utexo — execution layer<wbr /> as an API.
               </h2>
                <p className="font-sans text-[14px] sm:text-[15px] lg:text-[16px] text-white leading-snug" style={{ fontFamily: "'PP Mori', sans-serif" }}>
