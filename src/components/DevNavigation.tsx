@@ -16,7 +16,7 @@ export default function DevNavigation() {
         <div className="w-full sm:w-[600px] md:w-11/12 h-[55px] mx-auto flex items-center justify-between">
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
-            <a href="/" target="" rel="noopener noreferrer">
+            <Link href="/" target="" rel="noopener noreferrer">
 
             <Image
               src="/UtexoLogoFullWhite.svg"
@@ -26,7 +26,7 @@ export default function DevNavigation() {
               priority
               className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
             />
-          </a>
+          </Link>
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
@@ -103,7 +103,7 @@ export default function DevNavigation() {
                       </a>
 
                       {/* Dev (Soon) – disabled, stays muted */}
-                      <a
+                      <Link
                         href="/dev"
                         target=""
                         rel="noopener noreferrer"
@@ -116,7 +116,7 @@ export default function DevNavigation() {
                       >
                         <span>Dev</span>
                         <span className="text-xs uppercase tracking-[0.05em] text-white/50 select-none">Soon</span>
-                      </a>
+                      </Link>
 
                     </div>
                   </div>
