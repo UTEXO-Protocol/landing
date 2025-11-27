@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function DevPricing() {
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto w-full sm:w-[640px] md:w-[900px] lg:w-[1320px]
+      <div className="mx-auto w-full sm:w-[640px] md:w-11/12
                       border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
 
         {/* Header row: left label + right label */}

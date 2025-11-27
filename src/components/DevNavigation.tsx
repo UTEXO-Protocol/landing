@@ -12,10 +12,12 @@ export default function DevNavigation() {
   return (
     <>
       {/* Dark header shell */}
-      <nav className="py-4 sm:py-6 lg:py-[33px] mx-auto left-0 right-0 z-[70] bg-black w-full px-4 sm:w-[640px] md:w-[900px] lg:w-[1320px] border-[#2a2a2a] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
-        <div className="w-full sm:w-[600px] md:w-[860px] lg:w-[1220px] h-[55px] mx-auto flex items-center justify-between">
+      <nav className="py-4 sm:py-6 lg:py-[33px] mx-auto left-0 right-0 z-[70] bg-black w-full px-4 sm:w-[640px] md:w-11/12 border-[#2a2a2a] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
+        <div className="w-full sm:w-[600px] md:w-11/12 h-[55px] mx-auto flex items-center justify-between">
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
+            <Link href="/" target="" rel="noopener noreferrer">
+
             <Image
               src="/UtexoLogoFullWhite.svg"
               alt="UTEXO Logo"
@@ -24,7 +26,7 @@ export default function DevNavigation() {
               priority
               className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
             />
-
+          </Link>
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
@@ -90,29 +92,31 @@ export default function DevNavigation() {
                           flex items-center justify-between
                           font-ingram text-sm text-white/90
                           pr-2 transition-all duration-200
-                          hover:text-[#FF9900]/80 hover:tracking-[0.015em] hover:opacity-100
+                          hover:text-[#FFBE3C]/80 hover:tracking-[0.015em] hover:opacity-100
                         "
                       >
                         <span>Bridge</span>
                         {/* status stays subtle on dark */}
                         <span className="text-xs uppercase tracking-[0.05em] text-white/50 select-none">
-                          Live↗
+                          Live
                         </span>
                       </a>
 
                       {/* Dev (Soon) – disabled, stays muted */}
-                      <div
+                      <Link
+                        href="/dev"
+                        target=""
+                        rel="noopener noreferrer"
                         className="
                           flex items-center justify-between
-                          font-ingram text-sm text-white/45
-                          cursor-not-allowed select-none pr-2
+                          font-ingram text-sm text-white/90
+                          pr-2 transition-all duration-200
+                          hover:text-[#FFBE3C]/80 hover:tracking-[0.015em] hover:opacity-100
                         "
-                        title="Coming soon"
-                        aria-disabled="true"
                       >
                         <span>Dev</span>
-                        <span className="text-xs uppercase tracking-[0.05em] text-white/45">Soon</span>
-                      </div>
+                        <span className="text-xs uppercase tracking-[0.05em] text-white/50 select-none">Soon</span>
+                      </Link>
 
                     </div>
                   </div>
@@ -153,7 +157,7 @@ export default function DevNavigation() {
             </button>
 
             <Button
-              href="https://bridge.utexo.com"
+              href="#DevCTA"
               variant="black"
               className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]"
             >
@@ -214,13 +218,18 @@ export default function DevNavigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-ingram uppercase text-white hover:text-[#FF9900]/80"
+                  className="text-[13px] font-ingram uppercase text-white hover:text-[#FFBE3C]/80"
                 >
                   Bridge <span className="text-white/50">· Live ↗</span>
                 </a>
-                <span className="text-[13px] font-ingram uppercase text-white/40">
-                  Dev <span className="text-white/40">· Soon</span>
-                </span>
+                <a
+                  href="https://bridge.utexo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-ingram uppercase text-white hover:text-[#FFBE3C]/80"
+                >
+                  Dev <span className="text-white/50">· Soon</span>
+                </a>
               </div>
             )}
 

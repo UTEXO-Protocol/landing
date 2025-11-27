@@ -6,7 +6,7 @@ export default function DevHero() {
   return (
     <section className="relative overflow-visible bg-black text-white">
       {/* rails like the landing page */}
-      <div className="mx-auto w-full px-4 sm:w-[640px] md:w-[900px] lg:w-[1320px]
+      <div className="mx-auto w-full px-4 sm:w-[640px] md:w-11/12
                       border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]
                       border-t border-b">
         {/* hero height tracks landing proportions */}
@@ -23,22 +23,20 @@ export default function DevHero() {
             <h1 className="font-sans font-medium tracking-[-0.03em]
                            text-[36px] sm:text-[56px] lg:text-[80px]
                            leading-[1.05] lg:leading-[82px] lg:px-24 max-w-[1040px]">
-              The Infrastructure<wbr/> Cloud 
-              for RGB and<wbr/> Lightning Network.
+              The API and SDK suite<wbr/> for native stablecoins<wbr/> on Bitcoin.
             </h1>
 
             {/* subhead – Mori / font-sans */}
             <p className="mt-5 max-w-[720px] text-[14px] leading-relaxed text-white/70 font-sans">
-              Simplify deployment and management of RGB and Lightning with
-              enterprise-grade reliability and zero DevOps overhead.
+              Utexo abstracts the complexity of Bitcoin, Lightning, and RGB so you can offer instant, private, low-cost payments natively on Bitcoin.
             </p>
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button variant="black" href="#request-demo" className="w-[180px] h-[48px] text-[12px]">
-                request demo
+              <Button variant="black" href="#DevCTA" className="w-[180px] h-[48px] text-[12px]">
+                request access
               </Button>
-              <Button variant="black" href="#docs" className="w-[160px] h-[48px] text-[12px]">
+              <Button variant="black" href="https://docs.thunderstack.org/bitcoin-native-infrastructure/readme/thunderlink/rgb-node" className="w-[160px] h-[48px] text-[12px]">
                 view docs
               </Button>
             </div>
@@ -46,7 +44,7 @@ export default function DevHero() {
 
           {/* 3D ring */}
           <div className="pointer-events-none absolute z-0 hidden lg:block lg:-bottom-20 lg:left-52 animate-floatOrb">
-            <Image src="/last.webp" alt="" width={260} height={260} className="w-[200px] h-auto" priority />
+            <Image src="/last.webp" alt="" width={260} height={260} className="w-16 md:w-48 h-auto" priority />
           </div>
         </div>
       </div>

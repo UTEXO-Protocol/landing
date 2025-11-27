@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function WhyUtexo() {
   return (
     <section id="why-utexo" className="bg-[#D4D4D4] px-4 sm:px-0">
-      <div className="w-full sm:w-[640px] md:w-11/12 mx-auto border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px] sm:border-t-[1px] sm:pt-6">
+      <div className="w-full sm:w-[640px] md:w-11/12 mx-auto border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px] sm:border-t-[1px] border-[#C6C6C6] sm:pt-5 lg:pt-6">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6">
           <div className="w-full sm:w-[120px] lg:w-[150px] ml-0 sm:ml-4 lg:ml-[32px] shrink-0">
             <span className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-ingram">
@@ -83,25 +83,25 @@ export default function WhyUtexo() {
         </div>
 
         {/* Tether + part.webp row */}
-        <div className="mt-6 sm:mt-9 lg:mt-12 border-t border-[#C6C6C6] pt-6 sm:pt-8 lg:pt-0">
+        <div className="mt-6 sm:mt-9 lg:mt-12 sm:border-t sm:border-[#C6C6C6] pt-6 sm:pt-8 lg:pt-0">
           <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-6 sm:gap-8 lg:gap-10">
             {/* LEFT: Tether shield + copy (spans 2 cols on desktop) */}
-            <div className="flex items-center gap-4 sm:gap-6 lg:col-span-2">
+            <div className="flex-0 sm:flex items-center gap-4 sm:gap-6 lg:col-span-2">
               <div className="shrink-0">
                 <Image
                   src="/tether_shield.webp"
                   alt="Shield"
                   width={360}
                   height={360}
-                  className="w-auto h-[120px] sm:h-[150px] lg:h-[188px] drop-shadow-xl/35 shadow-black"
+                  className="w-auto h-[180px] sm:h-[150px] lg:h-[188px] drop-shadow-xl/35 shadow-black"
                 />
               </div>
 
-              <div className="w-full space-y-3 sm:space-y-4">
+              <div className="w-full space-y-3 sm:space-y-4 py-6 sm:py-2">
                 <h3 className="text-[22px] sm:text-[25px] lg:text-[28px] font-normal leading-tight">
                   Backed by Tether, Anchored in Bitcoin
                 </h3>
-                <p className="text-[15px] sm:text-[16px] pr-4 lg:pr-10 lg:text-[17px] text-black opacity-50 leading-snug">
+                <p className="text-[15px] sm:text-[16px] pr-32 sm:pr-4 lg:pr-10 lg:text-[17px] text-black opacity-50 leading-snug">
                   Tether is one of the many investors in Utexo recognizing our mission to bring native USDT
                   adoption to Bitcoin&apos;s RGB &amp; Lightning ecosystems.
                 </p>
@@ -109,7 +109,7 @@ export default function WhyUtexo() {
             </div>
 
             {/* RIGHT: part.webp card (takes 1 col, full width of that col) */}
-            <div className="relative overflow-visible h-[280px] sm:h-[320px] lg:h-[358px] w-full">
+            <div className="relative  overflow-visible h-[320px] lg:h-[358px] w-full">
               <Image
                 src="/part.webp"
                 alt="Trading Background"

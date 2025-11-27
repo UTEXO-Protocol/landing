@@ -12,9 +12,10 @@ export default function Navigation() {
   return (
     <>
       <nav className="py-4 sm:py-6 lg:py-[33px] mx-auto left-0 right-0 z-50 bg-[#D4D4D4] w-full px-4 sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
-        <div className="w-full sm:w-[600px] md:w-full h-[55px] mx-auto flex items-center justify-between">
+        <div className="w-full sm:w-[600px] md:w-11/12 h-[55px] mx-auto flex items-center justify-between">
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
+            <Link href="/" target="" rel="noopener noreferrer">
             <Image
               src="/UtexoLogoFullBlack.svg"
               alt="UTEXO Logo"
@@ -23,7 +24,7 @@ export default function Navigation() {
               priority
               className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
             />
-
+          </Link>
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
@@ -100,18 +101,21 @@ export default function Navigation() {
                       </a>
 
                       {/* Dev (Soon) – disabled, stays muted */}
-                      <div
+
+                      <Link
+                        href="/dev"
+                        target=""
+                        rel="noopener noreferrer"
                         className="
                           flex items-center justify-between
-                          font-ingram text-sm text-white/50
-                          cursor-not-allowed select-none pr-2
+                          font-ingram text-sm text-white/90
+                          pr-2 transition-all duration-200
+                          hover:text-[#FFBE3C] hover:tracking-[0.015em] hover:opacity-100
                         "
-                        title="Coming soon"
-                        aria-disabled="true"
                       >
-                        <span>SDK</span>
+                        <span>Dev</span>
                         <span className="text-xs uppercase tracking-[0.05em] text-white/50">Soon</span>
-                      </div>
+                      </Link>
 
                     </div>
                   </div>
@@ -213,13 +217,21 @@ export default function Navigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-ingram uppercase text-black hover:opacity-80"
+                  className="text-[13px] font-ingram uppercase text-black transition-all duration-150
+                          hover:text-[#FFBE3C]/80 hover:brightness-90 "
                 >
                   Bridge <span className="text-black/50">· Live ↗</span>
                 </a>
-                <span className="text-[13px] font-ingram uppercase text-black/40">
-                  SDK <span className="text-black/40">· Soon</span>
-                </span>
+                <a
+                  href="/dev"
+                  target=""
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-ingram uppercase text-black transition-all duration-150
+                          hover:text-[#FFBE3C]/80 hover:brightness-90"
+                >
+                  SDK <span className="text-black/50">· Soon</span>
+
+              </a>
               </div>
             )}
 
