@@ -5,7 +5,7 @@ export default function ProductSuite() {
   return (
     <section
       id="ProductSuite"
-      className="max-w-[1320px] mx-auto text-white relative overflow-visible px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-0"
+      className="w-full mx-auto text-white relative overflow-visible px-4 sm:px-0 lg:px-0 py-0 sm:py-0 lg:py-0"
     >
       <div className="w-full sm:w-[640px] md:w-11/12 bg-black mx-auto
              border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">

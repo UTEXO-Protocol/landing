@@ -64,7 +64,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="relative bg-[#D4D4D4] px-4 sm:px-0 ">
+    <section className="relative bg-[#D4D4D4] px-4 sm:px-0 lg:px-0 ">
       <div className="pb-10 sm:pb-5 w-full sm:w-[640px] md:w-11/12 border-l-0 sm:border-l-[1px] border-[#C6C6C6] sm:border-l-[1px] border-[#C6C6C6] border-r-0 sm:border-r-[1px] mx-auto px-0 sm:px-6 lg:px-0 pt-6 sm:pt-8 lg:pt-8 pb-8 sm:pb-10 lg:pb-12">
 
         {/* flex wrapper: marquee left, stat right */}
@@ -79,12 +79,12 @@ export default function Stats() {
           <div className="w-full lg:w-auto flex flex-col text-center sm:text-right lg:text-right pr-0 sm:pr-4 lg:pr-[32px]">
             <div
               ref={containerRef}
-              className="text-[66px] sm:text-[90px] lg:text-[130px] font-medium leading-tight sm:leading-[70px] lg:leading-[82px] tracking-[-0.03em] text-black mb-0 sm:mb-2 font-sans"
+              className="text-[66px] text-left sm:text-[90px] lg:text-[130px] font-medium leading-tight sm:leading-[70px] lg:leading-[82px] tracking-[-0.03em] text-black mb-0 sm:mb-2 font-sans"
               aria-label="$300B+"
             >
               ${Math.round(count)}B+
             </div>
-            <p className="text-sm lg:text-[12px] mt-2 sm:pt-3 lg:pt-4 px-3 text-center sm:text-left lg:text-left text-black opacity-50 tracking-wider">
+            <p className="text-sm lg:text-[12px] mt-2 sm:pt-3 lg:pt-4 px-0 sm:px-3 text-left sm:text-left lg:text-left text-black opacity-50 tracking-wider">
               In stablecoin issuance
             </p>
 

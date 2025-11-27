@@ -15,6 +15,7 @@ export default function Navigation() {
         <div className="w-full sm:w-[600px] md:w-11/12 h-[55px] mx-auto flex items-center justify-between">
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
+            <a href="/" target="" rel="noopener noreferrer">
             <Image
               src="/UtexoLogoFullBlack.svg"
               alt="UTEXO Logo"
@@ -23,7 +24,7 @@ export default function Navigation() {
               priority
               className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
             />
-
+          </a>
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
@@ -216,13 +217,21 @@ export default function Navigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-ingram uppercase text-black hover:opacity-80"
+                  className="text-[13px] font-ingram uppercase text-black transition-all duration-200
+                          hover:opacity-70"
                 >
                   Bridge <span className="text-black/50">· Live ↗</span>
                 </a>
-                <span className="text-[13px] font-ingram uppercase text-black/40">
-                  SDK <span className="text-black/40">· Soon</span>
-                </span>
+                <a
+                  href="/dev"
+                  target=""
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-ingram uppercase text-black transition-all duration-200
+                          hover:opacity-70"
+                >
+                  SDK <span className="text-black/50">· Soon</span>
+
+              </a>
               </div>
             )}
 
