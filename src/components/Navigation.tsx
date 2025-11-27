@@ -217,8 +217,8 @@ export default function Navigation() {
                   href="https://bridge.utexo.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-ingram uppercase text-black transition-all duration-200
-                          hover:opacity-70"
+                  className="text-[13px] font-ingram uppercase text-black transition-all duration-150
+                          hover:text-[#FFBE3C]/80 hover:brightness-90 "
                 >
                   Bridge <span className="text-black/50">· Live ↗</span>
                 </a>
@@ -226,8 +226,8 @@ export default function Navigation() {
                   href="/dev"
                   target=""
                   rel="noopener noreferrer"
-                  className="text-[13px] font-ingram uppercase text-black transition-all duration-200
-                          hover:opacity-70"
+                  className="text-[13px] font-ingram uppercase text-black transition-all duration-150
+                          hover:text-[#FFBE3C]/80 hover:brightness-90"
                 >
                   SDK <span className="text-black/50">· Soon</span>
 
