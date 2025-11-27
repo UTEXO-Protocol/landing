@@ -157,7 +157,7 @@ export default function DevNavigation() {
             </button>
 
             <Button
-              href="https://bridge.utexo.com"
+              href="#DevCTA"
               variant="black"
               className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]"
             >

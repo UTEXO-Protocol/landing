@@ -33,10 +33,10 @@ export default function DevHero() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button variant="black" href="#request-demo" className="w-[180px] h-[48px] text-[12px]">
+              <Button variant="black" href="#DevCTA" className="w-[180px] h-[48px] text-[12px]">
                 request access
               </Button>
-              <Button variant="black" href="#docs" className="w-[160px] h-[48px] text-[12px]">
+              <Button variant="black" href="https://docs.thunderstack.org/bitcoin-native-infrastructure/readme/thunderlink/rgb-node" className="w-[160px] h-[48px] text-[12px]">
                 view docs
               </Button>
             </div>

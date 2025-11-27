@@ -59,10 +59,10 @@ export default function DevProductSuite() {
 
               {/* two CTAs, same width; wrap on small screens */}
               <div className="mt-2 flex flex-col sm:flex-row gap-3">
-                <Button href="https://bridge.utexo.com" variant="black" className="!w-44">
+                <Button href="#DevCTA" variant="black" className="!w-44">
                   Get Access
                 </Button>
-                <Button href="#api-docs" variant="black" className="!w-44">
+                <Button href="https://docs.thunderstack.org/bitcoin-native-infrastructure/readme/thunderlink/rgb-node" variant="black" className="!w-44">
                   View Docs
                 </Button>
               </div>
