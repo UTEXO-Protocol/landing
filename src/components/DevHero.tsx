@@ -44,7 +44,7 @@ export default function DevHero() {
 
           {/* 3D ring */}
           <div className="pointer-events-none absolute z-0 hidden lg:block lg:-bottom-20 lg:left-52 animate-floatOrb">
-            <Image src="/last.webp" alt="" width={260} height={260} className="w-[200px] h-auto" priority />
+            <Image src="/last.webp" alt="" width={260} height={260} className="w-16 md:w-48 h-auto" priority />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ export default function DevWhy() {
   return (
     <section className="bg-black text-white relative">
       <div className="mx-auto w-full sm:w-[640px] md:w-11/12
-                      border-[#2A2A2A] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px] border-b">
+                      border-[#2A2A2A] border-l-0 sm:border-l-[1px] px-4 border-r-0 sm:border-r-[1px] border-b">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-10 lg:gap-x-10 py-12 lg:py-24">
           <div className="lg:col-span-2">
             <h2 className="font-sans font-medium text-[44px] leading-[1.02] sm:text-[52px] lg:text-[60px] lg:leading-[1.02] tracking-[-0.01em] pl-10">
