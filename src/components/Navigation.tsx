@@ -222,16 +222,16 @@ export default function Navigation() {
                 >
                   Bridge <span className="text-black/50">· Live ↗</span>
                 </a>
-                <a
+                <Link
                   href="/dev"
                   target=""
                   rel="noopener noreferrer"
                   className="text-[13px] font-ingram uppercase text-black transition-all duration-150
                           hover:text-[#FFBE3C]/80 hover:brightness-90"
                 >
-                  SDK <span className="text-black/50">· Soon</span>
+                  Dev <span className="text-black/50">· Soon</span>
 
-              </a>
+              </Link>
               </div>
             )}
 
