@@ -40,7 +40,7 @@ export default function DevNavigation() {
               <div className="relative group">
                 {/* Trigger */}
                 <a
-                  href="#ProductSuite"
+                  href="#DevProductSuite"
                   className="lg:text-[14px] tracking-wide uppercase font-mono inline-flex items-center gap-2 text-white/90 hover:text-white"
                 >
                   PRODUCTS
