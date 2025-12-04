@@ -124,7 +124,7 @@ export default function DevNavigation() {
               </div>
 
               <a
-                href="#features"
+                href="#DevProductSuite"
                 className="lg:text-[14px] tracking-wide uppercase font-ingram text-white/90 hover:text-white transition-opacity"
               >
                 Features
