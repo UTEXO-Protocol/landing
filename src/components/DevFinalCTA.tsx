@@ -35,12 +35,12 @@ export default function DevFinalCTA() {
         throw new Error(data?.error || "Request failed");
       }
 
-      toast.success(
+      const defaultMessage =
         action === "sales"
           ? "Thanks, our team will reach out shortly."
-          : "Thanks, we’ll follow up with dev access details.",
-        { id: tid }
-      );
+          : "Thanks, we’ll follow up with dev access details.";
+
+      toast.success(data?.message ?? defaultMessage, { id: tid });
 
       setEmail("");
     } catch (err) {
