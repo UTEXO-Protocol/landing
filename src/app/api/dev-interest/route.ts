@@ -67,14 +67,23 @@ export async function POST(req: Request) {
       );
     }
 
+    const alreadyDev = existing?.wants_dev_access ?? false;
+    const alreadySales = existing?.wants_sales_contact ?? false;
+
     const wants_dev_access =
-      (existing?.wants_dev_access ?? false) || action === "dev";
+      alreadyDev || action === "dev";
     const wants_sales_contact =
-      (existing?.wants_sales_contact ?? false) || action === "sales";
+      alreadySales || action === "sales";
 
     // auto-subscribe dev/sales requests to newsletter
     const is_newsletter = true;
-    
+
+    const isNewRecord = !existing;
+    const flagJustAddedForThisAction =
+      action === "dev"
+        ? !alreadyDev && wants_dev_access
+        : !alreadySales && wants_sales_contact;
+
     if (existing) {
       // Update flags on existing row
       const { error: updateErr } = await supabaseSrv
@@ -119,30 +128,48 @@ export async function POST(req: Request) {
       }
     }
 
-    // Telegram alert
-    const title =
-      action === "sales"
-        ? "💼 New Talk-to-Sales request"
-        : "🛰 New Dev Utexo access request";
+    // Decide on user-facing message
+    let message: string;
+    if (action === "sales") {
+      message = flagJustAddedForThisAction
+        ? "💼 Thanks, our team will reach out shortly."
+        : "💼 You're already on the list to talk to sales. 🙌";
+    } else {
+      message = flagJustAddedForThisAction
+        ? "🛰 Thanks, we'll follow up with dev access details."
+        : "🛰 You're already on the list for dev access. 🙌";
+    }
 
-    const flagsLine = `Newsletter: ${
-      is_newsletter ? "✅" : "❌"
-    } • Dev access: ${wants_dev_access ? "✅" : "❌"} • Sales: ${
-      wants_sales_contact ? "✅" : "❌"
-    }`;
+    // Only send Telegram when something actually changed:
+    // - new record, or
+    // - new dev/sales flag for this email.
+    const shouldSendTelegram = isNewRecord || flagJustAddedForThisAction;
 
-    const lines = [
-      `<b>${title}</b>`,
-      "",
-      `Email: ${escapeHtml(email)}`,
-      `Source: ${escapeHtml(source)}`,
-      flagsLine,
-    ];
+    if (shouldSendTelegram) {
+      const title =
+        action === "sales"
+          ? "💼 New Talk-to-Sales request"
+          : "🛰 New Dev Utexo access request";
 
-    await sendTelegramMessage(lines.join("\n"), { parseMode: "HTML" });
+      const flagsLine = `Newsletter: ${
+        is_newsletter ? "✅" : "❌"
+      } • Dev access: ${wants_dev_access ? "✅" : "❌"} • Sales: ${
+        wants_sales_contact ? "✅" : "❌"
+      }`;
+
+      const lines = [
+        `<b>${title}</b>`,
+        "",
+        `Email: ${escapeHtml(email)}`,
+        `Source: ${escapeHtml(source)}`,
+        flagsLine,
+      ];
+
+      await sendTelegramMessage(lines.join("\n"), { parseMode: "HTML" });
+    }
 
     return NextResponse.json(
-      { ok: true, message: "Request received." },
+      { ok: true, message },
       { status: 200 }
     );
   } catch (err) {
