@@ -8,6 +8,7 @@ import Button from './Button';
 export default function DevNavigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [desktopProductsOpen, setDesktopProductsOpen] = useState(false); // NEW
 
   return (
     <>
@@ -17,16 +18,16 @@ export default function DevNavigation() {
           {/* Left: logo + desktop links */}
           <div className="flex items-center gap-4 sm:gap-8 lg:gap-16">
             <Link href="/" target="" rel="noopener noreferrer">
+              <Image
+                src="/UtexoLogoFullWhite.svg"
+                alt="UTEXO Logo"
+                width={100.14}
+                height={37}
+                priority
+                className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
+              />
+            </Link>
 
-            <Image
-              src="/UtexoLogoFullWhite.svg"
-              alt="UTEXO Logo"
-              width={100.14}
-              height={37}
-              priority
-              className="w-[100px] h-auto sm:w-[100px] sm:h-auto lg:w-[100.14px] lg:h-auto"
-            />
-          </Link>
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center lg:gap-10">
               <a
@@ -36,39 +37,57 @@ export default function DevNavigation() {
                 Why Utexo
               </a>
 
-              {/* PRODUCTS with hover dropdown (desktop only) */}
-              <div className="relative group">
-                {/* Trigger */}
-                <a
-                  href="#DevProductSuite"
-                  className="lg:text-[14px] tracking-wide uppercase font-mono inline-flex items-center gap-2 text-white/90 hover:text-white"
-                >
-                  PRODUCTS
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-[14px] w-[18px] transition-transform duration-200 group-hover:rotate-180"
-                    aria-hidden="true"
+              {/* PRODUCTS with hover + click dropdown (desktop only) */}
+              <div
+                className="relative group"
+                onMouseEnter={() => setDesktopProductsOpen(true)}
+                onMouseLeave={() => setDesktopProductsOpen(false)}
+              >
+                {/* Trigger row: text link (scroll) + chevron button (dropdown) */}
+                <div className="inline-flex items-center gap-2">
+                  {/* Text still scrolls to DevProductSuite */}
+                  <a
+                    href="#DevProductSuite"
+                    className="lg:text-[14px] tracking-wide uppercase font-mono text-white/90 hover:text-white"
                   >
-                    <path
-                      d="M6 15l6-6 6 6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
+                    PRODUCTS
+                  </a>
+
+                  {/* Chevron toggles dropdown on click (for iPad / touch) */}
+                  <button
+                    type="button"
+                    onClick={() => setDesktopProductsOpen((v) => !v)}
+                    aria-expanded={desktopProductsOpen}
+                    aria-label="Toggle products menu"
+                    className="inline-flex items-center text-white/90"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className={`
+                        h-[14px] w-[18px] transition-transform duration-200
+                        ${desktopProductsOpen ? 'rotate-180' : ''}
+                      `}
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M6 15l6-6 6 6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
 
                 {/* Dropdown */}
                 <div
-                  className="
-                    invisible opacity-0 translate-y-1
-                    group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
-                    focus-within:visible focus-within:opacity-100 focus-within:translate-y-0
+                  className={`
                     transition-all duration-150
                     absolute left-0 top-[calc(100%+6px)] z-[80]
-                  "
+                    ${desktopProductsOpen ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-1'}
+                  `}
                 >
                   {/* hover buffer */}
                   <span className="absolute -top-3 left-0 right-0 h-3" aria-hidden />
@@ -102,7 +121,7 @@ export default function DevNavigation() {
                         </span>
                       </a>
 
-                      {/* Dev (Soon) – disabled, stays muted */}
+                      {/* Dev (Soon) */}
                       <Link
                         href="/dev"
                         target=""
@@ -115,9 +134,10 @@ export default function DevNavigation() {
                         "
                       >
                         <span>Dev</span>
-                        <span className="text-xs uppercase tracking-[0.05em] text-white/50 select-none">Soon</span>
+                        <span className="text-xs uppercase tracking-[0.05em] text-white/50 select-none">
+                          Soon
+                        </span>
                       </Link>
-
                     </div>
                   </div>
                 </div>
@@ -207,13 +227,6 @@ export default function DevNavigation() {
 
             {mobileProductsOpen && (
               <div className="ml-4 flex flex-col gap-3 pb-2">
-                {/*                <a
-                  href="#ProductSuite"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-[13px] font-mono uppercase text-white/70 hover:text-white"
-                >
-                  Overview
-                </a>*/}
                 <a
                   href="https://bridge.utexo.com"
                   target="_blank"
@@ -222,14 +235,14 @@ export default function DevNavigation() {
                 >
                   Bridge <span className="text-white/50">· Live ↗</span>
                 </a>
-                <a
-                  href="https://bridge.utexo.com"
-                  target="_blank"
+                <Link
+                  href="/dev"
+                  target=""
                   rel="noopener noreferrer"
                   className="text-[13px] font-ingram uppercase text-white hover:text-[#FFBE3C]/80"
                 >
                   Dev <span className="text-white/50">· Soon</span>
-                </a>
+                </Link>
               </div>
             )}
 

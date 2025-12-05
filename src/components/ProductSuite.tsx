@@ -151,7 +151,7 @@ export default function ProductSuite() {
               <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal mb-2 sm:mb-2.5 lg:mb-3" style={{ fontFamily: "'PP Mori', sans-serif" }}>
                   <a
                   href="/dev"
-                  target="_blank"
+                  target="_self"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center text-white/90 hover:text-white transition-colors duration-200"
                 >

@@ -8,6 +8,8 @@ import Button from './Button';
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [desktopProductsOpen, setDesktopProductsOpen] = useState(false); // NEW
+
 
   return (
     <>
@@ -35,39 +37,57 @@ export default function Navigation() {
               </a>
 
               {/* PRODUCTS with hover dropdown (desktop only) */}
-              <div className="relative group">
-                {/* Trigger */}
-                <a
-                  href="#ProductSuite"
-                  className="lg:text-[14px] tracking-wide uppercase font-ingram inline-flex items-center gap-2"
-                >
-                  PRODUCTS
-                  {/* wide chevron, rotates up on hover/open */}
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-[14px] w-[18px] transition-transform duration-200 group-hover:rotate-180"
-                    aria-hidden="true"
+              <div
+                className="relative group"
+                onMouseEnter={() => setDesktopProductsOpen(true)}
+                onMouseLeave={() => setDesktopProductsOpen(false)}
+              >
+                {/* Trigger row: text link (scroll) + chevron button (dropdown) */}
+                <div className="inline-flex items-center gap-2">
+                  {/* Text still scrolls to ProductSuite */}
+                  <a
+                    href="#ProductSuite"
+                    className="lg:text-[14px] tracking-wide uppercase font-ingram"
                   >
-                    <path
-                      d="M6 15l6-6 6 6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
+                    PRODUCTS
+                  </a>
+
+                  {/* Chevron toggles dropdown on click (for iPad / touch) */}
+                  <button
+                    type="button"
+                    onClick={() => setDesktopProductsOpen((v) => !v)}
+                    aria-expanded={desktopProductsOpen}
+                    aria-label="Toggle products menu"
+                    className="inline-flex items-center"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className={`
+                        h-[14px] w-[18px] transition-transform duration-200
+                        ${desktopProductsOpen ? "rotate-180" : ""}
+                        group-hover:rotate-180
+                      `}
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M6 15l6-6 6 6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
 
                 {/* Dropdown */}
                 <div
-                  className="
-                    invisible opacity-0 translate-y-1
-                    group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
-                    focus-within:visible focus-within:opacity-100 focus-within:translate-y-0
+                  className={`
                     transition-all duration-150
                     absolute left-0 top-[calc(100%+6px)] z-[60]
-                  "
+                    ${desktopProductsOpen ? "visible opacity-100 translate-y-0" : "invisible opacity-0 translate-y-1"}
+                  `}
                 >
                   {/* hover buffer */}
                   <span className="absolute -top-3 left-0 right-0 h-3" aria-hidden />
@@ -100,8 +120,7 @@ export default function Navigation() {
                         </span>
                       </a>
 
-                      {/* Dev (Soon) – disabled, stays muted */}
-
+                      {/* Dev (Soon) */}
                       <Link
                         href="/dev"
                         target=""
@@ -114,12 +133,14 @@ export default function Navigation() {
                         "
                       >
                         <span>Dev</span>
-                        <span className="text-xs uppercase tracking-[0.05em] text-white/50">Soon</span>
+                        <span className="text-xs uppercase tracking-[0.05em] text-white/50">
+                          Soon
+                        </span>
                       </Link>
-
                     </div>
                   </div>
                 </div>
+
               </div>
 
               <a
