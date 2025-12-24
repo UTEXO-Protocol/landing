@@ -4,8 +4,8 @@ import Button from "./Button";
 export default function Hero() {
   return (
     <section className="relative overflow-visible px-4 sm:px-0">
-      <div className="pb-4 sm:pb-16 lg:pb-20 mx-auto w-full sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l-0 sm:border-l-[1px] border-r-0 sm:border-r-[1px]">
-        <div className="relative bg-[#1a2e1a] overflow-visible h-[550px] sm:h-[550px] lg:h-[740px] mx-auto">
+      <div className="pb-4 sm:pb-16 lg:pb-20 mx-auto w-full sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l-0 sm:border-l border-r-0 sm:border-r">
+        <div className="relative bg-[rgb(26,46,26)] overflow-visible h-[550px] sm:h-[550px] lg:h-[740px] mx-auto">
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
             <Image
