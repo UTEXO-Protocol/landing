@@ -24,7 +24,6 @@ export default function Footer() {
             height={200}
             className="w-44 h-auto lg:w-80 lg:h-auto"
           />
-
         </div>
 
 {/*        <div className="hidden lg:block absolute lg:bottom-[-100px] lg:right-[20px]">

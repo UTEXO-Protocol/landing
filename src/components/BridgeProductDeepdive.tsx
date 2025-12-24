@@ -39,7 +39,7 @@ export default function BridgeProductDeepdive() {
               />
             </div>
 
-            <div className="absolute top-[600px] md:top-auto -right-30 md:right-auto md:-bottom-[135px] md:left-40 pointer-events-none animate-floatOrb">
+            <div className="absolute top-[600px] md:top-auto -right-30 md:right-auto md:-bottom-[135px] md:left-40 pointer-events-none animate-floatOrb z-20">
               <Image
                 src="/first.webp"
                 alt="3D Element"

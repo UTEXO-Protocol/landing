@@ -62,7 +62,7 @@ export default function WhyBridge() {
                       </p>
                     </div>
 
-                    <div className="hidden lg:block col-span-1 flex md:pt-2 md:px-3 lg:px-4">
+                    <div className="hidden lg:block col-span-1">
                       <Button
                         href="https://bridge.utexo.com"
                         variant="black"
