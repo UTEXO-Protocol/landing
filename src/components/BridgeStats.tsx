@@ -13,8 +13,17 @@ const duplicatedStats = [...stats, ...stats, ...stats];
 const BridgeStats = () => {
   return (
     <section className=" overflow-visible bg-[#D4D4D4]">
-      {/* rails like the landing page */}
       <div className="relative mx-auto w-22/23 sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b">
+          <div className="hidden lg:block absolute pointer-events-none -bottom-44 left-30 z-10 animate-floatOrb">
+            <Image
+              src="/first.webp"
+              alt="3D Element"
+              width={350}
+              height={350}
+              className="w-36 lg:w-64 h-auto"
+            />
+          </div>
+          
           <div
             className="hidden lg:block absolute pointer-events-none -top-18 -right-7.5 z-10"
             style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.40))" }}
