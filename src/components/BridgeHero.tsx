@@ -5,11 +5,11 @@ export default function BridgeHero() {
   return (
     <section className="relative overflow-visible bg-[#D4D4D4]">
       {/* rails like the landing page */}
-      <div className="mx-auto w-22/23 px-4  sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b">
+      <div className="mx-auto w-22/23 pb-10 px-4 md:pb-0 sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b">
         {/* hero height tracks landing proportions */}
         <div className="relative overflow-visible lg:h-[740px]">
           {/* content sits higher (not fully centered) */}
-          <div className="relative z-10 flex h-full flex-col items-center text-center justify-end ">
+          <div className="relative z-10 flex h-full flex-col items-center text-center justify-center ">
 
             {/* headline – Mori / font-sans */}
             <h1 className="font-sans font-medium tracking-[-0.03em]
@@ -33,10 +33,10 @@ export default function BridgeHero() {
 
             <div className="mt-[63px] md:px-0 px-4">
               <Image 
-                src='./bridge-hero-banner.svg' 
+                src='/hero-banner.webp' 
                 alt="banner" 
-                width={100} 
-                height={100}
+                width={1631} 
+                height={401}
                 className="w-[682px]"
               />
               </div>

@@ -76,10 +76,10 @@ export default function WhyBridge() {
               </div>
             </div>
             <Image
-              src="/why-udexo-bridge.svg"
+              src="/why-bridge.webp"
               alt="3D Element"
-              width={350}
-              height={350}
+              width={1000}
+              height={1000}
               className="w-full sm:w-1/2 lg:w-[448px] h-auto"
             />
         </div>
