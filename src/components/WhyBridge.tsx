@@ -12,7 +12,7 @@ export default function WhyBridge() {
                 </div>
               <div className="flex gap-4 sm:gap-5 lg:gap-6">
                 <div className="flex-1">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-22 mb-4 sm:mb-5 lg:mb-6">
                     <div className="space-y-3 sm:space-y-4">
                       <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">
                         Only RGB-native USDT bridge
@@ -32,7 +32,7 @@ export default function WhyBridge() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-22 mb-4 sm:mb-5 lg:mb-6">
                     <div className="space-y-3 sm:space-y-4">
                       <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">
                         Non-custodial design
@@ -52,7 +52,7 @@ export default function WhyBridge() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-22 mb-4 sm:mb-5 lg:mb-6">
                     <div className="col-span-2 lg:col-span-1 space-y-3 sm:space-y-4">
                       <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">
                         Privacy by default
