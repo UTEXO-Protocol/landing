@@ -117,7 +117,7 @@ import Link from "next/link";
 import type * as React from "react";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "black";
+  variant?: "primary" | "secondary" | "black" | "white";
   children?: React.ReactNode;
   className?: string;
   onClick?: (e: React.MouseEvent) => void;
@@ -153,6 +153,8 @@ export default function Button({
     switch (variant) {
       case "black":
         return { background: "#000" };
+      case "white":
+        return { background: "#fff", color: "#000" };
       case "primary":
         return {
           background:
@@ -198,7 +200,7 @@ export default function Button({
     <>
       {iconOnly ? (
         <Image
-          src="/Vector.png"
+          src={variant == "white" ? "/Arrow-right-black.png" : "/Vector.png"}
           alt="arrow"
           width={iconSize.width}
           height={iconSize.height}
@@ -209,7 +211,7 @@ export default function Button({
           <span className="font-bold font-ingram">{label}</span>
           {!loading && (
             <Image
-              src="/Vector.png"
+              src={variant == "white" ? "/Arrow-right-black.png" : "/Vector.png"}
               alt="arrow-right"
               width={iconSize.width}
               height={iconSize.height}
