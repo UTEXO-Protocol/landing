@@ -43,7 +43,7 @@ const BridgeStats = () => {
                 {duplicatedStats.map((stat, index) => (
                   <div 
                     key={index} 
-                    className={` shrink-0 w-[350px] lg:w-[451px] pl-7.5 lg:pl-[60px] py-5 lg:py-7 ${index % 2 != 0 ? "bg-[#E2E2E2]" : ''}`}
+                    className={`not-last:border-r border-[#C6C6C6] shrink-0 w-[350px] lg:w-[451px] pl-7.5 lg:pl-[60px] py-5 lg:py-7 ${index % 2 != 0 ? "bg-[#E2E2E2]" : ''}`}
                   >
                     <div className="leading-tight text-[70px] lg:text-[100px] font-medium text-medium mb-1">
                       {stat.value}
