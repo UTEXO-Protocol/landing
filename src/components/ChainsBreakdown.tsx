@@ -39,7 +39,7 @@ export default function ChainsBreakdown() {
           Chains Breakdown
         </h2>
 
-        <div className="gap-[1px] grid grid-cols-[repeat(8,auto)] md:grid-cols-2 lg:grid-cols-4 overflow-scroll bg-[#C6C6C6] border-t border-[#C6C6C6]">
+        <div className="gap-px grid grid-cols-[repeat(8,auto)] md:grid-cols-2 lg:grid-cols-4 overflow-scroll bg-[#C6C6C6] border-t border-[#C6C6C6]">
           {chains.map(chain => (
             <ChainCard
               key={chain.id}

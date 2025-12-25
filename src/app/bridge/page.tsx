@@ -2,6 +2,7 @@ import {Footer} from '@/components'
 import BridgeHero from '@/components/BridgeHero'
 import BridgeNavigation from '@/components/BridgeNavigation'
 import BridgeProductDeepdive from '@/components/BridgeProductDeepdive'
+import BridgeRoadmap from '@/components/BridgeRoadmap'
 import BridgeStats from '@/components/BridgeStats'
 import ChainsBreakdown from '@/components/ChainsBreakdown'
 import SupportedChains from '@/components/SupportedChains'
@@ -18,6 +19,7 @@ export default function BridgePage() {
       <BridgeProductDeepdive/>
       <SupportedChains/>
       <ChainsBreakdown/>
+      <BridgeRoadmap/>
     </div>
   )
 }
