@@ -25,7 +25,7 @@ const BridgeStats = () => {
           </div>
           
           <div
-            className="hidden lg:block absolute pointer-events-none -top-18 -right-7.5 z-10"
+            className="hidden lg:block absolute pointer-events-none -top-18 -right-7.5 z-10 animate-floatRing"
             style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.40))" }}
           >
             <Image

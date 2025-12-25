@@ -4,8 +4,8 @@ import React from 'react'
 export default function SupportedChains() {
   return (
     <section className="relative bg-[#D4D4D4] overflow-hidden">
-      <div className="mx-auto w-22/23  px-5 lg:px-15 xl:px-[122px]  sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b py-15 lg:py-[276px] ">
-        <div className="hidden lg:block absolute lg:-bottom-10 lg:-left-20 animate-floatOrb">
+      <div className="mx-auto w-22/23  px-5 lg:px-15 xl:px-[122px]  sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r py-15 lg:py-[276px] ">
+        <div className="hidden lg:block absolute lg:bottom-15 lg:-left-20 animate-floatOrb">
             <Image
               src="/end0.svg"
               alt="3D Element"

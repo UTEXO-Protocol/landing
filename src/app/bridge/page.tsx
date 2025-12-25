@@ -3,6 +3,7 @@ import BridgeHero from '@/components/BridgeHero'
 import BridgeNavigation from '@/components/BridgeNavigation'
 import BridgeProductDeepdive from '@/components/BridgeProductDeepdive'
 import BridgeStats from '@/components/BridgeStats'
+import ChainsBreakdown from '@/components/ChainsBreakdown'
 import SupportedChains from '@/components/SupportedChains'
 import WhyBridge from '@/components/WhyBridge'
 import React from 'react'
@@ -16,6 +17,7 @@ export default function BridgePage() {
       <WhyBridge/>
       <BridgeProductDeepdive/>
       <SupportedChains/>
+      <ChainsBreakdown/>
     </div>
   )
 }
