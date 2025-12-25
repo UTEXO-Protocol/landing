@@ -24,7 +24,7 @@ export default function BePart() {
         <div className="px-3 sm:px-10">
           <div className="mx-auto max-w-[900px] text-center">
 
-            <h2 className="mt-3 text-[40px] md:text-[66px] leading-[1.1] font-sans font-medium">
+            <h2 className="mt-3 text-[40px] md:text-[66px] leading-[1.1] font-medium tracking-tighter">
               Be part of Utexo
             </h2>
 
@@ -34,14 +34,16 @@ export default function BePart() {
 
             <div className="flex gap-3 mt-6 md:mt-8 justify-center items-center flex-col md:flex-row">
 
-              <Button variant="black">
-                VIEW DOCS
-              </Button>
               <a href="./#newsletter">
                 <Button variant="black" className="w-[225px]">
                   SUBSCRIBE TO NEWSLETTER
                 </Button>
               </a>
+
+              <Button variant="black">
+                VIEW DOCS
+              </Button>
+
               <Button variant="black" className="w-[180px]">
                 BECOME A PARTNER
               </Button>

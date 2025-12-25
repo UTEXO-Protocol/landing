@@ -27,7 +27,7 @@ export default function SupportedChains() {
         <div className='flex flex-col lg:flex-row gap-5 lg:gap-[10%] items-center'>
           <div className='max-w-[485px]'>
               <div className='font-ingram text-[14px] tracking-tight'>SUPPORTED CHAINS</div>
-              <h2 className='text-4xl  mt-6'> 
+              <h2 className='text-4xl  mt-6 tracking-tighter'> 
                 Part of a growing ecosystem powering wallets, CEXs, LSPs & protocols
               </h2>
             </div>

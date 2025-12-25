@@ -18,12 +18,12 @@ type ChainCardProps = {
 
 const ChainCard = ({label}: ChainCardProps) => {
   return (
-    <div className="bg-[#D4D4D4] relative flex flex-col justify-between p-8 min-w-[325px] md:min-w-auto h-[245px]">
-      <div className="w-6 h-6">
-        <Image src="/chain-icon.svg" alt="Bridge" width={28} height={28} className="w-5 h-5" />
-      </div>
+    <div className="bg-[#D4D4D4] relative flex flex-col justify-between p-5 lg:p-8 min-w-[325px] md:min-w-auto h-[184px] md:h-[245px]">
 
-      <p className="text-[20px] font-medium">
+      <Image src="/chain-icon.svg" alt="Bridge" width={28} height={28} className="w-6 h-6" />
+
+
+      <p className="text-[20px] font-medium tracking-tighter">
         {label}
       </p>
     </div>
@@ -35,7 +35,7 @@ export default function ChainsBreakdown() {
     <section className="relative bg-[#D4D4D4]">
       <div className="mx-auto w-22/23 sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b ">
 
-        <h2 className="mb-6 lg:mb:10 text-[40px] lg:text-[66px] font-medium px-5 lg:px-10">
+        <h2 className="tracking-tighter mb-6 lg:mb:10 text-[40px] lg:text-[66px] font-medium px-5 lg:px-10">
           Chains Breakdown
         </h2>
 

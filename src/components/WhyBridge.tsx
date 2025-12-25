@@ -5,16 +5,16 @@ export default function WhyBridge() {
   return (
      <section className="relative overflow-visible bg-[#D4D4D4]">
       <div className="mx-auto w-22/23 px-5 sm:px-8  sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b py-15 lg:py-[151px]">
-        <div className="flex flex-wrap sm:flex-nowrap  gap-[71px] items-start sm:items-center">
+        <div className="flex flex-wrap sm:flex-nowrap  gap-5  lg:gap-[71px] items-start sm:items-center">
             <div>
-               <div className="text-[14px] sm:text-[15px] lg:text-[16px] uppercase tracking-tight text-black font-ingram mb-8 sm:mb-[46px]">
+               <div className="uppercase tracking-tight text-black font-ingram mb-8 sm:mb-[46px]">
                   Why Utexo Bridge
                 </div>
               <div className="flex gap-4 sm:gap-5 lg:gap-6">
                 <div className="flex-1">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-22 mb-4 sm:mb-5 lg:mb-6">
-                    <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">
+                  <div className="grid grid-cols-1 lg:grid-cols-[280px_280px] gap-4 sm:gap-5 lg:gap-22 mb-4 lg:mb-[42px]">
+                    <div className="space-y-4 sm:space-y-4">
+                      <h3 className="text-[26px] sm:text-[23px] lg:text-[26px] font-normal tracking-tighter leading-tight">
                         Only RGB-native USDT bridge
                       </h3>
                       <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
@@ -22,8 +22,8 @@ export default function WhyBridge() {
                       </p>
                     </div>
 
-                    <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight md:pr-2">
+                    <div className="space-y-4 sm:space-y-4">
+                      <h3 className="text-[26px] sm:text-[23px] lg:text-[26px] font-normal tracking-tighter leading-tight md:pr-2">
                         Lightning-fast & low-fee
                       </h3>
                       <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
@@ -32,9 +32,9 @@ export default function WhyBridge() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-22 mb-4 sm:mb-5 lg:mb-6">
-                    <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">
+                  <div className="grid grid-cols-1 lg:grid-cols-[280px_280px] gap-4 sm:gap-5 lg:gap-22 mb-4 lg:mb-[42px]">
+                    <div className="space-y-4 sm:space-y-4">
+                      <h3 className="text-[26px] sm:text-[23px] lg:text-[26px] font-normal tracking-tighter leading-tight">
                         Non-custodial design
                       </h3>
                       <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
@@ -42,8 +42,8 @@ export default function WhyBridge() {
                       </p>
                     </div>
 
-                    <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight md:pr-2">
+                    <div className="space-y-4 sm:space-y-4">
+                      <h3 className="text-[26px] sm:text-[23px] lg:text-[26px] font-normal tracking-tighter leading-tight md:pr-2">
                         Stablecoin-first architecture
                       </h3>
                       <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
@@ -52,9 +52,9 @@ export default function WhyBridge() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-22 mb-4 sm:mb-5 lg:mb-6">
-                    <div className="col-span-2 lg:col-span-1 space-y-3 sm:space-y-4">
-                      <h3 className="text-[20px] sm:text-[23px] lg:text-[26px] font-normal leading-tight">
+                  <div className="grid grid-cols-1 lg:grid-cols-[280px_280px] gap-4 sm:gap-5 lg:gap-22 mb-4 lg:mb-[42px]">
+                    <div className="col-span-2 lg:col-span-1 space-y-4 sm:space-y-4">
+                      <h3 className="text-[26px] sm:text-[23px] lg:text-[26px] font-normal tracking-tighter leading-tight">
                         Privacy by default
                       </h3>
                       <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-black opacity-50 leading-snug">
