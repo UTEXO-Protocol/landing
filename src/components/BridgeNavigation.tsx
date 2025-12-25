@@ -193,13 +193,13 @@ export default function BridgeNavigation() {
               </div>
 
               <a
-                href="#features"
+                href="./#features"
                 className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
               >
                 Features
               </a>
               <a
-                href="#faqs"
+                href="./#faqs"
                 className="lg:text-[14px] tracking-wide uppercase font-ingram hover:opacity-70 transition-opacity"
               >
                 FAQs
@@ -252,11 +252,11 @@ export default function BridgeNavigation() {
               mobileMenuOpen={mobileMenuOpen}
             />
           </div>
-          <div className="flex flex-col space-y-4 mb-8">
+          <div className="flex flex-col mb-4 tracking-tighter">
             <a
               href="#why-utexo"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[40px] hover:opacity-70 transition-opacity py-1 text-white"
+              className="text-[40px] hover:opacity-70 transition-opacity text-white"
             >
               Why Utexo
             </a>
@@ -265,7 +265,7 @@ export default function BridgeNavigation() {
             <button
               onClick={() => setMobileProductsOpen((v) => !v)}
               aria-expanded={mobileProductsOpen}
-              className="text-[40px] flex items-center justify-between py-1  text-white"
+              className="text-[40px] flex items-center justify-between text-white"
             >
               <span>Products</span>
               <svg
@@ -315,102 +315,99 @@ export default function BridgeNavigation() {
               </div>
             )}
 
-            <a
-              href="#features"
+            <Link
+              href="./"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[40px] hover:opacity-70 transition-opacity py-1  text-white"
+              className="text-[40px] hover:opacity-70 transition-opacity  text-white"
             >
               Features
-            </a>
-            <a
-              href="#faqs"
+            </Link>
+            <Link
+              href="./#faqs"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[40px] hover:opacity-70 transition-opacity py-1  text-white"
+              className="text-[40px] hover:opacity-70 transition-opacity  text-white"
             >
               FAQs
-            </a>
+            </Link>
           </div>
           <Button
             href="#newsletter"
             variant="white"
-            className="w-[100px] h-[45px] text-[11px] sm:w-[120px] sm:h-[50px] sm:text-[12px] lg:w-[144px] lg:h-[55px] rounded-[10px]"
+            onClick={() => setMobileMenuOpen(false)}
           >
             Get Started
           </Button>
 
-           <div className="px-4 sm:px0 text-white">
-                <div className="relative w-full ">
-          
-                  <div className="w-full sm:w-[500px] mx-auto py-12 sm:py-8 lg:py-0">
-                      <div className="flex justify-center">
-                        <Image
-                          src="/UtexoLogo.webp"
-                          alt="Utexo Logo"
-                          width={372}
-                          height={372}
-                          className="w-44 h-auto drop-shadow-2xl/35"
-                        />
-                      </div>
-          
-                  <div className="flex justify-center gap-4 sm:gap-5 lg:gap-6 mb-5">
-                        <a
-                        href="https://x.com/utexocom"
-                        className="hover:opacity-70 transition-opacity"
-                        aria-label="Utexo on X"
-                      >
-                        <XIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-2 stroke-white fill-none" />
-                      </a>
-                      <a
-                        href="https://discord.gg/utexo"
-                        className="hover:opacity-70 transition-opacity"
-                        aria-label="Utexo on Discord"
-                      >
-                        <DiscordIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-1 " />
-                      </a>
-                   {/* <a href="#" className="hover:opacity-70 transition-opacity">
-                      <Image src="/t.png" alt="Telegram" width={24} height={24} className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6" />
-                    </a> */}
-                  </div>
-          
-                  <div className="flex flex-wrap flex-col items-center gap-2">
-                    <a 
-                      href="#" 
-                      className="text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
-                      style={{ 
-                        fontFamily: "'Roboto Mono', sans-serif",
-                        fontWeight: 400,
-                        fontStyle: 'normal',
-                        letterSpacing: '-0.03em',
-                        lineHeight: '130%'
-                      }}
-                    >Contact support</a>
-          
-                    <p 
-                       
-                      className="text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed text-center"
-                      style={{ 
-                        fontFamily: "'Ingram Mono', sans-serif",
-                        fontWeight: 400,
-                        fontStyle: 'normal',
-                        letterSpacing: '-0.03em',
-                        lineHeight: '130%'
-                      }}
-                    >more coming soon</p>
-                   <a 
-                      href="#" 
-                      className="text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
-                      style={{ 
-                        fontFamily: "'Roboto Mono', sans-serif",
-                        fontWeight: 400,
-                        fontStyle: 'normal',
-                        letterSpacing: '-0.03em',
-                        lineHeight: '130%'
-                      }}
-                    >Privacy policy</a>
-                  </div>
-                  </div>
+          <div className="px-4 sm:px0 text-white">
+            <div className="relative w-full ">
+
+              <div className="w-full sm:w-[500px] mx-auto py-13 sm:py-4">
+                <div className="flex justify-center">
+                  <Image
+                    src="/UtexoLogo.webp"
+                    alt="Utexo Logo"
+                    width={372}
+                    height={372}
+                    className="w-60 h-auto drop-shadow-2xl/35"
+                  />
+                </div>
+
+                <div className="flex justify-center gap-4 sm:gap-5 lg:gap-6 mb-5">
+                  <a
+                    href="https://x.com/utexocom"
+                    className="hover:opacity-70 transition-opacity"
+                    aria-label="Utexo on X"
+                  >
+                    <XIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-2 stroke-white fill-none" />
+                  </a>
+                  <a
+                    href="https://discord.gg/utexo"
+                    className="hover:opacity-70 transition-opacity"
+                    aria-label="Utexo on Discord"
+                  >
+                    <DiscordIcon className="w-6 h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 stroke-1 " />
+                  </a>
+                </div>
+
+                <div className="flex flex-wrap flex-col items-center gap-2">
+                  <a
+                    href="#"
+                    className="text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
+                    style={{
+                      fontFamily: "'Roboto Mono', sans-serif",
+                      fontWeight: 400,
+                      fontStyle: 'normal',
+                      letterSpacing: '-0.03em',
+                      lineHeight: '130%'
+                    }}
+                  >Contact support</a>
+
+                  <p
+
+                    className="text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed text-center"
+                    style={{
+                      fontFamily: "'Ingram Mono', sans-serif",
+                      fontWeight: 400,
+                      fontStyle: 'normal',
+                      letterSpacing: '-0.03em',
+                      lineHeight: '130%'
+                    }}
+                  >more coming soon</p>
+                  <a
+                    href="#"
+                    className="text-[12px] uppercase hover:opacity-70 transition-opacity cursor-not-allowed"
+                    style={{
+                      fontFamily: "'Roboto Mono', sans-serif",
+                      fontWeight: 400,
+                      fontStyle: 'normal',
+                      letterSpacing: '-0.03em',
+                      lineHeight: '130%'
+                    }}
+                  >Privacy policy</a>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
       )}
     </>

@@ -4,7 +4,6 @@ import Button from "./Button";
 export default function BridgeProductDeepdive() {
   return (
     <section
-      id="ProductSuite"
       className="w-full mx-auto text-white relative overflow-hidden lg:overflow-visible py-0 sm:py-0 lg:py-0"
     >
       <div className="w-22/23 sm:w-[640px] md:w-11/12 bg-black mx-auto">

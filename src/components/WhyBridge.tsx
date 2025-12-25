@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function WhyBridge() {
   return (
-     <section className="relative overflow-visible bg-[#D4D4D4]">
+     <section id="why-utexo" className="relative overflow-visible bg-[#D4D4D4]">
       <div className="mx-auto w-22/23 px-5 sm:px-8  sm:w-[640px] md:w-11/12 border-[#C6C6C6] border-l border-r border-b py-15 lg:py-[151px]">
         <div className="flex flex-wrap sm:flex-nowrap  gap-5  lg:gap-[71px] items-start sm:items-center">
             <div>
