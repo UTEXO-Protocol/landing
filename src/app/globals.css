@@ -286,13 +286,27 @@ html { scroll-behavior: smooth; }
   100% { transform: translateX(-50%); } /* -50% for duplicated items */
 }
 
+@keyframes marquee-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
 .animate-marquee {
   animation: marquee-left 15s linear infinite; /* Match speedMs default */
+}
+
+.animate-marquee-right {
+  animation: marquee-right 15s linear infinite; /* Match speedMs default */
 }
 
 /* Pause on reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .animate-marquee-right {
     animation: none !important;
     transform: none !important;
   }

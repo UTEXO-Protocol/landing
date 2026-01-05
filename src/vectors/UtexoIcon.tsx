@@ -1,6 +1,6 @@
-export default function UtexoIcon({className = ""}: {className?: string}) {
+export default function UtexoIcon({className = "", hideShadow}: {className?: string, hideShadow?: boolean}) {
   return (
-    <svg  className={`drop-shadow-[0_6px_10px_rgba(0,0,0,0.25)] ${className}`} width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg  className={`${hideShadow ? '' : 'drop-shadow-[0_6px_10px_rgba(0,0,0,0.25)]'} ${className}`} width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="64" cy="64" r="63.25" fill="black" stroke="url(#paint0_linear_553_105)" strokeWidth="1.5" />
       <path d="M52.293 44H67.421C72.0868 44 75.8691 47.7824 75.8691 52.4481H52.293V44Z" fill="white" />
       <path d="M89.4414 52.453L89.4414 65.017C89.4414 71.0934 84.5155 76.0192 78.4392 76.0192L75.8652 76.0192L75.8652 52.453L89.4414 52.453Z" fill="white" />

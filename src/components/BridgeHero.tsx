@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Button from "./Button";
+import {HeroBeamAnimation} from "./HeroBeamAnimation";
 
 export default function BridgeHero() {
   return (
@@ -19,8 +19,8 @@ export default function BridgeHero() {
             </h1>
 
             <p className="mt-5 max-w-[720px] text-[17px] leading-relaxed font-sans">
-              Bridging to bitcoin, enabling non-custodial, 
-              <br/>
+              Bridging to bitcoin, enabling non-custodial,
+              <br />
               lightning speed, private transactions by design.
             </p>
 
@@ -31,16 +31,9 @@ export default function BridgeHero() {
               </Button>
             </div>
 
-            <div className="mt-10 lg:mt-15 md:px-0 px-4">
-              <Image 
-                src='/hero-banner.webp' 
-                alt="banner" 
-                width={1631} 
-                height={401}
-                className="w-[682px]"
-              />
-              </div>
-            </div>
+
+            <HeroBeamAnimation className="pt-[63px] md:pb-8 lg:pb-0"/>
+          </div>
         </div>
       </div>
     </section>
