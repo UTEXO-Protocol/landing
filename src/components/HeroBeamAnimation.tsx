@@ -82,7 +82,7 @@ export function HeroBeamAnimation({
           <div className="flex ml-14 md:ml-25">
             <div className="flex flex-col justify-center">
               <Circle ref={utexoRef} className={isSmallScreen ? "size-[69px]" : "size-32"}>
-                <UtexoIcon />
+                <UtexoIcon shadowSize={isSmallScreen ? "5px" : "10px"}/>
               </Circle>
             </div>
             <div className="ml-20 md:ml-[177px] flex flex-col justify-center">
