@@ -134,7 +134,7 @@ export async function POST(req: Request) {
         logo_url: `${process.env.PUBLIC_SITE_URL}/UtexoLogoFullBlack.png`,
     });
 
-    await sendEmail(html);
+    await sendEmail(html, email);
 
     return NextResponse.json(
       { ok: true, message },

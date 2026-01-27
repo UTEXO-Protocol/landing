@@ -21,26 +21,9 @@ if (!EMAIL_DEV_TO) {
   console.warn("Missing EMAIL_DEV_TO");
 }
 
-let transporter: nodemailer.Transporter | null = null;
-
-function getTransporter() {
-  if (transporter) return transporter;
-
-  transporter = nodemailer.createTransport({
-    host: EMAIL_HOST,
-    port: Number(EMAIL_PORT) || 587,
-    secure: (Number(EMAIL_PORT) || 587) === 465,
-    auth: {
-      user: EMAIL_FROM,
-      pass: EMAIL_PASSWORD,
-    },
-  });
-
-  return transporter;
-}
-
 export async function sendEmail(
-  text: string
+  text: string,
+  userEmail: string
 ) {
   if (!EMAIL_HOST || !EMAIL_FROM || !EMAIL_DEV_TO || !EMAIL_PASSWORD) {
     if (process.env.NODE_ENV !== "production") {
@@ -49,13 +32,21 @@ export async function sendEmail(
     return;
   }
 
-  const transporter = getTransporter();
+  const transporter = nodemailer.createTransport({
+      host: EMAIL_HOST,
+      port: Number(EMAIL_PORT) || 587,
+      secure: (Number(EMAIL_PORT) || 587) === 465,
+      auth: {
+        user: EMAIL_FROM,
+        pass: EMAIL_PASSWORD,
+      },
+    });
 
   try {
     const mailOptions = {
       from: EMAIL_FROM,
       to: EMAIL_DEV_TO,
-      subject: "Notification",
+      subject: `Subscription - ${userEmail}`,
       html: text,
     };
 
