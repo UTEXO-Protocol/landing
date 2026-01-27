@@ -12,44 +12,42 @@ export default function DevFinalCTA() {
     null
   );
 
-  async function submit(action: "dev" | "sales") {
-    if (!email || pendingAction) return;
+  async function handleInterestSubmit(action: "dev" | "sales") {
+  if (!email || pendingAction) return;
 
-    setPendingAction(action);
-    const tid = toast.loading("Submitting…");
+  setPendingAction(action);
+  const tid = toast.loading("Submitting…");
 
-    try {
-      const res = await fetch("/api/dev-interest", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          action, // "dev" | "sales"
-          source: "dev-page-final-cta",
-        }),
-      });
+  try {
+    const res = await fetch("/api/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email,
+        action,
+      }),
+    });
 
-      const data = await res.json().catch(() => null);
+    const data = await res.json().catch(() => null);
 
-      if (!res.ok || !data?.ok) {
-        throw new Error(data?.error || "Request failed");
-      }
-
-      const defaultMessage =
-        action === "sales"
-          ? "Thanks, our team will reach out shortly."
-          : "Thanks, we’ll follow up with dev access details.";
-
-      toast.success(data?.message ?? defaultMessage, { id: tid });
-
-      setEmail("");
-    } catch (err) {
-      console.error("[DevFinalCTA] submit error", err);
-      toast.error("Please try again.", { id: tid });
-    } finally {
-      setPendingAction(null);
+    if (!res.ok || !data?.ok) {
+      throw new Error(data?.error || "Request failed");
     }
+
+    const defaultMessage =
+      action === "sales"
+        ? "Thanks, our team will reach out shortly."
+        : "Thanks, we'll follow up with dev access details.";
+
+    toast.success(data?.message ?? defaultMessage, { id: tid });
+    setEmail("");
+  } catch (err) {
+    console.error("[Interest] submit error", err);
+    toast.error("Please try again.", { id: tid });
+  } finally {
+    setPendingAction(null);
   }
+}
 
   return (
     <section id="DevCTA" className="bg-black text-white relative z-10">
@@ -114,7 +112,7 @@ export default function DevFinalCTA() {
                   variant="black"
                   className="!w-48"
                   loading={pendingAction === "dev"}
-                  onClick={() => submit("dev")}
+                  onClick={() => handleInterestSubmit("dev")}
                 >
                   request access
                 </Button>
@@ -123,7 +121,7 @@ export default function DevFinalCTA() {
                   variant="black"
                   className="!w-48"
                   loading={pendingAction === "sales"}
-                  onClick={() => submit("sales")}
+                  onClick={() => handleInterestSubmit("sales")}
                 >
                   talk to sales
                 </Button>

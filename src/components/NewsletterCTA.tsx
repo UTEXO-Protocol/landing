@@ -9,34 +9,37 @@ export default function NewsletterCTA() {
   const [email, setEmail] = useState("");
   const [pending, setPending] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (!email || pending) return;
+  async function handleNewsletterSubmit(e: React.FormEvent<HTMLFormElement>) {
+      e.preventDefault();
+      if (!email || pending) return;
 
-    setPending(true);
-    const tid = toast.loading("Submitting…");
+      setPending(true);
+      const tid = toast.loading("Submitting…");
 
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          source: "website-main",
-          company: "", // honeypot intentionally empty
-        }),
-      });
+      try {
+        const res = await fetch("/api/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            action: "newsletter",
+          }),
+        });
 
-      const data = await res.json();
-      if (!res.ok || !data?.ok) throw new Error(data?.error || "Signup failed");
+        const data = await res.json().catch(() => null);
 
-      toast.success(data?.message ?? "Thanks for signing up! 🎉", { id: tid });
-      setEmail("");
-    } catch {
-      toast.error("Please try again.", { id: tid });
-    } finally {
-      setPending(false);
-    }
+        if (!res.ok || !data?.ok) {
+          throw new Error(data?.error || "Request failed");
+        }
+
+        toast.success(data?.message ?? "Thanks for signing up! 🎉", { id: tid });
+        setEmail("");
+      } catch (err) {
+        console.error("[Newsletter] submit error", err);
+        toast.error("Please try again.", { id: tid });
+      } finally {
+        setPending(false);
+      }
   }
 
   return (
@@ -81,7 +84,7 @@ export default function NewsletterCTA() {
 
           {/* form */}
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleNewsletterSubmit}
             className="mt-8 mx-auto w-full max-w-[520px] flex-col items-center grid grid-cols-1 sm:grid-cols-[1fr_auto]  gap-3 sm:flex-row sm:items-center"
           >
             {/* honeypot */}
