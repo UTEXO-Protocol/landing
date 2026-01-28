@@ -7,8 +7,8 @@ export DOCKER_BUILDKIT=1
 .PHONY: build push docker help
 
 build: ## Build utexo landing docker image.
-	docker build --ssh default -f ./Dockerfile -t $(IMAGE_UTEXO_LANDING_BACKUP) . && \
-	docker build --ssh default -f ./Dockerfile -t $(IMAGE_UTEXO_LANDING_LATEST) .
+	docker build -f ./Dockerfile -t $(IMAGE_UTEXO_LANDING_BACKUP) . && \
+	docker build -f ./Dockerfile -t $(IMAGE_UTEXO_LANDING_LATEST) .
 
 push: ## Push utexo landing docker image.
 	docker push $(IMAGE_UTEXO_LANDING_BACKUP) && \
