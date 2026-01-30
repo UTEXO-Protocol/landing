@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build & push docker images
-        run: make docker
+        run: make docker ENVIRONMENT=-prod
 
   deploy:
     needs: build-prod
