@@ -1,0 +1,150 @@
+@use "@/app/index.scss" as *;
+
+.cloud-operators {
+  background-color: #E2E2E2;
+  padding: 110px 60px 80px;
+
+  &__body {
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  &__content {
+
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background-color: rgba(212, 212, 212, 0.6);
+    backdrop-filter: blur(11.25px);
+    border: 1px solid #bababa;
+  }
+
+  &__left {
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include text-geist("400-44");
+    line-height: 110%;
+    letter-spacing: -2px;
+    color: #383838;
+    margin: 0;
+  }
+
+  &__title-accent {
+    display: block;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  &__coin {
+    position: absolute;
+    bottom: -60px;
+    left: 100px;
+    width: 250px;
+    height: auto;
+    filter: grayscale(100%) brightness(0.7);
+    z-index: 1;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #bababa;
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    padding: 23px 32px;
+    border-top: 1px solid #bababa;
+    transition: background-color 0.3s ease;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:hover {
+      background-color: #1f3114;
+
+      .cloud-operators__service-title,
+      .cloud-operators__service-link {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__service-title {
+    @include text-geist("500-24");
+    letter-spacing: -0.5px;
+    color: #000000;
+    margin: 0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  &__service-link {
+    @include text-geist-mono("400-12");
+    letter-spacing: -0.12px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-operators {
+    padding: 48px 24px 48px;
+
+    &__body {
+      padding-bottom: 40px;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    &__left {
+      padding: 32px 24px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 120%;
+      letter-spacing: -1px;
+    }
+
+    &__right {
+      border-left: none;
+      border-top: 1px solid #bababa;
+    }
+
+    &__service {
+      height: 140px;
+      padding: 20px 24px;
+    }
+
+    &__service-title {
+      font-size: 18px;
+    }
+
+    &__coin {
+      width: 150px;
+      left: 50px;
+      bottom: -40px;
+    }
+  }
+}

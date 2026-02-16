@@ -1,0 +1,190 @@
+@use "@/app/index.scss" as *;
+
+.infrastructure {
+  background-color: #e2e2e2;
+  padding: 110px 60px 200px;
+
+  &__tags {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include text-geist-mono("400-14");
+    color: #000000;
+  }
+
+  &__tag-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    object-fit: contain;
+  }
+
+  &__tag-label {
+    letter-spacing: -3%;
+    max-width: 169px;
+  }
+
+  &__body {
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background-color: rgba(212, 212, 212, 0.6);
+    backdrop-filter: blur(11.25px);
+    border: 1px solid #bababa;
+  }
+
+  &__left {
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include text-geist("400-44");
+    line-height: 110%;
+    letter-spacing: -2px;
+    color: #383838;
+    margin: 0;
+  }
+
+  &__title-accent {
+    display: block;
+    color: #000000;
+    font-weight: 500;
+  }
+
+
+  &__coin {
+    position: absolute;
+    bottom: -60px;
+    left: 100px;
+    width: 250px;
+    height: auto;
+    filter: grayscale(100%) brightness(0.7);
+    z-index: 1;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #bababa;
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    padding: 23px 32px;
+    border-top: 1px solid #bababa;
+    transition: background-color 0.3s ease;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:hover {
+      background-color: #1f3114;
+
+      .infrastructure__service-title,
+      .infrastructure__service-description {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__service-title {
+    @include text-geist("500-24");
+    letter-spacing: -0.5px;
+    color: #000000;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  &__service-description {
+    max-width: 428px;
+    @include text-geist("400-16");
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    color: #383838;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .infrastructure {
+    padding: 48px 24px 120px;
+
+    &__tags {
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    &__tag {
+      font-size: 12px;
+    }
+
+    &__tag-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    &__left {
+      padding: 32px 24px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 120%;
+      letter-spacing: -1px;
+    }
+
+    &__right {
+      border-left: none;
+      border-top: 1px solid #bababa;
+    }
+
+    &__service {
+      height: auto;
+      min-height: 140px;
+      padding: 20px 24px;
+    }
+
+    &__service-title {
+      font-size: 18px;
+    }
+
+    &__service-description {
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    &__coin {
+      width: 150px;
+      left: 50px;
+      bottom: -40px;
+    }
+  }
+}
