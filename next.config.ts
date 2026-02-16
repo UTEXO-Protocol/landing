@@ -1,10 +1,14 @@
-// next.config.ts
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  output: "standalone",
   images: {
-    formats: ['image/avif', 'image/webp'], // optional optimization formats
+    formats: ["image/avif", "image/webp"],
+  },
+  turbopack: {
+    resolveAlias: {
+      "@": "./",
+    },
   },
 };
 

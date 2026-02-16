@@ -12,12 +12,14 @@
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@supabase/supabase-js": "^2.77.0",
     "@vercel/analytics": "^1.5.0",
+    "embla-carousel-react": "^8.6.0",
     "motion": "^12.23.27",
     "next": "15.5.9",
     "nodemailer": "^7.0.12",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-hot-toast": "^2.6.0"
+    "react-hot-toast": "^2.6.0",
+    "sass": "^1.97.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

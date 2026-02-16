@@ -1,26 +1,20 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import WhyUtexo from "@/components/WhyUtexo";
-import ProductSuite from "@/components/ProductSuite";
-import Features from "@/components/Features";
-import Quote from "@/components/Quote";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import NewsletterCTA from "@/components/NewsletterCTA";
+import Navigation from "@/components/common/Navigation";
+import { Footer } from "@/components/common/Footer";
+import { Features } from "@/components/home/Features";
+import { Hero } from "@/components/home/Hero";
+import { TrustedBy } from "@/components/common/TrustedBy";
+import { Payments } from "@/components/home/Payments";
+import { Impact } from "@/components/home/Impact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#D4D4D4] text-black w-full">
+    <div className="page">
       <Navigation />
       <Hero />
-      <Stats />
-      <WhyUtexo />
-      <ProductSuite />
+      <TrustedBy />
       <Features />
-      <Quote />
-      <FAQ />
-      <NewsletterCTA />
+      <Payments />
+      <Impact />
       <Footer />
     </div>
   );

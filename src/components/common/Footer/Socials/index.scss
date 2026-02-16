@@ -1,0 +1,14 @@
+.footer-socials {
+  display: flex;
+  gap: 16px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

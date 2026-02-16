@@ -1,17 +1,15 @@
-
 // export const metadata: Metadata = {
 //   title: "Utexo - Bitcoin's private stablecoin backbone",
 //   description: "Native USDT & BTC, instant zero-fee settlements, lightning fast, private & non-custodial payments.",
 // };
 
 import type { Metadata } from "next";
-import "./globals.css";
-import { Analytics } from '@vercel/analytics/next';
-import ToasterClient from "@/components/ToasterClient";
-
+import { Analytics } from "@vercel/analytics/next";
+import ToasterClient from "@/components/common/ToasterClient";
+import "./index.scss";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://utexo.com'),
+  metadataBase: new URL("https://utexo.com"),
   title: "Utexo - Bitcoin's private stablecoin backbone",
   description: "Native USDT & BTC, instant zero-fee settlements, lightning-fast, private & non-custodial payments.",
   keywords: "Utexo, stablecoins, Bitcoin, Lightning, private payments, non-custodial, RGB",
@@ -22,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Utexo",
     images: [
       {
-        url: "/utexo-og.png",
+        url: "/common/utexo-og.png",
         width: 1200,
         height: 630,
         alt: "Utexo - Private Stablecoin Payments on Bitcoin",
@@ -35,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Utexo - Bitcoin's private stablecoin backbone",
     description: "Native USDT & BTC, instant zero-fee settlements, lightning-fast, private & non-custodial payments.",
-    images: ["/utexo-og.png"],
+    images: ["/common/utexo-og.png"],
     site: "@utexocom",
     creator: "@utexocom",
   },

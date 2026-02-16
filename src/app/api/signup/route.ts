@@ -131,7 +131,7 @@ export async function POST(req: Request) {
         email,
         action,
         isNewRecord: flagJustAddedForThisAction,
-        logo_url: `${process.env.PUBLIC_SITE_URL}/UtexoLogoFullBlack.png`,
+        logo_url: `${process.env.PUBLIC_SITE_URL}/common/UtexoLogoFullBlack.png`,
     });
 
     await sendEmail(html, email);

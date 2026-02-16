@@ -1,0 +1,126 @@
+@use "@/app/index.scss" as *;
+
+.cloud-hero {
+  position: relative;
+  width: 100%;
+  height: 839px;
+  border: 1px solid #222222;
+  background-color: #000000;
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: unset;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      black 0%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  &__content {
+    position: absolute;
+    top: 206px;
+    left: 60px;
+    z-index: 10;
+    width: 833px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 66px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__title {
+    @include text-geist("400-72");
+    letter-spacing: -2.16px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 74px;
+  }
+
+  &__description {
+    width: 626px;
+    @include text-geist("400-24");
+    color: #ffffff;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    margin: 0;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-hero {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    &__gradient {
+      display: none;
+    }
+
+    &__content {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      width: auto;
+      padding: 32px 24px;
+      gap: 32px;
+    }
+
+    &__text {
+      gap: 20px;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: -1.2px;
+    }
+
+    &__description {
+      width: 100%;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.48px;
+    }
+
+    &__buttons {
+      gap: 16px;
+    }
+  }
+}
