@@ -20,9 +20,13 @@
     @include text-geist("400-44");
     line-height: 48px;
     letter-spacing: -1.32px;
-    color: rgba(0, 0, 0, 0.1);
+    color: #878787;
     margin: 0;
     max-width: 550px;
+
+    span {
+      color: #000;
+    }
   }
 
   &__features {
@@ -57,19 +61,19 @@
 
 @media (max-width: 768px) {
   .cloud-overview {
-    padding: 48px 24px;
+    padding: 48px 16px;
 
     &__inner {
       flex-direction: column;
       align-items: flex-start;
-      padding: 32px 24px;
+      padding: 40px 20px;
       height: auto;
       gap: 40px;
     }
 
     &__text {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 36px;
+      line-height: 120%;
       letter-spacing: -0.72px;
       max-width: 100%;
     }

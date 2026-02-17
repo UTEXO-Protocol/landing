@@ -64,9 +64,16 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .footer-nav {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-nav {
+    grid-template-columns: 1fr;
     gap: 32px;
   }
 }

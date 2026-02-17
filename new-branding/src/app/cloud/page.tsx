@@ -11,13 +11,15 @@ export default function Cloud() {
   return (
     <div className="page">
       <Navigation />
-      <CloudHero />
-      <TrustedBy />
-      <Overview />
-      <CloudFeatures />
-      <CloudOperators />
-      <Innovators />
-      <Footer />
+      <div className="page__content">
+        <CloudHero />
+        <TrustedBy />
+        <Overview />
+        <CloudFeatures />
+        <CloudOperators />
+        <Innovators />
+        <Footer />
+      </div>
     </div>
   );
 }

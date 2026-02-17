@@ -15,7 +15,7 @@ export class FooterNavSection {
 }
 
 export const footerNavigation = [
-  new FooterNavSection("PRODUCTS", [new FooterNavItem("API", "/products/api"), new FooterNavItem("Cloud", "/products/cloud")]),
+  new FooterNavSection("PRODUCTS", [new FooterNavItem("API", "/api-product"), new FooterNavItem("Cloud", "/cloud")]),
   new FooterNavSection("CUSTOMERS", [
     new FooterNavItem("PSPs", "/customers/psps"),
     new FooterNavItem("Exchanges", "/customers/exchanges"),

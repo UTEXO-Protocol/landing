@@ -34,15 +34,16 @@
   }
 
   &__card-icon {
-    width: 42px;
-    height: 42px;
+    margin: 15px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   &__card-icon-img {
-    width: 42px;
+    width: 20px;
     height: auto;
     transition: filter 0.3s ease;
   }
@@ -74,7 +75,7 @@
 
 @media (max-width: 768px) {
   .psp-features {
-    padding: 48px 24px;
+    padding: 48px 16px;
 
     &__grid {
       grid-template-columns: 1fr;
@@ -82,11 +83,17 @@
 
     &__card {
       min-height: auto;
-      padding: 20px 24px;
+      padding: 20px 16px;
+    }
+
+    &__card-icon img,
+    &__card-icon {
+      height: 20px;
+      width: 20px;
     }
 
     &__card-icon {
-      width: 12px;
+      margin-bottom: 20px;
     }
 
     &__card-text {

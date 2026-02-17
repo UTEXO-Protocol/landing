@@ -11,13 +11,15 @@ export default function ApiProduct() {
   return (
     <div className="page">
       <Navigation />
-      <ApiHero />
-      <TrustedBy />
-      <Infrastructure />
-      <ApiFeatures />
-      <Operators />
-      <Innovators />
-      <Footer />
+      <div className="page__content">
+        <ApiHero />
+        <TrustedBy />
+        <Infrastructure />
+        <ApiFeatures />
+        <Operators />
+        <Innovators />
+        <Footer />
+      </div>
     </div>
   );
 }

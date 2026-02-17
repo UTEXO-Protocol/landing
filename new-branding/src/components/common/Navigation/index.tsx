@@ -16,7 +16,7 @@ export class NavigationItem {
   ) {}
 }
 
-export const additionalNavigation: NavigationItem[] = [new NavigationItem("Docs", "/docs", "/common/linkVector.svg"), new NavigationItem("Contact", "/contact")];
+export const additionalNavigation: NavigationItem[] = [new NavigationItem("Docs", "https://docs.utexo.com/", "/common/linkVector.svg"), new NavigationItem("Contact", "/contact")];
 
 export default function Navigation() {
   const [isSticky, setIsSticky] = useState(false);
@@ -69,11 +69,7 @@ export default function Navigation() {
               <Button variant="white">Get Started</Button>
             </div>
 
-            <button
-              className="header__mobile-toggle"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
+            <button className="header__mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
               <Image src="/heading/menu-grid.svg" alt="Menu" width={28} height={28} />
             </button>
           </div>
@@ -122,7 +118,9 @@ export default function Navigation() {
             ))}
 
             <div className="mobile-menu__cta">
-              <Button variant="white" href="/contact">Get Started</Button>
+              <Button variant="white" href="/contact">
+                Get Started
+              </Button>
             </div>
           </nav>
         </div>

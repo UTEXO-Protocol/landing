@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #BABABA;
+    border: 1px solid #bababa;
   }
 
   &__icon {
@@ -171,31 +171,31 @@
     }
 
     &__content {
-      padding: 24px;
+      padding: 32px 20px;
       flex-grow: 1;
     }
 
     &__icon {
-      width: 120px;
+      width: 140px;
       margin-bottom: 32px;
     }
 
     &__title {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 28px;
       width: 100%;
-      margin: 0 0 16px 0;
+      margin: 0 0 24px 0;
     }
 
     &__description {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 22px;
-      margin: 0 0 24px 0;
+      margin: 0 0 34px 0;
       max-width: 100%;
     }
 
     &__image {
-      height: 240px;
+      height: 270px;
     }
 
     &__slide {
@@ -208,11 +208,6 @@
       bottom: auto;
       left: 0;
       margin-top: 16px;
-    }
-
-    &__button {
-      width: 40px;
-      height: 40px;
     }
   }
 }

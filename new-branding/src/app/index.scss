@@ -14,7 +14,10 @@ body {
 
 .page {
   background: #000;
-  padding: 20px 20px 57px;
+
+  &__content {
+    padding: 20px 20px 57px;
+  }
 }
 
 .scroll-disable {
@@ -26,7 +29,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .page {
-    padding: 10px 10px 32px;
+  .page__content {
+    padding: 0 20px 26px;
   }
 }

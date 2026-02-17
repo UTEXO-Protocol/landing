@@ -78,19 +78,22 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 600px;
+    &__overlay {
+      background: linear-gradient(180deg, rgba(31, 49, 20, 0.3) 0%, rgba(31, 49, 20, 0.8) 100%);
+    }
 
     &__content {
       flex-direction: column;
+      justify-content: space-between;
       align-items: flex-start;
-      gap: 24px;
-      bottom: 48px;
-      padding: 0 24px;
+      gap: 60px;
+      bottom: 0;
+      padding: 24px 16px;
     }
 
     &__title {
-      font-size: 36px;
-      line-height: 40px;
+      font-size: 44px;
+      line-height: 48px;
       letter-spacing: -1.5px;
       max-width: 100%;
     }

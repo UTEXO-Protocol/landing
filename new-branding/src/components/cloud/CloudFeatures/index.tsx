@@ -32,28 +32,22 @@ export const CloudFeatures = () => {
 
       const inView = isSectionInView();
 
-      // If not locked and section not in center zone — skip
       if (!isLocked.current && !inView) return;
 
       const idx = activeIndexRef.current;
       const goingDown = e.deltaY > 0;
       const goingUp = e.deltaY < 0;
 
-      // Enter lock when section hits center zone
       if (!isLocked.current && inView) {
-        // Scrolling down: lock and reset to first card
         if (goingDown && idx === 0) {
           isLocked.current = true;
         }
-        // Scrolling up: lock if we still have cards to go back through
         if (goingUp && idx === cloudFeatures.length - 1) {
           isLocked.current = true;
         }
-        // Not at the right boundary to start — let page scroll
         if (!isLocked.current) return;
       }
 
-      // At boundaries while locked — unlock and let page scroll
       if (isLocked.current) {
         if ((goingUp && idx === 0) || (goingDown && idx === cloudFeatures.length - 1)) {
           isLocked.current = false;
@@ -61,7 +55,6 @@ export const CloudFeatures = () => {
         }
       }
 
-      // Hold scroll and switch cards
       e.preventDefault();
 
       if (isTransitioning.current) return;
@@ -90,16 +83,12 @@ export const CloudFeatures = () => {
       <div className="cloud-features__layout">
         <div className="cloud-features__left">
           <h2 className="cloud-features__title">
-            <span className="cloud-features__title-bold">
-              BTC over Lightning was the start,
-            </span>
+            <span className="cloud-features__title-bold">BTC over Lightning was the start,</span>
             <br />
             Utexo is bringing USDT
           </h2>
           <p className="cloud-features__subtitle">
-            Exchanges, digital banks, wallets can access for the first time both
-            BTC and USDT over Lightning. Creating a new market for stablecoin
-            payments and BTC/USDT trading over Lightning.
+            Exchanges, digital banks, wallets can access for the first time both BTC and USDT over Lightning. Creating a new market for stablecoin payments and BTC/USDT trading over Lightning.
           </p>
         </div>
 
@@ -108,30 +97,16 @@ export const CloudFeatures = () => {
             {cloudFeatures.map((feature, index) => (
               <article
                 key={feature.title}
-                className={`cloud-features__card ${
-                  index === activeIndex ? "cloud-features__card--active" : ""
-                } ${
-                  index < activeIndex ? "cloud-features__card--above" : ""
-                } ${
+                className={`cloud-features__card ${index === activeIndex ? "cloud-features__card--active" : ""} ${index < activeIndex ? "cloud-features__card--above" : ""} ${
                   index > activeIndex ? "cloud-features__card--below" : ""
                 }`}
               >
                 <div className="cloud-features__card-visual">
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    width={540}
-                    height={280}
-                    className="cloud-features__card-visual-img"
-                  />
+                  <Image src={feature.image} alt={feature.title} width={540} height={280} className="cloud-features__card-visual-img" />
                 </div>
                 <div className="cloud-features__card-info">
-                  <h3 className="cloud-features__card-title">
-                    {feature.title}
-                  </h3>
-                  <p className="cloud-features__card-description">
-                    {feature.description}
-                  </p>
+                  <h3 className="cloud-features__card-title">{feature.title}</h3>
+                  <p className="cloud-features__card-description">{feature.description}</p>
                 </div>
               </article>
             ))}

@@ -10,12 +10,14 @@ export default function Psp() {
   return (
     <div className="page">
       <Navigation />
-      <PspHero />
-      <TrustedBy />
-      <PspFeatures />
-      <Products />
-      <UseCases />
-      <Footer />
+      <div className="page__content">
+        <PspHero />
+        <TrustedBy />
+        <PspFeatures />
+        <Products />
+        <UseCases />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -31,7 +31,9 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 310px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
 
     &:hover {
       background-color: #1f3114;
@@ -79,10 +81,14 @@
 
 @media (max-width: 768px) {
   .operators {
-    padding: 48px 24px;
+    padding: 48px 16px;
+
+    &__card-index {
+      margin-bottom: 20px;
+    }
 
     &__title {
-      font-size: 28px;
+      font-size: 36px;
       line-height: 120%;
       letter-spacing: -1px;
       margin: 0 0 32px 0;
@@ -94,17 +100,23 @@
 
     &__card {
       min-height: auto;
-      padding: 20px 24px;
+      padding: 24px;
       gap: 16px;
     }
 
     &__card-title {
-      font-size: 18px;
+      font-size: 24px;
+      line-height: 130%;
+    }
+
+    &__card-bottom {
+      gap: 24px;
     }
 
     &__card-description {
-      font-size: 14px;
+      font-size: 16px;
       max-width: 100%;
+      line-height: 120%;
     }
   }
 }

@@ -1,18 +1,13 @@
-import Image from "next/image";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const ApiHero = () => {
   return (
     <section className="api-hero">
-      <Image
-        src="/api-product/hero-bg.png"
-        alt="The Bitcoin Settlement Layer"
-        width={1110}
-        height={624}
-        className="api-hero__image"
-        priority
-      />
+      <video className="api-hero__video" poster="/api-product/hero-poster.png" autoPlay muted loop playsInline>
+        <source src="/api-product/bitcoin-api.webm" type="video/webm" />
+        <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
+      </video>
 
       <div className="api-hero__gradient" />
 
@@ -20,18 +15,19 @@ export const ApiHero = () => {
         <div className="api-hero__text">
           <h1 className="api-hero__title">The Bitcoin Settlement Layer</h1>
           <div className="api-hero__description">
-            <span className="api-hero__description-line">
-              Your gateway to USDT on Bitcoin.
-            </span>
-            <br /><br /> <br />
-            <span className="api-hero__description-detail">
-              One API to move stablecoins with near-instant settlement, fixed costs, and private execution—built on Bitcoin.
-            </span>
+            <span className="api-hero__description-line">Your gateway to USDT on Bitcoin.</span>
+            <br />
+            <br />
+            <span className="api-hero__description-detail">One API to move stablecoins with near-instant settlement, fixed costs, and private execution—built on Bitcoin.</span>
           </div>
         </div>
         <div className="api-hero__buttons">
-          <Button variant="white" href="/contact">TALK TO SALES</Button>
-          <Button variant="white" href="/docs">EXPLORE API</Button>
+          <Button variant="white" href="/contact">
+            TALK TO SALES
+          </Button>
+          <Button variant="white" href="/docs">
+            EXPLORE API
+          </Button>
         </div>
       </div>
     </section>

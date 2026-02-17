@@ -16,7 +16,7 @@
     background: #d4d4d4;
     border: 1px solid #bababa;
     padding: 8px 16px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
 
   &__title {
@@ -143,7 +143,7 @@
 
 @media (max-width: 768px) {
   .psp-products {
-    padding: 48px 24px 60px;
+    padding: 48px 16px 60px;
 
     &__badge {
       font-size: 12px;
@@ -163,7 +163,7 @@
     }
 
     &__card-info {
-      padding: 20px 24px;
+      padding: 20px 16px;
     }
 
     &__card-top {

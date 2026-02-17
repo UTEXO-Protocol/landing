@@ -7,9 +7,9 @@ export const apiFeatureImages = [
 ];
 
 export const infrastructureTags = [
-  { icon: "/api-product/icon-fixed-fees.png", label: "Pre-Fixed fees" },
+  { icon: "/api-product/icon-private.svg", label: "Pre-Fixed fees" },
   { icon: "/api-product/icon-throughput.svg", label: "Volume-independent throughput" },
-  { icon: "/api-product/icon-private.svg", label: "Private by default" },
+  { icon: "/api-product/icon-fixed-fees.png", label: "Private by default" },
 ];
 
 export const infrastructureServices = [
@@ -23,8 +23,7 @@ export const infrastructureServices = [
   },
   {
     title: "Settlement",
-    description:
-      "Settle value instantly with fixed costs and private execution. Integrate once, set fees upfront, and maintain stable speed regardless of network activity.",
+    description: "Settle value instantly with fixed costs and private execution. Integrate once, set fees upfront, and maintain stable speed regardless of network activity.",
   },
 ];
 

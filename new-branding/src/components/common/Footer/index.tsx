@@ -16,11 +16,18 @@ export const Footer = () => {
             </p>
             <Button variant="white">Contact us</Button>
           </div>
-          <FooterSocials />
+          <div className="footer__socials--desktop">
+            <FooterSocials />
+          </div>
         </div>
         <div className="footer__content">
           <FooterNavigation />
-          <p className="footer__copyright">© Utexo 2025. All rights reserved.</p>
+          <div className="footer__wrapper">
+            <div className="footer__socials--mobile">
+              <FooterSocials />
+            </div>
+            <p className="footer__copyright">© Utexo 2025. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
