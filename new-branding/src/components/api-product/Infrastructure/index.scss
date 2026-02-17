@@ -1,6 +1,7 @@
 @use "@/app/index.scss" as *;
 
 .infrastructure {
+  overflow-x: clip;
   background-color: #e2e2e2;
   padding: 110px 60px 200px;
 

@@ -105,6 +105,7 @@
 
 @media (max-width: 768px) {
   .cloud-operators {
+    overflow-x: clip;
     padding: 48px 16px 48px;
 
     &__body {
