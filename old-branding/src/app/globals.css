@@ -1,0 +1,329 @@
+/* Import PP Mori Font - Must be first */
+/*@import url('https://fonts.cdnfonts.com/css/pp-mori');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import '@fontsource-variable/jetbrains-mono';
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ingram Mono';
+    src: url('/fonts/IngramMono-Regular.woff2') format('woff2'),
+        url('/fonts/IngramMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+  --background: #D4D4D4;
+  --foreground: #000000;
+  --font-sans-real: 'PP Mori', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono-real: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --font-jetbrains-real: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --font-ingram-real: 'Ingram Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans-real);
+  --font-mono: var(--font-mono-real);
+  --font-ingram: var(--font-ingram-real);
+}
+
+.font-jetbrains { font-family: var(--font-jetbrains-real); }
+.font-ingram { font-family: var(--font-ingram-real); }
+
+
+svg {
+  shape-rendering: geometricPrecision;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* === Liquid Glass + Chrome Sheen (finalized iOS-style) === */
+
+/* Existing keyframes unchanged */
+@keyframes sheen {
+  from { transform: translateX(-160%) skewX(-14deg); }
+  to   { transform: translateX(240%) skewX(-14deg); }
+}
+
+@keyframes float-a {
+  0%,100% { transform: translate(-8%, -6%) scale(1.05); }
+  50%     { transform: translate(10%, 8%) scale(0.95); }
+}
+
+@keyframes float-b {
+  0%,100% { transform: translate(6%, 8%) scale(1.1); }
+  50%     { transform: translate(-12%, -10%) scale(0.9); }
+}
+
+.btn-liquid {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* --- Glass layer (unchanged) --- */
+.btn-liquid::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 60% at 30% 30%, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.12) 40%, transparent 60%) no-repeat,
+    radial-gradient(48% 48% at 70% 65%, rgba(166,214,255,0.30) 0%, rgba(166,214,255,0.10) 50%, transparent 70%) no-repeat;
+  filter: blur(12px) saturate(140%);
+  animation: float-a 6s ease-in-out infinite alternate;
+}
+
+/* --- Chrome sweep (unchanged) --- */
+
+
+.btn-liquid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+
+  /* keep your 40% beam width */
+  width: 40%;
+
+  /* this is what slides across during hover via @keyframes sheen */
+  transform: translateX(-160%) skewX(-14deg);
+
+  opacity: 0;
+  pointer-events: none;
+
+  /* 👇 NEW: use a CSS variable for the highlight gradient */
+  background: var(--sheen-gradient, linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.9),
+    transparent
+  ));
+}
+
+
+/* --- Trigger sheen (unchanged) --- */
+.btn-liquid:hover::after,
+.btn-liquid:focus-visible::after {
+  opacity: 1;
+  animation: sheen .5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* --- Variant tuning --- */
+
+/* Default/secondary: cool glass look (unchanged) */
+.btn-liquid[data-variant="primary"],
+.btn-liquid[data-variant="secondary"]::before {
+  mix-blend-mode: screen;
+}
+
+/* Black variant: add Bitcoin gradient layer */
+.btn-liquid[data-variant="black"]::before {
+  background:
+    /* Existing radial gradients */
+    radial-gradient(60% 60% at 40% 40%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.03) 40%, transparent 60%) no-repeat,
+    radial-gradient(48% 48% at 70% 65%, rgba(255,255,255,0.05) 0%, transparent 70%) no-repeat,
+    /* New Bitcoin orange gradient */
+    linear-gradient(
+      135deg,
+      rgba(255, 153, 0, 0.15) 0%, /* Bitcoin #FF9900 at low opacity */
+      transparent 50%
+    );
+  filter: blur(6px) brightness(0.8);
+  mix-blend-mode: lighten;
+  animation: float-a 6s ease-in-out infinite alternate; /* Unchanged */
+}
+
+
+.btn-liquid[data-variant="black"]::after {
+  --sheen-gradient: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 153, 0, 0.4) 40%,  /* Bitcoin ember */
+    rgba(255, 255, 255, 0.4) 60%, /* chrome edge */
+    transparent 100%
+  );
+}
+
+
+
+/* Hover/focus enhancement for black variant */
+.btn-liquid[data-variant="black"]:hover,
+.btn-liquid[data-variant="black"]:focus-visible {
+  transform: scale(1.05); /* Subtle scale for tactile luxury */
+}
+
+/* Reduced motion (unchanged) */
+@media (prefers-reduced-motion: reduce) {
+  .btn-liquid::before,
+  .btn-liquid::after {
+    animation: none !important;
+  }
+}
+
+/* === Premium floating motion === */
+
+/* Smaller / foreground element: a gentle hover with XY drift */
+@keyframes floatOrb {
+  0% {
+    transform: translate3d(-2px, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(3px, -10px, 0) rotate(1.2deg);
+  }
+  100% {
+    transform: translate3d(-2px, 0px, 0) rotate(0deg);
+  }
+}
+
+/* Larger ring: slightly slower, more "weighty", tiny roll */
+@keyframes floatRing {
+  0% {
+    transform: translate3d(2px, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-3px, -7px, 0) rotate(-1deg);
+  }
+  100% {
+    transform: translate3d(2px, 0px, 0) rotate(0deg);
+  }
+}
+
+/* Utilities */
+.animate-floatOrb {
+  animation: floatOrb 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-floatRing {
+  animation: floatRing 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* slight stagger helper if you ever need it */
+.float-delay {
+  animation-delay: 1.5s;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-floatOrb,
+  .animate-floatRing {
+    animation: none !important;
+  }
+}
+
+
+/* Replace existing marquee-scroll with this */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* -50% for duplicated items */
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.animate-marquee {
+  animation: marquee-left 15s linear infinite; /* Match speedMs default */
+}
+
+.animate-marquee-right {
+  animation: marquee-right 15s linear infinite; /* Match speedMs default */
+}
+
+/* Pause on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .animate-marquee-right {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+.animate-orbit { 
+  animation: orbit calc(var(--duration) * 1s) linear infinite
+};
+ 
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg))
+      translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg))
+      translateY(calc(var(--radius) * 1px))
+      rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
+}

@@ -1,0 +1,151 @@
+@use "@/app/index.scss" as *;
+
+.api-hero {
+  position: relative;
+  width: 100%;
+  height: 839px;
+  border: 1px solid #222222;
+  background-color: #000000;
+  overflow: hidden;
+
+  &__video {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    width: 900px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%), linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 40%);
+  }
+
+  &__content {
+    position: absolute;
+    top: 206px;
+    left: 60px;
+    z-index: 10;
+    width: 833px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+  }
+
+  &__text {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 56px;
+  }
+
+  &__title {
+    width: 665px;
+    @include text-geist("400-72");
+    letter-spacing: -3px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 74px;
+  }
+
+  &__description {
+    width: 626px;
+  }
+
+  &__description-line {
+    @include text-geist("400-24");
+    color: #ffffff;
+    line-height: 28px;
+  }
+
+  &__description-detail {
+    @include text-geist("400-24");
+    color: #ffffff;
+    line-height: 42px;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .api-hero {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      max-width: 310px;
+    }
+
+    &__video {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 0 auto;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__gradient {
+      position: absolute;
+      z-index: 10;
+      width: 1711px;
+      height: 250px;
+      left: -589px;
+      top: 322px;
+      background: #2c3e20;
+      border-radius: 50%;
+      filter: blur(300px);
+      pointer-events: none;
+    }
+    &__content {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      width: auto;
+      padding: 32px 16px;
+      gap: 24px;
+    }
+
+    &__text {
+      gap: 60px;
+    }
+
+    &__title {
+      width: 100%;
+      font-size: 44px;
+      line-height: 48px;
+      letter-spacing: -1.5px;
+    }
+
+    &__description {
+      width: 100%;
+    }
+
+    &__description-line {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__description-detail {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &__buttons {
+      gap: 16px;
+    }
+  }
+}

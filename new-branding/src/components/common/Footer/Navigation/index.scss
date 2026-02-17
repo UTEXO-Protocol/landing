@@ -1,0 +1,79 @@
+@use "@/app/index.scss" as *;
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  width: 100%;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include text-geist-mono("400-12");
+
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #5c5c5c;
+    letter-spacing: -0.01em;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__link {
+    position: relative;
+    @include text-geist("400-14");
+
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+    &:hover {
+      transform: translateY(-2px);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #6d6d6d;
+      transition: width 0.3s ease;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-nav {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

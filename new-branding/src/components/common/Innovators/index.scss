@@ -1,0 +1,182 @@
+@use "@/app/index.scss" as *;
+
+.innovators {
+  background: #e9e9e9;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 210px 60px 100px;
+  }
+
+  &__green-block {
+    position: absolute;
+    left: -379px;
+    top: 164px;
+    width: 1160px;
+    height: 284px;
+    background: #1f3114;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    @include text-geist("400-44");
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #cecece;
+    margin: 0 0 100px 0;
+  }
+
+  &__title-accent {
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  &__cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding: 44px;
+    outline: 1px solid #222222;
+    outline-offset: -1px;
+    backdrop-filter: blur(12px);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 301px;
+
+    &--light {
+      background: #d4d4d4;
+    }
+
+    &--dark {
+      background: #131313;
+    }
+  }
+
+  &__card-quote {
+    align-self: stretch;
+    @include text-geist("400-16");
+    line-height: 24px;
+    margin-bottom: 24px;
+
+    .innovators__card--light & {
+      color: #272727;
+    }
+
+    .innovators__card--dark & {
+      color: #7e7e7e;
+    }
+  }
+
+  &__card-quote-mark {
+    .innovators__card--light & {
+      color: #000000;
+    }
+
+    .innovators__card--dark & {
+      color: #e2e2e2;
+    }
+  }
+
+  &__card-quote-bold {
+    font-weight: 500;
+
+    .innovators__card--light & {
+      color: #000000;
+    }
+
+    .innovators__card--dark & {
+      color: #e2e2e2;
+    }
+  }
+
+  &__card-quote-rest {
+    .innovators__card--light & {
+      color: #272727;
+    }
+
+    .innovators__card--dark & {
+      color: #7e7e7e;
+    }
+  }
+
+  &__card-author {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__card-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+  }
+
+  &__card-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__card-author-name {
+    @include text-geist("500-12");
+    color: #e2e2e2;
+  }
+
+  &__card-author-company {
+    @include text-geist-mono("500-10");
+    color: #8d8d8d;
+  }
+}
+
+@media (max-width: 768px) {
+  .innovators {
+    &__wrapper {
+      padding: 60px 22px 60px 20px;
+    }
+
+    &__green-block {
+      left: -16px;
+      top: 0;
+      width: calc(100% + 32px);
+      height: 55%;
+      z-index: 1;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 120%;
+      letter-spacing: -1px;
+      margin: 0 0 58px 0;
+    }
+
+    &__cards {
+      flex-direction: column;
+    }
+
+    &__card {
+      padding: 44px;
+      min-height: auto;
+    }
+
+    &__card-quote {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}

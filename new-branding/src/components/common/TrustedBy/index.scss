@@ -1,0 +1,97 @@
+@use "@/app/index.scss" as *;
+
+.trusted-by {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  align-items: center;
+  border: 1px solid #222222;
+  height: 339px;
+
+  &__label {
+    @include text-geist-mono("400-16");
+
+    margin: 0 auto;
+    border: 1px solid #222222;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &__carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      z-index: 10;
+      pointer-events: none;
+      background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      z-index: 10;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+  }
+
+  &__carousel-track {
+    display: flex;
+    gap: 32px;
+    animation: scroll 40s linear infinite;
+    will-change: transform;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__logo {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted-by {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 54px 0;
+    gap: 24px;
+
+    &__label {
+      margin: 0 auto 0 20px;
+    }
+
+    &__logo {
+      height: 50px;
+      margin-top: 22px;
+    }
+
+    &__carousel-track {
+      gap: 24px;
+    }
+  }
+}
