@@ -16,16 +16,10 @@ export const socialLinks: SocialLink[] = [
     alt: "X",
   },
   {
-    href: "https://discord.gg/utexo",
-    label: "Utexo on Discord",
-    icon: "/footer/discord-icon.svg",
-    alt: "Discord",
-  },
-  {
-    href: "https://t.me/utexo",
-    label: "Utexo on Telegram",
-    icon: "/footer/telegram-icon.svg",
-    alt: "Telegram",
+    href: "https://www.linkedin.com/company/utexo/",
+    label: "Utexo on Linkedin",
+    icon: "/footer/linkedin-icon.svg",
+    alt: "Linkedin",
   },
 ];
 
