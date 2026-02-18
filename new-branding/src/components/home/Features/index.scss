@@ -40,12 +40,12 @@
       backdrop-filter: blur(24px);
       color: #ffffff;
 
-      .features__card-icon {
+      .features__card__icon {
         color: #ffffff;
       }
     }
 
-    &-tag {
+    &__tag {
       @include text-geist-mono("400-14");
       letter-spacing: -1px;
       text-transform: uppercase;
@@ -53,26 +53,26 @@
       margin: 0;
     }
 
-    &-body {
+    &__body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    &-header {
+    &__header {
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 16px 0;
     }
 
-    &-icon {
+    &__icon {
       flex-shrink: 0;
       color: #111827;
       transition: color 0.3s ease;
     }
 
-    &-title {
+    &__title {
       @include text-geist("500-24");
       letter-spacing: -0.5px;
       color: inherit;
@@ -80,7 +80,7 @@
       line-height: 120%;
     }
 
-    &-description {
+    &__description {
       @include text-geist("400-16");
       letter-spacing: -0.5px;
       line-height: 140%;
@@ -91,7 +91,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .features {
     padding: 48px 16px;
 
@@ -113,26 +113,26 @@
       padding: 28px 20px;
       gap: 30px;
 
-      &-tag {
+      &__tag {
         font-size: 16px;
         padding: 0 0 16px 0;
       }
 
-      &-body {
+      &__body {
         gap: 0;
       }
 
-      &-title {
+      &__title {
         font-size: 24px;
       }
 
-      &-description {
+      &__description {
         font-size: 16px;
         line-height: 140%;
         padding: 12px 0 0;
       }
 
-      &-header {
+      &__header {
         gap: 12px;
         padding: 8px 0;
       }

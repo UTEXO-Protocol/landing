@@ -83,6 +83,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    border-top: none;
 
     &__title {
       max-width: 310px;
