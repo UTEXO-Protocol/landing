@@ -1,7 +1,7 @@
 @use "@/app/index.scss" as *;
 
 .api-features {
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   padding: 80px 0;
   overflow: hidden;
 
@@ -34,7 +34,6 @@
     gap: 4px;
     animation: api-features-scroll 40s linear infinite;
     will-change: transform;
-
   }
 
   &__card {
@@ -77,6 +76,27 @@
 
     &__card {
       flex: 0 0 calc(50vw - 2px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .api-features {
+    &__card {
+      flex: 0 0 calc(50vw - 2px);
+    }
+
+    &__track {
+      animation: api-features-scroll-mobile 40s linear infinite;
+    }
+  }
+
+  @keyframes api-features-scroll-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-150vw);
     }
   }
 }
