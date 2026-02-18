@@ -83,7 +83,12 @@
 @media (max-width: 500px) {
   .api-features {
     &__card {
-      flex: 0 0 calc(50vw - 2px);
+      flex: 0 0 280px;
+      min-width: 280px;
+    }
+
+    &__card-image {
+      width: 280px;
     }
 
     &__track {
@@ -96,7 +101,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-150vw);
+      transform: translateX(calc(-6 * (280px + 4px)));
     }
   }
 }

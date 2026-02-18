@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "../CommonButton";
 import { FooterNavigation } from "./Navigation";
@@ -5,6 +8,12 @@ import { FooterSocials } from "./Socials";
 import "./index.scss";
 
 export const Footer = () => {
+  const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -26,7 +35,7 @@ export const Footer = () => {
             <div className="footer__socials--mobile">
               <FooterSocials />
             </div>
-            <p className="footer__copyright">© Utexo 2025. All rights reserved.</p>
+            <p className="footer__copyright">© Utexo {currentYear}. All rights reserved.</p>
           </div>
         </div>
       </div>
