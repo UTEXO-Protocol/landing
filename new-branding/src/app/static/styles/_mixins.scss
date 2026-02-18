@@ -158,3 +158,12 @@ $geist-mono-styles: (
     transform: translateX(var(--scroll-width));
   }
 }
+
+@keyframes wordColor {
+  from {
+    color: #878787;
+  }
+  to {
+    color: #000;
+  }
+}
