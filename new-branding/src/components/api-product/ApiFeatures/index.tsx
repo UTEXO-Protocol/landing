@@ -18,13 +18,7 @@ export const ApiFeatures = () => {
         <div className="api-features__track">
           {duplicated.map((src, index) => (
             <article key={index} className="api-features__card">
-              <Image
-                src={src}
-                alt={`Feature ${(index % apiFeatureImages.length) + 1}`}
-                width={280}
-                height={500}
-                className="api-features__card-image"
-              />
+              <Image src={src} alt={`Feature ${(index % apiFeatureImages.length) + 1}`} width={280} height={407} className="api-features__card-image" />
             </article>
           ))}
         </div>
