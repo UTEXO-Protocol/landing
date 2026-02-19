@@ -4,7 +4,7 @@ import "./index.scss";
 export const Hero = () => {
   return (
     <section className="hero">
-      <video className="hero__video" poster="/hero/utexo-hero-poster.png" autoPlay muted loop playsInline>
+      <video className="hero__video" autoPlay muted loop playsInline>
         <source src="/home/utexo-hero.webm" type="video/webm" />
         <source src="/home/utexo-hero.mp4" type="video/mp4" />
       </video>

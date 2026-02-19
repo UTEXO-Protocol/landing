@@ -4,7 +4,7 @@ import "./index.scss";
 export const ApiHero = () => {
   return (
     <section className="api-hero">
-      <video className="api-hero__video" poster="/api-product/hero-poster.png" autoPlay muted loop playsInline>
+      <video className="api-hero__video" autoPlay muted loop playsInline>
         <source src="/api-product/bitcoin-api.webm" type="video/webm" />
         <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
       </video>
