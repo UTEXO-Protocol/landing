@@ -120,8 +120,17 @@
       transform: none;
     }
 
-    &__gradient {
+    &__gradient--bottom {
       display: none;
+    }
+
+    &__gradient {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+      height: 60%;
+      background: #3c5940;
+      background: radial-gradient(circle, rgba(13, 40, 14, 0.55) 0%, rgba(0, 0, 0, 0) 100%);
     }
 
     &__content {
@@ -131,7 +140,6 @@
       width: auto;
       padding: 40px 20px;
       gap: 24px;
-      background: radial-gradient(50% 35% at 50% 0%, transparent 0%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(80% 70% at 50% 0%, transparent 0%, rgba(0, 0, 0, 0.5) 100%), #1f3114;
     }
 
     &__text {
@@ -163,5 +171,12 @@
       padding: 8px 18px;
       font-size: 14px;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .psp-hero__description {
+    max-width: 100%;
+    width: 100%;
   }
 }

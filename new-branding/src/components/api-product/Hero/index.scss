@@ -81,6 +81,7 @@
 
 @media (max-width: 768px) {
   .api-hero {
+    position: relative;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -101,16 +102,13 @@
 
     &__gradient {
       position: absolute;
-      z-index: 10;
-      width: 1711px;
-      height: 250px;
-      left: -589px;
-      top: 322px;
-      background: #2c3e20;
-      border-radius: 50%;
-      filter: blur(300px);
-      pointer-events: none;
+      bottom: 0;
+      top: auto;
+      height: 60%;
+      background: #3c5940;
+      background: radial-gradient(circle, rgba(13, 40, 14, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     }
+
     &__content {
       position: relative;
       top: auto;
