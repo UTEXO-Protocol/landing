@@ -111,8 +111,14 @@
     padding: 48px 16px;
 
     &__layout {
+      display: flex;
       flex-direction: column;
       gap: 32px;
+    }
+
+    &__left {
+      top: 0;
+      position: relative;
     }
 
     &__title {
