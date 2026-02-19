@@ -4,7 +4,7 @@ import "./index.scss";
 export const CloudHero = () => {
   return (
     <section className="cloud-hero">
-      <video className="cloud-hero__video" poster="/cloud/hero-image.png" autoPlay muted loop playsInline>
+      <video className="cloud-hero__video" autoPlay muted loop playsInline>
         <source src="/cloud/bitcoin-cloud.webm" type="video/webm" />
         <source src="/cloud/bitcoin-cloud.mp4" type="video/mp4" />
       </video>

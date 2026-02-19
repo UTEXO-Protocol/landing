@@ -1,23 +1,27 @@
 @use "@/app/index.scss" as *;
 
 .cloud-features {
-  
   position: relative;
-  background: #E2E2E2;
+  background: #e2e2e2;
   padding: 106px 60px;
   display: flex;
   align-items: center;
 
   &__layout {
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: flex-start;
     width: 100%;
+    min-height: 100%;
   }
 
   &__left {
-    flex: 1;
+    top: 140px;
+    align-self: flex-start;
+    position: sticky;
+    padding: 10px;
+    z-index: 10;
   }
 
   &__title {
@@ -51,77 +55,54 @@
   }
 
   &__cards {
-    position: relative;
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   &__card {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 480px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+      opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
       transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
 
-    &--active {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
+    &__visual {
+      height: 280px;
+      min-height: 280px;
+      background: #000000;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    &__visual-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    &--above {
-      opacity: 0;
-      transform: translateY(-40px);
+    &__info {
+      padding: 24px;
+      background: #e2e2e2;
     }
 
-    &--below {
-      opacity: 0;
-      transform: translateY(40px);
+    &__title {
+      @include text-geist("500-24");
+      font-weight: 500;
+      letter-spacing: -0.72px;
+      color: #000000;
+      margin: 0 0 16px 0;
     }
-  }
 
-  &__card-visual {
-    height: 280px;
-    min-height: 280px;
-    background: #000000;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-
-  &__card-visual-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__card-info {
-    padding: 24px;
-    background: #e2e2e2;
-  }
-
-  &__card-title {
-    @include text-geist("500-24");
-    font-weight: 500;
-    letter-spacing: -0.72px;
-    color: #000000;
-    margin: 0 0 16px 0;
-  }
-
-  &__card-description {
-    @include text-geist("400-16");
-    line-height: 24px;
-    letter-spacing: -0.48px;
-    color: #383838;
-    margin: 0 0 24px 0;
+    &__description {
+      @include text-geist("400-16");
+      line-height: 24px;
+      letter-spacing: -0.48px;
+      color: #383838;
+      margin: 0 0 24px 0;
+    }
   }
 }
 
@@ -172,32 +153,25 @@
       pointer-events: auto;
       transition: none;
 
-      &--active,
-      &--above,
-      &--below {
-        opacity: 1;
-        transform: none;
+      &__visual {
+        height: 200px;
+        min-height: 200px;
       }
-    }
 
-    &__card-visual {
-      height: 200px;
-      min-height: 200px;
-    }
+      &__info {
+        padding: 16px;
+      }
 
-    &__card-info {
-      padding: 16px;
-    }
+      &__title {
+        font-size: 18px;
+        margin: 0 0 12px 0;
+      }
 
-    &__card-title {
-      font-size: 18px;
-      margin: 0 0 12px 0;
-    }
-
-    &__card-description {
-      font-size: 14px;
-      line-height: 22px;
-      margin: 0 0 16px 0;
+      &__description {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 0 16px 0;
+      }
     }
   }
 }

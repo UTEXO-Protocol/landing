@@ -4,11 +4,13 @@
   z-index: 100;
   position: relative;
   padding: 21px 20px;
+  margin: 0 20px;
   border: 1px solid #222222;
   transition: all 0.3s ease;
 
   &--sticky {
     position: fixed;
+    margin: 0;
     top: 0;
     left: 20px;
     right: 0;
