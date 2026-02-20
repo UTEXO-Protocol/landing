@@ -55,7 +55,7 @@ export const Payments = () => {
               <h3 className="payments__product-title">{product.title}</h3>
               <p className="payments__product-description">{product.description}</p>
               <Link href={product.link} className="payments__product-link">
-                Explore
+                Explore {product.title.toLocaleUpperCase()}
               </Link>
             </div>
             <div className="payments__product-visual">
