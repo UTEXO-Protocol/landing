@@ -37,11 +37,11 @@ export const Payments = () => {
     <section className="payments">
       <div className="payments__header">
         <h2 className="payments__title">
-          <span className="payments__title-accent">Scale your payments.</span> Secure your data
+          <span className="payments__title-accent">Grow your business.</span> Keep your stack.
         </h2>
         <p className="payments__subtitle">
-          Our products enable high-volume stablecoin payments and HFT with instant settlement, fixed execution costs, lightning-scale throughput, protocol-level privacy, and flexible deployment via
-          API, Cloud, Bridge, and Swap.
+          Our products let you settle payments and accrue yield natively on Bitcoin without managing infrastructure, changing custody or rewriting user experience. Abstract away the complexity of
+          using Lightning and RGB with a simple integration.
         </p>
       </div>
 

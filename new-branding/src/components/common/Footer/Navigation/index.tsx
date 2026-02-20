@@ -16,14 +16,7 @@ export class FooterNavSection {
 
 export const footerNavigation = [
   new FooterNavSection("PRODUCTS", [new FooterNavItem("API", "/api-product"), new FooterNavItem("Cloud", "/cloud")]),
-  new FooterNavSection("CUSTOMERS", [
-    new FooterNavItem("PSPs", "/psp"),
-    new FooterNavItem("Exchanges", "/customers/exchanges"),
-    new FooterNavItem("Wallets", "/customers/wallets"),
-    new FooterNavItem("Digital Banks", "/customers/digital-banks"),
-    new FooterNavItem("HFTs", "/customers/hfts"),
-    new FooterNavItem("iGaming", "/customers/igaming"),
-  ]),
+  new FooterNavSection("CUSTOMERS", [new FooterNavItem("PSPs", "/psp")]),
   new FooterNavSection("RESOURCES", [
     new FooterNavItem("FAQ", "/resources/faq"),
     new FooterNavItem("Support", "/resources/support"),

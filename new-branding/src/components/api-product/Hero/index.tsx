@@ -13,12 +13,12 @@ export const ApiHero = () => {
 
       <div className="api-hero__content">
         <div className="api-hero__text">
-          <h1 className="api-hero__title">The Bitcoin Settlement Layer</h1>
+          <h1 className="api-hero__title">Your gateway to USDT on Bitcoin.</h1>
           <div className="api-hero__description">
-            <span className="api-hero__description-line">Your gateway to USDT on Bitcoin.</span>
+            <span className="api-hero__description-line">One API to move stablecoins with real-time settlement, fixed costs and confidential execution.</span>
             <br />
             <br />
-            <span className="api-hero__description-detail">One API to move stablecoins with near-instant settlement, fixed costs, and private execution—built on Bitcoin.</span>
+            <span className="api-hero__description-detail">Powered by Lightning Network and RGB.</span>
           </div>
         </div>
         <div className="api-hero__buttons">

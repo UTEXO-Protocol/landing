@@ -5,6 +5,8 @@ import { Hero } from "@/components/home/Hero";
 import { TrustedBy } from "@/components/common/TrustedBy";
 import { Payments } from "@/components/home/Payments";
 import { Impact } from "@/components/home/Impact";
+import { Operators } from "@/components/home/Operators";
+import { NewsletterCTA } from "@/components/home/NewsletterCTA";
 
 export default function Home() {
   return (
@@ -13,9 +15,10 @@ export default function Home() {
       <div className="page__content">
         <Hero />
         <TrustedBy />
-        <Features />
+        <Operators />
         <Payments />
         <Impact />
+        <NewsletterCTA />
         <Footer />
       </div>
     </div>

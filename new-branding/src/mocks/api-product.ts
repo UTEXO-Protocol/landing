@@ -14,16 +14,16 @@ export const infrastructureTags = [
 
 export const infrastructureServices = [
   {
+    title: "Settlement",
+    description: "Settle value instantly with fixed costs and private execution. Integrate once, set fees upfront, and maintain stable speed regardless of network activity.",
+  },
+  {
     title: "Swap",
     description: "Swap USDT/BTC directly on Bitcoin.",
   },
   {
     title: "Bridge",
     description: "Bridge stablecoins from other networks directly into Utexo.",
-  },
-  {
-    title: "Settlement",
-    description: "Settle value instantly with fixed costs and private execution. Integrate once, set fees upfront, and maintain stable speed regardless of network activity.",
   },
 ];
 

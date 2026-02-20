@@ -39,11 +39,11 @@
 
   &__subtitle {
     @include text-geist("400-20");
-    line-height: 28px;
+    line-height: 130%;
     letter-spacing: -0.6px;
     color: #383838;
     margin: 0;
-    max-width: 480px;
+    max-width: 440px;
   }
 
   &__right {

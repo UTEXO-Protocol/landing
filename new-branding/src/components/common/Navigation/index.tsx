@@ -31,6 +31,16 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleSubmenuClick = (e: React.MouseEvent, isComingSoon: boolean) => {
+    if (isComingSoon) {
+      e.preventDefault();
+
+      return;
+    }
+
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -95,10 +105,16 @@ export default function Navigation() {
               <div key={group.title} className="mobile-menu__group">
                 <div className="mobile-menu__group-title">{group.title}</div>
                 {group.submenu.map(item => (
-                  <a key={item.title} href={item.link} className="mobile-menu__item" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a
+                    key={item.title}
+                    href={item.link}
+                    className={`mobile-menu__item ${item.isComingSoon ? "mobile-menu__item--coming-soon" : ""}`}
+                    onClick={e => handleSubmenuClick(e, item.isComingSoon)}
+                  >
                     <span className="mobile-menu__item-icon">
                       <Image src={item.icon} alt={item.title} width={20} height={20} />
                     </span>
+                    {item.isComingSoon && <span className="mobile-menu__item__badge">Coming Soon</span>}
                     <span className="mobile-menu__item-text">
                       <span className="mobile-menu__item-title">{item.title}</span>
                       <span className="mobile-menu__item-description">{item.description}</span>

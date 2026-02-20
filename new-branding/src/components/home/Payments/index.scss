@@ -1,22 +1,20 @@
 @use "@/app/index.scss" as *;
 
 .payments {
-  border-top: 1px solid #222222;
   background-color: #d4d4d4;
   padding: 104px 60px;
 
   &__header {
     margin-bottom: 133px;
     display: grid;
-    grid-template-columns: 450px 1fr;
-    gap: 60px;
+    grid-template-columns: 490px 1fr;
     align-items: center;
   }
 
   &__title {
     @include text-geist("400-44");
-    line-height: 120%;
-    letter-spacing: -2px;
+    line-height: 110%;
+    letter-spacing: -1.5px;
     color: #383838;
     margin: 0;
   }
@@ -29,10 +27,11 @@
 
   &__subtitle {
     @include text-geist("400-20");
-    letter-spacing: -0.03em;
+    padding-right: 100px;
+    letter-spacing: -0.5px;
     color: #383838;
     margin: 0;
-    line-height: 150%;
+    line-height: 120%;
   }
 
   &__grid {

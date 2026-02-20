@@ -2,7 +2,7 @@
 
 .psp-usecases {
   position: relative;
-  padding: 60px;
+  padding: 100px 0 115px 180px;
   border-top: 1px solid #222222;
   border-bottom: 1px solid #222222;
   overflow: hidden;
@@ -18,8 +18,14 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .psp-usecases {
+    padding: 70px 0px 70px 200px;
+  }
+}
+
 @media (max-width: 768px) {
   .psp-usecases {
-    padding: 40px 16px;
+    padding: 40px 0 40px 40px;
   }
 }

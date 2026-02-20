@@ -1,0 +1,37 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ExpandIcon } from "@/app/static/images";
+import { operatorsServices } from "@/mocks/home";
+import "./index.scss";
+
+export const Operators = () => {
+  return (
+    <section className="operators">
+      <div className="operators__container">
+        <div className="operators__content">
+          <div className="operators__info">
+            <h2 className="operators__title">
+              <span className="operators__title-accent">Designed for operators</span> that move value at scale.
+            </h2>
+          </div>
+
+          <div className="operators__services">
+            {operatorsServices.map(service => (
+              <article key={service.title} className="operators__service">
+                <h3 className="operators__service-title">{service.title}</h3>
+                <Link href={service.link} className="operators__service-link">
+                  View More
+                  <ExpandIcon className="operators__service-icon" aria-hidden="true" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="operators__decoration">
+          <Image src="/api-product/coin-3d.png" alt="" width={300} height={300} className="operators__coin" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  );
+};
