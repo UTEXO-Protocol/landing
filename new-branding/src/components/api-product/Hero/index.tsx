@@ -9,24 +9,24 @@ export const ApiHero = () => {
         <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
       </video>
 
-      <div className="api-hero__gradient" />
+      <div className="api-hero__gradient" aria-hidden="true" />
 
       <div className="api-hero__content">
-        <div className="api-hero__text">
+        <div className="api-hero__info">
           <h1 className="api-hero__title">Your gateway to USDT on Bitcoin.</h1>
+
           <div className="api-hero__description">
-            <span className="api-hero__description-line">One API to move stablecoins with real-time settlement, fixed costs and confidential execution.</span>
-            <br />
-            <br />
-            <span className="api-hero__description-detail">Powered by Lightning Network and RGB.</span>
+            <p className="api-hero__description-text">One API to move stablecoins with real-time settlement, fixed costs and confidential execution.</p>
+            <p className="api-hero__description-detail">Powered by Lightning Network and RGB.</p>
           </div>
         </div>
-        <div className="api-hero__buttons">
+
+        <div className="api-hero__actions">
           <Button variant="white" href="/contact">
-            TALK TO SALES
+            Talk to Sales
           </Button>
           <Button variant="white" href="/docs">
-            EXPLORE API
+            Explore API
           </Button>
         </div>
       </div>

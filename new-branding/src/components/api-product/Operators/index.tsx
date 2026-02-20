@@ -1,22 +1,23 @@
-import { operators } from "@/mocks/api-product";
+import { operatorsList } from "@/mocks/api-product";
 import "./index.scss";
 
 export const Operators = () => {
   return (
     <section className="operators">
       <h2 className="operators__title">
-        <span className="operators__title-accent">Designed for operators</span>
-        that move value at scale.
+        <span className="operators__title-accent">APIs and tools for</span> payment operators that move value at scale.
       </h2>
 
       <div className="operators__grid">
-        {operators.map(operator => (
-          <article key={operator.title} className="operators__card">
-            <span className="operators__card-index">{operator.index}</span>
-            <div className="operators__card-bottom">
-              <h3 className="operators__card-title">{operator.title}</h3>
-              <p className="operators__card-description">{operator.description}</p>
+        {operatorsList.map(item => (
+          <article key={item.title} className="operators__card">
+            <div className="operators__card-header">
+              <div className="operators__card-icon" aria-hidden="true">
+                {item.icon}
+              </div>
+              <h3 className="operators__card-title">{item.title}</h3>
             </div>
+            <p className="operators__card-description">{item.description}</p>
           </article>
         ))}
       </div>

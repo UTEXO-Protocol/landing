@@ -4,7 +4,7 @@ import { TrustedBy } from "@/components/common/TrustedBy";
 import { CloudHero } from "@/components/cloud/Hero";
 import { Overview } from "@/components/cloud/Overview";
 import { CloudFeatures } from "@/components/cloud/CloudFeatures";
-import { CloudOperators } from "@/components/cloud/CloudOperators";
+import { Operators } from "@/components/common/Operators";
 import { Innovators } from "@/components/common/Innovators";
 
 export default function Cloud() {
@@ -16,7 +16,7 @@ export default function Cloud() {
         <TrustedBy />
         <Overview />
         <CloudFeatures />
-        <CloudOperators />
+        <Operators />
         <Innovators />
         <Footer />
       </div>

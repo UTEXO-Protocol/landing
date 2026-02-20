@@ -28,6 +28,7 @@ export const Operators = () => {
           </div>
         </div>
 
+        <Image src="/common/decorator-coin.png" alt="" width={82} height={64} className="operators__coin--small" loading="lazy" />
         <div className="operators__decoration">
           <Image src="/api-product/coin-3d.png" alt="" width={300} height={300} className="operators__coin" loading="lazy" />
         </div>
