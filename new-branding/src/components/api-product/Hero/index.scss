@@ -31,81 +31,70 @@
     top: 206px;
     left: 60px;
     z-index: 10;
-    width: 833px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 27px;
-  }
-
-  &__text {
-    align-self: stretch;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 46px;
+    max-width: 833px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
     gap: 56px;
   }
 
   &__title {
-    width: 665px;
     @include text-geist("400-72");
-    letter-spacing: -3px;
-    color: #ffffff;
+    max-width: 665px;
     margin: 0;
-    line-height: 74px;
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+    color: #ffffff;
   }
 
   &__description {
-    width: 626px;
+    max-width: 626px;
   }
 
-  &__description-line {
+  &__description-text {
     @include text-geist("400-24");
+    margin: 0 0 24px;
+    line-height: 1.17;
     color: #ffffff;
-    line-height: 28px;
   }
 
   &__description-detail {
     @include text-geist("400-24");
+    display: block;
+    margin: 0;
+    line-height: 1.75;
     color: #ffffff;
-    line-height: 42px;
   }
 
-  &__buttons {
-    display: inline-flex;
-    align-items: flex-start;
+  &__actions {
+    display: flex;
     gap: 32px;
   }
 }
 
 @media (max-width: 768px) {
   .api-hero {
-    position: relative;
     height: auto;
-    display: flex;
-    flex-direction: column;
     border: 1px solid #222222;
     border-top: 0;
-
-    &__title {
-      max-width: 310px;
-    }
 
     &__video {
       position: relative;
       top: auto;
       right: auto;
-      margin: 0 auto;
       width: 100%;
-      object-fit: cover;
     }
 
     &__gradient {
       position: absolute;
-      bottom: 0;
       top: auto;
+      bottom: 0;
       height: 60%;
-      background: #3c5940;
       background: radial-gradient(circle, rgba(13, 40, 14, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     }
 
@@ -113,39 +102,77 @@
       position: relative;
       top: auto;
       left: auto;
-      right: auto;
-      width: auto;
+      max-width: 100%;
       padding: 32px 16px;
       gap: 24px;
     }
 
-    &__text {
+    &__info {
       gap: 60px;
     }
 
     &__title {
-      width: 100%;
+      max-width: 310px;
       font-size: 44px;
-      line-height: 48px;
-      letter-spacing: -1.5px;
+      line-height: 1.09;
+      letter-spacing: -0.03em;
     }
 
     &__description {
-      width: 100%;
+      max-width: 100%;
     }
 
-    &__description-line {
+    &__description-text {
       font-size: 16px;
-      line-height: 22px;
+      line-height: 1.38;
+      margin-bottom: 16px;
     }
 
     &__description-detail {
       font-size: 16px;
-      line-height: 26px;
+      line-height: 1.63;
     }
 
-    &__buttons {
+    &__actions {
+      flex-wrap: wrap;
       gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .api-hero {
+    &__content {
+      padding: 24px 16px;
+    }
+
+    &__info {
+      gap: 40px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 1.11;
+    }
+
+    &__description-text {
+      font-size: 14px;
+      line-height: 1.43;
+    }
+
+    &__description-detail {
+      font-size: 14px;
+      line-height: 1.57;
+    }
+
+    &__actions {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+import { DollarIcon, LayersIcon, LockIcon, RocketIcon } from "@/app/static/images";
+
 export const apiFeatureImages = [
   "/api-product/features/feature-1.svg",
   "/api-product/features/feature-2.svg",
@@ -15,54 +17,44 @@ export const infrastructureTags = [
 export const infrastructureServices = [
   {
     title: "Settlement",
-    description: "Settle value instantly with fixed costs and private execution. Integrate once, set fees upfront, and maintain stable speed regardless of network activity.",
+    description: "Settle instantly with predictable costs and built-in privacy. Integrate once, define costs in advance, and maintain consistent performance regardless of network activity.",
   },
   {
     title: "Swap",
-    description: "Swap USDT/BTC directly on Bitcoin.",
+    description: "Non-custodial BTC<>USDT swaps natively on Bitcoin.",
   },
   {
     title: "Bridge",
-    description: "Bridge stablecoins from other networks directly into Utexo.",
+    description: "Bridge from Tron and EVM networks directly into Utexo payment rails.",
   },
 ];
 
-export interface Operator {
-  index: string;
+interface OperatorItem {
+  icon: React.ReactNode;
   title: string;
   description: string;
 }
 
-export const operators: Operator[] = [
+export const operatorsList: OperatorItem[] = [
   {
-    index: "01",
-    title: "Payment Service Providers",
-    description: "Global reach. Instant finality. Private execution.",
+    icon: <DollarIcon />,
+    title: "Control your costs",
+    description: "Fees are defined upfront and don’t fluctuate with network activity.",
   },
   {
-    index: "02",
-    title: "Retail Wallets",
-    description: "Global reach. Instant finality. Private execution.",
+    icon: <RocketIcon />,
+    title: "Settle in real-time",
+    description: "Transactions execute off-chain with sub-second finality.",
   },
   {
-    index: "03",
-    title: "Exchanges",
-    description: "Global reach. Instant finality. Private execution.",
+    icon: <LayersIcon />,
+    title: "Scale without surprise",
+    description: "Performance stays consistent at 1x or 100x volume.",
   },
   {
-    index: "04",
-    title: "Enterprise Wallets",
-    description: "Global reach. Instant finality. Private execution.",
-  },
-  {
-    index: "05",
-    title: "Custodians",
-    description: "Global reach. Instant finality. Private execution.",
-  },
-  {
-    index: "06",
-    title: "iGaming",
-    description: "Global reach. Instant finality. Private execution.",
+    icon: <LockIcon />,
+    title: "Reduce public visibility",
+    description: "Maintain AML compliance without exposing sensitive data on-chain.",
   },
 ];
 

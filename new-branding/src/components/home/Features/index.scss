@@ -91,32 +91,6 @@
   }
 }
 
-@media (max-width: 1250px) {
-  .features {
-    padding: 48px 16px;
-
-    &__card {
-      display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      height: 210px;
-      gap: 20px;
-
-      &__tag {
-        font-size: 12px;
-        padding: 20px 0 16px 0;
-      }
-
-      &__title {
-        font-size: 20px;
-      }
-
-      &__description {
-        font-size: 14px;
-      }
-    }
-  }
-}
-
 @media (max-width: 850px) {
   .features {
     padding: 48px 16px;
