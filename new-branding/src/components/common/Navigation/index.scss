@@ -4,7 +4,7 @@
   z-index: 100;
   position: relative;
   padding: 21px 20px;
-  margin: 0 20px;
+  margin: 20px 20px 0;
   border: 1px solid #222222;
   transition: all 0.3s ease;
 
@@ -232,6 +232,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -242,6 +243,22 @@
 
     &:hover {
       background: rgba(255, 255, 255, 0.05);
+    }
+
+    &--coming-soon {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    &__badge {
+      @include text-geist("500-12");
+
+      position: absolute;
+      right: 0;
+      top: -2px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      background: #000000;
     }
   }
 

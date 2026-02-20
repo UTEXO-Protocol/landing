@@ -80,7 +80,7 @@
 
     &__subtitle {
       @include text-geist("400-16");
-      color: #000000;
+      color: rgba(56, 56, 56, 1);
       margin: 0;
     }
 
@@ -88,7 +88,7 @@
       @include text-geist("400-16");
       line-height: 24px;
       letter-spacing: -0.48px;
-      color: #383838;
+      color: rgba(56, 56, 56, 1);
       margin: 0;
       max-width: 380px;
     }

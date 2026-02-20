@@ -10,13 +10,13 @@
     position: relative;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 210px 60px 100px;
+    padding: 180px 60px 140px;
   }
 
   &__green-block {
     position: absolute;
     left: -379px;
-    top: 164px;
+    top: 144px;
     width: 1160px;
     height: 284px;
     background: #1f3114;
@@ -27,12 +27,13 @@
     z-index: 2;
     @include text-geist("400-44");
     line-height: 48px;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     color: #cecece;
     margin: 0 0 100px 0;
   }
 
   &__title-accent {
+    display: block;
     color: #ffffff;
     font-weight: 500;
   }
