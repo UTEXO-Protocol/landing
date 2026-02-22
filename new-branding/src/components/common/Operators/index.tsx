@@ -19,10 +19,17 @@ export const Operators = () => {
             {operatorsServices.map(service => (
               <article key={service.title} className="operators__service">
                 <h3 className="operators__service-title">{service.title}</h3>
-                <Link href={service.link} className="operators__service-link">
-                  View More
-                  <ExpandIcon className="operators__service-icon" aria-hidden="true" />
-                </Link>
+                {service.link ? (
+                  <Link href={service.link} className="operators__service-link">
+                    View More
+                    <ExpandIcon className="operators__service-icon" aria-hidden="true" />
+                  </Link>
+                ) : (
+                  <span className="operators__service-link operators__service-link--disabled" aria-disabled="true">
+                    View More
+                    <ExpandIcon className="operators__service-icon" aria-hidden="true" />
+                  </span>
+                )}
               </article>
             ))}
           </div>

@@ -17,7 +17,7 @@ export default function ApiProduct() {
         <Infrastructure />
         <ApiFeatures />
         <Operators />
-        <Innovators />
+        {/* <Innovators /> */}
         <Footer />
       </div>
     </div>

@@ -6,12 +6,13 @@ import "./index.scss";
 
 const logos = [
   { name: "Tether", src: "/trustedBy/tether.svg" },
-  { name: "Big brain", src: "/trustedBy/big-brain.svg" },
-  { name: "Portal Ventures", src: "/trustedBy/portal-ventures.svg" },
-  { name: "Coinspaid", src: "/trustedBy/coinspaid.svg" },
-  { name: "Ethereal", src: "/trustedBy/ethereal.svg" },
-  { name: "Alchemy", src: "/trustedBy/alchemy.svg" },
-  { name: "BTC Pay", src: "/trustedBy/btcpay.svg" },
+  { name: "Arcanum Captal", src: "/trustedBy/arcanum.png" },
+  { name: "Big brain", src: "/trustedBy/big-brain.png" },
+  { name: "Ethereal Ventures", src: "/trustedBy/ethereal-ventures.svg" },
+  { name: "Maven11", src: "/trustedBy/maven11.svg" },
+  { name: "Alchemy", src: "/trustedBy/alchemy.png" },
+  { name: "Paper ventures", src: "/trustedBy/paper-ventures.png" },
+  { name: "Portal ventures", src: "/trustedBy/portal-ventures.svg" },
 ];
 
 const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];

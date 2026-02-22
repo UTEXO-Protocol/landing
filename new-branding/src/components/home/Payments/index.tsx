@@ -14,14 +14,14 @@ const products: PaymentProduct[] = [
   {
     title: "API",
     icon: "/payments/api.svg",
-    description: "APIs to send, receive, and settle stablecoins with fixed costs and private execution.",
+    description: "APIs to settle USDT payments natively on Bitcoin with instant finality, predictable costs and built-in privacy.",
     link: "/api-product",
     visual: <Image src="/payments/code-image.svg" width={425} height={283} alt="API visualization" className="payments__visual-icon" />,
   },
   {
     title: "Cloud",
     icon: "/payments/cloud.svg",
-    description: "Hands-off, managed infrastructure for stablecoin payments and trading, with yield on BTC and stablecoins.",
+    description: "Hands-off infrastructure for stablecoin payments and yield on BTC<>USDT.",
     link: "/cloud",
     visual: (
       <div className="payments__visual-currencies">

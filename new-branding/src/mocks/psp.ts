@@ -19,7 +19,7 @@ export const pspFeatures: PspFeature[] = [
   },
   {
     icon: "/psp/features/private.svg",
-    title: "Private but Compliant",
+    title: "AML Compliance",
     description: "Confidential transfers that are compatible with internal audit and reporting.",
   },
 ];
