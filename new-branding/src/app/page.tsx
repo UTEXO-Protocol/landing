@@ -16,7 +16,7 @@ export default function Home() {
         <TrustedBy />
         <Operators />
         <Payments />
-        <Impact />
+        {/* <Impact /> */}
         <NewsletterCTA />
         <Footer />
       </div>

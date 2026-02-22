@@ -15,7 +15,7 @@ export default function Psp() {
         <TrustedBy />
         <PspFeatures />
         <Products />
-        <UseCases />
+        {/* <UseCases /> */}
         <Footer />
       </div>
     </div>

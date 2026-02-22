@@ -17,7 +17,7 @@ export default function Cloud() {
         <Overview />
         <CloudFeatures />
         <Operators />
-        <Innovators />
+        {/* <Innovators /> */}
         <Footer />
       </div>
     </div>

@@ -42,7 +42,8 @@
       background-color: #1f3114;
       color: #ffffff;
 
-      .operators__card-icon {
+      .operators__card-icon,
+      .operators__card-description {
         color: #ffffff;
       }
     }
@@ -80,7 +81,7 @@
     margin: 0;
     line-height: 1.4;
     letter-spacing: -0.03em;
-    color: inherit;
+    color: #383838;
   }
 }
 
