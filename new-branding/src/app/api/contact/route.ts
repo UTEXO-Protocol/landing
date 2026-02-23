@@ -1,44 +1,54 @@
-// app/api/contact/route.ts
 import { NextResponse } from "next/server";
 import { supabaseSrv } from "@/lib/supabaseServer";
 import { sendEmail } from "@/lib/email";
 import { renderTemplate } from "@/lib/readHtml";
+import { COMPANY_TYPE_LABELS, COMPANY_TYPES, HEAR_ABOUT, HEAR_ABOUT_LABELS, REGION_LABELS, REGIONS, USE_CASE_LABELS, USE_CASES, VOLUME_LABELS, VOLUMES } from "@/lib/contact";
 
-const PROJECT_TYPES = ["web", "mobile", "design", "consulting", "other"];
+import { z } from "zod";
+
+const bodySchema = z.object({
+  fullName: z.string().trim().default(""),
+  email: z.string().trim().toLowerCase(),
+  companyName: z.string().trim(),
+  jobTitle: z.string().trim().default(""),
+  companyType: z.enum(COMPANY_TYPES),
+  useCase: z.enum(USE_CASES),
+  volume: z.enum(VOLUMES).optional(),
+  region: z.enum(REGIONS).optional(),
+  message: z.string().trim().default(""),
+  hearAbout: z.enum(HEAR_ABOUT).optional(),
+});
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const parsed = bodySchema.safeParse(await req.json());
 
-    const fullName = (body.fullName || "").toString().trim();
-    const email = (body.email || "").toString().trim().toLowerCase();
-    const projectType = (body.projectType || "").toString().trim();
-    const message = (body.message || "").toString().trim();
-
-    if (!fullName) {
-      return NextResponse.json({ ok: false, error: "Missing full name." }, { status: 400 });
+    if (!parsed.success) {
+      const error = parsed.error.issues[0] ?? "Invalid request.";
+      return NextResponse.json({ ok: false, error }, { status: 400 });
     }
 
-    if (!email) {
-      return NextResponse.json({ ok: false, error: "Missing email." }, { status: 400 });
-    }
-
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      return NextResponse.json({ ok: false, error: "Invalid email address." }, { status: 400 });
-    }
-
-    if (!PROJECT_TYPES.includes(projectType)) {
-      return NextResponse.json({ ok: false, error: "Invalid project type." }, { status: 400 });
-    }
-
-    if (!message) {
-      return NextResponse.json({ ok: false, error: "Missing message." }, { status: 400 });
-    }
+    const { fullName, email, companyName, jobTitle, companyType, useCase, volume, region, message, hearAbout } = parsed.data;
 
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null;
     const user_agent = req.headers.get("user-agent") ?? null;
 
-    const { error: insertErr } = await supabaseSrv.from("contact_requests").insert([{ full_name: fullName, email, project_type: projectType, message, ip, user_agent }]);
+    const { error: insertErr } = await supabaseSrv.from("contact_requests").insert([
+      {
+        full_name: fullName || null,
+        email,
+        company_name: companyName,
+        job_title: jobTitle || null,
+        company_type: companyType,
+        use_case: useCase,
+        volume: volume || null,
+        region: region || null,
+        message: message || null,
+        hear_about: hearAbout || null,
+        ip,
+        user_agent,
+      },
+    ]);
 
     if (insertErr) {
       console.error("[contact] insert error", insertErr);
@@ -46,14 +56,20 @@ export async function POST(req: Request) {
     }
 
     const html = renderTemplate("src/emails/contact.html", {
-      fullName,
+      fullName: fullName || "—",
       email,
-      projectType,
-      message,
+      companyName,
+      jobTitle: jobTitle || "—",
+      companyType: COMPANY_TYPE_LABELS[companyType] ?? companyType,
+      useCase: USE_CASE_LABELS[useCase] ?? useCase,
+      volume: (volume && VOLUME_LABELS[volume]) ?? "—",
+      region: (region && REGION_LABELS[region]) ?? "—",
+      message: message || "—",
+      hearAbout: (hearAbout && HEAR_ABOUT_LABELS[hearAbout]) ?? "—",
       logo_url: `${process.env.PUBLIC_SITE_URL}/common/UtexoLogoFullBlack.png`,
     });
 
-    await sendEmail(html, `Contact request - ${fullName} (${email})`);
+    await sendEmail(html, `Contact request - ${companyName} (${email})`);
 
     return NextResponse.json({ ok: true, message: "Your message has been sent. We'll be in touch soon." }, { status: 200 });
   } catch (err) {
