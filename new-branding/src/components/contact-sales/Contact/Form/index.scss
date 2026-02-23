@@ -1,0 +1,21 @@
+.contact-form {
+  position: relative;
+  z-index: 2;
+  padding: 59px 66px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(216.99deg, #666666 -6.76%, #000000 116.61%) 1;
+  background: #141414;
+  background: linear-gradient(180deg, rgb(10, 10, 10) 40%, rgba(42, 74, 45, 0.3) 100%);
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .contact-form {
+    padding: 35px 40px;
+  }
+}

@@ -10,7 +10,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   iconOnly?: boolean;
   iconSize?: { width: number; height: number };
   variant?: "black" | "white";
-  size?: "default" | "sm" | "lg" | "icon";
+  size?: "default" | "sm" | "lg" | "icon" | "full";
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant = "black", size = "default", href, external, loading, disabled, children, iconOnly, ...props }, ref) => {
