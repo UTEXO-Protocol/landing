@@ -13,16 +13,29 @@ const bodySchema = z.object({
   jobTitle: z.string().trim().default(""),
   companyType: z.enum(COMPANY_TYPES),
   useCase: z.enum(USE_CASES),
-  volume: z.enum(VOLUMES).optional(),
-  region: z.enum(REGIONS).optional(),
+  volume: z
+    .string()
+    .trim()
+    .transform(v => v || undefined)
+    .pipe(z.enum(VOLUMES).optional()),
+  region: z
+    .string()
+    .trim()
+    .transform(v => v || undefined)
+    .pipe(z.enum(REGIONS).optional()),
   message: z.string().trim().default(""),
-  hearAbout: z.enum(HEAR_ABOUT).optional(),
+  hearAbout: z
+    .string()
+    .trim()
+    .transform(v => v || undefined)
+    .pipe(z.enum(HEAR_ABOUT).optional()),
 });
 
 export async function POST(req: Request) {
   try {
     const parsed = bodySchema.safeParse(await req.json());
 
+    console.log(parsed);
     if (!parsed.success) {
       const error = parsed.error.issues[0] ?? "Invalid request.";
       return NextResponse.json({ ok: false, error }, { status: 400 });
