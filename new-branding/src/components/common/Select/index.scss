@@ -2,7 +2,7 @@
 
 .common-select {
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 
   &__label {
     @include text-geist("400-16");
@@ -17,7 +17,7 @@
     @include text-geist("400-12");
 
     position: absolute;
-    bottom: -14px;
+    bottom: -18px;
     left: 0;
     letter-spacing: -2%;
     color: rgb(243, 100, 100);
