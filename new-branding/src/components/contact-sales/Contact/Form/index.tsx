@@ -8,8 +8,11 @@ import { CommonTextarea } from "@/components/common/Textarea";
 import { CommonSelect } from "@/components/common/Select";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
+import toast from "react-hot-toast";
 
-const projectTypeOptions = [
+type ProjectType = "web" | "mobile" | "design" | "consulting" | "other";
+
+const projectTypeOptions: { label: string; value: ProjectType }[] = [
   { label: "Web Development", value: "web" },
   { label: "Mobile App", value: "mobile" },
   { label: "Design", value: "design" },
@@ -37,8 +40,26 @@ export const ContactForm = () => {
     },
   });
 
-  const onSubmit = (values: ContactFormValues) => {
-    console.log("Form submitted:", values);
+  const onSubmit = async (values: ContactFormValues) => {
+    const toastId = toast.loading("Submitting…");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values }),
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok || !data?.ok) {
+        throw new Error(data?.error || "Request failed");
+      }
+
+      toast.success(data?.message ?? "Thanks for contact us! 🎉", { id: toastId });
+    } catch {
+      toast.error("Please try again.", { id: toastId });
+    }
   };
 
   return (
