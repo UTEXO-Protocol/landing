@@ -1,0 +1,86 @@
+@use "@/app/index.scss" as *;
+
+.common-select {
+  position: relative;
+  margin-bottom: 14px;
+
+  &__label {
+    @include text-geist("400-16");
+
+    display: block;
+    margin-bottom: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+  }
+
+  &__error-slot {
+    @include text-geist("400-12");
+
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    letter-spacing: -2%;
+    color: rgb(243, 100, 100);
+  }
+
+  &__input-wrap {
+    position: relative;
+  }
+
+  &__select-chevron {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #7e7e7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__field {
+    @include text-geist("400-16");
+
+    width: 100%;
+    padding: 16px;
+    padding-right: 40px;
+    border-radius: 4px;
+    background: #ffffff0a;
+    letter-spacing: -2%;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:focus,
+    &:focus-visible,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:hover {
+      background:
+        linear-gradient(#121613, #151a17) padding-box,
+        linear-gradient(216.99deg, #666666 -6.76%, #000000 116.61%) border-box;
+    }
+
+    &::placeholder {
+      color: #7e7e7e;
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

@@ -66,6 +66,10 @@ $geist-styles: (
     500,
     44px,
   ),
+  "400-56": (
+    400,
+    56px,
+  ),
 );
 
 @mixin text-geist($key) {
