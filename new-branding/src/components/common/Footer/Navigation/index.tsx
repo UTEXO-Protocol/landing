@@ -11,25 +11,15 @@ export class FooterNavSection {
   constructor(
     public label: string,
     public items: FooterNavItem[],
+    public isBlank: boolean = false,
   ) {}
 }
 
 export const footerNavigation = [
   new FooterNavSection("PRODUCTS", [new FooterNavItem("API", "/api-product"), new FooterNavItem("Cloud", "/cloud")]),
   new FooterNavSection("CUSTOMERS", [new FooterNavItem("PSPs", "/psp")]),
-  new FooterNavSection("RESOURCES", [
-    new FooterNavItem("FAQ", "/resources/faq"),
-    new FooterNavItem("Support", "/resources/support"),
-    new FooterNavItem("Glossary", "/resources/glossary"),
-    new FooterNavItem("Writing", "/resources/writing"),
-    new FooterNavItem("Brand Kit", "/resources/brand-kit"),
-  ]),
-  new FooterNavSection("LEGAL", [
-    new FooterNavItem("Terms & Conditions", "/legal/terms"),
-    new FooterNavItem("Privacy Policy", "/legal/privacy"),
-    new FooterNavItem("Licenses", "/legal/licenses"),
-    new FooterNavItem("Cookie Preferences", "/legal/cookies"),
-  ]),
+  new FooterNavSection("RESOURCES", [new FooterNavItem("FAQ", "/resources/faq"), new FooterNavItem("Docs", "https://docs.utexo.com/"), new FooterNavItem("Brand Kit", "/resources/brand-kit")]),
+  new FooterNavSection("LEGAL", [new FooterNavItem("Terms & Conditions", "/legal/terms"), new FooterNavItem("Privacy Policy", "/legal/privacy")]),
 ];
 
 interface FooterNavigationProps {
@@ -45,7 +35,7 @@ export const FooterNavigation = ({ sections = footerNavigation }: FooterNavigati
           <ul className="footer-nav__list">
             {section.items.map(item => (
               <li key={item.title} className="footer-nav__item">
-                <a href={item.link} className="footer-nav__link">
+                <a href={item.link} className="footer-nav__link" {...(section.isBlank && { target: "_blank", rel: "noopener noreferrer" })}>
                   {item.title}
                 </a>
               </li>

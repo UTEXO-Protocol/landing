@@ -37,7 +37,7 @@ export const Payments = () => {
     <section className="payments">
       <div className="payments__header">
         <h2 className="payments__title">
-          <span className="payments__title-accent">Grow your business.</span> Keep your stack.
+          <span className="payments__title-accent">The future of settlement.</span> Without the friction.
         </h2>
         <p className="payments__subtitle">
           Our products let you settle payments and accrue yield natively on Bitcoin without managing infrastructure, changing custody or rewriting user experience. Abstract away the complexity of

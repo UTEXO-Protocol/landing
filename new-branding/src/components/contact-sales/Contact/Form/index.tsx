@@ -118,54 +118,58 @@ export const ContactForm = () => {
   return (
     <div className="contact-form">
       <form className="contact-form__form" onSubmit={handleSubmit(onSubmit)} noValidate>
-        <Controller name="fullName" control={control} render={({ field, fieldState }) => <CommonInput title="Full Name" placeholder="Your name" field={field} error={fieldState.error} />} />
+        <div className="contact-form__form__wrapper">
+          <Controller name="fullName" control={control} render={({ field, fieldState }) => <CommonInput title="Full Name" placeholder="Your name" field={field} error={fieldState.error} />} />
 
-        <Controller
-          name="email"
-          control={control}
-          render={({ field, fieldState }) => <CommonInput title="Work Email *" placeholder="name@company.com" type="email" field={field} error={fieldState.error} />}
-        />
+          <Controller
+            name="email"
+            control={control}
+            render={({ field, fieldState }) => <CommonInput title="Work Email *" placeholder="name@company.com" type="email" field={field} error={fieldState.error} />}
+          />
 
-        <Controller name="companyName" control={control} render={({ field, fieldState }) => <CommonInput title="Company Name *" placeholder="Your company" field={field} error={fieldState.error} />} />
+          <Controller
+            name="companyName"
+            control={control}
+            render={({ field, fieldState }) => <CommonInput title="Company Name *" placeholder="Your company" field={field} error={fieldState.error} />}
+          />
 
-        <Controller name="jobTitle" control={control} render={({ field, fieldState }) => <CommonInput title="Job Title" placeholder="Your role" field={field} error={fieldState.error} />} />
+          <Controller name="jobTitle" control={control} render={({ field, fieldState }) => <CommonInput title="Job Title" placeholder="Your role" field={field} error={fieldState.error} />} />
 
-        <Controller
-          name="companyType"
-          control={control}
-          render={({ field, fieldState }) => <CommonSelect title="Company Type *" placeholder="Select an option..." options={companyTypeOptions} field={field} error={fieldState.error} />}
-        />
+          <Controller
+            name="companyType"
+            control={control}
+            render={({ field, fieldState }) => <CommonSelect title="Company Type *" placeholder="Select an option..." options={companyTypeOptions} field={field} error={fieldState.error} />}
+          />
 
-        <Controller
-          name="useCase"
-          control={control}
-          render={({ field, fieldState }) => <CommonSelect title="Use Case *" placeholder="Select an option..." options={useCaseOptions} field={field} error={fieldState.error} />}
-        />
+          <Controller
+            name="useCase"
+            control={control}
+            render={({ field, fieldState }) => <CommonSelect title="Use Case *" placeholder="Select an option..." options={useCaseOptions} field={field} error={fieldState.error} />}
+          />
 
-        <Controller
-          name="volume"
-          control={control}
-          render={({ field, fieldState }) => <CommonSelect title="Monthly Transaction Volume" placeholder="Select an option..." options={volumeOptions} field={field} error={fieldState.error} />}
-        />
+          <Controller
+            name="volume"
+            control={control}
+            render={({ field, fieldState }) => <CommonSelect title="Monthly Transaction Volume" placeholder="Select an option..." options={volumeOptions} field={field} error={fieldState.error} />}
+          />
 
-        <Controller
-          name="region"
-          control={control}
-          render={({ field, fieldState }) => <CommonSelect title="Region" placeholder="Select an option..." options={regionOptions} field={field} error={fieldState.error} />}
-        />
+          <Controller
+            name="region"
+            control={control}
+            render={({ field, fieldState }) => <CommonSelect title="Region" placeholder="Select an option..." options={regionOptions} field={field} error={fieldState.error} />}
+          />
 
+          <Controller
+            name="hearAbout"
+            control={control}
+            render={({ field, fieldState }) => <CommonSelect title="How did you hear about us?" placeholder="Select an option..." options={hearAboutOptions} field={field} error={fieldState.error} />}
+          />
+        </div>
         <Controller
           name="message"
           control={control}
           render={({ field, fieldState }) => <CommonTextarea title="Message" placeholder="Tell us about your project" field={field} error={fieldState.error} rows={5} />}
         />
-
-        <Controller
-          name="hearAbout"
-          control={control}
-          render={({ field, fieldState }) => <CommonSelect title="How did you hear about us?" placeholder="Select an option..." options={hearAboutOptions} field={field} error={fieldState.error} />}
-        />
-
         <Button variant="white" size="full">
           SUBMIT
         </Button>

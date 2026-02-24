@@ -1,7 +1,20 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const CloudHero = () => {
+  const router = useRouter();
+
+  const goTalkToSales = () => {
+    router.push("/contact-sales");
+  };
+
+  const goToCloud = () => {
+    window.open("https://docs.utexo.com/getting-started/editor/cloud", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="cloud-hero">
       <video className="cloud-hero__video" autoPlay muted loop playsInline>
@@ -14,15 +27,15 @@ export const CloudHero = () => {
       <div className="cloud-hero__content">
         <div className="cloud-hero__text">
           <h1 className="cloud-hero__title">Cloud</h1>
-          <p className="cloud-hero__description">Managed Lightning infrastructure for running stablecoin payments and trading at scale, with built-in yield and zero operational overhead.</p>
+          <p className="cloud-hero__description">Fully managed Lightning infrastructure for native USDT settlement and enterprise-grade yield.</p>
         </div>
         <div className="cloud-hero__gradient--mobile" />
         <div className="cloud-hero__buttons">
-          <Button variant="white" href="/api-product">
+          <Button variant="white" onClick={goTalkToSales}>
             TALK TO SALES
           </Button>
-          <Button variant="white" href="/api-product">
-            LOG IN
+          <Button variant="white" onClick={goToCloud}>
+            Explore Cloud
           </Button>
         </div>
       </div>

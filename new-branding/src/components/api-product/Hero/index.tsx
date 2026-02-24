@@ -17,7 +17,7 @@ export const ApiHero = () => {
 
           <div className="api-hero__description">
             <p className="api-hero__description-text">One API to move stablecoins with real-time settlement, fixed costs and confidential execution.</p>
-            <p className="api-hero__description-detail">Powered by Lightning Network and RGB.</p>
+            <p className="api-hero__description-detail">Powered by Lightning and RGB.</p>
           </div>
         </div>
 
