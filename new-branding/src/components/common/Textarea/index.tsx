@@ -14,11 +14,12 @@ interface CommonTextareaProps {
   };
   error?: FieldError;
   rows?: number;
+  className?: string;
 }
 
-export const CommonTextarea = ({ title, placeholder, field, error, rows = 5 }: CommonTextareaProps) => {
+export const CommonTextarea = ({ title, placeholder, field, error, rows = 5, className }: CommonTextareaProps) => {
   return (
-    <div className="common-textarea">
+    <div className={`common-textarea ${className ?? ""}`}>
       {title && <label className="common-textarea__label">{title}</label>}
       <div className={`common-textarea__input-wrap ${error ? "common-textarea__input-wrap--error" : ""}`}>
         <textarea {...field} placeholder={placeholder} rows={rows} className="common-textarea__field" />

@@ -43,7 +43,9 @@ export const Footer = () => {
             <div className="footer__socials--mobile">
               <FooterSocials />
             </div>
-            <p className="footer__copyright">© Utexo {currentYear}. All rights reserved.</p>
+            <p className="footer__copyright" suppressHydrationWarning>
+              © Utexo {currentYear}. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

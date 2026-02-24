@@ -2,28 +2,28 @@ import { DollarIcon, LayersIcon, LockIcon, RocketIcon } from "@/app/static/image
 
 export const apiFeature = [
   {
-    text: "Easy plug in into your stack.  No overhead needed.",
-    image: "/api-product/features/feature-1.svg",
+    text: "Reduce capital lock-up with real-time settlement.",
+    image: "/api-product/features/feature-5.svg",
     alt: "Feature 1",
   },
   {
-    text: "AML and Compliance integrated ",
-    image: "/api-product/features/feature-2.svg",
+    text: "Plug into your current stack without heavy custom development.",
+    image: "/api-product/features/feature-4.svg",
     alt: "Feature 2",
   },
   {
-    text: "Move at your customers’ speed. 24/7 global payments.",
-    image: "/api-product/features/feature-3.svg",
+    text: "Stay compliant to AML requirements",
+    image: "/api-product/features/feature-2.svg",
     alt: "Feature 3",
   },
   {
-    text: "Pre-fixed transaction fee with max 20bps per transaction",
-    image: "/api-product/features/feature-4.svg",
+    text: "Send and receive 24/7 private USDT payments globally.",
+    image: "/api-product/features/feature-3.svg",
     alt: "Feature 4",
   },
   {
-    text: "Faster settlement means lower locked liquidity",
-    image: "/api-product/features/feature-5.svg",
+    text: "Lock in your costs in advance with fixed-fee transfers",
+    image: "/api-product/features/feature-1.svg",
     alt: "Feature 5",
   },
 ];

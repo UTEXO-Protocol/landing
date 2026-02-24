@@ -168,9 +168,11 @@ export const ContactForm = () => {
         <Controller
           name="message"
           control={control}
-          render={({ field, fieldState }) => <CommonTextarea title="Message" placeholder="Tell us about your project" field={field} error={fieldState.error} rows={5} />}
+          render={({ field, fieldState }) => (
+            <CommonTextarea title="Message" placeholder="Tell us about your project" field={field} error={fieldState.error} rows={5} className="contact-form__textarea" />
+          )}
         />
-        <Button variant="white" size="full">
+        <Button variant="white" className="contact-form__button">
           SUBMIT
         </Button>
       </form>
