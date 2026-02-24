@@ -46,7 +46,7 @@ export const cloudFeatures: CloudFeature[] = [
   },
   {
     title: "Enterprise-grade security",
-    description: "Built-in safeguards across the entire node lifecycle",
+    description: "Built-in safeguards across the entire node lifecycle.",
     image: "/cloud/features/security.svg",
   },
 ];

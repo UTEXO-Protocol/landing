@@ -22,7 +22,7 @@ export const socialLinks: SocialLink[] = [
     alt: "Linkedin",
   },
   {
-    href: "",
+    href: "https://discord.com/invite/utexo",
     label: "utexo on Discord",
     icon: "/footer/discord-icon.svg",
     alt: "Discord",

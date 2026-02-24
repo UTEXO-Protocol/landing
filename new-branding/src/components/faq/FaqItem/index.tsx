@@ -32,7 +32,7 @@ export const FAQItem = ({ faq, index, openIndex, onToggle }: FAQItemProps) => {
             <div
               className="faq-item__answer"
               dangerouslySetInnerHTML={{
-                __html: faq.answer.replace(/\n\n/g, "<br/><br/>").replace(/\n/g, "<br/>"),
+                __html: faq.answer,
               }}
             />
           )}

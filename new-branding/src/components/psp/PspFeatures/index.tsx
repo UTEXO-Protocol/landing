@@ -17,10 +17,6 @@ export const PspFeatures = () => {
             </div>
           </article>
         ))}
-        <div className="psp-features__decoration">
-          <p className="psp-features__decoration__title">Grow</p>
-          <Image alt="cube decorator" src="/psp/cube-decoration.svg" width={100} height={70} className="psp-features__decoration__image" />
-        </div>
       </div>
     </section>
   );

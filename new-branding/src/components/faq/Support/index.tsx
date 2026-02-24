@@ -13,7 +13,7 @@ export const FAQSupport = () => {
         support@utexo.com
       </a>
 
-      <Button variant="black" size="full">
+      <Button variant="black" size="full" href="https://docs.utexo.com/">
         Go to documentation
       </Button>
     </div>

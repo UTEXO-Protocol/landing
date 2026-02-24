@@ -16,7 +16,7 @@ export const ContactLinks = () => {
 
             <div className="contact-links__content">
               <span className="contact-links__title">{item.title}</span>
-              <span className="contact-links__subtitle">{item.subtitle}</span>
+              {item.subtitle && <span className="contact-links__subtitle">{item.subtitle}</span>}
             </div>
 
             <ExpandIcon className="contact-links__arrow" aria-hidden="true" />

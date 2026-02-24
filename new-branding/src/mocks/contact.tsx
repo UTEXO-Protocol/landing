@@ -7,11 +7,10 @@ export const contactLinks = [
     alt: "Email",
   },
   {
-    title: "Our Telegram",
-    subtitle: "@utexosales",
-    href: "https://t.me/utexosales",
-    icon: "/contact-sales/tg-icon.svg",
-    alt: "Tg",
+    title: "Our Discord",
+    href: "https://discord.com/invite/utexo",
+    icon: "/contact-sales/discord-icon.svg",
+    alt: "Discord",
   },
   {
     title: "Write us on X",
