@@ -21,6 +21,12 @@ export const socialLinks: SocialLink[] = [
     icon: "/footer/linkedin-icon.svg",
     alt: "Linkedin",
   },
+  {
+    href: "",
+    label: "utexo on Discord",
+    icon: "/footer/discord-icon.svg",
+    alt: "Discord",
+  },
 ];
 
 interface FooterSocialsProps {

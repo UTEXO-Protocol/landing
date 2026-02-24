@@ -46,8 +46,6 @@ export const NewsletterCTA = () => {
   return (
     <section className="newsletter-cta">
       <div className="newsletter-cta__content">
-        <p className="newsletter-cta__microcopy">Zero spam. Pure signal.</p>
-
         <h2 className="newsletter-cta__title">
           <span className="newsletter-cta__title-accent">Join</span> the Bitcoin frontier
         </h2>

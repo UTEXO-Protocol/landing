@@ -1,11 +1,31 @@
 import { DollarIcon, LayersIcon, LockIcon, RocketIcon } from "@/app/static/images";
 
-export const apiFeatureImages = [
-  "/api-product/features/feature-1.svg",
-  "/api-product/features/feature-2.svg",
-  "/api-product/features/feature-3.svg",
-  "/api-product/features/feature-4.svg",
-  "/api-product/features/feature-5.svg",
+export const apiFeature = [
+  {
+    text: "Reduce capital lock-up with real-time settlement.",
+    image: "/api-product/features/feature-5.svg",
+    alt: "Feature 1",
+  },
+  {
+    text: "Plug into your current stack without heavy custom development.",
+    image: "/api-product/features/feature-4.svg",
+    alt: "Feature 2",
+  },
+  {
+    text: "Stay compliant to AML requirements",
+    image: "/api-product/features/feature-2.svg",
+    alt: "Feature 3",
+  },
+  {
+    text: "Send and receive 24/7 private USDT payments globally.",
+    image: "/api-product/features/feature-3.svg",
+    alt: "Feature 4",
+  },
+  {
+    text: "Lock in your costs in advance with fixed-fee transfers",
+    image: "/api-product/features/feature-1.svg",
+    alt: "Feature 5",
+  },
 ];
 
 export const infrastructureTags = [
@@ -17,15 +37,15 @@ export const infrastructureTags = [
 export const infrastructureServices = [
   {
     title: "Settlement",
-    description: "Settle instantly with predictable costs and built-in privacy. Integrate once, define costs in advance, and maintain consistent performance regardless of network activity.",
+    description: "Control your costs and process high-volume USDT payments secured by Bitcoin.",
   },
   {
-    title: "Swap",
-    description: "Non-custodial BTC<>USDT swaps natively on Bitcoin.",
+    title: "Swaps",
+    description: "Atomic BTC<>USDT conversion without third-party custody, natively on Bitcoin and Lightning.",
   },
   {
     title: "Bridge",
-    description: "Bridge from Tron and EVM networks directly into Utexo payment rails.",
+    description: "Route USDT from all networks into Bitcoin on private payment rails.",
   },
 ];
 
@@ -38,12 +58,12 @@ interface OperatorItem {
 export const operatorsList: OperatorItem[] = [
   {
     icon: <DollarIcon />,
-    title: "Control your costs",
+    title: "Control your margins",
     description: "Fees are defined upfront and don’t fluctuate with network activity.",
   },
   {
     icon: <RocketIcon />,
-    title: "Settle in real-time",
+    title: "Settle in seconds",
     description: "Transactions execute off-chain with sub-second finality.",
   },
   {

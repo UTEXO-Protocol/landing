@@ -14,7 +14,7 @@ export const PspHero = () => {
 
       <div className="psp-hero__content">
         <div className="psp-hero__text">
-          <h1 className="psp-hero__title">Real-time settlement, powered by Bitcoin.</h1>
+          <h1 className="psp-hero__title">Real-time USDT settlement, powered by Bitcoin.</h1>
           <p className="psp-hero__description">Instant USDT transfer on the most resilient open network. Boost your margins with predictable costs and consistent performance.</p>
         </div>
 

@@ -38,7 +38,7 @@ export const TrustedBy = () => {
 
   return (
     <section className="trusted-by">
-      <h2 className="trusted-by__label">Trusted by</h2>
+      <h2 className="trusted-by__label">Blacked By</h2>
       <div className="trusted-by__carousel">
         <div className="trusted-by__carousel-track" ref={trackRef}>
           {duplicatedLogos.map((logo, index) => (

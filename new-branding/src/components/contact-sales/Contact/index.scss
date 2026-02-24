@@ -3,8 +3,8 @@
 .contact-us {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 172px;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 60px;
   padding: 69px 61px 100px;
   overflow: hidden;
   border: 1px solid #222222;
@@ -38,7 +38,7 @@
   }
 
   &__description {
-    @include text-geist("400-24");
+    @include text-geist("400-20");
 
     position: relative;
     z-index: 1;

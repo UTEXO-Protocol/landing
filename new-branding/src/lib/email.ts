@@ -13,7 +13,7 @@ if (!EMAIL_PASSWORD) console.warn("Missing EMAIL_PASSWORD");
 if (!EMAIL_FROM) console.warn("Missing EMAIL_FROM");
 if (!EMAIL_DEV_TO) console.warn("Missing EMAIL_DEV_TO");
 
-export async function sendEmail(html: string, subject: string) {
+export async function sendEmail(html: string, subject: string, reciever?: string) {
   if (!EMAIL_HOST || !EMAIL_FROM || !EMAIL_DEV_TO || !EMAIL_PASSWORD) {
     if (process.env.NODE_ENV !== "production") {
       console.warn("Email env vars missing, not sending:", html);
@@ -34,7 +34,7 @@ export async function sendEmail(html: string, subject: string) {
   try {
     const res = await transporter.sendMail({
       from: EMAIL_FROM,
-      to: EMAIL_DEV_TO,
+      to: reciever ?? EMAIL_DEV_TO,
       subject,
       html,
     });

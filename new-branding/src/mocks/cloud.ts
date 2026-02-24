@@ -6,15 +6,15 @@ export interface CloudOverviewFeature {
 export const cloudOverviewFeatures: CloudOverviewFeature[] = [
   {
     icon: "/cloud/overview/versioned.svg",
-    text: "Versioned deployments",
+    text: "Versioned deployments.",
   },
   {
     icon: "/cloud/overview/access.svg",
-    text: "Controlled access and permissions",
+    text: "Node-level access control.",
   },
   {
     icon: "/cloud/overview/health.svg",
-    text: "Health and status monitoring",
+    text: "Health and status monitoring.",
   },
   {
     icon: "/cloud/overview/lifecycle.svg",
@@ -31,32 +31,23 @@ export interface CloudFeature {
 export const cloudFeatures: CloudFeature[] = [
   {
     title: "Yield",
-    description:
-      "Generate BTC & USDT yield out of payment transactions processed over the Lightning network",
-    image: "/cloud/features/yield.png",
+    description: "Turn BTC<>USDT volume into recurring revenue.",
+    image: "/cloud/features/yield.svg",
   },
   {
-    title: "High Frequency trading",
-    description:
-      "BTC/USDT cross-exchange settlement for High frequency traders",
-    image: "/cloud/features/hft.png",
+    title: "High-Frequency Trading",
+    description: "BTC<>USDT cross-exchange settlement for high velocity traders",
+    image: "/cloud/features/hft.svg",
   },
   {
-    title: "Custody, your way",
-    description:
-      "Choose between Remote signer set up or Operation signing key",
-    image: "/cloud/features/custody.png",
+    title: "Fully non-custodial",
+    description: "Your data is stored in your environment. Utexo has no access to your keys.",
+    image: "/cloud/features/custody.svg",
   },
   {
-    title: "Independent",
-    description: "Be in control of your Lightning node operations",
-    image: "/cloud/features/independent.png",
-  },
-  {
-    title: "Enterprise grade security",
-    description:
-      "Security is maintained across the entire node life-cycle to ensure it meets internal security standards",
-    image: "/cloud/features/security.png",
+    title: "Enterprise-grade security",
+    description: "Built-in safeguards across the entire node lifecycle",
+    image: "/cloud/features/security.svg",
   },
 ];
 
@@ -64,8 +55,4 @@ export interface CloudService {
   title: string;
 }
 
-export const cloudServices: CloudService[] = [
-  { title: "Wallets" },
-  { title: "Custodians" },
-  { title: "Exchanges" },
-];
+export const cloudServices: CloudService[] = [{ title: "Wallets" }, { title: "Custodians" }, { title: "Exchanges" }];

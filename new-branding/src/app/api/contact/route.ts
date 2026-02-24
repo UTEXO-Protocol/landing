@@ -82,7 +82,8 @@ export async function POST(req: Request) {
       logo_url: `${process.env.PUBLIC_SITE_URL}/common/UtexoLogoFullBlack.png`,
     });
 
-    await sendEmail(html, `Contact request - ${companyName} (${email})`);
+    const salesContactEmail = process.env.SALES_CONTACT_EMAIL;
+    await sendEmail(html, `Contact request - ${companyName} (${email})`, salesContactEmail);
 
     return NextResponse.json({ ok: true, message: "Your message has been sent. We'll be in touch soon." }, { status: 200 });
   } catch (err) {

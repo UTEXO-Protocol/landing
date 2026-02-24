@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/common/CommonButton";
 import { NavMenu, navigation } from "./Menu";
 import "./index.scss";
+import { useRouter } from "next/navigation";
 
 export class NavigationItem {
   constructor(
@@ -16,9 +17,10 @@ export class NavigationItem {
   ) {}
 }
 
-export const additionalNavigation: NavigationItem[] = [new NavigationItem("Docs", "https://docs.utexo.com/", "/common/linkVector.svg"), new NavigationItem("Contact", "/contact")];
+export const additionalNavigation: NavigationItem[] = [new NavigationItem("Contact", "/contact-sales")];
 
 export default function Navigation() {
+  const router = useRouter();
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -52,6 +54,10 @@ export default function Navigation() {
     };
   }, [isMobileMenuOpen]);
 
+  const goToDocs = () => {
+    window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
       {isSticky && <div className="header__spacer" />}
@@ -76,7 +82,9 @@ export default function Navigation() {
                   </a>
                 ))}
               </nav>
-              <Button variant="white">Get Started</Button>
+              <Button variant="white" onClick={goToDocs}>
+                Get Started
+              </Button>
             </div>
 
             <button className="header__mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
@@ -134,7 +142,7 @@ export default function Navigation() {
             ))}
 
             <div className="mobile-menu__cta">
-              <Button variant="white" href="/contact">
+              <Button variant="white" onClick={goToDocs}>
                 Get Started
               </Button>
             </div>

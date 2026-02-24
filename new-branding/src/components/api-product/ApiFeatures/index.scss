@@ -41,15 +41,30 @@
   }
 
   &__card {
-    flex: 0 0 calc(20vw - 3px);
+    height: 499px;
+    width: 366px;
+    position: relative;
+    flex: 0 0 366px;
     overflow: hidden;
+    background: #000000;
   }
 
   &__card-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+  }
+
+  &__card-text {
+    @include text-geist("400-16");
+
+    max-width: 240px;
+    position: absolute;
+    left: 21px;
+    top: 21px;
   }
 }
 

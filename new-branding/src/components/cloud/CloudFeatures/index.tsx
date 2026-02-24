@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { cloudFeatures } from "@/mocks/cloud";
 import "./index.scss";
@@ -11,12 +10,13 @@ export const CloudFeatures = () => {
       <div className="cloud-features__layout">
         <div className="cloud-features__left">
           <h2 className="cloud-features__title">
-            <span className="cloud-features__title-bold">BTC over Lightning was the start,</span>
+            <span className="cloud-features__title-bold">Lightning started with BTC.</span>
             <br />
-            Utexo is bringing USDT
+            Now it’s USDT turn.
           </h2>
           <p className="cloud-features__subtitle">
-            Exchanges, digital banks, wallets can access for the first time both BTC and USDT over Lightning. Creating a new market for stablecoin payments and BTC/USDT trading over Lightning.
+            For the first time, exchanges, liquidity providers, banks, and wallets can access native BTC&lt;&gt;USDT liquidity on Lightning. Settle large-scale payments and execute HFT instantly, with
+            fixed costs and private execution.
           </p>
         </div>
 
