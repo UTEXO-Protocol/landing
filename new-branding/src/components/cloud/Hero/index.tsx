@@ -1,16 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const CloudHero = () => {
-  const router = useRouter();
-
-  const goTalkToSales = () => {
-    router.push("/contact-sales");
-  };
-
   const goToCloud = () => {
     window.open("https://docs.utexo.com/getting-started/editor/cloud", "_blank", "noopener,noreferrer");
   };
@@ -31,7 +24,7 @@ export const CloudHero = () => {
         </div>
         <div className="cloud-hero__gradient--mobile" />
         <div className="cloud-hero__buttons">
-          <Button variant="white" onClick={goTalkToSales}>
+          <Button variant="white" href="/contact-sales">
             TALK TO SALES
           </Button>
           <Button variant="white" onClick={goToCloud}>

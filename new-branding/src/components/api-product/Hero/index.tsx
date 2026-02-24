@@ -1,7 +1,13 @@
+"use client";
+
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const ApiHero = () => {
+  const goToDocs = () => {
+    window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="api-hero">
       <video className="api-hero__video" autoPlay muted loop playsInline>
@@ -22,10 +28,10 @@ export const ApiHero = () => {
         </div>
 
         <div className="api-hero__actions">
-          <Button variant="white" href="/contact">
+          <Button variant="white" href="/contact-sales">
             Talk to Sales
           </Button>
-          <Button variant="white" href="/docs">
+          <Button variant="white" onClick={goToDocs}>
             Explore API
           </Button>
         </div>

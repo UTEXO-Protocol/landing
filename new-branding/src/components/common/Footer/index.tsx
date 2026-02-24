@@ -6,19 +6,13 @@ import { Button } from "../CommonButton";
 import { FooterNavigation } from "./Navigation";
 import { FooterSocials } from "./Socials";
 import "./index.scss";
-import { useRouter } from "next/navigation";
 
 export const Footer = () => {
-  const router = useRouter();
   const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
   }, []);
-
-  const contactSales = () => {
-    router.push("contact-sales");
-  };
 
   return (
     <footer className="footer">
@@ -29,7 +23,7 @@ export const Footer = () => {
             <p className="footer__left-side__text">
               <span>Talk with sales.</span> Learn more about how Utexo can help your business.
             </p>
-            <Button variant="white" onClick={contactSales}>
+            <Button variant="white" href="/contact-sales">
               Contact us
             </Button>
           </div>
