@@ -77,7 +77,7 @@ const validationSchema = z.object({
 type ContactFormValues = z.infer<typeof validationSchema>;
 
 export const ContactForm = () => {
-  const { control, handleSubmit } = useForm<ContactFormValues>({
+  const { control, handleSubmit, reset } = useForm<ContactFormValues>({
     resolver: zodResolver(validationSchema) as Resolver<ContactFormValues>,
     defaultValues: {
       fullName: "",
@@ -110,6 +110,7 @@ export const ContactForm = () => {
       }
 
       toast.success(data?.message ?? "Thanks for contacting us! 🎉", { id: toastId });
+      reset();
     } catch {
       toast.error("Please try again.", { id: toastId });
     }

@@ -9,17 +9,22 @@ export interface PspFeature {
 export const pspFeatures: PspFeature[] = [
   {
     icon: "/psp/features/control.svg",
-    title: "Total control.",
-    description: "Your margins shouldn’t fluctuate with network activity. Define your costs upfront and watch your business grow without surprise.",
+    title: "Control your margins.",
+    description: "Settlement costs stay predictable, even during peak network activity.",
   },
   {
     icon: "/psp/features/native.svg",
-    title: "Stay Native.",
-    description: "Reduce reliance on wrapped assets and remove counterparty risks.",
+    title: "Eliminate capital fragmentation.",
+    description: "Settle without pre-funding multiple accounts or locking balances across venues.",
+  },
+  {
+    icon: "/psp/features/focus.svg",
+    title: "Maintain consistent performance.",
+    description: "Handle cross-border and high-volume payment activity without slowdowns.",
   },
   {
     icon: "/psp/features/private.svg",
-    title: "AML Compliance",
-    description: "Confidential transfers that are compatible with internal audit and reporting.",
+    title: "Preserve privacy without losing compliance",
+    description: "Confidential transfers that stay compatible with internal audit and reporting",
   },
 ];
