@@ -1,0 +1,19 @@
+import { Footer } from "@/components/common/Footer";
+import { InfoHero } from "@/components/common/InfoHero";
+import Navigation from "@/components/common/Navigation";
+import { FAQWrapper } from "@/components/faq/Wrapper";
+
+const FAQ = () => {
+  return (
+    <div className="page">
+      <Navigation />
+      <div className="page__content">
+        <InfoHero title="Frequently Asked Questions" />
+        <FAQWrapper />
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+export default FAQ;

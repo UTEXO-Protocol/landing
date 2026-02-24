@@ -1,0 +1,24 @@
+.faq-wrapper {
+  display: grid;
+  grid-template-columns: 394px 1fr;
+  gap: 51px;
+  padding: 77px 66px 200px;
+  border-width: 1px, 0px, 1px, 0px;
+  border-style: solid;
+  border-color: #bababa;
+  background: #e2e2e2;
+}
+
+@media (max-width: 1100px) {
+  .faq-wrapper {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-wrapper {
+    padding: 28px 21px;
+  }
+}

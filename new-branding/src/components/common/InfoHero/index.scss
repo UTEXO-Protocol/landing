@@ -14,7 +14,7 @@
     position: absolute;
     bottom: 80px;
     left: 60px;
-    line-height: 74px;
+    line-height: 120%;
     letter-spacing: -3%;
   }
 }
@@ -40,6 +40,7 @@
     height: 381px;
 
     &__title {
+      max-width: 200px;
       bottom: 50px;
       left: 20px;
       font-size: 44px;
