@@ -1,0 +1,51 @@
+@use "@/app/index.scss" as *;
+
+.faq-support {
+  padding: 25px;
+  background: #d4d4d4;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+
+  &__badge {
+    @include text-geist-mono("400-12");
+
+    margin-bottom: 12px;
+    color: #383838;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include text-geist("400-36");
+
+    line-height: 1.3;
+    letter-spacing: -1px;
+    color: #000;
+  }
+
+  &__email {
+    @include text-geist("400-16");
+
+    margin: 16px 0 auto;
+    padding-bottom: 83px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    color: #383838;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-support__email {
+    padding-bottom: 35px;
+  }
+}
