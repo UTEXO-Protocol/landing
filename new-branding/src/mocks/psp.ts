@@ -9,17 +9,17 @@ export interface PspFeature {
 export const pspFeatures: PspFeature[] = [
   {
     icon: "/psp/features/control.svg",
-    title: "Control your margins.",
+    title: "Control your margins",
     description: "Settlement costs stay predictable, even during peak network activity.",
   },
   {
     icon: "/psp/features/native.svg",
-    title: "Eliminate capital fragmentation.",
+    title: "Eliminate capital fragmentation",
     description: "Settle without pre-funding multiple accounts or locking balances across venues.",
   },
   {
-    icon: "/psp/features/focus.svg",
-    title: "Maintain consistent performance.",
+    icon: "/psp/features/growth.svg",
+    title: "Maintain consistent performance",
     description: "Handle cross-border and high-volume payment activity without slowdowns.",
   },
   {
