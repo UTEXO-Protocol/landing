@@ -10,6 +10,7 @@ const logos = [
   { name: "Big brain", src: "/trustedBy/big-brain.png" },
   { name: "Arcanum Captal", src: "/trustedBy/arcanum.png" },
   { name: "Ethereal Ventures", src: "/trustedBy/ethereal-ventures.svg" },
+  { name: "Franklin Templenton", src: "/trustedBy/franklinTempleton.svg" },
   { name: "Maven11", src: "/trustedBy/maven11.svg" },
   { name: "Alchemy", src: "/trustedBy/alchemy.png" },
   { name: "Paper ventures", src: "/trustedBy/paper-ventures.png" },
@@ -38,7 +39,7 @@ export const TrustedBy = () => {
 
   return (
     <section className="trusted-by">
-      <h2 className="trusted-by__label">Blacked By</h2>
+      <h2 className="trusted-by__label">Backed By</h2>
       <div className="trusted-by__carousel">
         <div className="trusted-by__carousel-track" ref={trackRef}>
           {duplicatedLogos.map((logo, index) => (
