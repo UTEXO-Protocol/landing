@@ -17,7 +17,12 @@ export const NewsletterCTA = () => {
 
     if (!email || pending) return;
 
-    setPending(true);
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      toast.error("Please enter a valid email address");
+
+      return;
+    }
+
     const toastId = toast.loading("Submitting…");
 
     try {

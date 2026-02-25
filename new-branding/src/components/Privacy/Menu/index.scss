@@ -49,20 +49,6 @@
       }
     }
 
-    &--active {
-      &::before {
-        content: "";
-        position: absolute;
-        left: -17px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 3px;
-        height: 100%;
-        background: #000000;
-        border-radius: 2px;
-      }
-    }
-
     &--sublevel {
       padding-left: 16px;
       @include text-geist("400-16");
