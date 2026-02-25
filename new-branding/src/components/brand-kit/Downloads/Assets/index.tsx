@@ -1,6 +1,6 @@
 import Image from "next/image";
-import "./index.scss";
 import { LoadingButton } from "../LoadingButton";
+import "./index.scss";
 
 export const Assets = () => {
   const iconNames = ["utexo-logo-asset", "utexo-bottleneck-3d", "utexo-bottleneck-3d", "utexo-shield"];

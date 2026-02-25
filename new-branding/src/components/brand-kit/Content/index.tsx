@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import "./index.scss";
 import { Colors } from "../Downloads/Colors";
 import { Fonts } from "../Downloads/Fonts";
 import { Avatar } from "../Downloads/Avatar";
 import { BrandingLogos } from "../Downloads/Logo";
-import Image from "next/image";
 import { Assets } from "../Downloads/Assets";
 
 interface BrandKit {

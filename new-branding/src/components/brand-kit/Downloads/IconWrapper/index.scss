@@ -1,22 +1,18 @@
 @use "@/app/index.scss" as *;
 
 // Variables
-$color-bg-dark: #000000;
-$color-bg-white: #ffffff;
-$color-text-dark: #000000;
-$color-text-white: #ffffff;
-$color-text-muted: rgba(255, 255, 255, 0.4);
-$color-border: rgba(255, 255, 255, 0.1);
+$color-dark: #000000;
+$color-white: #ffffff;
 
 .icon-wrapper {
   position: relative;
   width: 100%;
   height: 368px;
   border: 1px solid #323232;
-  background-color: $color-bg-dark;
+  background-color: $color-dark;
 
   &--white {
-    background-color: $color-bg-white;
+    background-color: $color-white;
   }
 
   &__container {
@@ -75,7 +71,7 @@ $color-border: rgba(255, 255, 255, 0.1);
     z-index: 10;
 
     &.icon-wrapper__theme--dark .icon-wrapper__theme-btn {
-      color: $color-text-white;
+      color: $color-white;
     }
   }
 
