@@ -33,9 +33,14 @@
 }
 
 @media (max-width: 820px) {
-  .brand-kit-logos {
-    &__bottom-side {
-      display: block;
-    }
+  .brand-kit-logos__bottom-side {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand-kit-logos__icon-logotype {
+    width: 200px;
+    height: auto;
   }
 }

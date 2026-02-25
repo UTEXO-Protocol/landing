@@ -1,8 +1,8 @@
 export const contactLinks = [
   {
     title: "Email us",
-    subtitle: "contactsales@utexo.com",
-    href: "mailto:contactsales@utexo.com",
+    subtitle: "sales@utexo.com",
+    href: "mailto:sales@utexo.com",
     icon: "/contact-sales/email-icon.svg",
     alt: "Email",
   },
