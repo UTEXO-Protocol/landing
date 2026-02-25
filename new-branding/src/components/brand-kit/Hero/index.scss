@@ -1,0 +1,92 @@
+@use "@/app/index.scss" as *;
+
+.brand-kit-hero {
+  position: relative;
+  height: 475px;
+  width: 100%;
+  background: #000000;
+  border: 1px solid #222222;
+  overflow: hidden;
+
+  &__info {
+    z-index: 2;
+    position: absolute;
+    bottom: 75px;
+    left: 55px;
+  }
+
+  &__title {
+    @include text-geist("400-72");
+
+    margin-bottom: 44px;
+    letter-spacing: -1.5px;
+  }
+
+  &__text {
+    @include text-geist("400-20");
+
+    max-width: 391px;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    color: #d8d8d8;
+  }
+
+  &__image {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+  }
+
+  &__decoration {
+    position: absolute;
+    width: 220%;
+    height: 400px;
+    top: 100px;
+    left: -50%;
+    background: #1f3114;
+    background: linear-gradient(4deg, rgba(31, 49, 20, 1) 36%, rgba(0, 0, 0, 1) 71%);
+    opacity: 0.3;
+    backdrop-filter: blur(500px);
+  }
+}
+
+@media (max-width: 820px) {
+  .brand-kit-hero {
+    height: 381px;
+
+    &__info {
+      left: 30px;
+      bottom: 40px;
+    }
+
+    &__title {
+      font-size: 56px;
+    }
+
+    &__image {
+      right: -180px;
+      bottom: -100px;
+    }
+
+    &__decoration {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .brand-kit-hero {
+    &__info {
+      left: 20px;
+      bottom: 30px;
+    }
+
+    &__title {
+      font-size: 44px;
+    }
+
+    &__text {
+      line-height: 120%;
+    }
+  }
+}
