@@ -1,0 +1,31 @@
+.brand-kit-assets {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  height: 368px;
+  border: 1px solid #bdbdbd;
+  background: #000;
+
+  &__load {
+    position: absolute;
+    right: 26px;
+    bottom: 29px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .brand-kit-assets {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-kit-assets {
+    grid-template-columns: 1fr;
+  }
+}
