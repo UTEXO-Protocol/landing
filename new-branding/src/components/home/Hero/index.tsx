@@ -5,9 +5,9 @@ export const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper">
-        <video className="hero__video" autoPlay muted loop playsInline>
-          <source src="/home/utexo-hero.webm" type="video/webm" />
+        <video className="hero__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
           <source src="/home/utexo-hero.mp4" type="video/mp4" />
+          <source src="/home/utexo-hero.webm" type="video/webm" />
         </video>
 
         <div className="hero__overlay" />

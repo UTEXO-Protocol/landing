@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import "./index.scss";
 import { Colors } from "../Downloads/Colors";
 import { Fonts } from "../Downloads/Fonts";
 import { Avatar } from "../Downloads/Avatar";
 import { BrandingLogos } from "../Downloads/Logo";
 import { Assets } from "../Downloads/Assets";
+import "./index.scss";
 
 interface BrandKit {
   id: string;
@@ -75,7 +75,7 @@ export const BrandKitContent = () => {
         ([entry]) => {
           if (entry.isIntersecting) setActiveId(id);
         },
-        { rootMargin: "-40% 0px -55% 0px", threshold: 0 },
+        { rootMargin: "-100px 0px -55% 0px", threshold: 0 },
       );
 
       observer.observe(el);
@@ -88,7 +88,15 @@ export const BrandKitContent = () => {
   const scrollTo = (id: string) => {
     const el = sectionRefs.current[id];
     if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    const offset = 100;
+    const elementPosition = el.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   };
 
   return (

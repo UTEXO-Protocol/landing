@@ -8,7 +8,7 @@ export const apiFeature = [
   },
   {
     text: "Plug into your current stack without heavy custom development.",
-    image: "/api-product/features/feature-4.svg",
+    image: "/api-product/features/feature-1.svg",
     alt: "Feature 2",
   },
   {
@@ -23,7 +23,7 @@ export const apiFeature = [
   },
   {
     text: "Lock in your costs in advance with fixed-fee transfers",
-    image: "/api-product/features/feature-1.svg",
+    image: "/api-product/features/feature-4.svg",
     alt: "Feature 5",
   },
 ];

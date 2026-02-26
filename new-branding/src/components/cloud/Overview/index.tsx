@@ -6,7 +6,7 @@ import { cloudOverviewFeatures } from "@/mocks/cloud";
 import { AnimatedText } from "./AnimatedText";
 import "./index.scss";
 
-const text = "Utexo cloud offers managed execution infrastructure for applications that require direct control over node-level components.";
+const text = "Run Lightning and RGB without managing nodes. Control execution without operating the stack.";
 const GROUP_SIZE = 3;
 
 export const Overview = () => {

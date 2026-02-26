@@ -28,15 +28,16 @@ export const IconWrapper: React.FC<IconWrapperProps> = ({ badge, iconName, hasTh
           </div>
         </div>
 
-        <div className={`icon-wrapper__theme  icon-wrapper__theme--${theme}`}>
-          <button className="icon-wrapper__theme-btn" onClick={() => setTheme("dark")}>
-            DARK
-          </button>
-          <button className="icon-wrapper__theme-btn" onClick={() => setTheme("white")}>
-            WHITE
-          </button>
-        </div>
-
+        {hasTheme && (
+          <div className={`icon-wrapper__theme  icon-wrapper__theme--${theme}`}>
+            <button className="icon-wrapper__theme-btn" onClick={() => setTheme("dark")}>
+              DARK
+            </button>
+            <button className="icon-wrapper__theme-btn" onClick={() => setTheme("white")}>
+              WHITE
+            </button>
+          </div>
+        )}
         <div className="icon-wrapper__load-btn">
           <LoadingButton iconNames={[iconName]} theme={theme} hasTheme={hasTheme} />
         </div>

@@ -9,8 +9,8 @@ export const FAQSupport = () => {
 
       <p className="faq-support__title">Can't find what you're looking for?</p>
 
-      <a className="faq-support__email" href="mailto:support@utexo.com">
-        support@utexo.com
+      <a className="faq-support__email" href="mailto:info@utexo.com">
+        info@utexo.com
       </a>
 
       <Button variant="black" size="full" href="https://docs.utexo.com/">

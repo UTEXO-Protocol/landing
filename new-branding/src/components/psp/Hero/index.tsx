@@ -4,9 +4,9 @@ import "./index.scss";
 export const PspHero = () => {
   return (
     <section className="psp-hero">
-      <video className="psp-hero__video" autoPlay muted loop playsInline>
-        <source src="/psp/USDT-bitcoin-rails.webm" type="video/webm" />
+      <video className="psp-hero__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
         <source src="/psp/USDT-bitcoin-rails.mp4" type="video/mp4" />
+        <source src="/psp/USDT-bitcoin-rails.webm" type="video/webm" />
       </video>
 
       <div className="psp-hero__gradient" />
