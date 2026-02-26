@@ -38,7 +38,7 @@ export const Fonts = () => {
           <div className="brand-fonts__item-header">
             <span className="brand-fonts__item-label">{label}</span>
             <a className="brand-fonts__item-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${label}`}>
-              <ExpandIcon className="brand-fonts__item-icon" aria-hidden="true" />
+              <Image src="/common/linkVector.svg" className="brand-fonts__item-icon" alt="expand icon" aria-hidden="true" width={20} height={20} />
             </a>
           </div>
 
