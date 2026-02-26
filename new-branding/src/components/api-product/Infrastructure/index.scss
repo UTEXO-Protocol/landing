@@ -14,10 +14,11 @@
   }
 
   &__tag {
+    @include text-geist("400-16");
+
     display: flex;
     align-items: center;
     gap: 16px;
-    @include text-geist-mono("400-16");
     line-height: 1.2;
     color: #000000;
   }
@@ -30,7 +31,6 @@
 
   &__tag-label {
     max-width: 169px;
-    letter-spacing: -0.12em;
   }
 
   &__container {

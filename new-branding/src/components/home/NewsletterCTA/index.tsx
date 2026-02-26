@@ -1,5 +1,5 @@
 "use client";
-import { useState, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent, ChangeEvent, useRef } from "react";
 import toast from "react-hot-toast";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
@@ -7,6 +7,7 @@ import "./index.scss";
 export const NewsletterCTA = () => {
   const [email, setEmail] = useState("");
   const [pending, setPending] = useState(false);
+  const toastIdRef = useRef<string | undefined>(undefined);
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -17,13 +18,17 @@ export const NewsletterCTA = () => {
 
     if (!email || pending) return;
 
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      toast.error("Please enter a valid email address");
+    if (toastIdRef.current) {
+      toast.dismiss(toastIdRef.current);
+    }
 
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      toastIdRef.current = toast.error("Please enter a valid email address");
       return;
     }
 
-    const toastId = toast.loading("Submitting…");
+    setPending(true);
+    toastIdRef.current = toast.loading("Submitting…");
 
     try {
       const response = await fetch("/api/signup", {
@@ -38,11 +43,17 @@ export const NewsletterCTA = () => {
         throw new Error(data?.error || "Request failed");
       }
 
-      toast.success(data?.message ?? "Thanks for signing up! 🎉", { id: toastId });
+      toast.success(data?.message ?? "Thanks for signing up! 🎉", {
+        id: toastIdRef.current,
+      });
       setEmail("");
+      toastIdRef.current = undefined;
     } catch (error) {
       console.error("[Newsletter] submit error:", error);
-      toast.error("Please try again.", { id: toastId });
+      toast.error("Please try again.", {
+        id: toastIdRef.current,
+      });
+      toastIdRef.current = undefined;
     } finally {
       setPending(false);
     }
