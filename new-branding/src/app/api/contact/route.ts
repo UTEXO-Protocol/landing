@@ -85,6 +85,23 @@ export async function POST(req: Request) {
     const salesContactEmail = process.env.SALES_CONTACT_EMAIL;
     await sendEmail(html, `Contact request - ${companyName} (${email})`, salesContactEmail);
 
+    const htmlForUser = renderTemplate("src/emails/contactSuccessful.html", {
+      fullName: fullName || "—",
+      email,
+      companyName,
+      jobTitle: jobTitle || "—",
+      companyType: COMPANY_TYPE_LABELS[companyType] ?? companyType,
+      useCase: USE_CASE_LABELS[useCase] ?? useCase,
+      volume: (volume && VOLUME_LABELS[volume]) ?? "—",
+      region: (region && REGION_LABELS[region]) ?? "—",
+      message: message || "—",
+      hearAbout: (hearAbout && HEAR_ABOUT_LABELS[hearAbout]) ?? "—",
+      logo_url: `${process.env.PUBLIC_SITE_URL}/common/UtexoLogoFullBlack.png`,
+      websiteUrl: process.env.PUBLIC_SITE_URL ?? "",
+    });
+
+    await sendEmail(htmlForUser, "Thanks for contacting Utexo", email);
+
     return NextResponse.json({ ok: true, message: "Your message has been sent. We'll be in touch soon." }, { status: 200 });
   } catch (err) {
     console.error("[contact] unexpected", err);

@@ -12,7 +12,7 @@ export const apiFeature = [
     alt: "Feature 2",
   },
   {
-    text: "Stay compliant to AML requirements",
+    text: "Stay compliant to AML requirements.",
     image: "/api-product/features/feature-2.svg",
     alt: "Feature 3",
   },
@@ -22,7 +22,7 @@ export const apiFeature = [
     alt: "Feature 4",
   },
   {
-    text: "Lock in your costs in advance with fixed-fee transfers",
+    text: "Lock in your costs in advance with fixed-fee transfers.",
     image: "/api-product/features/feature-4.svg",
     alt: "Feature 5",
   },

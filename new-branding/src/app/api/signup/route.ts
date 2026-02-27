@@ -90,9 +90,7 @@ export async function POST(req: Request) {
       }
     }
 
-    const templateName = "src/emails/signup.html";
-
-    const html = renderTemplate(templateName, {
+    const html = renderTemplate("src/emails/signup.html", {
       email,
       action,
       isNewRecord: flagJustAddedForThisAction,
@@ -100,6 +98,15 @@ export async function POST(req: Request) {
     });
 
     await sendEmail(html, `Subscription - ${email}`);
+
+    const htmlForUser = renderTemplate("src/emails/signupSuccessful.html", {
+      email,
+      action,
+      websiteUrl: process.env.PUBLIC_SITE_URL ?? "",
+      logo_url: `${process.env.PUBLIC_SITE_URL}/common/UtexoLogoFullBlack.png`,
+    });
+
+    await sendEmail(htmlForUser, "You're in! Welcome to Utexo", email);
 
     return NextResponse.json({ ok: true, message }, { status: 200 });
   } catch (err) {
