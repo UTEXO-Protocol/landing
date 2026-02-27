@@ -89,7 +89,7 @@ export const BrandKitContent = () => {
     const el = sectionRefs.current[id];
     if (!el) return;
 
-    const offset = 100;
+    const offset = 130;
     const elementPosition = el.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - offset;
 

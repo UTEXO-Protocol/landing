@@ -33,12 +33,16 @@
     color: #383838;
 
     h2 {
-      margin: 22px 0 27px;
+      margin: 27px 0 27px;
       color: #000000;
       font-weight: 500;
       font-size: 24px;
       letter-spacing: -0.5px;
       scroll-margin-top: 140px;
+
+      &:first-child {
+        margin-top: 45px;
+      }
     }
 
     h3 {
