@@ -5,8 +5,8 @@ import { Heading } from "@/lib/extractHeadingsForMd";
 
 import "./index.scss";
 
-const SCROLL_OFFSET = 110;
-const SCROLL_MOBILE_OFFSET = 90;
+const SCROLL_OFFSET = 140;
+const SCROLL_MOBILE_OFFSET = 110;
 
 export const PrivacyMenu = ({ headings }: { headings: Heading[] }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
