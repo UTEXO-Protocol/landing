@@ -15,8 +15,7 @@ export const CloudFeatures = () => {
             Now it’s USDT turn.
           </h2>
           <p className="cloud-features__subtitle">
-            For the first time, exchanges, liquidity providers, banks, and wallets can access native BTC&lt;&gt;USDT liquidity on Lightning. Settle large-scale payments and execute HFT instantly, with
-            fixed costs and private execution.
+            For the first time, exchanges, liquidity providers, banks, and wallets can access native BTC&lt;&gt;USDT liquidity on Lightning.
             <br />
             Settle large-scale payments and execute HFT instantly, with fixed costs and private execution.
           </p>

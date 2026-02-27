@@ -1,6 +1,5 @@
 import Image from "next/image";
 import "./index.scss";
-import { ExpandIcon } from "@/app/static/images";
 
 interface BrandFont {
   id: string;
@@ -13,12 +12,12 @@ interface BrandFont {
 
 const brandFonts: BrandFont[] = [
   {
-    id: "pp-mori",
-    label: "PP MORI",
+    id: "geist",
+    label: "Geist",
     type: "Primary font",
     weights: "Regular, Medium, Semibold",
-    fontFamily: "PP Mori",
-    href: "",
+    fontFamily: "Geist",
+    href: "https://fonts.google.com/specimen/Geist",
   },
   {
     id: "geist-mono",

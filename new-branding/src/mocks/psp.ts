@@ -25,6 +25,6 @@ export const pspFeatures: PspFeature[] = [
   {
     icon: "/psp/features/private.svg",
     title: "Preserve privacy without losing compliance",
-    description: "Confidential transfers that stay compatible with internal audit and reporting",
+    description: "Confidential transfers that stay compatible with internal audit and reporting.",
   },
 ];

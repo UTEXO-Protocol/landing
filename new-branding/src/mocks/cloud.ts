@@ -36,7 +36,7 @@ export const cloudFeatures: CloudFeature[] = [
   },
   {
     title: "High-Frequency Trading",
-    description: "BTC<>USDT cross-exchange settlement for high velocity traders",
+    description: "BTC<>USDT cross-exchange settlement for high velocity traders.",
     image: "/cloud/features/hft.svg",
   },
   {

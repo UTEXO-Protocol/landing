@@ -11,8 +11,8 @@ export const ApiHero = () => {
   return (
     <section className="api-hero">
       <video className="api-hero__video" poster="/api-product/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
-        <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
         <source src="/api-product/bitcoin-api.webm" type="video/webm" />
+        <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
       </video>
 
       <div className="api-hero__gradient" aria-hidden="true" />
