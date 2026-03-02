@@ -14,7 +14,7 @@ export default function Home() {
       <div className="page__content">
         <Hero />
         <TrustedBy />
-        {/* <Operators /> */}
+        <Operators />
         <Payments />
         {/* <Impact /> */}
         <NewsletterCTA />
