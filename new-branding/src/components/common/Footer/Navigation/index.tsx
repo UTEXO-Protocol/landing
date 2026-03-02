@@ -17,7 +17,7 @@ export class FooterNavSection {
 
 export const footerNavigation = [
   new FooterNavSection("PRODUCTS", [new FooterNavItem("API", "/api-product"), new FooterNavItem("Cloud", "/cloud")]),
-  new FooterNavSection("CUSTOMERS", [new FooterNavItem("PSPs", "/psp")]),
+  // new FooterNavSection("CUSTOMERS", [new FooterNavItem("PSPs", "/psp")]),
   new FooterNavSection("RESOURCES", [new FooterNavItem("FAQ", "/faq"), new FooterNavItem("Docs", "https://docs.utexo.com/", true), new FooterNavItem("Brand Kit", "/brand-kit")]),
   new FooterNavSection("LEGAL", [new FooterNavItem("Terms & Conditions", "/privacy#key-terms-and-definitions"), new FooterNavItem("Privacy Policy", "/privacy")]),
 ];
