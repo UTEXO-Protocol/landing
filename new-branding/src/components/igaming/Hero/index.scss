@@ -1,6 +1,6 @@
 @use "@/app/index.scss" as *;
 
-.psp-hero {
+.igaming-hero {
   position: relative;
   width: 100%;
   height: 770px;
@@ -76,7 +76,7 @@
 }
 
 @media (max-width: 768px) {
-  .psp-hero {
+  .igaming-hero {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@
 
     &__title {
       width: 100%;
-      max-width: 310px;
+      max-width: 400px;
       font-size: 44px;
       line-height: 48px;
       letter-spacing: -1.5px;
@@ -137,7 +137,7 @@
 }
 
 @media (max-width: 600px) {
-  .psp-hero__description {
+  .igaming-hero__description {
     max-width: 100%;
     width: 100%;
   }

@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 153px;
+    min-height: 130px;
     padding: 25px 32px;
     border-top: 1px solid #bababa;
     transition: background-color 0.3s ease;
@@ -68,7 +68,8 @@
 
       .operators__service-title,
       .operators__service-link,
-      .operators__service-icon {
+      .operators__service-icon,
+      .operators__service-description {
         color: #ffffff;
       }
     }
@@ -104,6 +105,12 @@
     height: 6px;
     color: currentColor;
     transition: color 0.3s ease;
+  }
+
+  &__service-description {
+    @include text-geist("400-14");
+
+    color: #383838;
   }
 
   &__decoration {
