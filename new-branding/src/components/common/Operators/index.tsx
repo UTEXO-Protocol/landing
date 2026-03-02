@@ -11,7 +11,7 @@ export const Operators = () => {
         <div className="operators__content">
           <div className="operators__info">
             <h2 className="operators__title">
-              <span className="operators__title-accent">Designed for operators</span> that move value at scale.
+              <span className="operators__title-accent">Designed for operators</span> that move USDT at scale..
             </h2>
           </div>
 
@@ -25,6 +25,7 @@ export const Operators = () => {
                     <ExpandIcon className="operators__service-icon" aria-hidden="true" />
                   </Link>
                 )}
+                <p className="operators__service-description">{service.description}</p>
               </article>
             ))}
           </div>

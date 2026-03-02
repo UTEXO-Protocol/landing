@@ -1,0 +1,157 @@
+@use "@/app/index.scss" as *;
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  &__card {
+    height: 353px;
+    padding: 24px;
+    background: rgba(212, 212, 212, 0.6);
+    border: 0.5px solid #bababa;
+    height: 100%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #1f3114;
+
+      .features__card-icon-img {
+        filter: invert(1);
+      }
+
+      .features__card-title,
+      .features__card-description {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__decoration {
+    position: relative;
+    width: 262px;
+    height: 100%;
+    background: #1f3114;
+    overflow: hidden;
+
+    &__title {
+      position: absolute;
+      left: 24px;
+      top: 24px;
+      @include text-geist("500-24");
+    }
+
+    &__image {
+      position: absolute;
+      right: -100px;
+      bottom: 0;
+      width: 400px;
+      height: 170px;
+    }
+  }
+
+  &__card-icon {
+    margin: 15px 10px;
+    margin-bottom: 109px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-icon-img {
+    width: 24px;
+    height: auto;
+    transition: filter 0.3s ease;
+  }
+
+  &__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__card-title {
+    @include text-geist("500-24");
+    font-weight: 500;
+    letter-spacing: -0.72px;
+    color: #000000;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  &__card-description {
+    @include text-geist("400-20");
+    line-height: 130%;
+    letter-spacing: -0.6px;
+    color: #383838;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+}
+
+@media (max-width: 1300px) {
+  .features {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+
+    &__card {
+      height: 353px;
+    }
+
+    &__decoration {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: auto;
+      padding: 24px;
+      height: 252px;
+    }
+
+    &__card-icon img,
+    &__card-icon {
+      height: 18px;
+      width: 18px;
+    }
+
+    &__card-icon {
+      margin: 0;
+    }
+
+    &__card-text {
+      gap: 24px;
+    }
+
+    &__card-title {
+      font-size: 24px;
+    }
+
+    &__card-description {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__decoration {
+      height: 223px;
+
+      &__title {
+        top: auto;
+        bottom: 24px;
+      }
+
+      &__image {
+        right: -150px;
+      }
+    }
+  }
+}

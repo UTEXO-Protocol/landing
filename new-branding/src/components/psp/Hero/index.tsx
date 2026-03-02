@@ -1,5 +1,6 @@
 import { pspHeroTags } from "@/mocks/psp";
 import "./index.scss";
+import { Tags } from "@/components/common/Tags";
 
 export const PspHero = () => {
   return (
@@ -18,13 +19,7 @@ export const PspHero = () => {
           <p className="psp-hero__description">Instant USDT transfer on the most resilient open network. Boost your margins with predictable costs and consistent performance.</p>
         </div>
 
-        <div className="psp-hero__tags">
-          {pspHeroTags.map(tag => (
-            <span key={tag} className="psp-hero__tag">
-              {tag}
-            </span>
-          ))}
-        </div>
+        <Tags tags={pspHeroTags} />
       </div>
     </section>
   );
