@@ -11,7 +11,7 @@ export const Operators = () => {
         <div className="operators__content">
           <div className="operators__info">
             <h2 className="operators__title">
-              <span className="operators__title-accent">Designed for operators</span> that move USDT at scale..
+              <span className="operators__title-accent">Designed for operators</span> that move USDT at scale.
             </h2>
           </div>
 
