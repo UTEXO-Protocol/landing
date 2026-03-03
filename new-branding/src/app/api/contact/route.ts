@@ -5,6 +5,7 @@ import { renderTemplate } from "@/lib/readHtml";
 import { COMPANY_TYPE_LABELS, COMPANY_TYPES, HEAR_ABOUT, HEAR_ABOUT_LABELS, REGION_LABELS, REGIONS, USE_CASE_LABELS, USE_CASES, VOLUME_LABELS, VOLUMES } from "@/lib/contact";
 
 import { z } from "zod";
+import { isRateLimited, RATE_LIMIT_MAX } from "@/lib/rateLimiter";
 
 const bodySchema = z.object({
   fullName: z.string().trim().default(""),
@@ -33,6 +34,21 @@ const bodySchema = z.object({
 
 export async function POST(req: Request) {
   try {
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { ok: false, error: "Too many requests. Please try again later." },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": "60",
+            "X-RateLimit-Limit": String(RATE_LIMIT_MAX),
+          },
+        },
+      );
+    }
+
     const parsed = bodySchema.safeParse(await req.json());
 
     console.log(parsed);
@@ -43,7 +59,6 @@ export async function POST(req: Request) {
 
     const { fullName, email, companyName, jobTitle, companyType, useCase, volume, region, message, hearAbout } = parsed.data;
 
-    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null;
     const user_agent = req.headers.get("user-agent") ?? null;
 
     const { error: insertErr } = await supabaseSrv.from("contact_requests").insert([

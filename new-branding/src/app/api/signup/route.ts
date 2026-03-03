@@ -4,9 +4,25 @@ import { supabaseSrv } from "@/lib/supabaseServer";
 import { sendEmail } from "@/lib/email";
 import { renderTemplate } from "@/lib/readHtml";
 import { calculateFlags, SignupAction } from "@/lib/signupFlags";
+import { isRateLimited, RATE_LIMIT_MAX } from "@/lib/rateLimiter";
 
 export async function POST(req: Request) {
   try {
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { ok: false, error: "Too many requests. Please try again later." },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": "60",
+            "X-RateLimit-Limit": String(RATE_LIMIT_MAX),
+          },
+        },
+      );
+    }
+
     const body = await req.json();
 
     const email: string = (body.email || "").toString().trim().toLowerCase();
@@ -25,7 +41,6 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "Invalid action." }, { status: 400 });
     }
 
-    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null;
     const user_agent = req.headers.get("user-agent") ?? null;
 
     // Check if email already exists

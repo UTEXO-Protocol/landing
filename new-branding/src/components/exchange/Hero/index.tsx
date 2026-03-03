@@ -19,7 +19,7 @@ export const ExchangeHero = () => {
       <div className="exchange-hero__content">
         <div className="exchange-hero__text">
           <h1 className="exchange-hero__title">Settle as fast as your order books</h1>
-          <p className="exchange-hero__description">Settle USDT on Lightning with predictable costs and educe capital fragmentation for high-frequency traders.</p>
+          <p className="exchange-hero__description">Settle USDT on Lightning with predictable costs and reduce capital fragmentation for high-frequency traders.</p>
         </div>
         <Tags tags={exchangeHeroTags} />
       </div>
