@@ -9,7 +9,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   loading?: boolean;
   iconOnly?: boolean;
   iconSize?: { width: number; height: number };
-  variant?: "black" | "white";
+  variant?: "black" | "white" | "grey";
   size?: "default" | "sm" | "lg" | "icon" | "full";
 }
 

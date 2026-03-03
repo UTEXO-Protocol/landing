@@ -2,19 +2,21 @@ import Navigation from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { TrustedBy } from "@/components/common/TrustedBy";
 import { Products } from "@/components/common/Products";
-import { IGamingHero } from "@/components/igaming/Hero";
 import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
-import { igamingFeatures } from "@/mocks/igaming";
+import { exchangeFeatures } from "@/mocks/exchange";
+import { ExchangeHero } from "@/components/exchange/Hero";
+import { CloudInfo } from "@/components/common/CloudInfo";
 
-export default function IGaming() {
+export default function Exchange() {
   return (
     <div className="page">
       <Navigation />
       <div className="page__content">
-        <IGamingHero />
+        <ExchangeHero />
         <TrustedBy />
-        <FeaturesWrapper features={igamingFeatures} />
+        <FeaturesWrapper features={exchangeFeatures} />
         <Products />
+        <CloudInfo />
         <Footer />
       </div>
     </div>
