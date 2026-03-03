@@ -2,7 +2,7 @@ import Navigation from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { TrustedBy } from "@/components/common/TrustedBy";
 import { PspHero } from "@/components/psp/Hero";
-import { Products } from "@/components/psp/Products";
+import { Products } from "@/components/common/Products";
 import { UseCases } from "@/components/psp/UseCases";
 import { PspFeatures } from "@/components/psp/PspFeatures";
 

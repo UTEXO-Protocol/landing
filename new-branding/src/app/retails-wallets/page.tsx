@@ -2,18 +2,18 @@ import Navigation from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { TrustedBy } from "@/components/common/TrustedBy";
 import { Products } from "@/components/common/Products";
-import { IGamingHero } from "@/components/igaming/Hero";
 import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
-import { igamingFeatures } from "@/mocks/igaming";
+import { RetailsWalletHero } from "@/components/retails-wallet/Hero";
+import { retailsWalletFeatures } from "@/mocks/retailsWallets";
 
-export default function IGaming() {
+export default function RetailsWallets() {
   return (
     <div className="page">
       <Navigation />
       <div className="page__content">
-        <IGamingHero />
+        <RetailsWalletHero />
         <TrustedBy />
-        <FeaturesWrapper features={igamingFeatures} />
+        <FeaturesWrapper features={retailsWalletFeatures} />
         <Products />
         <Footer />
       </div>
