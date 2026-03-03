@@ -37,11 +37,6 @@ export const FAQs: FAQData[] = [
       "Running Lightning natively means managing nodes, channels, liquidity, and rebalancing. Utexo abstracts all of that into a single API. You get Lightning-speed settlement and Bitcoin security without operating any infrastructure or embedding protocol logic into your stack.",
   },
   {
-    question: "What is RGB, and why pair it with Lightning?",
-    answer:
-      "RGB is a client-side validation protocol for private, programmable assets on Bitcoin. Utexo pairs RGB with Lightning to enhance scalability while keeping asset logic off-chain.<br/><br/>Together, they create a settlement model where stablecoins move instantly, privately, and without global state updates, all secured by Bitcoin's base layer commitments.<br/><br/>The Utexo execution layer sits between users and a network of professional LSPs, abstracting Lightning's channel management, RGB issuance, and rebalancing challenges so users get a simple stablecoin experience on Bitcoin without giving up custody.",
-  },
-  {
     question: "Is Utexo custodial?",
     answer:
       "No. Utexo is fully non-custodial. Your keys and your data stay in your environment. Utexo has no access to either. For enterprise deployments via Cloud, node-level access control and lifecycle management are built in, but custody remains entirely yours.",
