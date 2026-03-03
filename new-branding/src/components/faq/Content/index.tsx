@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import "./index.scss";
 import { FAQs } from "@/mocks/faq";
 import { FAQItem } from "../FaqItem";
+
+import "./index.scss";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

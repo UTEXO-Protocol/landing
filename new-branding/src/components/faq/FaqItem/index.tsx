@@ -36,20 +36,6 @@ export const FAQItem = ({ faq, index, openIndex, onToggle }: FAQItemProps) => {
               }}
             />
           )}
-
-          {faq.bullets && faq.bullets.length > 0 && (
-            <ul className="faq-item__bullets">
-              {faq.bullets.map((bullet, i) => (
-                <li
-                  key={i}
-                  className="faq-item__bullet"
-                  dangerouslySetInnerHTML={{
-                    __html: bullet.replace(/\n/g, "<br/>"),
-                  }}
-                />
-              ))}
-            </ul>
-          )}
         </div>
       )}
     </div>
