@@ -48,9 +48,16 @@ export const NewsletterCTA = () => {
       });
       setEmail("");
       toastIdRef.current = undefined;
-    } catch (error) {
+    } catch (error: any) {
       console.error("[Newsletter] submit error:", error);
-      toast.error("Please try again.", {
+      if (error.code === 500) {
+        toast.error("Please try again.", {
+          id: toastIdRef.current,
+        });
+
+        return;
+      }
+      toast.error(error.message, {
         id: toastIdRef.current,
       });
       toastIdRef.current = undefined;
