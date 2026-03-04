@@ -11,7 +11,7 @@ export const ApiFeatures = () => {
         <div className="api-features__header">
           <h2 className="api-features__title">
             <span className="api-features__title-accent">Move stablecoins like you move money.</span>
-            Instantly. Privately.Predictably.
+            Instantly. Privately. Predictably.
           </h2>
         </div>
 
