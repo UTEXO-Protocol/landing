@@ -22,7 +22,7 @@ export const apiFeature = [
     alt: "Feature 4",
   },
   {
-    text: "Lock in your costs in advance with fixed-fee transfers.",
+    text: "Lock in your costs with configurable settlement fees.",
     image: "/api-product/features/feature-4.svg",
     alt: "Feature 5",
   },
@@ -41,7 +41,7 @@ export const infrastructureServices = [
   },
   {
     title: "Swaps",
-    description: "Atomic BTC<>USDT conversion without third-party custody, natively on Bitcoin and Lightning.",
+    description: "Intent-based cross-chain swaps with low latency and best rates for BTC<>USDT conversion.",
   },
   {
     title: "Bridge",
@@ -73,8 +73,8 @@ export const operatorsList: OperatorItem[] = [
   },
   {
     icon: <LockIcon />,
-    title: "Reduce public visibility",
-    description: "Maintain AML compliance without exposing sensitive data on-chain.",
+    title: "Maintain complete privacy",
+    description: "AML compliance without exposing sensitive data on-chain.",
   },
 ];
 

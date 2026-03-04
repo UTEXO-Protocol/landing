@@ -10,14 +10,12 @@ export const CloudFeatures = () => {
       <div className="cloud-features__layout">
         <div className="cloud-features__left">
           <h2 className="cloud-features__title">
-            <span className="cloud-features__title-bold">Lightning started with BTC.</span>
-            <br />
-            Now it’s USDT turn.
+            Lightning started with BTC. <span className="cloud-features__title-bold">Now it’s USDT turn.</span>
           </h2>
           <p className="cloud-features__subtitle">
-            For the first time, exchanges, liquidity providers, banks, and wallets can access native BTC&lt;&gt;USDT liquidity on Lightning.
+            For the first time, exchanges, liquidity providers, neobanks, and wallets can access native BTC&lt;&gt;USDT liquidity on Lightning.
             <br />
-            Settle large-scale payments and execute HFT instantly, with fixed costs and private execution.
+            Settle large-scale payments and execute HFT instantly, with configurable fees and private execution.
           </p>
         </div>
 
