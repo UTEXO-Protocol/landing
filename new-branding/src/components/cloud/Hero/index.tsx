@@ -19,8 +19,8 @@ export const CloudHero = () => {
 
       <div className="cloud-hero__content">
         <div className="cloud-hero__text">
-          <h1 className="cloud-hero__title">Cloud</h1>
-          <p className="cloud-hero__description">Fully managed Lightning infrastructure for native USDT settlement and enterprise-grade yield.</p>
+          <h1 className="cloud-hero__title">One-Click Cloud</h1>
+          <p className="cloud-hero__description">Fully managed Lightning Network infrastructure for native USDT settlement and enterprise-grade yield.</p>
         </div>
         <div className="cloud-hero__gradient--mobile" />
         <div className="cloud-hero__buttons">

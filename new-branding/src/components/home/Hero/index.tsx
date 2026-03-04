@@ -14,8 +14,8 @@ export const Hero = () => {
 
         <div className="hero__content">
           <div className="hero__info">
-            <h1 className="hero__title">Bitcoin&apos;s private stablecoin backbone</h1>
-            <p className="hero__description">A single API to settle value on Bitcoin. Fixed costs. Private execution.</p>
+            <h1 className="hero__title">Move USDT Instantly and Privately on Bitcoin</h1>
+            <p className="hero__description">Products for USDT payments with configurable fees.</p>
             <Button variant="white" href="/api-product">
               EXPLORE API
             </Button>

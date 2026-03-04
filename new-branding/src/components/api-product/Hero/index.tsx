@@ -22,7 +22,7 @@ export const ApiHero = () => {
           <h1 className="api-hero__title">Your gateway to native USDT on Bitcoin.</h1>
 
           <div className="api-hero__description">
-            <p className="api-hero__description-text">One API to move USDT instantly with fixed costs and confidential execution.</p>
+            <p className="api-hero__description-text">One API to move USDT instantly with configurable costs and confidential execution.</p>
             <p className="api-hero__description-detail">Powered by Lightning and RGB.</p>
           </div>
         </div>

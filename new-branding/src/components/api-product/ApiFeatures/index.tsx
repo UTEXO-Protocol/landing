@@ -10,8 +10,8 @@ export const ApiFeatures = () => {
       <div className="api-features__wrapper">
         <div className="api-features__header">
           <h2 className="api-features__title">
-            <span className="api-features__title-accent">Stablecoin payments on Bitcoin.</span>
-            One API. Any volume.
+            <span className="api-features__title-accent">Move stablecoins like you move money.</span>
+            Instantly. Privately.Predictably.
           </h2>
         </div>
 

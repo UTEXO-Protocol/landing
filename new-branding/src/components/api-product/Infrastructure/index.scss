@@ -166,6 +166,10 @@
       font-size: 28px;
       line-height: 1.2;
       letter-spacing: -0.04em;
+
+      &-accent {
+        max-width: 300px;
+      }
     }
 
     &__services {

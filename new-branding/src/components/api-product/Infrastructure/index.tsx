@@ -5,20 +5,11 @@ import "./index.scss";
 export const Infrastructure = () => {
   return (
     <section className="infrastructure">
-      <ul className="infrastructure__tags">
-        {infrastructureTags.map(tag => (
-          <li key={tag.label} className="infrastructure__tag">
-            <Image src={tag.icon} alt="" width={44} height={44} className="infrastructure__tag-icon" loading="lazy" />
-            <span className="infrastructure__tag-label">{tag.label}</span>
-          </li>
-        ))}
-      </ul>
-
       <div className="infrastructure__container">
         <div className="infrastructure__content">
           <div className="infrastructure__info">
             <h2 className="infrastructure__title">
-              <span className="infrastructure__title-accent">Best-in-class stablecoins</span> settlement Infrastructure
+              <span className="infrastructure__title-accent">APIs and tools</span> for private, instant payments on an open network.
             </h2>
           </div>
 

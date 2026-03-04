@@ -14,14 +14,14 @@ const products: PaymentProduct[] = [
   {
     title: "API",
     icon: "/payments/api.svg",
-    description: "APIs to settle USDT payments natively on Bitcoin with instant finality, predictable costs and built-in privacy.",
+    description: "APIs to settle USDT payments instantly with configurable fees and built-in privacy.",
     link: "/api-product",
     visual: <Image src="/payments/code-image.svg" width={425} height={283} alt="API visualization" className="payments__visual-icon" />,
   },
   {
     title: "Cloud",
     icon: "/payments/cloud.svg",
-    description: "Hands-off infrastructure for stablecoin payments and yield on BTC<>USDT.",
+    description: "Hands-off Lightning Network infrastructure for stablecoin payments and yield on BTC<>USDT.",
     link: "/cloud",
     visual: (
       <div className="payments__visual-currencies">
@@ -39,10 +39,7 @@ export const Payments = () => {
         <h2 className="payments__title">
           <span className="payments__title-accent">The future of settlement.</span> Without the friction.
         </h2>
-        <p className="payments__subtitle">
-          Our products let you settle payments and accrue yield natively on Bitcoin without managing infrastructure, changing custody or rewriting user experience. Abstract away the complexity of
-          using Lightning and RGB with a simple integration.
-        </p>
+        <p className="payments__subtitle">Settle payments and accrue yield natively on Bitcoin without managing infrastructure, changing custody or rewriting user experience.</p>
       </div>
 
       <div className="payments__grid">
