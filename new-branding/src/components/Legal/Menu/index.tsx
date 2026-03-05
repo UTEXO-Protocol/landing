@@ -8,7 +8,7 @@ import "./index.scss";
 const SCROLL_OFFSET = 140;
 const SCROLL_MOBILE_OFFSET = 110;
 
-export const PrivacyMenu = ({ headings }: { headings: Heading[] }) => {
+export const LegalMenu = ({ headings }: { headings: Heading[] }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -30,12 +30,12 @@ export const PrivacyMenu = ({ headings }: { headings: Heading[] }) => {
   };
 
   return (
-    <nav className="privacy-menu">
-      <h3 className="privacy-menu__badge">Table of contents</h3>
-      <ul className="privacy-menu__list">
+    <nav className="legal-menu">
+      <h3 className="legal-menu__badge">Table of contents</h3>
+      <ul className="legal-menu__list">
         {headings.map(heading => (
-          <li key={heading.id} className={`privacy-menu__item ${heading.level === 3 ? "privacy-menu__item--sublevel" : ""}`} data-level={heading.level}>
-            <a href={`#${heading.id}`} onClick={e => handleClick(e, heading.id)} className="privacy-menu__item__link">
+          <li key={heading.id} className={`legal-menu__item ${heading.level === 3 ? "legal-menu__item--sublevel" : ""}`} data-level={heading.level}>
+            <a href={`#${heading.id}`} onClick={e => handleClick(e, heading.id)} className="legal-menu__item__link">
               {heading.title}
             </a>
           </li>

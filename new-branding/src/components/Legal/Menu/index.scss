@@ -1,6 +1,6 @@
 @use "@/app/index.scss" as *;
 
-.privacy-menu {
+.legal-menu {
   &__badge {
     @include text-geist("400-16");
 
@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 1000px) {
-  .privacy-menu__item--active::before {
+  .legal-menu__item--active::before {
     display: none;
   }
 }
