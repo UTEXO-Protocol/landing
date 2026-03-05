@@ -1,7 +1,12 @@
+import { Metadata } from "next";
 import { Footer } from "@/components/common/Footer";
 import { InfoHero } from "@/components/common/InfoHero";
 import Navigation from "@/components/common/Navigation";
 import { LegalContent } from "@/components/Legal/Content";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://utexo.com/terms-and-conditions" },
+};
 
 const TermsAndConditions = () => {
   return (

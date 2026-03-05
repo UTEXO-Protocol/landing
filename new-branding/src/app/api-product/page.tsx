@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Navigation from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { TrustedBy } from "@/components/common/TrustedBy";
@@ -6,6 +7,10 @@ import { Infrastructure } from "@/components/api-product/Infrastructure";
 import { ApiFeatures } from "@/components/api-product/ApiFeatures";
 import { Innovators } from "@/components/common/Innovators";
 import { Operators } from "@/components/api-product/Operators";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://utexo.com/api-product" },
+};
 
 export default function ApiProduct() {
   return (
