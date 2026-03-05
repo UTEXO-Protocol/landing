@@ -1,21 +1,36 @@
-name: "Build & Deploy to Prod"
+name: "Release & Deploy to Prod"
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version (e.g. v0.0.1)"
+        required: true
+        type: string
 
 env:
   DOCKER_VERSION: ${{ github.sha }}
   NODE_VERSION: 20.x
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
 permissions:
-  contents: read
+  contents: write
   packages: write
 
 jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create ${{ inputs.version }} --target ${{ github.sha }} --title "${{ inputs.version }}" --generate-notes
+
   build-prod:
+    needs: release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,7 +44,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build & push docker images
-        run: make docker ENVIRONMENT=-prod APP_DIR=old-branding
+        run: make docker ENVIRONMENT=-prod APP_DIR=new-branding IMAGE_TAG=${{ inputs.version }}
 
   deploy:
     needs: build-prod
