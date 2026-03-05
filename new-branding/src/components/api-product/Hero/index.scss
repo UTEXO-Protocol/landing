@@ -144,29 +144,37 @@
   .api-hero {
     &__content {
       padding: 24px 16px;
+      gap: 45px;
+    }
+
+    &__video {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+      height: 270px;
     }
 
     &__info {
-      gap: 40px;
+      gap: 60px;
     }
 
     &__title {
-      font-size: 36px;
-      line-height: 1.11;
+      font-size: 44px;
     }
 
     &__description-text {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.43;
     }
 
     &__description-detail {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.57;
     }
 
     &__actions {
-      flex-direction: column;
+      flex-wrap: nowrap;
       gap: 12px;
       width: 100%;
 

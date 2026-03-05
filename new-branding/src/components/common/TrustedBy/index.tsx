@@ -46,7 +46,7 @@ export const TrustedBy = () => {
         <div className="trusted-by__carousel-track" ref={trackRef}>
           {duplicatedLogos.map((logo, index) => (
             <div key={`${logo.name}-${index}`} className="trusted-by__item">
-              <Image src={logo.src} alt={logo.name} width={150} height={70} className="trusted-by__logo" />
+              <Image src={logo.src} alt={logo.name} width={140} height={80} className="trusted-by__logo" />
             </div>
           ))}
         </div>

@@ -93,10 +93,6 @@
       letter-spacing: -1px;
       max-width: 100%;
     }
-
-    &__card {
-      flex: 0 0 calc(50vw - 2px);
-    }
   }
 }
 
@@ -119,12 +115,12 @@
     }
 
     &__card {
-      flex: 0 0 280px;
-      min-width: 280px;
+      flex: 0 0 330px;
+      min-width: 330px;
     }
 
     &__card-image {
-      width: 280px;
+      width: 330px;
     }
 
     &__track {
@@ -137,7 +133,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-6 * (280px + 4px)));
+      transform: translateX(calc(-6 * (330px + 4px)));
     }
   }
 }

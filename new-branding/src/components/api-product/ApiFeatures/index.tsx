@@ -20,7 +20,7 @@ export const ApiFeatures = () => {
             {duplicated.map((feature, index) => (
               <article key={index} className="api-features__card">
                 <p className="api-features__card-text">{feature.text}</p>
-                <Image src={feature.image} alt={feature.alt} width={280} height={407} className="api-features__card-image" />
+                <Image src={feature.image} alt={feature.alt} width={330} height={499} className="api-features__card-image" />
               </article>
             ))}
           </div>

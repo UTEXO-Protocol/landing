@@ -135,7 +135,7 @@
 }
 
 @media (max-width: 1000px) {
-  .provicy-policy {
+  .legal {
     grid-template-columns: 1fr;
     gap: 87px;
 
@@ -157,7 +157,7 @@
   }
 }
 @media (max-width: 600px) {
-  .provicy-policy {
+  .legal {
     padding: 28px;
 
     &__content {

@@ -2,7 +2,7 @@
 
 .cloud-features {
   position: relative;
-  background: #e2e2e2;
+  background: #d4d4d4;
   padding: 106px 60px;
   display: flex;
   align-items: center;
@@ -196,12 +196,12 @@
 @media (max-width: 500px) {
   .cloud-features__card {
     &__visual {
-      height: 200px;
-      min-height: 200px;
+      height: 209px;
+      min-height: 209px;
     }
 
     &__visual-img {
-      width: 500px;
+      width: 400px;
     }
   }
 }
