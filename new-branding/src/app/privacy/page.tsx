@@ -5,7 +5,7 @@ import Navigation from "@/components/common/Navigation";
 import { LegalContent } from "@/components/Legal/Content";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://utexo.com/privacy-policy" },
+  alternates: { canonical: "https://utexo.com/privacy" },
 };
 
 const PrivacyPolicy = () => {
