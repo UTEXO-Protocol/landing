@@ -3,7 +3,7 @@ import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { ReactNode } from "react";
 import remarkGfm from "remark-gfm";
-import { PrivacyMenu } from "../Menu";
+import { LegalMenu } from "../Menu";
 import { extractHeadings } from "@/lib/extractHeadingsForMd";
 import "./index.scss";
 
@@ -12,8 +12,8 @@ interface Frontmatter {
   version: string;
 }
 
-export const PrivacyContent = async () => {
-  const filePath = path.join(process.cwd(), "src/app/static/content", "privacy-policy.mdx");
+export const LegalContent: React.FC<{ fileName: string }> = async ({ fileName }) => {
+  const filePath = path.join(process.cwd(), "src/app/static/content", fileName);
   const source = await fs.readFile(filePath, "utf-8");
 
   const headings = extractHeadings(source);
@@ -29,13 +29,13 @@ export const PrivacyContent = async () => {
   });
 
   return (
-    <div className="provicy-policy">
-      <div className="provicy-policy__menu">
-        <PrivacyMenu headings={headings} />
+    <div className="legal">
+      <div className="legal__menu">
+        <LegalMenu headings={headings} />
       </div>
       <div>
-        <div className="provicy-policy__heading">
-          <time className="provicy-policy__updated">
+        <div className="legal__heading">
+          <time className="legal__updated">
             Last updated:{" "}
             {new Date(frontmatter.lastUpdated).toLocaleDateString("en-US", {
               year: "numeric",
@@ -43,9 +43,9 @@ export const PrivacyContent = async () => {
               day: "numeric",
             })}
           </time>
-          <p className="provicy-policy__version">Version: {frontmatter.version}</p>
+          <p className="legal__version">Version: {frontmatter.version}</p>
         </div>
-        <article className="provicy-policy__content">{content as ReactNode}</article>
+        <article className="legal__content">{content as ReactNode}</article>
       </div>
     </div>
   );

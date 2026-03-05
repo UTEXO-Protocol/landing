@@ -1,26 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const ApiHero = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.play().catch(() => {});
-  }, []);
-
   const goToDocs = () => {
     window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
   };
 
   return (
     <section className="api-hero">
-      <video ref={videoRef} className="api-hero__video" poster="/api-product/hero-image.png" autoPlay muted loop playsInline preload="auto">
+      <video  className="api-hero__video" poster="/api-product/hero-image.png" autoPlay muted loop playsInline preload="auto">
         <source src="/api-product/bitcoin-api.webm" type="video/webm" />
         <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
       </video>

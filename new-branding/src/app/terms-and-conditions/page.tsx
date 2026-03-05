@@ -3,17 +3,17 @@ import { InfoHero } from "@/components/common/InfoHero";
 import Navigation from "@/components/common/Navigation";
 import { LegalContent } from "@/components/Legal/Content";
 
-const PrivacyPolicy = () => {
+const TermsAndConditions = () => {
   return (
     <div className="page">
       <Navigation />
       <div className="page__content">
-        <InfoHero title="Privacy Policy" />
-        <LegalContent fileName="privacy-policy.mdx" />
+        <InfoHero title="Terms And Conditions" />
+        <LegalContent fileName="terms-and-conditions.mdx" />
         <Footer />
       </div>
     </div>
   );
 };
 
-export default PrivacyPolicy;
+export default TermsAndConditions;

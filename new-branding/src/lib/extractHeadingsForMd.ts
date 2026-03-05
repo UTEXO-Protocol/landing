@@ -11,9 +11,13 @@ export const extractHeadings = (source: string): Heading[] => {
   let match;
 
   while ((match = h2Regex.exec(source)) !== null) {
+    let title = match[2].trim();
+
+    title = title.replace(/^\d+[.*)\s]\s*/, "");
+
     headings.push({
       id: match[1],
-      title: match[2].trim(),
+      title: title,
       level: 2,
     });
   }
