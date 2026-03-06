@@ -31,7 +31,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Match all paths except Next.js internals and static files
-    "/((?!_next/static|_next/image|favicon.ico).*)",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.mp4|.*\\.webm|.*\\.png|.*\\.jpg|.*\\.webp|.*\\.svg|.*\\.woff2|.*\\.woff).*)",
   ],
 };
