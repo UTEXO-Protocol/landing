@@ -37,6 +37,7 @@ export const FooterNavigation = ({ sections = footerNavigation }: FooterNavigati
               <li key={item.title} className="footer-nav__item">
                 <a href={item.link} className="footer-nav__link" {...(item.isBlank && { target: "_blank", rel: "noopener noreferrer" })}>
                   {item.title}
+                  {item.isBlank && <span className="sr-only">(opens in a new tab)</span>}
                 </a>
               </li>
             ))}

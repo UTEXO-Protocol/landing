@@ -20,6 +20,7 @@ export const ContactLinks = () => {
             </div>
 
             <ExpandIcon className="contact-links__arrow" aria-hidden="true" />
+            <span className="sr-only">(opens in a new tab)</span>
           </Link>
         </li>
       ))}

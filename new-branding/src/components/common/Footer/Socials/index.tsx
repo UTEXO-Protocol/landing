@@ -39,6 +39,7 @@ export const FooterSocials = ({ links = socialLinks }: FooterSocialsProps) => {
       {links.map(link => (
         <a key={link.alt} href={link.href} className="footer-socials__link" aria-label={link.label} target="_blank" rel="noopener noreferrer">
           <Image src={link.icon} alt={link.alt} width={16} height={16} className="footer-socials__icon" />
+          <span className="sr-only">(opens in a new tab)</span>
         </a>
       ))}
     </div>

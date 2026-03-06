@@ -1,13 +1,23 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import { Button } from "../CommonButton";
 
 import "./index.scss";
 
 export const CloudInfo = () => {
-  const goToCloud = () => {
-    window.open("https://docs.utexo.com/getting-started/editor/cloud", "_blank", "noopener,noreferrer");
-  };
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches && videoRef.current) videoRef.current.pause();
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) videoRef.current?.pause();
+      else videoRef.current?.play();
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   return (
     <section className="cloud-info">
@@ -18,13 +28,13 @@ export const CloudInfo = () => {
         </div>
         <div className="cloud-info__buttons">
           <Button href="/contact-sales">talk to sales</Button>
-          <Button variant="grey" onClick={goToCloud}>
+          <Button variant="grey" href="https://docs.utexo.com/getting-started/editor/cloud" external={true}>
             explore cloud
           </Button>
         </div>
       </div>
       <div className="cloud-info__video-wrapper">
-        <video className="cloud-info__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.webp">
+        <video ref={videoRef} className="cloud-info__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.webp">
           <source src="/cloud/bitcoin-cloud.webm" type="video/webm" />
           <source src="/cloud/bitcoin-cloud.mp4" type="video/mp4" />
         </video>

@@ -1,16 +1,26 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const ApiHero = () => {
-  const goToDocs = () => {
-    window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
-  };
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches && videoRef.current) videoRef.current.pause();
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) videoRef.current?.pause();
+      else videoRef.current?.play();
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   return (
     <section className="api-hero">
-      <video  className="api-hero__video" poster="/api-product/hero-image.webp" autoPlay muted loop playsInline preload="auto">
+      <video ref={videoRef} className="api-hero__video" poster="/api-product/hero-image.webp" autoPlay muted loop playsInline preload="auto">
         <source src="/api-product/bitcoin-api.webm" type="video/webm" />
         <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
       </video>
@@ -31,7 +41,7 @@ export const ApiHero = () => {
           <Button variant="white" href="/contact-sales">
             Talk to Sales
           </Button>
-          <Button variant="white" onClick={goToDocs}>
+          <Button variant="white" href="https://docs.utexo.com/" external={true}>
             Explore API
           </Button>
         </div>

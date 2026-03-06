@@ -21,13 +21,13 @@ export const FAQItem = ({ faq, index, openIndex, onToggle }: FAQItemProps) => {
 
   return (
     <div className="faq-item">
-      <div className="faq-item__question" onClick={() => onToggle(index)}>
+      <button type="button" className="faq-item__question" onClick={() => onToggle(index)} aria-expanded={isOpen} aria-controls={`faq-answer-${index}`}>
         <span className="faq-item__question-text">{faq.question}</span>
-        <Image src={isOpen ? "/common/minus.svg" : "/common/plus.svg"} alt={isOpen ? "collapse" : "expand"} width={24} height={24} />
-      </div>
+        <Image src={isOpen ? "/common/minus.svg" : "/common/plus.svg"} alt="" width={24} height={24} aria-hidden="true" />
+      </button>
 
       {isOpen && (
-        <div className="faq-item__answer-wrapper">
+        <div className="faq-item__answer-wrapper" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`}>
           {faq.answer && (
             <div
               className="faq-item__answer"

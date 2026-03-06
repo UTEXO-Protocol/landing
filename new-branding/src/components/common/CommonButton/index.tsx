@@ -38,8 +38,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ classN
 
     return (
       <div className="btn-wrapper">
-        <Link href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} className="btn-wrapper__link">
-          {inner}
+        <Link className={`btn btn--${variant} btn--${size} ${className || ""}`} href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
+          {content} {isExternal && <span className="sr-only">(opens in a new tab)</span>}
         </Link>
       </div>
     );

@@ -14,7 +14,7 @@ export const FAQSupport = () => {
       </a>
 
       <Button variant="black" size="full" href="https://docs.utexo.com/">
-        Go to documentation
+        Go to documentation <span className="sr-only">(opens in a new tab)</span>
       </Button>
     </div>
   );

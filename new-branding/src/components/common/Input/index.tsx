@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { FieldError } from "react-hook-form";
 import "./index.scss";
 
@@ -17,11 +18,14 @@ interface CommonInputProps {
 }
 
 export const CommonInput = ({ title, placeholder, type = "text", field, error }: CommonInputProps) => {
+  const generatedId = useId();
+  const inputId = `input-${generatedId}`;
+
   return (
     <div className="common-input">
-      {title && <label className="common-input__label">{title}</label>}
+      {title && <label htmlFor={inputId} className="common-input__label">{title}</label>}
       <div className={`common-input__input-wrap ${error ? "common-input__input-wrap--error" : ""}`}>
-        <input {...field} type={type} placeholder={placeholder} className="common-input__field" />
+        <input {...field} id={inputId} type={type} placeholder={placeholder} className="common-input__field" />
       </div>
       <div className="common-input__error-slot">{error && <span className="common-input__error">{error.message}</span>}</div>
     </div>
