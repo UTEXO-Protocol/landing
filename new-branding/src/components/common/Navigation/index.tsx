@@ -95,7 +95,7 @@ export default function Navigation() {
       </header>
 
       <div className={`mobile-menu ${isMobileMenuOpen ? "mobile-menu--open" : ""}`}>
-        <div className="mobile-menu__overlay" onClick={() => setIsMobileMenuOpen(false)} />
+        <div className="mobile-menu__overlay" onClick={() => setIsMobileMenuOpen(false)} role="button" tabIndex={0} aria-label="Close menu" onKeyDown={e => e.key === "Enter" && setIsMobileMenuOpen(false)} />
         <div className="mobile-menu__content">
           <div className="mobile-menu__header">
             <Link href="/" className="mobile-menu__logo" onClick={() => setIsMobileMenuOpen(false)}>
