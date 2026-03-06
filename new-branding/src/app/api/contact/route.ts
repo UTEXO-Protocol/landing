@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabaseSrv } from "@/lib/supabaseServer";
+import { getSupabaseSrv } from "@/lib/supabaseServer";
 import { sendEmail } from "@/lib/email";
 import { renderTemplate } from "@/lib/readHtml";
 import { COMPANY_TYPE_LABELS, COMPANY_TYPES, HEAR_ABOUT, HEAR_ABOUT_LABELS, REGION_LABELS, REGIONS, USE_CASE_LABELS, USE_CASES, VOLUME_LABELS, VOLUMES } from "@/lib/contact";
@@ -61,7 +61,7 @@ export async function POST(req: Request) {
 
     const user_agent = req.headers.get("user-agent") ?? null;
 
-    const { error: insertErr } = await supabaseSrv.from("contact_requests").insert([
+    const { error: insertErr } = await getSupabaseSrv().from("contact_requests").insert([
       {
         full_name: fullName || null,
         email,
