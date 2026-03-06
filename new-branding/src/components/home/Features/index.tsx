@@ -32,7 +32,7 @@ const featuresList: FeatureItem[] = [
     tag: "EMBEDDED CONFIDENTIALITY",
     icon: <LockIcon />,
     title: "Private, but compliant",
-    description: "No on-chain evidence of transfers while staying complaint with AML rules.",
+    description: "No on-chain evidence of transfers while staying compliant with AML rules.",
   },
 ];
 

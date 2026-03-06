@@ -5,7 +5,6 @@ import { TrustedBy } from "@/components/common/TrustedBy";
 import { ApiHero } from "@/components/api-product/Hero";
 import { Infrastructure } from "@/components/api-product/Infrastructure";
 import { ApiFeatures } from "@/components/api-product/ApiFeatures";
-import { Innovators } from "@/components/common/Innovators";
 import { Operators } from "@/components/api-product/Operators";
 
 export const metadata: Metadata = {
