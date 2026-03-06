@@ -1,0 +1,207 @@
+@use "@/app/index.scss" as *;
+
+.cloud-features {
+  position: relative;
+  background: #d4d4d4;
+  padding: 106px 60px;
+  display: flex;
+  align-items: center;
+
+  &__layout {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  &__left {
+    top: 140px;
+    align-self: flex-start;
+    position: sticky;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  &__title {
+    @include text-geist("400-44");
+    line-height: 48px;
+    letter-spacing: -1.32px;
+    color: #383838;
+    margin: 0 0 32px 0;
+  }
+
+  &__title-bold {
+    font-weight: 500;
+    color: #000000;
+  }
+
+  &__subtitle {
+    @include text-geist("400-20");
+    line-height: 130%;
+    letter-spacing: -0.6px;
+    color: #383838;
+    margin: 0;
+    max-width: 440px;
+  }
+
+  &__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    margin-left: auto;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition:
+      opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+
+    &__visual {
+      height: 280px;
+      min-height: 280px;
+      background: #000000;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    &__visual-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__info {
+      padding: 24px;
+      background: #e2e2e2;
+    }
+
+    &__title {
+      @include text-geist("500-24");
+      font-weight: 500;
+      letter-spacing: -0.72px;
+      color: #000000;
+      margin: 0 0 16px 0;
+    }
+
+    &__description {
+      @include text-geist("400-16");
+      line-height: 24px;
+      letter-spacing: -0.48px;
+      color: #383838;
+      margin: 0 0 24px 0;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .cloud-features {
+    padding: 48px 16px;
+
+    &__layout {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__left {
+      top: 0;
+      position: relative;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: -0.84px;
+      margin: 0 0 20px 0;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 100%;
+    }
+
+    &__right {
+      max-width: 100%;
+      margin-left: 0;
+    }
+
+    &__cards {
+      position: relative;
+      height: auto;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__card {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      transition: none;
+
+      &__visual {
+        position: relative;
+        height: 260px;
+        min-height: 260px;
+      }
+
+      &__visual-img {
+        position: absolute;
+        width: 600px;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+
+      &__info {
+        padding: 16px;
+      }
+
+      &__title {
+        font-size: 18px;
+        margin: 0 0 12px 0;
+      }
+
+      &__description {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 0 16px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cloud-features__card {
+    &__visual {
+      height: 209px;
+      min-height: 209px;
+    }
+
+    &__visual-img {
+      width: 400px;
+    }
+  }
+}

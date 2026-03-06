@@ -1,0 +1,130 @@
+@use "@/app/index.scss" as *;
+
+.nav-menu {
+  height: 45px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+
+  &__item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &--active {
+      border-radius: 4px;
+      background-color: #151515;
+    }
+  }
+
+  &__link {
+    @include text-geist("400-16");
+
+    flex: 1;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.02em;
+    color: #d4d4d4;
+    background: none;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 295px;
+    max-width: 295px;
+    margin-top: 8px;
+    border-radius: 8px;
+    gap: 16px;
+    padding: 16px;
+    animation: slideDown 0.2s ease;
+    background:
+      linear-gradient(rgba(21, 21, 21, 0.93), rgba(21, 21, 21, 0.93)) padding-box,
+      linear-gradient(65.98deg, rgba(255, 255, 255, 0) 7.36%, rgba(255, 255, 255, 0.24) 72.51%) border-box;
+    border: 1px solid transparent;
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+  }
+
+  &__submenu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    gap: 16px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+    transition: background-color 0.2s;
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      background: #000000;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      @include text-geist("500-16");
+
+      margin-bottom: 5px;
+      letter-spacing: -0.02em;
+      color: #d4d4d4;
+    }
+
+    &__badge {
+      @include text-geist("500-12");
+
+      position: absolute;
+      right: 0;
+      top: -2px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      background: #000000;
+    }
+
+    &--coming-soon {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    &__description {
+      @include text-geist("400-12");
+
+      letter-spacing: -0.02em;
+      color: #8d8d8d;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+}

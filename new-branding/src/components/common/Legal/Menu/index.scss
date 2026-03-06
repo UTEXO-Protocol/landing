@@ -1,0 +1,63 @@
+@use "@/app/index.scss" as *;
+
+.legal-menu {
+  &__badge {
+    @include text-geist("400-16");
+
+    margin-bottom: 16px;
+    color: #878787;
+    letter-spacing: -0.5px;
+  }
+
+  &__list {
+    @include text-geist("500-20");
+
+    padding-top: 3px;
+    position: relative;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: -0.5px;
+    padding-left: 17px;
+    list-style: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background: #878787;
+    }
+  }
+
+  &__item {
+    position: relative;
+    transition: all 0.2s ease;
+
+    &__link {
+      color: #383838;
+      line-height: 130%;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: block;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+
+    &--sublevel {
+      padding-left: 16px;
+      @include text-geist("400-16");
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .legal-menu__item--active::before {
+    display: none;
+  }
+}

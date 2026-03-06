@@ -1,0 +1,139 @@
+@use "@/app/index.scss" as *;
+
+.api-features {
+  background-color: #dddddd;
+  padding: 90px 0;
+
+  &__wrapper {
+    background-color: #dddddd;
+    overflow: hidden;
+  }
+
+  &__header {
+    margin-bottom: 60px;
+    padding: 0 60px;
+  }
+
+  &__title {
+    @include text-geist("400-44");
+    line-height: 110%;
+    letter-spacing: -2px;
+    color: #383838;
+    margin: 0;
+    max-width: 700px;
+  }
+
+  &__title-accent {
+    display: block;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  &__carousel {
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    gap: 4px;
+    animation: api-features-scroll 40s linear infinite;
+    will-change: transform;
+  }
+
+  &__card {
+    height: 499px;
+    width: 366px;
+    position: relative;
+    flex: 0 0 366px;
+    overflow: hidden;
+    background: #000000;
+  }
+
+  &__card-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__card-text {
+    @include text-geist("400-16");
+
+    max-width: 270px;
+    position: absolute;
+    line-height: 130%;
+    left: 21px;
+    top: 21px;
+  }
+}
+
+@keyframes api-features-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .api-features {
+    padding: 48px 0;
+
+    &__header {
+      margin-bottom: 32px;
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 120%;
+      letter-spacing: -1px;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .api-features {
+    background: #e9e9e9;
+
+    &__wrapper {
+      padding: 51px 0 156px;
+      margin: 0 20px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 120%;
+    }
+
+    &__header {
+      margin-bottom: 120px;
+    }
+
+    &__card {
+      flex: 0 0 330px;
+      min-width: 330px;
+    }
+
+    &__card-image {
+      width: 330px;
+    }
+
+    &__track {
+      animation: api-features-scroll-mobile 40s linear infinite;
+    }
+  }
+
+  @keyframes api-features-scroll-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-6 * (330px + 4px)));
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.brand-kit-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  &__bottom-side {
+    display: grid;
+    grid-template-columns: 368px 1fr;
+
+    .icon-wrapper {
+      border-top: 0;
+
+      &:not(:last-child) {
+        border-right: 0;
+      }
+    }
+  }
+
+  &__icon-logotype {
+    width: 324px;
+    height: auto;
+  }
+
+  &__icon-symbol {
+    width: 138px;
+    height: 110px;
+  }
+
+  &__icon-metalic {
+    width: 184px;
+    height: 184px;
+  }
+}
+
+@media (max-width: 820px) {
+  .brand-kit-logos {
+    &__bottom-side {
+      display: block;
+
+      .icon-wrapper {
+        &:not(:last-child) {
+          border-right: 1px solid #323232;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .brand-kit-logos__icon-logotype {
+    width: 200px;
+    height: auto;
+  }
+}

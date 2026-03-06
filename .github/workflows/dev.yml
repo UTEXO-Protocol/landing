@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build & push docker images
-        run: make docker ENVIRONMENT=-dev
+        run: make docker ENVIRONMENT=-dev APP_DIR=new-branding
 
   deploy:
     needs: build-dev
@@ -42,4 +42,3 @@ jobs:
           username: ${{ secrets.DEV_SERVER_USER }}
           key: ${{ secrets.DEV_SERVER_SSH_KEY }}
           script: ${{ secrets.DEV_DEPLOY_SCRIPT }}
-

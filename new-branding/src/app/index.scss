@@ -1,0 +1,35 @@
+@forward "@/app/static/styles/reset";
+@forward "@/app/static/styles/mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+  font-family: Geist, sans-serif;
+  color: #fff;
+  background: #000;
+}
+
+.page {
+  background: #000;
+
+  &__content {
+    padding: 20px 20px 57px;
+  }
+}
+
+.scroll-disable {
+  overflow-y: hidden;
+}
+
+:root {
+  --toastify-toast-width: 340px;
+}
+
+@media (max-width: 768px) {
+  .page__content {
+    padding: 0 20px 26px;
+  }
+}

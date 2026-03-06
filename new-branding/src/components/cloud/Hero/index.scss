@@ -1,0 +1,134 @@
+@use "@/app/index.scss" as *;
+
+.cloud-hero {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  background-color: #000000;
+  overflow: hidden;
+
+  &__video {
+    position: absolute;
+    top: 100px;
+    right: -200px;
+    width: unset;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+
+  &__gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 80%);
+  }
+
+  &__content {
+    position: absolute;
+    top: 206px;
+    left: 60px;
+    z-index: 10;
+    width: 833px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 66px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__title {
+    @include text-geist("400-72");
+    letter-spacing: -2.16px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 74px;
+  }
+
+  &__description {
+    width: 626px;
+    @include text-geist("400-24");
+    color: #ffffff;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    margin: 0;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-hero {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #222222;
+    border-top: 0;
+
+    &__video {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 290px;
+      right: auto;
+      z-index: 5;
+    }
+
+    &__gradient {
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      background: #3c5940;
+      background: radial-gradient(circle, rgba(13, 40, 14, 0.48) 0%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    &__content {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      width: auto;
+      padding: 50px 16px 80px;
+      gap: 30px;
+    }
+
+    &__text {
+      gap: 60px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 48px;
+      letter-spacing: -1.2px;
+    }
+
+    &__description {
+      width: 100%;
+      font-size: 16px;
+      line-height: 130%;
+      letter-spacing: -0.48px;
+    }
+
+    &__buttons {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

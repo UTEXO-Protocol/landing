@@ -1,0 +1,11 @@
+@use "@/app/index.scss" as *;
+
+.animated-text {
+  display: inline;
+  color: #878787;
+
+  &--visible {
+    animation: wordColor 0.3s ease forwards;
+    animation-delay: var(--delay, 0s);
+  }
+}

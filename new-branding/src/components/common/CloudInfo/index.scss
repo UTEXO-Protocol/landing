@@ -1,0 +1,74 @@
+@use "@/app/index.scss" as *;
+
+.cloud-info {
+  padding: 106px 60px 138px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e2e2e2;
+  border-width: 1px, 0px, 1px, 0px;
+  border-style: solid;
+  border-color: #bababa;
+  color: #000000;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include text-geist("500-44");
+
+    margin-bottom: 44px;
+  }
+
+  &__description {
+    @include text-geist("400-24");
+
+    max-width: 460px;
+    line-height: 120%;
+  }
+
+  &__video {
+    width: 100%;
+    height: auto;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 32px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1150px) {
+  .cloud-info {
+    padding: 80px 40px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+
+    &__text {
+      margin-bottom: 44px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cloud-info {
+    padding: 23px 20px;
+    grid-template-columns: 1fr;
+    gap: 46px;
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+  }
+}

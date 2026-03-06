@@ -1,5 +1,6 @@
 # Variables.
 ENVIRONMENT             ?=
+APP_DIR                 ?= .
 IMAGE_TAG               ?= latest
 REGISTRY_HOST           ?= ghcr.io/utexo-protocol
 CURRENT_DATE_TIME       := $(shell date +'%Y-%m-%d')

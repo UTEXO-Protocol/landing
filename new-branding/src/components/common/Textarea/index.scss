@@ -1,0 +1,74 @@
+@use "@/app/index.scss" as *;
+
+.common-textarea {
+  position: relative;
+  margin-bottom: 18px;
+
+  &__label {
+    @include text-geist("400-16");
+
+    display: block;
+    margin-bottom: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+  }
+
+  &__error-slot {
+    @include text-geist("400-12");
+
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    letter-spacing: -2%;
+    color: rgb(243, 100, 100);
+  }
+
+  &__field {
+    @include text-geist("400-16");
+
+    height: 152px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+    background: #ffffff0a;
+    letter-spacing: -2%;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #4ade80;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background:
+        linear-gradient(#121613, #151a17) padding-box,
+        linear-gradient(216.99deg, #666666 -6.76%, #000000 116.61%) border-box;
+      transition: 0.4ms ease-in;
+    }
+
+    &::placeholder {
+      color: #7e7e7e;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px #121613 inset !important;
+      -webkit-text-fill-color: #ffffff !important;
+      caret-color: #ffffff;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+}

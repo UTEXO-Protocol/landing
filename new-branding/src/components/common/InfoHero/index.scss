@@ -1,0 +1,49 @@
+@use "@/app/index.scss" as *;
+
+.info-hero {
+  position: relative;
+  width: 100%;
+  height: 273px;
+  border: 1px solid #222222;
+  background: url("/common/common-hero.webp") center / cover no-repeat;
+  overflow: hidden;
+
+  &__title {
+    @include text-geist("400-72");
+
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    line-height: 120%;
+    letter-spacing: -3%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact-sales-hero {
+    &__title {
+      z-index: 2;
+      left: 40px;
+      font-size: 56px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .contact-sales-hero {
+    border-top: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .info-hero {
+    height: 381px;
+
+    &__title {
+      max-width: 200px;
+      bottom: 50px;
+      left: 20px;
+      font-size: 44px;
+    }
+  }
+}

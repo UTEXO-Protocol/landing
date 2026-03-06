@@ -1,0 +1,185 @@
+@use "sass:map";
+@use "sass:list";
+
+$geist-styles: (
+  "400-10": (
+    400,
+    10px,
+  ),
+  "400-12": (
+    400,
+    12px,
+  ),
+  "400-14": (
+    400,
+    14px,
+  ),
+  "400-16": (
+    400,
+    16px,
+  ),
+  "400-20": (
+    400,
+    20px,
+  ),
+  "400-24": (
+    400,
+    24px,
+  ),
+  "400-32": (
+    400,
+    32px,
+  ),
+  "400-36": (
+    400,
+    36px,
+  ),
+  "500-12": (
+    500,
+    12px,
+  ),
+  "500-14": (
+    500,
+    14px,
+  ),
+  "500-16": (
+    500,
+    16px,
+  ),
+  "500-24": (
+    400,
+    24px,
+  ),
+  "500-20": (
+    500,
+    20px,
+  ),
+  "600-20": (
+    600,
+    20px,
+  ),
+  "400-72": (
+    400,
+    72px,
+  ),
+  "400-44": (
+    400,
+    44px,
+  ),
+  "500-44": (
+    500,
+    44px,
+  ),
+  "400-56": (
+    400,
+    56px,
+  ),
+);
+
+@mixin text-geist($key) {
+  $style: map.get($geist-styles, $key);
+
+  @if $style == null {
+    @error "Key '#{$key}' not found in $geist-styles";
+  }
+
+  font-family: Geist, sans-serif;
+  font-style: normal;
+  font-weight: list.nth($style, 1);
+  font-size: list.nth($style, 2);
+  line-height: 100%;
+}
+
+$geist-mono-styles: (
+  "500-10": (
+    500,
+    10px,
+  ),
+  "400-10": (
+    400,
+    10px,
+  ),
+  "400-11": (
+    400,
+    11px,
+  ),
+  "400-12": (
+    400,
+    12px,
+  ),
+  "400-14": (
+    400,
+    14px,
+  ),
+  "400-16": (
+    400,
+    16px,
+  ),
+  "500-12": (
+    500,
+    12px,
+  ),
+  "500-14": (
+    500,
+    14px,
+  ),
+  "500-16": (
+    500,
+    16px,
+  ),
+  "500-24": (
+    400,
+    24px,
+  ),
+  "600-12": (
+    600,
+    12px,
+  ),
+  "600-14": (
+    600,
+    14px,
+  ),
+);
+
+@mixin text-geist-mono($key) {
+  $style: map.get($geist-mono-styles, $key);
+
+  @if $style == null {
+    @error "Key '#{$key}' not found in $geist-styles";
+  }
+
+  font-family: "Geist Mono", monospace;
+  font-style: normal;
+  font-weight: list.nth($style, 1);
+  font-size: list.nth($style, 2);
+  line-height: 100%;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--scroll-width));
+  }
+}
+
+@keyframes wordColor {
+  from {
+    color: #878787;
+  }
+  to {
+    color: #000;
+  }
+}

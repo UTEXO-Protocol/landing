@@ -1,0 +1,12 @@
+@use "@/app/index.scss" as *;
+
+.psp-features {
+  background: #e9e9e9;
+  padding: 118px 60px;
+}
+
+@media (max-width: 768px) {
+  .psp-features {
+    padding: 24px 20px;
+  }
+}

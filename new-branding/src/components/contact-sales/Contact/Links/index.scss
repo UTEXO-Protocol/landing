@@ -1,0 +1,77 @@
+@use "@/app/index.scss" as *;
+
+.contact-links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 413px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 11px;
+    text-decoration: none;
+    background: #ffffff05;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    backdrop-filter: blur(100px);
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      background: #f9f9f90b;
+
+      .contact-links__arrow {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    background: #000;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    @include text-geist("400-16");
+
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+    color: #fff;
+  }
+
+  &__subtitle {
+    @include text-geist("400-12");
+
+    letter-spacing: -0.5px;
+    color: #8d8d8d;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    color: #d4d4d4;
+    transition: color 0.2s ease;
+  }
+}

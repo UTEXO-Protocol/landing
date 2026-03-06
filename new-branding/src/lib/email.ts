@@ -1,0 +1,45 @@
+// src/lib/email.ts
+import "server-only";
+import nodemailer from "nodemailer";
+
+const EMAIL_HOST = process.env.EMAIL_HOST;
+const EMAIL_PORT = process.env.EMAIL_PORT;
+const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
+const EMAIL_FROM = process.env.EMAIL_FROM;
+const EMAIL_DEV_TO = process.env.EMAIL_DEV_TO;
+
+if (!EMAIL_HOST) console.warn("Missing EMAIL_HOST");
+if (!EMAIL_PASSWORD) console.warn("Missing EMAIL_PASSWORD");
+if (!EMAIL_FROM) console.warn("Missing EMAIL_FROM");
+if (!EMAIL_DEV_TO) console.warn("Missing EMAIL_DEV_TO");
+
+export async function sendEmail(html: string, subject: string, reciever?: string) {
+  if (!EMAIL_HOST || !EMAIL_FROM || !EMAIL_DEV_TO || !EMAIL_PASSWORD) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("Email env vars missing, not sending:", html);
+    }
+    return;
+  }
+
+  const transporter = nodemailer.createTransport({
+    host: EMAIL_HOST,
+    port: Number(EMAIL_PORT) || 587,
+    secure: (Number(EMAIL_PORT) || 587) === 465,
+    auth: {
+      user: EMAIL_FROM,
+      pass: EMAIL_PASSWORD,
+    },
+  });
+
+  try {
+    const res = await transporter.sendMail({
+      from: EMAIL_FROM,
+      to: reciever ?? EMAIL_DEV_TO,
+      subject,
+      html,
+    });
+    console.log("Email sent successfully:", res.messageId);
+  } catch (err) {
+    console.error("Error sending email:", err);
+  }
+}

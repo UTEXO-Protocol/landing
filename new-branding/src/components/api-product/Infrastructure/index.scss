@@ -1,0 +1,254 @@
+@use "@/app/index.scss" as *;
+
+.infrastructure {
+  padding: 150px 110px 190px;
+  background-color: #e2e2e2;
+  overflow: hidden;
+
+  &__tags {
+    display: flex;
+    gap: 27px;
+    margin: 0 0 40px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__tag {
+    @include text-geist("400-16");
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.2;
+    color: #000000;
+  }
+
+  &__tag-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+  }
+
+  &__tag-label {
+    max-width: 169px;
+  }
+
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 40px;
+    background-color: rgba(212, 212, 212, 0.6);
+    backdrop-filter: blur(11.25px);
+    border: 1px solid #bababa;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px;
+  }
+
+  &__title {
+    @include text-geist("400-44");
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    color: #383838;
+  }
+
+  &__title-accent {
+    display: block;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #bababa;
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    padding: 23px 32px;
+    border-top: 1px solid #bababa;
+    transition: background-color 0.3s ease;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:hover {
+      background-color: #1f3114;
+
+      .infrastructure__service-title,
+      .infrastructure__service-description {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__service-title {
+    @include text-geist("500-24");
+    margin: 0 0 16px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+
+  &__service-description {
+    @include text-geist("400-16");
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    color: #383838;
+    transition: color 0.3s ease;
+  }
+
+  &__decoration {
+    position: absolute;
+    bottom: -60px;
+    left: 100px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__coin {
+    width: 250px;
+    height: auto;
+    filter: grayscale(100%) brightness(0.7);
+  }
+}
+
+@media (max-width: 850px) {
+  .infrastructure {
+    padding: 80px 16px;
+
+    &__tags {
+      flex-wrap: wrap;
+      gap: 33px;
+      margin-bottom: 60px;
+    }
+
+    &__tag {
+      @include text-geist-mono("500-16");
+      line-height: 1.4;
+    }
+
+    &__tag-label {
+      max-width: 200px;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    &__info {
+      padding: 32px 16px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+
+      &-accent {
+        max-width: 300px;
+      }
+    }
+
+    &__services {
+      border-left: none;
+      border-top: 1px solid #bababa;
+    }
+
+    &__service {
+      min-height: 140px;
+      padding: 20px 16px;
+    }
+
+    &__service-title {
+      font-size: 18px;
+    }
+
+    &__service-description {
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    &__decoration {
+      right: -40px;
+      left: auto;
+      top: -60px;
+      bottom: auto;
+    }
+
+    &__coin {
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .infrastructure {
+    padding: 60px 16px;
+
+    &__tags {
+      margin-bottom: 60px;
+    }
+
+    &__tag-label {
+      max-width: 150px;
+    }
+
+    &__container {
+      padding-bottom: 40px;
+    }
+
+    &__info {
+      padding: 44px 20px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+
+      &-accent {
+        max-width: 200px;
+      }
+    }
+
+    &__service {
+      height: 235px;
+      padding: 32px;
+    }
+
+    &__service-title {
+      font-size: 24px;
+    }
+
+    &__service-description {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__coin {
+      width: 120px;
+    }
+  }
+}

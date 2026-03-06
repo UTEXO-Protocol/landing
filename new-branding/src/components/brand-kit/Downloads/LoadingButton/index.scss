@@ -1,0 +1,85 @@
+@use "@/app/index.scss" as *;
+
+.loading-button {
+  position: relative;
+  width: 23px;
+  height: 29px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &--white {
+    .loading-button__icon {
+      &--hover {
+        background-image: url("/common/load-animated-dark.svg");
+      }
+      &--default {
+        background-image: url("/common/load-dark.svg");
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    inset: 0;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  &__icon {
+    &--hover {
+      background-image: url("/common/load-animated.svg");
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    &--default {
+      background-image: url("/common/load.svg");
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &:hover .loading-button__icon--default {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  &:hover .loading-button__icon--hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__dropdown {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -110px;
+    position: absolute;
+    padding: 4px;
+    border-radius: 8px;
+    background: #1f1f1f;
+    display: flex;
+    column-gap: 7px;
+    align-items: center;
+  }
+
+  &__dropdown-item {
+    @include text-geist("400-10");
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background:
+      linear-gradient(#1f1f1f, #1f1f1f) padding-box,
+      linear-gradient(235.17deg, #000000 -25.5%, #666666 70.52%) border-box;
+    letter-spacing: -2%;
+    padding: 4px 12px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+  }
+}

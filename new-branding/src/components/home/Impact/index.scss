@@ -1,0 +1,102 @@
+@use "@/app/index.scss" as *;
+
+.impact {
+  position: relative;
+  background-color: #e2e2e2;
+  padding: 89px 2px 184px 80px;
+  overflow: hidden;
+
+  &__decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 400px;
+    background-color: #1f3114;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: start;
+  }
+
+  &__header-title {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+  }
+
+  &__title {
+    @include text-geist("500-44");
+    line-height: 90%;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin: 0;
+    padding-right: 100px;
+  }
+
+  &__description {
+    @include text-geist("400-20");
+    max-width: 500px;
+    letter-spacing: -0.03em;
+    line-height: 110%;
+    color: #5c5c5c;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    z-index: 3;
+    margin-left: 150px;
+    margin-top: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact {
+    padding: 60px 0 80px 22px;
+
+    &__decoration {
+      width: 100%;
+      height: 560px;
+    }
+
+    &__header {
+      grid-template-columns: 1fr;
+      gap: 44px;
+      margin-bottom: 200px;
+    }
+
+    &__header-title {
+      justify-content: flex-start;
+      padding-right: 0;
+    }
+
+    &__title {
+      font-size: 35px;
+      line-height: 110%;
+      letter-spacing: -1px;
+      padding: 0;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 140%;
+      padding-left: 0;
+      color: #d4d4d4;
+    }
+
+    &__slider-wrapper {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+}
