@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/common/CommonButton";
@@ -19,10 +19,14 @@ export class NavigationItem {
 
 export const additionalNavigation: NavigationItem[] = [new NavigationItem("Contact", "/contact-sales")];
 
+const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 export default function Navigation() {
   const router = useRouter();
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +47,11 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
+    toggleButtonRef.current?.focus();
+  }, []);
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -53,6 +62,41 @@ export default function Navigation() {
       document.body.style.overflow = "";
     };
   }, [isMobileMenuOpen]);
+
+  // Focus trap and Escape key
+  useEffect(() => {
+    if (!isMobileMenuOpen || !mobileMenuRef.current) return;
+
+    const menuEl = mobileMenuRef.current;
+    const closeBtn = menuEl.querySelector<HTMLElement>(".mobile-menu__close");
+    if (closeBtn) closeBtn.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeMobileMenu();
+        return;
+      }
+
+      if (e.key !== "Tab") return;
+
+      const focusableEls = menuEl.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      if (focusableEls.length === 0) return;
+
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMobileMenuOpen, closeMobileMenu]);
 
   const goToDocs = () => {
     window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
@@ -87,22 +131,22 @@ export default function Navigation() {
               </Button>
             </div>
 
-            <button className="header__mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
-              <Image src="/heading/menu-grid.svg" alt="Menu" width={28} height={28} />
+            <button ref={toggleButtonRef} className="header__mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu" aria-expanded={isMobileMenuOpen}>
+              <Image src="/heading/menu-grid.svg" alt="" width={28} height={28} aria-hidden="true" />
             </button>
           </div>
         </div>
       </header>
 
-      <div className={`mobile-menu ${isMobileMenuOpen ? "mobile-menu--open" : ""}`}>
-        <div className="mobile-menu__overlay" onClick={() => setIsMobileMenuOpen(false)} />
-        <div className="mobile-menu__content">
+      <div className={`mobile-menu ${isMobileMenuOpen ? "mobile-menu--open" : ""}`} aria-hidden={!isMobileMenuOpen}>
+        <div className="mobile-menu__overlay" onClick={closeMobileMenu} />
+        <div className="mobile-menu__content" ref={mobileMenuRef} role="dialog" aria-modal="true" aria-label="Navigation menu">
           <div className="mobile-menu__header">
             <Link href="/" className="mobile-menu__logo" onClick={() => setIsMobileMenuOpen(false)}>
               <Image src="/heading/UtexoLogo.svg" alt="UTEXO Logo" width={120} height={37} />
             </Link>
-            <button className="mobile-menu__close" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button className="mobile-menu__close" onClick={closeMobileMenu} aria-label="Close menu">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M18 6L6 18M6 6l12 12" stroke="#D4D4D4" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </button>
