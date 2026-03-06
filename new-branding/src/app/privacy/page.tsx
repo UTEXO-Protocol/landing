@@ -5,7 +5,16 @@ import Navigation from "@/components/common/Navigation";
 import { LegalContent } from "@/components/common/Legal/Content";
 
 export const metadata: Metadata = {
+  title: "Privacy Policy - Utexo",
+  description:
+    "Read the Utexo privacy policy. Learn how we collect, use, and protect your personal information.",
   alternates: { canonical: "https://utexo.com/privacy" },
+  openGraph: {
+    title: "Privacy Policy - Utexo",
+    description:
+      "Read the Utexo privacy policy. Learn how we collect, use, and protect your personal information.",
+    url: "https://utexo.com/privacy",
+  },
 };
 
 const PrivacyPolicy = () => {

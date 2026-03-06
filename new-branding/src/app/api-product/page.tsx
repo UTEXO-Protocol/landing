@@ -9,7 +9,21 @@ import { Innovators } from "@/components/common/Innovators";
 import { Operators } from "@/components/api-product/Operators";
 
 export const metadata: Metadata = {
+  title: "Utexo API - Your Gateway to Native USDT on Bitcoin",
+  description:
+    "One API to move USDT instantly with configurable costs and confidential execution. Powered by Lightning and RGB.",
   alternates: { canonical: "https://utexo.com/api-product" },
+  openGraph: {
+    title: "Utexo API - Your Gateway to Native USDT on Bitcoin",
+    description:
+      "One API to move USDT instantly with configurable costs and confidential execution. Powered by Lightning and RGB.",
+    url: "https://utexo.com/api-product",
+  },
+  twitter: {
+    title: "Utexo API - Your Gateway to Native USDT on Bitcoin",
+    description:
+      "One API to move USDT instantly with configurable costs and confidential execution. Powered by Lightning and RGB.",
+  },
 };
 
 export default function ApiProduct() {

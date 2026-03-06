@@ -9,7 +9,21 @@ import { CloudFeatures } from "@/components/cloud/CloudFeatures";
 import { Innovators } from "@/components/common/Innovators";
 
 export const metadata: Metadata = {
+  title: "Utexo Cloud - One-Click Lightning Network Infrastructure",
+  description:
+    "Fully managed Lightning Network infrastructure for native USDT settlement and enterprise-grade yield. Deploy without managing nodes.",
   alternates: { canonical: "https://utexo.com/cloud" },
+  openGraph: {
+    title: "Utexo Cloud - One-Click Lightning Network Infrastructure",
+    description:
+      "Fully managed Lightning Network infrastructure for native USDT settlement and enterprise-grade yield.",
+    url: "https://utexo.com/cloud",
+  },
+  twitter: {
+    title: "Utexo Cloud - One-Click Lightning Network Infrastructure",
+    description:
+      "Fully managed Lightning Network infrastructure for native USDT settlement and enterprise-grade yield.",
+  },
 };
 
 export default function Cloud() {
