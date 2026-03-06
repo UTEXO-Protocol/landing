@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import "./index.scss";
 
@@ -37,6 +37,7 @@ export const navigation = [
 export const NavMenu = () => {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const submenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -53,40 +54,61 @@ export const NavMenu = () => {
     setOpenSubmenu(openSubmenu === title ? null : title);
   };
 
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Escape" && openSubmenu) {
+        setOpenSubmenu(null);
+      }
+    },
+    [openSubmenu],
+  );
+
   const handleSubmenuClick = (e: React.MouseEvent, isComingSoon: boolean) => {
     if (isComingSoon) {
       e.preventDefault();
     }
   };
 
+  useEffect(() => {
+    if (openSubmenu && submenuRef.current) {
+      const firstLink = submenuRef.current.querySelector("a");
+      if (firstLink) firstLink.focus();
+    }
+  }, [openSubmenu]);
+
   return (
-    <nav className="nav-menu" ref={menuRef}>
-      {navigation.map(item => (
-        <div key={item.title} className={`nav-menu__item ${openSubmenu === item.title ? "nav-menu__item--active" : ""}`} onClick={() => handleItemClick(item.title)}>
-          <div className="nav-menu__link">{item.title}</div>
-          {item.submenu && openSubmenu === item.title && (
-            <div className="nav-menu__submenu">
-              {item.submenu.map(subitem => (
-                <a
-                  key={subitem.title}
-                  href={subitem.link}
-                  className={`nav-menu__submenu-item ${subitem.isComingSoon ? "nav-menu__submenu-item--coming-soon" : ""}`}
-                  onClick={e => handleSubmenuClick(e, subitem.isComingSoon)}
-                >
-                  {subitem.isComingSoon && <span className="nav-menu__submenu-item__badge">Coming Soon</span>}
-                  <span className="nav-menu__submenu-item__icon">
-                    <Image src={subitem.icon} alt={subitem.title} width={20} height={20} />
-                  </span>
-                  <span className="nav-menu__submenu-item__text">
-                    <span className="nav-menu__submenu-item__title">{subitem.title}</span>
-                    <span className="nav-menu__submenu-item__description">{subitem.description}</span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+    <nav className="nav-menu" ref={menuRef} onKeyDown={handleKeyDown}>
+      {navigation.map(item => {
+        const isOpen = openSubmenu === item.title;
+        return (
+          <div key={item.title} className={`nav-menu__item ${isOpen ? "nav-menu__item--active" : ""}`}>
+            <button type="button" className="nav-menu__link" onClick={() => handleItemClick(item.title)} aria-expanded={isOpen} aria-haspopup="true">
+              {item.title}
+            </button>
+            {item.submenu && isOpen && (
+              <div className="nav-menu__submenu" ref={submenuRef}>
+                {item.submenu.map(subitem => (
+                  <a
+                    key={subitem.title}
+                    href={subitem.link}
+                    className={`nav-menu__submenu-item ${subitem.isComingSoon ? "nav-menu__submenu-item--coming-soon" : ""}`}
+                    onClick={e => handleSubmenuClick(e, subitem.isComingSoon)}
+                  >
+                    {subitem.isComingSoon && <span className="nav-menu__submenu-item__badge">Coming Soon</span>}
+                    <span className="nav-menu__submenu-item__icon">
+                      <Image src={subitem.icon} alt={subitem.title} width={20} height={20} />
+                    </span>
+                    <span className="nav-menu__submenu-item__text">
+                      <span className="nav-menu__submenu-item__title">{subitem.title}</span>
+                      <span className="nav-menu__submenu-item__description">{subitem.description}</span>
+                    </span>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
     </nav>
   );
 };
