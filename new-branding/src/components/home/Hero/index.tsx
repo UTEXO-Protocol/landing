@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper">
-        <video className="hero__video" poster="/home/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
+        <video className="hero__video" poster="/home/hero-image.png" autoPlay muted loop playsInline preload="auto">
           <source src="/home/utexo-hero.webm" type="video/webm" />
           <source src="/home/utexo-hero.mp4" type="video/mp4" />
         </video>

@@ -24,7 +24,7 @@ export const CloudInfo = () => {
         </div>
       </div>
       <div className="cloud-info__video-wrapper">
-        <video className="cloud-info__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.png">
+        <video className="cloud-info__video" autoPlay muted loop playsInline preload="auto" poster="/cloud/hero-image.png">
           <source src="/cloud/bitcoin-cloud.webm" type="video/webm" />
           <source src="/cloud/bitcoin-cloud.mp4" type="video/mp4" />
         </video>
