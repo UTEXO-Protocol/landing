@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
   keywords:
     "Utexo, USDT, Bitcoin, Lightning Network, stablecoins, private payments, instant payments, zero fee payments, non-custodial, RGB, API payments, stablecoin infrastructure, agentic payments, A2A payments",
+  alternates: { canonical: "https://utexo.com" },
   openGraph: {
     title: "Utexo - Move USDT Instantly and Privately on Bitcoin for Free",
     description: "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
