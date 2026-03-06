@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { FieldError } from "react-hook-form";
 import "./index.scss";
 
@@ -18,11 +19,14 @@ interface CommonTextareaProps {
 }
 
 export const CommonTextarea = ({ title, placeholder, field, error, rows = 5, className }: CommonTextareaProps) => {
+  const generatedId = useId();
+  const textareaId = `textarea-${generatedId}`;
+
   return (
     <div className={`common-textarea ${className ?? ""}`}>
-      {title && <label className="common-textarea__label">{title}</label>}
+      {title && <label htmlFor={textareaId} className="common-textarea__label">{title}</label>}
       <div className={`common-textarea__input-wrap ${error ? "common-textarea__input-wrap--error" : ""}`}>
-        <textarea {...field} placeholder={placeholder} rows={rows} className="common-textarea__field" />
+        <textarea {...field} id={textareaId} placeholder={placeholder} rows={rows} className="common-textarea__field" />
       </div>
       <div className="common-textarea__error-slot">{error && <span className="common-textarea__error">{error.message}</span>}</div>
     </div>

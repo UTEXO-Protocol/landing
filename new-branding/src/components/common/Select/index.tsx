@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { FieldError } from "react-hook-form";
 import "./index.scss";
 
@@ -22,11 +23,14 @@ interface CommonSelectProps<T extends string = string> {
 }
 
 export const CommonSelect = <T extends string = string>({ title, placeholder = "Select an option...", options, field, error }: CommonSelectProps<T>) => {
+  const generatedId = useId();
+  const selectId = `select-${generatedId}`;
+
   return (
     <div className="common-select">
-      {title && <label className="common-select__label">{title}</label>}
+      {title && <label htmlFor={selectId} className="common-select__label">{title}</label>}
       <div className={`common-select__input-wrap ${error ? "contact-form__input-wrap--error" : ""}`}>
-        <select {...field} className="common-select__field">
+        <select {...field} id={selectId} className="common-select__field">
           <option value="" disabled hidden>
             {placeholder}
           </option>
