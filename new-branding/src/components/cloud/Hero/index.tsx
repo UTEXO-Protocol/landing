@@ -24,7 +24,7 @@ export const CloudHero = () => {
 
   return (
     <section className="cloud-hero">
-      <video ref={videoRef} className="cloud-hero__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.png">
+      <video ref={videoRef} className="cloud-hero__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.webp">
         <source src="/cloud/bitcoin-cloud.webm" type="video/webm" />
         <source src="/cloud/bitcoin-cloud.mp4" type="video/mp4" />
       </video>

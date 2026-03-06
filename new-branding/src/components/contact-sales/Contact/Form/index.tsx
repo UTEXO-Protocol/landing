@@ -183,7 +183,7 @@ export const ContactForm = () => {
             <CommonTextarea title="Message" placeholder="Tell us about your project" field={field} error={fieldState.error} rows={5} className="contact-form__textarea" />
           )}
         />
-        <Button variant="white" className="contact-form__button">
+        <Button type="submit" variant="white" className="contact-form__button">
           SUBMIT
         </Button>
       </form>

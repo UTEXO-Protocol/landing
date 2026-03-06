@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper">
-        <video ref={videoRef} className="hero__video" poster="/home/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
+        <video ref={videoRef} className="hero__video" poster="/home/hero-image.webp" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
           <source src="/home/utexo-hero.webm" type="video/webm" />
           <source src="/home/utexo-hero.mp4" type="video/mp4" />
         </video>
@@ -39,7 +39,9 @@ export const Hero = () => {
         </div>
       </div>
       <div className="hero__info__mobile">
-        <p className="hero__title" role="presentation" aria-hidden="true">Move USDT Instantly and Privately on Bitcoin</p>
+        <p className="hero__title" role="presentation" aria-hidden="true">
+          Move USDT Instantly and Privately on Bitcoin
+        </p>
         <p className="hero__description">Products for USDT payments with configurable fees.</p>
         <Button variant="white" href="/api-product">
           EXPLORE API

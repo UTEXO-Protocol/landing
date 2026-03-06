@@ -56,7 +56,7 @@ export const Payments = () => {
               </Link>
             </div>
             <div className="payments__product-visual">
-              <Image src="/payments/grid.webp" width={500} height={400} alt="Grid background" className="payments__product-grid" />
+              <Image src="/payments/grid.webp" width={500} height={400} alt="" className="payments__product-grid" />
               {product.visual}
             </div>
           </article>
