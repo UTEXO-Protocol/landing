@@ -31,7 +31,7 @@ npm install
 
 ### Environment Variables
 
-Create a `.env.local` file in the project root. All required variables:
+Create a `.env` file in the project root. All required variables:
 
 #### Supabase
 
