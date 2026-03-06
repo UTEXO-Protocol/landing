@@ -13,13 +13,12 @@ Marketing and sales website for Utexo — Bitcoin-native USDT infrastructure pow
 - **Animations:** Motion (Framer Motion successor)
 - **Carousel:** Embla Carousel
 - **Analytics:** Vercel Analytics
-- **Deployment:** Vercel (standalone output)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js >= 20 (tested on 25.x)
+- Node.js >= 20 (tested on 22.x)
 - npm
 
 ### Installation
@@ -127,8 +126,3 @@ Each page has its own component directory. Components are co-located with their 
 - **SVG components:** SVG icons are imported as React components via `@svgr/webpack`, configured in `next.config.ts`.
 - **Standalone output:** `next.config.ts` sets `output: "standalone"` for containerized deployments.
 
-## Deployment
-
-Deployed on **Vercel** using the `@vercel/next` builder. Configuration is in `vercel.json` with a catch-all route rewrite. The build uses Turbopack (`next build --turbopack`).
-
-Image optimization is configured for AVIF and WebP formats via `next.config.ts`.
