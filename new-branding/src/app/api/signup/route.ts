@@ -1,6 +1,6 @@
 // app/api/signup/route.ts
 import { NextResponse } from "next/server";
-import { getSupabaseSrv } from "@/lib/supabaseServer";
+import { supabaseSrv } from "@/lib/supabaseServer";
 import { sendEmail } from "@/lib/email";
 import { renderTemplate } from "@/lib/readHtml";
 import { calculateFlags, SignupAction } from "@/lib/signupFlags";
@@ -44,7 +44,7 @@ export async function POST(req: Request) {
     const user_agent = req.headers.get("user-agent") ?? null;
 
     // Check if email already exists
-    const { data: existing, error: existingErr } = await getSupabaseSrv().from("newsletter_signups").select("is_newsletter, wants_dev_access, wants_sales_contact").eq("email", email).maybeSingle();
+    const { data: existing, error: existingErr } = await supabaseSrv.from("newsletter_signups").select("is_newsletter, wants_dev_access, wants_sales_contact").eq("email", email).maybeSingle();
 
     if (existingErr) {
       console.error("[dev-interest] select error", existingErr);
@@ -54,7 +54,7 @@ export async function POST(req: Request) {
     const { wants_dev_access, wants_sales_contact, is_newsletter, message, flagJustAddedForThisAction } = calculateFlags(action as SignupAction, existing);
 
     if (existing) {
-      const { error: updateErr } = await getSupabaseSrv()
+      const { error: updateErr } = await supabaseSrv
         .from("newsletter_signups")
         .update({
           wants_dev_access,
@@ -69,7 +69,7 @@ export async function POST(req: Request) {
       }
     } else {
       // Insert new row
-      const { error: insertErr } = await getSupabaseSrv().from("newsletter_signups").insert([
+      const { error: insertErr } = await supabaseSrv.from("newsletter_signups").insert([
         {
           email,
           ip,
@@ -86,7 +86,7 @@ export async function POST(req: Request) {
         if (insertErr.code === "23505") {
           console.log("[signup] duplicate email detected:", email);
 
-          const { error: updateErr } = await getSupabaseSrv()
+          const { error: updateErr } = await supabaseSrv
             .from("newsletter_signups")
             .update({
               wants_dev_access,

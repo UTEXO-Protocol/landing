@@ -8,15 +8,6 @@ interface TemplateConfig {
   description: string;
 }
 
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
 export function renderTemplate(
   file: string,
   vars: Record<string, string | boolean>
@@ -74,8 +65,7 @@ export function renderTemplate(
 
   for (const [key, value] of Object.entries(dynamicVars)) {
     const regex = new RegExp(`{{\\s*${key}\\s*}}`, "g");
-    const strValue = String(value);
-    html = html.replace(regex, typeof value === "string" ? escapeHtml(strValue) : strValue);
+    html = html.replace(regex, String(value));
   }
 
   return html;
