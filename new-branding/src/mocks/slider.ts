@@ -7,7 +7,7 @@ export const sliderItems: SliderItem[] = [
     description:
       "Eliminate the risk of unpredictable gas spikes. We flatten your transaction costs, giving you the certainty needed to scale your business with confidence.",
     link: "/",
-    image: "/common/slider/slide-1.png",
+    image: "/common/slider/slide-1.webp",
     icon: "/common/slider/coinspaid.svg",
   },
   {
@@ -16,7 +16,7 @@ export const sliderItems: SliderItem[] = [
     description:
       "Sub-second settlement and deterministic latency for high-frequency trading. Built for firms that need guaranteed throughput without network congestion risk.",
     link: "/",
-    image: "/common/slider/slide-2.png",
+    image: "/common/slider/slide-2.webp",
     icon: "/common/slider/auros.svg",
   },
   {
