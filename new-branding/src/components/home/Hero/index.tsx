@@ -23,7 +23,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="hero__info__mobile">
-        <h1 className="hero__title">Move USDT Instantly and Privately on Bitcoin</h1>
+        <p className="hero__title" role="presentation" aria-hidden="true">Move USDT Instantly and Privately on Bitcoin</p>
         <p className="hero__description">Products for USDT payments with configurable fees.</p>
         <Button variant="white" href="/api-product">
           EXPLORE API
