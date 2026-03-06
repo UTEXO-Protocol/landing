@@ -1,11 +1,27 @@
+"use client";
+
+import { useRef, useEffect } from "react";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches && videoRef.current) videoRef.current.pause();
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) videoRef.current?.pause();
+      else videoRef.current?.play();
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero__wrapper">
-        <video className="hero__video" poster="/home/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
+        <video ref={videoRef} className="hero__video" poster="/home/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true">
           <source src="/home/utexo-hero.webm" type="video/webm" />
           <source src="/home/utexo-hero.mp4" type="video/mp4" />
         </video>

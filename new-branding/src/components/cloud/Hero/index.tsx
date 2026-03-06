@@ -1,16 +1,30 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import { Button } from "@/components/common/CommonButton";
 import "./index.scss";
 
 export const CloudHero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const goToCloud = () => {
     window.open("https://docs.utexo.com/getting-started/editor/cloud", "_blank", "noopener,noreferrer");
   };
 
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches && videoRef.current) videoRef.current.pause();
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) videoRef.current?.pause();
+      else videoRef.current?.play();
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   return (
     <section className="cloud-hero">
-      <video className="cloud-hero__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.png">
+      <video ref={videoRef} className="cloud-hero__video" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" poster="/cloud/hero-image.png">
         <source src="/cloud/bitcoin-cloud.webm" type="video/webm" />
         <source src="/cloud/bitcoin-cloud.mp4" type="video/mp4" />
       </video>
