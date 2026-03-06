@@ -6,8 +6,6 @@ import { TrustedBy } from "@/components/common/TrustedBy";
 import { CloudHero } from "@/components/cloud/Hero";
 import { Overview } from "@/components/cloud/Overview";
 import { CloudFeatures } from "@/components/cloud/CloudFeatures";
-import { Innovators } from "@/components/common/Innovators";
-
 export const metadata: Metadata = {
   alternates: { canonical: "https://utexo.com/cloud" },
 };
