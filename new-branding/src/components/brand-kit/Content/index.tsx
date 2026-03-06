@@ -106,7 +106,7 @@ export const BrandKitContent = () => {
           {brandKits.map(({ id, title }) => (
             <li key={id} className="brand-kit-content__nav-item">
               <button className={`brand-kit-content__nav-btn ${activeId === id ? "brand-kit-content__nav-btn--active" : ""}`} onClick={() => scrollTo(id)}>
-                <Image src="/common/arrow-right.svg" className="brand-kit-content__nav-indicator" alt="arrow" width={18} height={24} />
+                <Image src="/common/arrow-right.svg" className="brand-kit-content__nav-indicator" alt="" width={18} height={24} />
                 {title}
               </button>
             </li>

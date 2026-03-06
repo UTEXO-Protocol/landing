@@ -36,7 +36,7 @@ export const Products = () => {
           </div>
         </div>
         <div className="psp-products__card__visual">
-          <Image src="/payments/grid.webp" width={500} height={400} alt="Grid background" className="psp-products__card__grid" />
+          <Image src="/payments/grid.webp" width={500} height={400} alt="" className="psp-products__card__grid" />
           <Image src="/payments/code-image.svg" width={425} height={283} alt="API visualization" className="psp-products__card__image" />
         </div>
       </div>
