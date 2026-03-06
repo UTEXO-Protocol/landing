@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Utexo",
     images: [
       {
-        url: "https://utexo.com/utexo-og.png",
+        url: "utexo-og.png",
         width: 1200,
         height: 630,
         alt: "Utexo - Private Stablecoin Payments on Bitcoin",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Utexo - Move USDT Instantly and Privately on Bitcoin for Free",
     description: "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
-    images: ["https://utexo.com/utexo-og.png"],
+    images: ["utexo-og.png"],
     site: "@utexocom",
     creator: "@utexocom",
   },
