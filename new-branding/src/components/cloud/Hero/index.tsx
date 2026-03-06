@@ -7,10 +7,6 @@ import "./index.scss";
 export const CloudHero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const goToCloud = () => {
-    window.open("https://docs.utexo.com/getting-started/editor/cloud", "_blank", "noopener,noreferrer");
-  };
-
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mq.matches && videoRef.current) videoRef.current.pause();
@@ -41,7 +37,7 @@ export const CloudHero = () => {
           <Button variant="white" href="/contact-sales">
             TALK TO SALES
           </Button>
-          <Button variant="white" onClick={goToCloud}>
+          <Button variant="white" href="https://docs.utexo.com/getting-started/editor/cloud" external={true}>
             Explore Cloud
           </Button>
         </div>

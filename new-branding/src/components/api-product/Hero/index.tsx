@@ -7,10 +7,6 @@ import "./index.scss";
 export const ApiHero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const goToDocs = () => {
-    window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
-  };
-
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mq.matches && videoRef.current) videoRef.current.pause();
@@ -45,7 +41,7 @@ export const ApiHero = () => {
           <Button variant="white" href="/contact-sales">
             Talk to Sales
           </Button>
-          <Button variant="white" onClick={goToDocs}>
+          <Button variant="white" href="https://docs.utexo.com/" external={true}>
             Explore API
           </Button>
         </div>

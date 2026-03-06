@@ -98,10 +98,6 @@ export default function Navigation() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isMobileMenuOpen, closeMobileMenu]);
 
-  const goToDocs = () => {
-    window.open("https://docs.utexo.com/", "_blank", "noopener,noreferrer");
-  };
-
   return (
     <>
       {isSticky && <div className="header__spacer" />}
@@ -126,7 +122,7 @@ export default function Navigation() {
                   </a>
                 ))}
               </nav>
-              <Button variant="white" onClick={goToDocs}>
+              <Button variant="white" href="https://docs.utexo.com/" external={true}>
                 Get Started
               </Button>
             </div>
@@ -186,7 +182,7 @@ export default function Navigation() {
             ))}
 
             <div className="mobile-menu__cta">
-              <Button variant="white" onClick={goToDocs}>
+              <Button variant="white" href="https://docs.utexo.com/" external={true}>
                 Get Started
               </Button>
             </div>

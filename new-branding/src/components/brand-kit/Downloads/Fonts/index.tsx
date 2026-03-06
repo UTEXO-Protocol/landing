@@ -38,6 +38,7 @@ export const Fonts = () => {
             <span className="brand-fonts__item-label">{label}</span>
             <a className="brand-fonts__item-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${label}`}>
               <Image src="/common/linkVector.svg" className="brand-fonts__item-icon" alt="expand icon" aria-hidden="true" width={20} height={20} />
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           </div>
 
