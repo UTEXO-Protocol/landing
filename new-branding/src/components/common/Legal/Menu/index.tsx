@@ -8,7 +8,6 @@ import "./index.scss";
 export const LegalMenu = ({ headings }: { headings: Heading[] }) => {
   const [activeId, setActiveId] = useState<string>("");
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const navRef = useRef<HTMLElement | null>(null);
 
   const getStickyOffset = () => {
     const stickyHeader = document.querySelector<HTMLElement>("header, [data-sticky], .header");
@@ -23,11 +22,7 @@ export const LegalMenu = ({ headings }: { headings: Heading[] }) => {
 
     const isMobile = window.innerWidth < 600;
 
-    if (navRef.current) {
-      return navRef.current.offsetHeight - (isMobile ? 290 : 260);
-    }
-
-    return 100;
+    return isMobile ? 140 : 170;
   };
 
   useEffect(() => {
@@ -74,6 +69,7 @@ export const LegalMenu = ({ headings }: { headings: Heading[] }) => {
 
     if (element) {
       const offset = getStickyOffset();
+      console.log(offset);
       const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
 
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
@@ -83,7 +79,7 @@ export const LegalMenu = ({ headings }: { headings: Heading[] }) => {
   };
 
   return (
-    <nav ref={navRef} className="legal-menu">
+    <nav className="legal-menu">
       <h3 className="legal-menu__badge">Table of contents</h3>
       <ul className="legal-menu__list">
         {headings.map(heading => (
