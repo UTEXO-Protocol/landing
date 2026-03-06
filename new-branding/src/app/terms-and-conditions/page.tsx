@@ -5,7 +5,16 @@ import Navigation from "@/components/common/Navigation";
 import { LegalContent } from "@/components/common/Legal/Content";
 
 export const metadata: Metadata = {
+  title: "Terms and Conditions - Utexo",
+  description:
+    "Read the Utexo terms and conditions. Understand the rules and guidelines for using Utexo products and services.",
   alternates: { canonical: "https://utexo.com/terms-and-conditions" },
+  openGraph: {
+    title: "Terms and Conditions - Utexo",
+    description:
+      "Read the Utexo terms and conditions for using Utexo products and services.",
+    url: "https://utexo.com/terms-and-conditions",
+  },
 };
 
 const TermsAndConditions = () => {

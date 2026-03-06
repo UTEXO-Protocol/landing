@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
   keywords:
     "Utexo, USDT, Bitcoin, Lightning Network, stablecoins, private payments, instant payments, zero fee payments, non-custodial, RGB, API payments, stablecoin infrastructure, agentic payments, A2A payments",
+  alternates: { canonical: "https://utexo.com" },
   openGraph: {
     title: "Utexo - Move USDT Instantly and Privately on Bitcoin for Free",
     description: "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
@@ -35,10 +36,38 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Utexo",
+      url: "https://utexo.com",
+      logo: "https://utexo.com/utexo-og.png",
+      sameAs: [
+        "https://x.com/utexocom",
+        "https://www.linkedin.com/company/utexo/",
+        "https://discord.com/invite/utexo",
+      ],
+      description:
+        "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
+    },
+    {
+      "@type": "WebSite",
+      name: "Utexo",
+      url: "https://utexo.com",
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         <Analytics />
         <ToasterClient />

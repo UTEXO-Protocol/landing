@@ -4,27 +4,27 @@ export const apiFeature = [
   {
     text: "Reduce capital lock-up with real-time settlement.",
     image: "/api-product/features/feature-5.svg",
-    alt: "Feature 1",
+    alt: "Real-time settlement reducing capital lock-up",
   },
   {
     text: "Plug into your current stack without heavy custom development.",
     image: "/api-product/features/feature-1.svg",
-    alt: "Feature 2",
+    alt: "Easy API integration with existing tech stack",
   },
   {
     text: "Stay compliant to AML requirements.",
     image: "/api-product/features/feature-2.svg",
-    alt: "Feature 3",
+    alt: "AML compliance built into payment flow",
   },
   {
     text: "Send and receive 24/7 private USDT payments globally.",
     image: "/api-product/features/feature-3.svg",
-    alt: "Feature 4",
+    alt: "Global 24/7 private USDT payments",
   },
   {
     text: "Lock in your costs with configurable settlement fees.",
     image: "/api-product/features/feature-4.svg",
-    alt: "Feature 5",
+    alt: "Configurable settlement fee structure",
   },
 ];
 
