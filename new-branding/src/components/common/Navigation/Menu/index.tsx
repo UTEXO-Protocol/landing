@@ -15,23 +15,22 @@ export class SubNavigationItem {
     public icon: string,
     public link: string,
     public description: string,
-    public isComingSoon: boolean = false,
   ) {}
 }
 
 export const navigation = [
   new NavigationItem("Products", [
-    new SubNavigationItem("API", "/heading/menu/api.svg", "/api-product", "Your gateway to USDT on Bitcoin.", false),
-    new SubNavigationItem("Cloud", "/heading/menu/cloud.svg", "/cloud", "Fully managed Lightning infrastructure.", false),
+    new SubNavigationItem("API", "/heading/menu/api.svg", "/api-product", "Your gateway to USDT on Bitcoin."),
+    new SubNavigationItem("Cloud", "/heading/menu/cloud.svg", "/cloud", "Fully managed Lightning infrastructure."),
   ]),
-  // new NavigationItem("Customers", [
-  //   new SubNavigationItem("PSPs", "/heading/menu/psps.svg", "/psp", "Fixed-cost private USDT.", false),
-  //   // new SubNavigationItem("Exchanges", "/heading/menu/exchanges.svg", "", "Remove friction, boost volume.", true),
-  //   // new SubNavigationItem("Wallets", "/heading/menu/wallets.svg", "", "Seamless in-app swapping.", true),
-  //   // new SubNavigationItem("Digital Banks", "/heading/menu/digital-banks.svg", "", "Compliant custody, native yield", true),
-  //   // new SubNavigationItem("HFTs", "/heading/menu/hfts.svg", "", "Stable high-volume settlement.", true),
-  //   // new SubNavigationItem("IGaming", "/heading/menu/igaming.svg", "", "Consistent latency, fixed fees.", true),
-  // ]),
+  new NavigationItem("Customers", [
+    new SubNavigationItem("PSPs", "/heading/menu/psps.svg", "/psps", "Fixed-cost private USDT."),
+    new SubNavigationItem("Exchanges", "/heading/menu/exchanges.svg", "/exchanges", "Remove friction, boost volume."),
+    new SubNavigationItem("Retails Wallets", "/heading/menu/wallets.svg", "/retails-wallets", "Seamless in-app swapping."),
+    new SubNavigationItem("Custodians", "/heading/menu/digital-banks.svg", "/custodians", "Compliant custody, native yield"),
+    new SubNavigationItem("Enterprise Wallets", "/heading/menu/hfts.svg", "/enterprise-wallets", "Stable high-volume settlement."),
+    new SubNavigationItem("IGaming", "/heading/menu/igaming.svg", "/igaming", "Consistent latency, fixed fees."),
+  ]),
 ];
 
 export const NavMenu = () => {
@@ -63,12 +62,6 @@ export const NavMenu = () => {
     [openSubmenu],
   );
 
-  const handleSubmenuClick = (e: React.MouseEvent, isComingSoon: boolean) => {
-    if (isComingSoon) {
-      e.preventDefault();
-    }
-  };
-
   useEffect(() => {
     if (openSubmenu && submenuRef.current) {
       const firstLink = submenuRef.current.querySelector("a");
@@ -88,13 +81,7 @@ export const NavMenu = () => {
             {item.submenu && isOpen && (
               <div className="nav-menu__submenu" ref={submenuRef}>
                 {item.submenu.map(subitem => (
-                  <a
-                    key={subitem.title}
-                    href={subitem.link}
-                    className={`nav-menu__submenu-item ${subitem.isComingSoon ? "nav-menu__submenu-item--coming-soon" : ""}`}
-                    onClick={e => handleSubmenuClick(e, subitem.isComingSoon)}
-                  >
-                    {subitem.isComingSoon && <span className="nav-menu__submenu-item__badge">Coming Soon</span>}
+                  <a key={subitem.title} href={subitem.link} className="nav-menu__submenu-item">
                     <span className="nav-menu__submenu-item__icon">
                       <Image src={subitem.icon} alt={subitem.title} width={20} height={20} />
                     </span>
