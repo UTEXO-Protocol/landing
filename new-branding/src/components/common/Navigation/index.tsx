@@ -69,7 +69,11 @@ export default function Navigation() {
 
     const menuEl = mobileMenuRef.current;
     const closeBtn = menuEl.querySelector<HTMLElement>(".mobile-menu__close");
-    if (closeBtn) closeBtn.focus();
+
+    if (closeBtn) {
+      closeBtn.focus({ preventScroll: true });
+      closeBtn.blur();
+    }
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
