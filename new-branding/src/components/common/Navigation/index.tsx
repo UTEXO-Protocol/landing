@@ -69,11 +69,7 @@ export default function Navigation() {
 
     const menuEl = mobileMenuRef.current;
     const closeBtn = menuEl.querySelector<HTMLElement>(".mobile-menu__close");
-
-    if (closeBtn) {
-      closeBtn.focus({ preventScroll: true });
-      closeBtn.blur();
-    }
+    if (closeBtn) closeBtn.focus();
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -99,7 +95,9 @@ export default function Navigation() {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [isMobileMenuOpen, closeMobileMenu]);
 
   return (

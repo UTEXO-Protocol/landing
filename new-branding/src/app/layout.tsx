@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import ToasterClient from "@/components/common/ToasterClient";
 import "./index.scss";
+import { KeyboardDetector } from "@/lib/hooks/KeyboardDetector";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://utexo.com"),
@@ -44,13 +45,8 @@ const jsonLd = {
       name: "Utexo",
       url: "https://utexo.com",
       logo: "https://utexo.com/utexo-og.png",
-      sameAs: [
-        "https://x.com/utexocom",
-        "https://www.linkedin.com/company/utexo/",
-        "https://discord.com/invite/utexo",
-      ],
-      description:
-        "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
+      sameAs: ["https://x.com/utexocom", "https://www.linkedin.com/company/utexo/", "https://discord.com/invite/utexo"],
+      description: "APIs and products for private, instant payments on an open network. Move USDT for free on Bitcoin and Lightning, natively.",
     },
     {
       "@type": "WebSite",
@@ -64,10 +60,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <KeyboardDetector />
         {children}
         <Analytics />
         <ToasterClient />
