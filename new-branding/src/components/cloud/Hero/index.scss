@@ -132,3 +132,15 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .cloud-hero {
+    &__video {
+      height: 240px;
+    }
+
+    &__content {
+      padding: 35px 16px;
+    }
+  }
+}

@@ -95,7 +95,9 @@ export default function Navigation() {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [isMobileMenuOpen, closeMobileMenu]);
 
   return (
