@@ -129,9 +129,28 @@
 }
 
 @media (max-width: 500px) {
-  .hero__video {
-    object-fit: cover;
-    left: 35%;
-    width: 200%;
+  .hero {
+    &__wrapper {
+      height: 240px;
+    }
+
+    &__video {
+      object-fit: cover;
+      left: 45%;
+      width: 140%;
+    }
+
+    &__info__mobile {
+      padding: 30px 20px;
+    }
+
+    &__title {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    &__gradient {
+      height: 105%;
+    }
   }
 }
