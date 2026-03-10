@@ -58,6 +58,21 @@ export async function POST(req: Request) {
 
     const { fullName, email, companyName, jobTitle, companyType, useCase, volume, region, message, hearAbout } = parsed.data;
 
+    // Persistent rate limit: max 3 contact requests per email per hour
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    const { count: recentCount } = await getSupabaseSrv()
+      .from("contact_requests")
+      .select("*", { count: "exact", head: true })
+      .eq("email", email)
+      .gte("created_at", oneHourAgo);
+
+    if (recentCount !== null && recentCount >= 3) {
+      return NextResponse.json(
+        { ok: false, error: "Too many requests from this email. Please try again later." },
+        { status: 429 },
+      );
+    }
+
     const user_agent = req.headers.get("user-agent") ?? null;
 
     const { error: insertErr } = await getSupabaseSrv().from("contact_requests").insert([
