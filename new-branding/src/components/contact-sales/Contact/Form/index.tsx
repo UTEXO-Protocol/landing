@@ -111,16 +111,9 @@ export const ContactForm = () => {
 
       toast.success(data?.message ?? "Thanks for contacting us! 🎉", { id: toastId });
       reset();
-    } catch (error: any) {
-      if (error.code === 500) {
-        toast.error("Please try again.", {
-          id: toastId,
-        });
-
-        return;
-      }
-
-      toast.error(error.message, {
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "Please try again.";
+      toast.error(message, {
         id: toastId,
       });
     }

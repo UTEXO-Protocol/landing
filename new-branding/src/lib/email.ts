@@ -8,16 +8,10 @@ const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
 const EMAIL_FROM = process.env.EMAIL_FROM;
 const EMAIL_DEV_TO = process.env.EMAIL_DEV_TO;
 
-if (!EMAIL_HOST) console.warn("Missing EMAIL_HOST");
-if (!EMAIL_PASSWORD) console.warn("Missing EMAIL_PASSWORD");
-if (!EMAIL_FROM) console.warn("Missing EMAIL_FROM");
-if (!EMAIL_DEV_TO) console.warn("Missing EMAIL_DEV_TO");
+const EMAIL_CONFIGURED = !!(EMAIL_HOST && EMAIL_PASSWORD && EMAIL_FROM && EMAIL_DEV_TO);
 
 export async function sendEmail(html: string, subject: string, reciever?: string) {
-  if (!EMAIL_HOST || !EMAIL_FROM || !EMAIL_DEV_TO || !EMAIL_PASSWORD) {
-    if (process.env.NODE_ENV !== "production") {
-      console.warn("Email env vars missing, not sending:", html);
-    }
+  if (!EMAIL_CONFIGURED) {
     return;
   }
 
@@ -38,8 +32,8 @@ export async function sendEmail(html: string, subject: string, reciever?: string
       subject,
       html,
     });
-    console.log("Email sent successfully:", res.messageId);
-  } catch (err) {
-    console.error("Error sending email:", err);
+    return res.messageId;
+  } catch {
+    throw new Error("Failed to send email");
   }
 }
