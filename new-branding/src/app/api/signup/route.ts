@@ -84,8 +84,6 @@ export async function POST(req: Request) {
         console.error("[signup] insert error", insertErr);
 
         if (insertErr.code === "23505") {
-          console.log("[signup] duplicate email detected:", email);
-
           const { error: updateErr } = await getSupabaseSrv()
             .from("newsletter_signups")
             .update({
