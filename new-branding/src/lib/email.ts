@@ -8,12 +8,9 @@ const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
 const EMAIL_FROM = process.env.EMAIL_FROM;
 const EMAIL_DEV_TO = process.env.EMAIL_DEV_TO;
 
-if (!EMAIL_HOST) console.warn("Missing EMAIL_HOST");
-if (!EMAIL_PASSWORD) console.warn("Missing EMAIL_PASSWORD");
-if (!EMAIL_FROM) console.warn("Missing EMAIL_FROM");
-if (!EMAIL_DEV_TO) console.warn("Missing EMAIL_DEV_TO");
+const EMAIL_CONFIGURED = !!(EMAIL_HOST && EMAIL_PASSWORD && EMAIL_FROM && EMAIL_DEV_TO);
 
-const STRICT_EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+export const STRICT_EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 function sanitizeRecipient(email: string): string {
   const cleaned = email.split(",")[0].split(";")[0].trim();
@@ -24,7 +21,7 @@ function sanitizeRecipient(email: string): string {
 }
 
 export async function sendEmail(html: string, subject: string, receiver?: string) {
-  if (!EMAIL_HOST || !EMAIL_FROM || !EMAIL_DEV_TO || !EMAIL_PASSWORD) {
+  if (!EMAIL_CONFIGURED) {
     return;
   }
 
@@ -47,7 +44,7 @@ export async function sendEmail(html: string, subject: string, receiver?: string
       subject,
       html,
     });
-  } catch (err) {
-    console.error("[email] send failed:", err);
+  } catch {
+    throw new Error("Failed to send email");
   }
 }

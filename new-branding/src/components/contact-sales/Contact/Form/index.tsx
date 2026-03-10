@@ -120,7 +120,8 @@ export const ContactForm = () => {
         return;
       }
 
-      toast.error(error.message, {
+      const message = error instanceof Error ? error.message : "Please try again.";
+      toast.error(message, {
         id: toastId,
       });
     }

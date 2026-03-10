@@ -20,7 +20,7 @@ export const ApiHero = () => {
 
   return (
     <section className="api-hero">
-      <video ref={videoRef} className="api-hero__video" poster="/api-product/hero-image.webp" autoPlay muted loop playsInline preload="auto">
+      <video ref={videoRef} className="api-hero__video" poster="/api-product/hero-image.webp" autoPlay muted loop playsInline preload="metadata">
         <source src="/api-product/bitcoin-api.webm" type="video/webm" />
         <source src="/api-product/bitcoin-api.mp4" type="video/mp4" />
       </video>

@@ -1,7 +1,7 @@
 // app/api/signup/route.ts
 import { NextResponse } from "next/server";
 import { getSupabaseSrv } from "@/lib/supabaseServer";
-import { sendEmail } from "@/lib/email";
+import { sendEmail, STRICT_EMAIL_RE } from "@/lib/email";
 import { renderTemplate } from "@/lib/readHtml";
 import { calculateFlags, SignupAction } from "@/lib/signupFlags";
 import { isRateLimited, RATE_LIMIT_MAX } from "@/lib/rateLimiter";
@@ -32,8 +32,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "Missing email." }, { status: 400 });
     }
 
-    // Strict email validation — reject commas, semicolons, and multi-recipient attempts
-    if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(email)) {
+    if (STRICT_EMAIL_RE.test(email)) {
       return NextResponse.json({ ok: false, error: "Invalid email address." }, { status: 400 });
     }
 
@@ -84,8 +83,6 @@ export async function POST(req: Request) {
         console.error("[signup] insert error", insertErr);
 
         if (insertErr.code === "23505") {
-          console.log("[signup] duplicate email detected:", email);
-
           const { error: updateErr } = await getSupabaseSrv()
             .from("newsletter_signups")
             .update({

@@ -40,7 +40,9 @@ export const NewsletterCTA = () => {
       const data = await response.json().catch(() => null);
 
       if (!response.ok || !data?.ok) {
-        throw new Error(data?.error || "Request failed");
+        const err = new Error(data?.error || "Request failed") as any;
+        err.status = response.status;
+        throw err;
       }
 
       toast.success(data?.message ?? "Thanks for signing up! 🎉", {
@@ -50,13 +52,15 @@ export const NewsletterCTA = () => {
       toastIdRef.current = undefined;
     } catch (error: any) {
       console.error("[Newsletter] submit error:", error);
-      if (error.code === 500) {
+
+      if (error.status === 500) {
         toast.error("Please try again.", {
           id: toastIdRef.current,
         });
 
         return;
       }
+
       toast.error(error.message, {
         id: toastIdRef.current,
       });
