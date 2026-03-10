@@ -151,7 +151,9 @@
       position: relative;
       top: auto;
       right: auto;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
       height: 240px;
     }
 
