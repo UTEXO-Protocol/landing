@@ -93,7 +93,7 @@ export const Slider = ({ items }: SliderProps) => {
           <Image src="/common/slider/arrow-left.svg" height={14.5} width={13.5} alt="" className="carousel__button-icon" />
         </button>
         <button className="carousel__button carousel__button--next" onClick={() => scroll("next")} disabled={!canScrollNext} aria-label="Next slide">
-          <Image src="/common/slider/arrow-left.svg" height={14.5} width={13.5} alt="" className="carousel__button-icon" />
+          <Image src="/common/slider/arrow-right.svg" height={14.5} width={13.5} alt="" className="carousel__button-icon" />
         </button>
       </div>
     </div>
