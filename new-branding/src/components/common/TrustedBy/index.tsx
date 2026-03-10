@@ -10,7 +10,7 @@ const logos = [
   { name: "Big brain", src: "/trustedBy/big-brain.png", width: 140, height: 80 },
   { name: "Arcanum Capital", src: "/trustedBy/arcanum.png", width: 120, height: 80 },
   { name: "Ethereal Ventures", src: "/trustedBy/ethereal-ventures.svg", width: 140, height: 80 },
-  { name: "Franklin Templeton", src: "/trustedBy/franklinTempleton.svg", width: 140, height: 80 },
+  { name: "Franklin Templeton", src: "/trustedBy/franklinTempleton.webp", width: 140, height: 80 },
   { name: "Auros", src: "/trustedBy/auros.svg", width: 120, height: 80 },
   { name: "Maven11", src: "/trustedBy/maven11.svg", width: 140, height: 80 },
   { name: "Axia8", src: "/trustedBy/axia8.svg", width: 120, height: 80 },
