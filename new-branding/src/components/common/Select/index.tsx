@@ -25,12 +25,13 @@ interface CommonSelectProps<T extends string = string> {
 export const CommonSelect = <T extends string = string>({ title, placeholder = "Select an option...", options, field, error }: CommonSelectProps<T>) => {
   const generatedId = useId();
   const selectId = `select-${generatedId}`;
+  const errorId = `${selectId}-error`;
 
   return (
     <div className="common-select">
       {title && <label htmlFor={selectId} className="common-select__label">{title}</label>}
-      <div className={`common-select__input-wrap ${error ? "contact-form__input-wrap--error" : ""}`}>
-        <select {...field} id={selectId} className="common-select__field">
+      <div className={`common-select__input-wrap ${error ? "common-select__input-wrap--error" : ""}`}>
+        <select {...field} id={selectId} className="common-select__field" aria-invalid={!!error} aria-describedby={error ? errorId : undefined}>
           <option value="" disabled hidden>
             {placeholder}
           </option>
@@ -46,7 +47,7 @@ export const CommonSelect = <T extends string = string>({ title, placeholder = "
           </svg>
         </span>
       </div>
-      <div className="common-select__error-slot">{error && <span className="common-select__error">{error.message}</span>}</div>
+      <div className="common-select__error-slot" aria-live="polite">{error && <span id={errorId} className="common-select__error" role="alert">{error.message}</span>}</div>
     </div>
   );
 };
