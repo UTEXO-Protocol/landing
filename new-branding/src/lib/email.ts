@@ -9,15 +9,22 @@ const EMAIL_FROM = process.env.EMAIL_FROM;
 const EMAIL_DEV_TO = process.env.EMAIL_DEV_TO;
 
 const EMAIL_CONFIGURED = !!(EMAIL_HOST && EMAIL_PASSWORD && EMAIL_FROM && EMAIL_DEV_TO);
+export const STRICT_EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-export const STRICT_EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+export const isValidEmail = (s: string) => !s.includes("\n") && STRICT_EMAIL_RE.test(s.trim());
 
 function sanitizeRecipient(email: string): string {
-  const cleaned = email.split(",")[0].split(";")[0].trim();
-  if (!STRICT_EMAIL_RE.test(cleaned)) {
+  const trimmed = email.trim();
+
+  if (/[,;\s]/.test(trimmed)) {
+    throw new Error("Only a single recipient is allowed");
+  }
+
+  if (!isValidEmail(trimmed)) {
     throw new Error("Invalid recipient email address");
   }
-  return cleaned;
+
+  return trimmed;
 }
 
 export async function sendEmail(html: string, subject: string, receiver?: string) {
@@ -45,6 +52,7 @@ export async function sendEmail(html: string, subject: string, receiver?: string
       html,
     });
   } catch {
+    console.log(1);
     throw new Error("Failed to send email");
   }
 }

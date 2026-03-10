@@ -1,7 +1,7 @@
 // app/api/signup/route.ts
 import { NextResponse } from "next/server";
 import { getSupabaseSrv } from "@/lib/supabaseServer";
-import { sendEmail, STRICT_EMAIL_RE } from "@/lib/email";
+import { isValidEmail, sendEmail, STRICT_EMAIL_RE } from "@/lib/email";
 import { renderTemplate } from "@/lib/readHtml";
 import { calculateFlags, SignupAction } from "@/lib/signupFlags";
 import { isRateLimited, RATE_LIMIT_MAX } from "@/lib/rateLimiter";
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "Missing email." }, { status: 400 });
     }
 
-    if (STRICT_EMAIL_RE.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json({ ok: false, error: "Invalid email address." }, { status: 400 });
     }
 
