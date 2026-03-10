@@ -32,8 +32,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "Missing email." }, { status: 400 });
     }
 
-    // basic email sanity
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    // Strict email validation — reject commas, semicolons, and multi-recipient attempts
+    if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(email)) {
       return NextResponse.json({ ok: false, error: "Invalid email address." }, { status: 400 });
     }
 

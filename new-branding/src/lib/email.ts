@@ -13,13 +13,22 @@ if (!EMAIL_PASSWORD) console.warn("Missing EMAIL_PASSWORD");
 if (!EMAIL_FROM) console.warn("Missing EMAIL_FROM");
 if (!EMAIL_DEV_TO) console.warn("Missing EMAIL_DEV_TO");
 
-export async function sendEmail(html: string, subject: string, reciever?: string) {
+const STRICT_EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+function sanitizeRecipient(email: string): string {
+  const cleaned = email.split(",")[0].split(";")[0].trim();
+  if (!STRICT_EMAIL_RE.test(cleaned)) {
+    throw new Error("Invalid recipient email address");
+  }
+  return cleaned;
+}
+
+export async function sendEmail(html: string, subject: string, receiver?: string) {
   if (!EMAIL_HOST || !EMAIL_FROM || !EMAIL_DEV_TO || !EMAIL_PASSWORD) {
-    if (process.env.NODE_ENV !== "production") {
-      console.warn("Email env vars missing, not sending:", html);
-    }
     return;
   }
+
+  const to = sanitizeRecipient(receiver ?? EMAIL_DEV_TO);
 
   const transporter = nodemailer.createTransport({
     host: EMAIL_HOST,
@@ -32,14 +41,13 @@ export async function sendEmail(html: string, subject: string, reciever?: string
   });
 
   try {
-    const res = await transporter.sendMail({
+    await transporter.sendMail({
       from: EMAIL_FROM,
-      to: reciever ?? EMAIL_DEV_TO,
+      to,
       subject,
       html,
     });
-    console.log("Email sent successfully:", res.messageId);
   } catch (err) {
-    console.error("Error sending email:", err);
+    console.error("[email] send failed:", err);
   }
 }
