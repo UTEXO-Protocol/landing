@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/common/CommonButton";
 import { NavMenu, navigation } from "./Menu";
 import "./index.scss";
-import { useRouter } from "next/navigation";
 
 export class NavigationItem {
   constructor(
@@ -36,16 +36,6 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleSubmenuClick = (e: React.MouseEvent, isComingSoon: boolean) => {
-    if (isComingSoon) {
-      e.preventDefault();
-
-      return;
-    }
-
-    setIsMobileMenuOpen(false);
-  };
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
@@ -155,16 +145,10 @@ export default function Navigation() {
               <div key={group.title} className="mobile-menu__group">
                 <div className="mobile-menu__group-title">{group.title}</div>
                 {group.submenu.map(item => (
-                  <a
-                    key={item.title}
-                    href={item.link}
-                    className={`mobile-menu__item ${item.isComingSoon ? "mobile-menu__item--coming-soon" : ""}`}
-                    onClick={e => handleSubmenuClick(e, item.isComingSoon)}
-                  >
+                  <a key={item.title} href={item.link} className="mobile-menu__item">
                     <span className="mobile-menu__item-icon">
                       <Image src={item.icon} alt={item.title} width={20} height={20} />
                     </span>
-                    {item.isComingSoon && <span className="mobile-menu__item__badge">Coming Soon</span>}
                     <span className="mobile-menu__item-text">
                       <span className="mobile-menu__item-title">{item.title}</span>
                       <span className="mobile-menu__item-description">{item.description}</span>

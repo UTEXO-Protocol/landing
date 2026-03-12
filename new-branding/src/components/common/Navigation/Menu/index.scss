@@ -94,22 +94,6 @@
       color: #d4d4d4;
     }
 
-    &__badge {
-      @include text-geist("500-12");
-
-      position: absolute;
-      right: 0;
-      top: -2px;
-      padding: 7px 10px;
-      border-radius: 6px;
-      background: #000000;
-    }
-
-    &--coming-soon {
-      opacity: 0.6;
-      cursor: default;
-    }
-
     &__description {
       @include text-geist("400-12");
 

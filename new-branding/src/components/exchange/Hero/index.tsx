@@ -2,15 +2,18 @@
 
 import { Tags } from "@/components/common/Tags";
 import { exchangeHeroTags } from "@/mocks/exchange";
+import { useReducedMotionVideo } from "@/lib/hooks/useReduceMotion";
 
 import "./index.scss";
 
 export const ExchangeHero = () => {
+  const videoRef = useReducedMotionVideo();
+
   return (
     <section className="exchange-hero">
-      <video className="exchange-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
-        <source src="/igaming/igaming-video.webm" type="video/webm" />
-        <source src="/igaming/igaming-video.mp4" type="video/mp4" />
+      <video className="exchange-hero__video" poster="/exchanges/exchanges-hero.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
+        <source src="/exchanges/exchanges-hero.webm" type="video/webm" />
+        <source src="/exchanges/exchanges-hero.webm" type="video/mp4" />
       </video>
 
       <div className="exchange-hero__gradient" />

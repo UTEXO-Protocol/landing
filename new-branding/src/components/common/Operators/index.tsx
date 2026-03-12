@@ -18,13 +18,15 @@ export const Operators = () => {
           <div className="operators__services">
             {operatorsServices.map(service => (
               <article key={service.title} className="operators__service">
-                <h3 className="operators__service-title">{service.title}</h3>
-                {service.link && (
-                  <Link href={service.link} className="operators__service-link">
-                    View More
-                    <ExpandIcon className="operators__service-icon" aria-hidden="true" />
-                  </Link>
-                )}
+                <div className="operators__services-heading">
+                  <h3 className="operators__service-title">{service.title}</h3>
+                  {service.link && (
+                    <Link href={service.link} className="operators__service-link">
+                      View More
+                      <ExpandIcon className="operators__service-icon" aria-hidden="true" />
+                    </Link>
+                  )}
+                </div>
                 <p className="operators__service-description">{service.description}</p>
               </article>
             ))}

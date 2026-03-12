@@ -11,9 +11,9 @@
     position: absolute;
     top: 50%;
     bottom: unset;
-    transform: translateY(-50%);
-    right: -300px;
-    height: 100%;
+    transform: translateY(-55%);
+    right: -200px;
+    height: 90%;
     width: unset;
     aspect-ratio: 16/9;
   }
@@ -24,7 +24,7 @@
     height: 100%;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(90deg, black 20%, transparent 60%);
+    background: linear-gradient(90deg, black 40%, transparent 60%);
   }
 
   &__gradient--bottom {
@@ -33,7 +33,7 @@
     height: 100%;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.804) 20%, transparent 80%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 15%, transparent 80%);
   }
 
   &__content {
@@ -116,15 +116,14 @@
     }
 
     &__text {
-      gap: 60px;
-      margin-bottom: 36px;
+      gap: 40px;
     }
 
     &__title {
       width: 100%;
       max-width: 400px;
-      font-size: 44px;
-      line-height: 48px;
+      font-size: 38px;
+      line-height: 40px;
       letter-spacing: -1.5px;
     }
 
@@ -136,9 +135,14 @@
   }
 }
 
-@media (max-width: 600px) {
-  .enterprise-wallet-hero__description {
-    max-width: 100%;
-    width: 100%;
+@media (max-width: 500px) {
+  .enterprise-wallet-hero {
+    &__video {
+      height: 240px;
+    }
+    &__description {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }
