@@ -18,7 +18,7 @@ export const exchangeFeatures: Feature[] = [
     description: "Generate native yield for BTC and USDT over Lightning.",
   },
   {
-    icon: "/common/features/puzzle.svg",
+    icon: "/common/features/model.svg",
     title: "Abstract the infrastructure",
     description: "Operate on Lightning and Bitcoin without managing liquidity or channels.",
   },

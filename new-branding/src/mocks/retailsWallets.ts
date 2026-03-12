@@ -8,12 +8,12 @@ export const retailsWalletFeatures: Feature[] = [
     description: "Capture fees on settlement activity generated inside your wallet.",
   },
   {
-    icon: "/common/features/native.svg",
+    icon: "/common/features/focus.svg",
     title: "Keep users inside your wallet",
     description: "A unified interface for USDT swaps and transfers on Bitcoin and Lightning.",
   },
   {
-    icon: "/common/features/growth.svg",
+    icon: "/common/features/assets.svg",
     title: "Remove fee volatility",
     description: "Enable fixed transaction costs, regardless of network congestion.",
   },
