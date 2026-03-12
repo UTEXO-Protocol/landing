@@ -2,15 +2,18 @@
 
 import { Tags } from "@/components/common/Tags";
 import { enterpiseWalletsHeroTags } from "@/mocks/enterprise-wallets";
+import { useReducedMotionVideo } from "@/lib/hooks/useReduceMotion";
 
 import "./index.scss";
 
 export const EnterpriseWalletsHero = () => {
+  const videoRef = useReducedMotionVideo();
+
   return (
     <section className="enterprise-wallet-hero">
-      <video className="enterprise-wallet-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
-        <source src="/igaming/igaming-video.webm" type="video/webm" />
-        <source src="/igaming/igaming-video.mp4" type="video/mp4" />
+      <video className="enterprise-wallet-hero__video" poster="/enterprise-wallet/enterprise-hero.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
+        <source src="/enterprise-wallet/enterprise-hero.webm" type="video/webm" />
+        <source src="/enterprise-wallet/enterprise-hero.mp4" type="video/mp4" />
       </video>
 
       <div className="enterprise-wallet-hero__gradient" />

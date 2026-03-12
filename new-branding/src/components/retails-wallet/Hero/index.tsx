@@ -9,8 +9,8 @@ export const RetailsWalletHero = () => {
   return (
     <section className="retails-wallet-hero">
       <video className="retails-wallet-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
-        <source src="/igaming/igaming-video.webm" type="video/webm" />
-        <source src="/igaming/igaming-video.mp4" type="video/mp4" />
+        <source src="/retails-wallets/retails-hero.webm" type="video/webm" />
+        <source src="/retails-wallets/retails-hero.mp4" type="video/mp4" />
       </video>
 
       <div className="retails-wallet-hero__gradient" />

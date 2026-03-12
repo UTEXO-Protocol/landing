@@ -1,22 +1,12 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import { Button } from "@/components/common/CommonButton";
+import { useReducedMotionVideo } from "@/lib/hooks/useReduceMotion";
+
 import "./index.scss";
 
 export const Hero = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches && videoRef.current) videoRef.current.pause();
-    const handler = (e: MediaQueryListEvent) => {
-      if (e.matches) videoRef.current?.pause();
-      else videoRef.current?.play();
-    };
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
+  const videoRef = useReducedMotionVideo();
 
   return (
     <section className="hero">
