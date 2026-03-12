@@ -9,11 +9,30 @@ const EMAIL_FROM = process.env.EMAIL_FROM;
 const EMAIL_DEV_TO = process.env.EMAIL_DEV_TO;
 
 const EMAIL_CONFIGURED = !!(EMAIL_HOST && EMAIL_PASSWORD && EMAIL_FROM && EMAIL_DEV_TO);
+export const STRICT_EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-export async function sendEmail(html: string, subject: string, reciever?: string) {
+export const isValidEmail = (s: string) => !s.includes("\n") && STRICT_EMAIL_RE.test(s.trim());
+
+function sanitizeRecipient(email: string): string {
+  const trimmed = email.trim();
+
+  if (/[,;\s]/.test(trimmed)) {
+    throw new Error("Only a single recipient is allowed");
+  }
+
+  if (!isValidEmail(trimmed)) {
+    throw new Error("Invalid recipient email address");
+  }
+
+  return trimmed;
+}
+
+export async function sendEmail(html: string, subject: string, receiver?: string) {
   if (!EMAIL_CONFIGURED) {
     return;
   }
+
+  const to = sanitizeRecipient(receiver ?? EMAIL_DEV_TO);
 
   const transporter = nodemailer.createTransport({
     host: EMAIL_HOST,
@@ -26,14 +45,14 @@ export async function sendEmail(html: string, subject: string, reciever?: string
   });
 
   try {
-    const res = await transporter.sendMail({
+    await transporter.sendMail({
       from: EMAIL_FROM,
-      to: reciever ?? EMAIL_DEV_TO,
+      to,
       subject,
       html,
     });
-    return res.messageId;
   } catch {
+    console.log(1);
     throw new Error("Failed to send email");
   }
 }
