@@ -21,7 +21,7 @@ export const footerNavigation = [
     new FooterNavItem("PSPs", "/psps"),
     new FooterNavItem("Exchanges", "/exchanges"),
     new FooterNavItem("Custodians", "/custodians"),
-    new FooterNavItem("Retails wallets", "/retails-wallets"),
+    new FooterNavItem("Retail wallet", "/retail-wallets"),
     new FooterNavItem("Enterprise wallets", "/enterprise-wallets"),
     new FooterNavItem("IGaming", "/igaming"),
   ]),

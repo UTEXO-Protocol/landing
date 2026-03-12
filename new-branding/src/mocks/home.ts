@@ -20,9 +20,9 @@ export const operatorsServices = [
     link: "/enterprise-wallets",
   },
   {
-    title: "Retails Wallets",
+    title: "Retail Wallets",
     description: "Set your own fees on user-generated volume.",
-    link: "/retails-wallets",
+    link: "/retail-wallets",
   },
   {
     title: "IGaming",

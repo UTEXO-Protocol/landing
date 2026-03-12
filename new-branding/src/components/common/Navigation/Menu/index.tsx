@@ -27,7 +27,7 @@ export const navigation = [
     new SubNavigationItem("PSPs", "/heading/menu/psps.svg", "/psps", "Fixed-cost private USDT."),
     new SubNavigationItem("Exchanges", "/heading/menu/exchanges.svg", "/exchanges", "Remove friction, boost volume."),
     new SubNavigationItem("Custodians", "/heading/menu/custodians.svg", "/custodians", "Custody, Settlement and Yield."),
-    new SubNavigationItem("Retails Wallets", "/heading/menu/retails-wallets.svg", "/retails-wallets", "USDT/BTC, natively on Bitcoin."),
+    new SubNavigationItem("Retail Wallets", "/heading/menu/retails-wallets.svg", "/retail-wallets", "USDT/BTC, natively on Bitcoin."),
     new SubNavigationItem("Enterprise Wallets", "/heading/menu/enterprice-wallets.svg", "/enterprise-wallets", "In-wallet settlement and yield."),
     new SubNavigationItem("IGaming", "/heading/menu/igaming.svg", "/igaming", "Consistent latency, fixed fees."),
   ]),
