@@ -54,8 +54,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 130px;
-    padding: 25px 32px;
+    min-height: 110px;
+    padding: 20px 32px;
     border-top: 1px solid #bababa;
     transition: background-color 0.3s ease;
 
@@ -77,11 +77,17 @@
 
   &__service-title {
     @include text-geist("500-24");
-    margin: 0 0 16px;
     font-weight: 500;
     letter-spacing: -0.02em;
     color: #000000;
     transition: color 0.3s ease;
+  }
+
+  &__services-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 16px;
   }
 
   &__service-link {
