@@ -26,7 +26,7 @@ export const Products = () => {
             </div>
           </div>
           <div className="psp-products__card__links">
-            <Link href="/api-product" className="psp-products__card__link">
+            <Link href="https://docs.utexo.com/" target="_blank" className="psp-products__card__link">
               VIEW DOCS
               <Image src="/common/arrow-link.svg" alt="" width={16} height={16} />
             </Link>
