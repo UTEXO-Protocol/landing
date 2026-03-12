@@ -73,7 +73,7 @@ export const Slider = ({ items }: SliderProps) => {
           {items.map(item => (
             <article key={item.id} className="carousel__slide">
               <div className="carousel__content">
-                <Image src={item.icon} alt="" width={160} height={40} className="carousel__icon" />
+                <Image src={item.icon} alt={`${item.title} logo`} width={160} height={40} className="carousel__icon" />
                 <h3 className="carousel__title">{item.title}</h3>
                 <p className="carousel__description">{item.description}</p>
                 <Link href={item.link} className="carousel__link">
