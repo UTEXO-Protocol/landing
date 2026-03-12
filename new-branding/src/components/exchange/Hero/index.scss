@@ -116,15 +116,13 @@
     }
 
     &__text {
-      gap: 60px;
-      margin-bottom: 36px;
+      gap: 40px;
     }
 
     &__title {
       width: 100%;
-      max-width: 400px;
-      font-size: 44px;
-      line-height: 48px;
+      font-size: 38px;
+      line-height: 40px;
       letter-spacing: -1.5px;
     }
 
@@ -137,8 +135,14 @@
 }
 
 @media (max-width: 600px) {
-  .exchange-hero__description {
-    max-width: 100%;
-    width: 100%;
+  .exchange-hero {
+    &__video {
+      height: 240px;
+    }
+
+    &__description {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }
