@@ -17,7 +17,7 @@ export const Products = () => {
         <div className="psp-products__card__info">
           <div className="psp-products__card__top">
             <div className="psp-products__card__icon">
-              <Image src="/psp/api-icon.svg" alt="" width={48} height={48} />
+              <Image src="/psp/api-icon.svg" alt="" width={48} height={48} aria-hidden="true" />
             </div>
             <div className="psp-products__card__content">
               <h3 className="psp-products__card__title">API</h3>

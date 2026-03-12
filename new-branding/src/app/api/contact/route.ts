@@ -9,7 +9,7 @@ import { isRateLimited, RATE_LIMIT_MAX } from "@/lib/rateLimiter";
 
 const bodySchema = z.object({
   fullName: z.string().trim().default(""),
-  email: z.string().trim().toLowerCase(),
+  email: z.string().trim().toLowerCase().email("Invalid email address"),
   companyName: z.string().trim(),
   jobTitle: z.string().trim().default(""),
   companyType: z.enum(COMPANY_TYPES),
