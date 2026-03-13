@@ -6,6 +6,7 @@ import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
 import { enterpiseWalletsFeatures } from "@/mocks/enterprise-wallets";
 import { EnterpriseWalletsHero } from "@/components/enterprise-wallet/Hero";
 import { CloudInfo } from "@/components/common/CloudInfo";
+import { apiProduct, cloudProduct } from "@/mocks/common";
 
 export default function EnterpriseWallets() {
   return (
@@ -15,8 +16,7 @@ export default function EnterpriseWallets() {
         <EnterpriseWalletsHero />
         <TrustedBy />
         <FeaturesWrapper features={enterpiseWalletsFeatures} />
-        <Products />
-        <CloudInfo />
+        <Products products={[apiProduct, cloudProduct]} />
         <Footer />
       </div>
     </div>

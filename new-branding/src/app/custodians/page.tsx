@@ -6,7 +6,7 @@ import { Products } from "@/components/common/Products";
 import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
 import { custodiansFeatures } from "@/mocks/custodians";
 import { CustodiansHero } from "@/components/custodians/Hero";
-import { CloudInfo } from "@/components/common/CloudInfo";
+import { apiProduct, cloudProduct } from "@/mocks/common";
 
 export default function Custodians() {
   return (
@@ -16,8 +16,7 @@ export default function Custodians() {
         <CustodiansHero />
         <TrustedBy />
         <FeaturesWrapper features={custodiansFeatures} />
-        <Products />
-        <CloudInfo />
+        <Products products={[apiProduct, cloudProduct]} />
         <Footer />
       </div>
     </div>
