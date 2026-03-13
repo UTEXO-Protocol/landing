@@ -5,6 +5,8 @@ import { ProductCardType } from "@/mocks/common";
 import "./index.scss";
 
 export const Products: React.FC<{ products: ProductCardType[] }> = ({ products }) => {
+  const isSingle = products.length === 1;
+
   return (
     <section className="products">
       <span className="products__badge">SETTLE VALUE INSTANTLY ON BITCOIN</span>
@@ -14,7 +16,7 @@ export const Products: React.FC<{ products: ProductCardType[] }> = ({ products }
         <br />
         your business
       </h2>
-      <div className="products__content">
+      <div className={`products__content ${isSingle ? "products__content--single" : ""}`}>
         {products.map(product => (
           <ProductCard key={product.title} title={product.title} subtitle={product.subtitle} description={product.description} icon={product.icon} links={product.links} visual={product.visual} />
         ))}
