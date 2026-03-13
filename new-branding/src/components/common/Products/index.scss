@@ -91,7 +91,7 @@
 
 @media (max-width: 900px) {
   .products {
-    padding: 48px 0 60px;
+    padding: 48px 0 60px 20px;
 
     &__title {
       margin-right: 16px;
@@ -104,6 +104,15 @@
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       gap: 16px;
+
+      &--single {
+        display: block;
+        padding-right: 20px;
+
+        .products-card {
+          width: 100%;
+        }
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -123,11 +132,5 @@
         width: 160px;
       }
     }
-  }
-}
-
-@media (max-width: 500px) {
-  .products {
-    padding: 48px 20px 60px;
   }
 }
