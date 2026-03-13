@@ -5,6 +5,7 @@ import { PspHero } from "@/components/psp/Hero";
 import { Products } from "@/components/common/Products";
 import { UseCases } from "@/components/psp/UseCases";
 import { PspFeatures } from "@/components/psp/PspFeatures";
+import { apiProduct, cloudProduct } from "@/mocks/common";
 
 export default function Psp() {
   return (
@@ -14,7 +15,7 @@ export default function Psp() {
         <PspHero />
         <TrustedBy />
         <PspFeatures />
-        <Products />
+        <Products products={[apiProduct]} />
         {/* <UseCases /> */}
         <Footer />
       </div>

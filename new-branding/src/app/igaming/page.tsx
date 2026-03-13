@@ -5,6 +5,7 @@ import { Products } from "@/components/common/Products";
 import { IGamingHero } from "@/components/igaming/Hero";
 import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
 import { igamingFeatures } from "@/mocks/igaming";
+import { apiProduct } from "@/mocks/common";
 
 export default function IGaming() {
   return (
@@ -14,7 +15,7 @@ export default function IGaming() {
         <IGamingHero />
         <TrustedBy />
         <FeaturesWrapper features={igamingFeatures} />
-        <Products />
+        <Products products={[apiProduct]} />
         <Footer />
       </div>
     </div>

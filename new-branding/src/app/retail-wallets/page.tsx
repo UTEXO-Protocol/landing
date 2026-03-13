@@ -5,6 +5,7 @@ import { Products } from "@/components/common/Products";
 import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
 import { RetailsWalletHero } from "@/components/retails-wallet/Hero";
 import { retailsWalletFeatures } from "@/mocks/retailsWallets";
+import { apiProduct } from "@/mocks/common";
 
 export default function RetailsWallets() {
   return (
@@ -14,7 +15,7 @@ export default function RetailsWallets() {
         <RetailsWalletHero />
         <TrustedBy />
         <FeaturesWrapper features={retailsWalletFeatures} />
-        <Products />
+        <Products products={[apiProduct]} />
         <Footer />
       </div>
     </div>

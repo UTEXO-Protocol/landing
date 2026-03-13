@@ -1,12 +1,18 @@
 @use "@/app/index.scss" as *;
 
-.psp-products {
+.products {
   position: relative;
   background: #d4d4d4;
   border-top: 1px solid #bababa;
   border-bottom: 1px solid #bababa;
   padding: 70px 60px 125px;
   overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
   &__badge {
     display: inline-block;
@@ -28,138 +34,45 @@
     margin-bottom: 75px;
   }
 
-  &__card {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-    height: 464px;
-    max-width: 1134px;
-    background: #d4d4d4;
-    border: 1px solid #bababa;
-    overflow: hidden;
+  &__visual-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 425px;
+    height: auto;
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease;
 
-    &:hover .psp-products__card__image {
+    .products-card:hover & {
       bottom: 15px;
     }
+  }
 
-    &__info {
-      flex: 1;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+  &__visual-currencies {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    align-items: flex-end;
+    gap: 19px;
+    transform: translateX(-50%);
+    width: 100%;
+    justify-content: center;
+    transition: bottom 0.5s ease;
 
-    &__top {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    &__icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    &__title {
-      @include text-geist("500-24");
-      font-weight: 500;
-      letter-spacing: -0.72px;
-      color: #000000;
-      margin: 0;
-    }
-
-    &__subtitle {
-      @include text-geist("400-16");
-      color: rgba(56, 56, 56, 1);
-      margin: 0;
-    }
-
-    &__description {
-      @include text-geist("400-16");
-      line-height: 24px;
-      letter-spacing: -0.48px;
-      color: rgba(56, 56, 56, 1);
-      margin: 0;
-      max-width: 380px;
-    }
-
-    &__links {
-      display: flex;
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    &__visual {
-      position: relative;
-      width: 662px;
-      flex-shrink: 0;
-      overflow: hidden;
-      background-color: #000000;
-    }
-
-    &__grid {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 100%;
+    img {
+      width: 251px;
       height: auto;
-      transform: translateX(-50%);
     }
 
-    &__image {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 595px;
-      height: auto;
-      transform: translateX(-50%);
-      transition: bottom 0.5s ease;
-    }
-
-    &__link {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      @include text-geist-mono("400-12");
-      letter-spacing: -0.12px;
-      text-transform: uppercase;
-      color: #000000;
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 4px;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #000000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
+    .products-card:hover & {
+      bottom: 35px;
     }
   }
 }
 
 @media (max-width: 1100px) {
-  .psp-products {
+  .products {
     padding: 48px 60px 60px;
 
     &__badge {
@@ -173,61 +86,48 @@
       letter-spacing: -1px;
       margin: 0 0 32px 0;
     }
+  }
+}
 
-    &__card {
-      flex-direction: column;
-      height: auto;
+@media (max-width: 900px) {
+  .products {
+    padding: 48px 0 60px;
 
-      &__info {
-        padding: 24px;
+    &__title {
+      margin-right: 16px;
+    }
+
+    &__content {
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 16px;
+
+      &::-webkit-scrollbar {
+        display: none;
       }
+    }
+  }
+}
 
-      &__top {
-        gap: 32px;
-      }
+@media (max-width: 700px) {
+  .products {
+    &__visual-icon {
+      width: 300px;
+    }
 
-      &__title {
-        font-size: 24px;
-      }
-
-      &__description {
-        font-size: 16px;
-        max-width: 100%;
-      }
-
-      &__links {
-        margin-top: 54px;
-      }
-
-      &__visual {
-        width: 100%;
-        height: 300px;
-      }
-
-      &__content {
-        gap: 20px;
-      }
-
-      &__image {
-        width: 400px;
+    &__visual-currencies {
+      img {
+        width: 160px;
       }
     }
   }
 }
 
 @media (max-width: 500px) {
-  .psp-products {
+  .products {
     padding: 48px 20px 60px;
-
-    &__card {
-      &__visual {
-        width: 100%;
-        height: 210px;
-      }
-
-      &__image {
-        width: 300px;
-      }
-    }
   }
 }

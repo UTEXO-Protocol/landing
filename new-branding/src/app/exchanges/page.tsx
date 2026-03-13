@@ -5,7 +5,7 @@ import { Products } from "@/components/common/Products";
 import { FeaturesWrapper } from "@/components/common/Features/Wrapper";
 import { exchangeFeatures } from "@/mocks/exchange";
 import { ExchangeHero } from "@/components/exchange/Hero";
-import { CloudInfo } from "@/components/common/CloudInfo";
+import { apiProduct, cloudProduct } from "@/mocks/common";
 
 export default function Exchange() {
   return (
@@ -15,8 +15,7 @@ export default function Exchange() {
         <ExchangeHero />
         <TrustedBy />
         <FeaturesWrapper features={exchangeFeatures} />
-        <Products />
-        <CloudInfo />
+        <Products products={[apiProduct, cloudProduct]} />
         <Footer />
       </div>
     </div>
