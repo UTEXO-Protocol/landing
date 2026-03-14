@@ -5,7 +5,7 @@ export const Operators = () => {
   return (
     <section className="operators">
       <h2 className="operators__title">
-        <span className="operators__title-accent">Best-in-class stablecoins</span> settlement Infrastructure
+        <span className="operators__title-accent">Best-in-class stablecoin</span> settlement infrastructure
       </h2>
 
       <div className="operators__grid">
