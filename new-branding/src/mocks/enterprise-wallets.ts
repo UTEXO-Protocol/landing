@@ -1,7 +1,7 @@
 import { Feature } from "@/components/common/Features";
 
-export const enterpiseWalletsHeroTags = ["Off-exchange BTC/USDT transfers", "BTC/USDT yield from wallet", "Merchant & consumer payments", "PSPs settlement rails"];
-export const enterpiseWalletsFeatures: Feature[] = [
+export const enterpriseWalletsHeroTags = ["Off-exchange BTC/USDT transfers", "BTC/USDT yield from wallet", "Merchant & consumer payments", "PSPs settlement rails"];
+export const enterpriseWalletsFeatures: Feature[] = [
   {
     icon: "/common/features/dollar.svg",
     title: "Monetize BTC<>USDT volume",
