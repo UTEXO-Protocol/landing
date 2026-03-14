@@ -18,7 +18,7 @@ export const cloudOverviewFeatures: CloudOverviewFeature[] = [
   },
   {
     icon: "/cloud/overview/lifecycle.svg",
-    text: "Node Lifecycle management.",
+    text: "Node lifecycle management.",
   },
 ];
 
