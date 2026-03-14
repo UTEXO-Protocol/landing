@@ -8,7 +8,7 @@ import "./index.scss";
 export const RetailsWalletHero = () => {
   return (
     <section className="retails-wallet-hero">
-      <video className="retails-wallet-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
+      <video className="retails-wallet-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="metadata">
         <source src="/retails-wallets/retails-hero.webm" type="video/webm" />
         <source src="/retails-wallets/retails-hero.mp4" type="video/mp4" />
       </video>

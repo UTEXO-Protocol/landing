@@ -11,7 +11,7 @@ export const ExchangeHero = () => {
 
   return (
     <section className="exchange-hero">
-      <video className="exchange-hero__video" poster="/exchanges/exchanges-hero.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
+      <video className="exchange-hero__video" poster="/exchanges/exchanges-hero.png" autoPlay muted loop playsInline preload="metadata" webkit-playsinline="true" ref={videoRef}>
         <source src="/exchanges/exchanges-hero.webm" type="video/webm" />
         <source src="/exchanges/exchanges-hero.webm" type="video/mp4" />
       </video>

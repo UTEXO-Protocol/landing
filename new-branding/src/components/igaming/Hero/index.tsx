@@ -7,7 +7,7 @@ import "./index.scss";
 export const IGamingHero = () => {
   return (
     <section className="igaming-hero">
-      <video className="igaming-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
+      <video className="igaming-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="metadata">
         <source src="/igaming/igaming-video.webm" type="video/webm" />
         <source src="/igaming/igaming-video.mp4" type="video/mp4" />
       </video>
