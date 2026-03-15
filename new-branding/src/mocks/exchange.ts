@@ -5,7 +5,7 @@ export const exchangeFeatures: Feature[] = [
   {
     icon: "/common/features/expand.svg",
     title: "Expand USDT withdrawal options",
-    description: "Offer native USDT withdrawals on Lightning with prefixed fees and private execution.",
+    description: "Offer native USDT withdrawals on Lightning with pre-fixed fees and private execution.",
   },
   {
     icon: "/common/features/native.svg",
