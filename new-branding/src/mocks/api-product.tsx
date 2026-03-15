@@ -12,7 +12,7 @@ export const apiFeature = [
     alt: "Easy API integration with existing tech stack",
   },
   {
-    text: "Stay compliant to AML requirements.",
+    text: "Stay compliant with AML requirements.",
     image: "/api-product/features/feature-2.svg",
     alt: "AML compliance built into payment flow",
   },
