@@ -2,13 +2,16 @@
 
 import { Tags } from "@/components/common/Tags";
 import { retailsWalletHeroTags } from "@/mocks/retailsWallets";
+import { useReducedMotionVideo } from "@/lib/hooks/useReduceMotion";
 
 import "./index.scss";
 
 export const RetailsWalletHero = () => {
+  const videoRef = useReducedMotionVideo();
+
   return (
     <section className="retails-wallet-hero">
-      <video className="retails-wallet-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
+      <video className="retails-wallet-hero__video" poster="/retails-wallets/retails-hero.png" autoPlay muted loop playsInline preload="metadata" webkit-playsinline="true" ref={videoRef}>
         <source src="/retails-wallets/retails-hero.webm" type="video/webm" />
         <source src="/retails-wallets/retails-hero.mp4" type="video/mp4" />
       </video>

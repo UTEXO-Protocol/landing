@@ -11,7 +11,7 @@ export const CustodiansHero = () => {
 
   return (
     <section className="custodians-hero">
-      <video className="custodians-hero__video" poster="/custodians/custodians-hero.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
+      <video className="custodians-hero__video" poster="/custodians/custodians-hero.png" autoPlay muted loop playsInline preload="metadata" webkit-playsinline="true" ref={videoRef}>
         <source src="/custodians/custodians-hero.webm" type="video/webm" />
         <source src="/custodians/custodians-hero.mp4" type="video/mp4" />
       </video>
