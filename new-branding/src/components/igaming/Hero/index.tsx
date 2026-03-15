@@ -2,12 +2,15 @@
 
 import { Tags } from "@/components/common/Tags";
 import { igamingHeroTags } from "@/mocks/igaming";
+import { useReducedMotionVideo } from "@/lib/hooks/useReduceMotion";
 import "./index.scss";
 
 export const IGamingHero = () => {
+  const videoRef = useReducedMotionVideo();
+
   return (
     <section className="igaming-hero">
-      <video className="igaming-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto">
+      <video className="igaming-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
         <source src="/igaming/igaming-video.webm" type="video/webm" />
         <source src="/igaming/igaming-video.mp4" type="video/mp4" />
       </video>
