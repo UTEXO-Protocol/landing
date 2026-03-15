@@ -1,7 +1,7 @@
 "use client";
 
 import { Tags } from "@/components/common/Tags";
-import { enterpiseWalletsHeroTags } from "@/mocks/enterprise-wallets";
+import { enterpriseWalletsHeroTags } from "@/mocks/enterprise-wallets";
 import { useReducedMotionVideo } from "@/lib/hooks/useReduceMotion";
 
 import "./index.scss";
@@ -25,7 +25,7 @@ export const EnterpriseWalletsHero = () => {
 
           <p className="enterprise-wallet-hero__description">Enable Lightning-native BTC&lt;&gt;USDT settlement and yield without leaving your wallet.</p>
         </div>
-        <Tags tags={enterpiseWalletsHeroTags} />
+        <Tags tags={enterpriseWalletsHeroTags} />
       </div>
     </section>
   );
