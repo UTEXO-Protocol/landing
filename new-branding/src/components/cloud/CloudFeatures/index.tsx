@@ -10,7 +10,7 @@ export const CloudFeatures = () => {
       <div className="cloud-features__layout">
         <div className="cloud-features__left">
           <h2 className="cloud-features__title">
-            Lightning started with BTC. <span className="cloud-features__title-bold">Now it’s USDT turn.</span>
+            Lightning started with BTC. <span className="cloud-features__title-bold">Now it’s USDT’s turn.</span>
           </h2>
           <p className="cloud-features__subtitle">
             For the first time, exchanges, liquidity providers, neobanks, and wallets can access native BTC&lt;&gt;USDT liquidity on Lightning.
