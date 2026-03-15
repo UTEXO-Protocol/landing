@@ -11,7 +11,7 @@ export const RetailsWalletHero = () => {
 
   return (
     <section className="retails-wallet-hero">
-      <video className="retails-wallet-hero__video" poster="/igaming/hero-image.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
+      <video className="retails-wallet-hero__video" poster="/retails-wallets/retails-hero.png" autoPlay muted loop playsInline preload="auto" webkit-playsinline="true" ref={videoRef}>
         <source src="/retails-wallets/retails-hero.webm" type="video/webm" />
         <source src="/retails-wallets/retails-hero.mp4" type="video/mp4" />
       </video>
