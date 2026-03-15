@@ -31,7 +31,7 @@ export const apiProduct = {
 
 export const cloudProduct = {
   title: "Cloud",
-  subtitle: "One-Click Lightning network infrastructure.",
+  subtitle: "One-Click Lightning Network infrastructure.",
   description: "Managed Lightning infrastructure for running stablecoin payments and trading at scale, with built-in yield and zero operational overhead.",
   icon: { src: "/payments/cloud.svg" },
   links: [
